@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE264C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.UI.ClientManager.Web.Core.Impl.Local</RootNamespace>
+    <AssemblyName>Common.UI.ClientManager.Web.Core.Impl.Local</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\DynamicForms\AccommodationsWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\AppointmentsCalendar\AppointmentBookingStudentWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\AppointmentsCalendar\AppointmentClientCalendarWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\AppointmentsCalendar\ClockWorkAppointmentProvider.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\AppointmentsCalendar\InterfaceAppointmentHelper.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\AppointmentsCalendar\RoomAndLocation.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\AppointmentsTestBooking\AutoTestBookingWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Appointments\AppointmentTypeWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Cache\SessionCaching.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\ConfidentialityAgreement\StudentConfidentialityAgreementWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Email\UserMailMergeValuesHelper.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\LookupCourses\InstructorClientHelper.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\LookupCourses\SessionClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\LookupCourses\StudentCourseLetterInfo.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\MailMerging\MailMergeCodes.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Notetaking\NotetakingClientDataSyncWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Notetaking\NotetakingWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Startup\StartupWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Tutoring\StudentTuteeWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Tutoring\TutoringClientWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Tutoring\TutorWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\AccessibilityWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\CaptchaTextQuestionManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\FileUploadWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\LicensingClientWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\NavigatorClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\WebClientUtilityWebClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\Local\Web\WebFileClientManager.cs" />
+    <Compile Include="TechnoPro\Common\UI\ClientManager\Web\Core\Impl\MailMerging\MailMergingDocWebClientManager.cs" />
+    <Compile Include="Web\AdminTestingWebClientManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Client.ServiceFactory\ClockWorkServer.Client.ServiceFactory.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F7}</Project>
+      <Name>ClockWorkServer.Client.ServiceFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ClientCaching\Common.ClientManager.ClientCaching.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2601}</Project>
+      <Name>Common.ClientManager.ClientCaching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2606}</Project>
+      <Name>Common.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Mappers\Common.Core.Mappers.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2617}</Project>
+      <Name>Common.Core.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Auth\Common.UI.ClientManager.Web.Auth.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264A}</Project>
+      <Name>Common.UI.ClientManager.Web.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core\Common.UI.ClientManager.Web.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264B}</Project>
+      <Name>Common.UI.ClientManager.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Entity\Common.UI.Web.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2653}</Project>
+      <Name>Common.UI.Web.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Mappers\Common.UI.Web.Mappers.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2656}</Project>
+      <Name>Common.UI.Web.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telerik.Web.UI\Telerik.Web.UI.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A3}</Project>
+      <Name>Telerik.Web.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

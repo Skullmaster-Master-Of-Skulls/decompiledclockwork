@@ -1,0 +1,221 @@
+﻿using System;
+
+namespace Telerik.Web.Apoc.Render.Pdf.Fonts
+{
+	// Token: 0x0200169A RID: 5786
+	internal class ZapfDingbats : Base14Font
+	{
+		// Token: 0x0600DF6B RID: 57195 RVA: 0x00319508 File Offset: 0x00317708
+		public ZapfDingbats() : base("ZapfDingbats", null, 820, 802, -143, 32, 255, Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths, Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.DefaultMapping)
+		{
+		}
+
+		// Token: 0x0600DF6C RID: 57196 RVA: 0x00319544 File Offset: 0x00317744
+		static ZapfDingbats()
+		{
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths = new int[256];
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[32] = 278;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[33] = 974;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[34] = 961;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[35] = 974;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[36] = 980;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[37] = 719;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[38] = 789;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[39] = 790;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[40] = 791;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[41] = 690;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[42] = 960;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[43] = 939;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[44] = 549;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[45] = 855;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[46] = 911;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[47] = 933;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[48] = 911;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[49] = 945;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[50] = 974;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[51] = 755;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[52] = 846;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[53] = 762;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[54] = 761;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[55] = 571;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[56] = 677;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[57] = 763;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[58] = 760;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[59] = 759;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[60] = 754;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[61] = 494;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[62] = 552;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[63] = 537;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[64] = 577;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[65] = 692;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[66] = 786;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[67] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[68] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[69] = 790;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[70] = 793;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[71] = 794;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[72] = 816;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[73] = 823;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[74] = 789;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[75] = 841;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[76] = 823;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[77] = 833;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[78] = 816;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[79] = 831;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[80] = 923;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[81] = 744;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[82] = 723;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[83] = 749;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[84] = 790;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[85] = 792;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[86] = 695;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[87] = 776;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[88] = 768;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[89] = 792;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[90] = 759;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[91] = 707;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[92] = 708;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[93] = 682;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[94] = 701;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[95] = 826;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[96] = 815;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[97] = 789;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[98] = 789;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[99] = 707;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[100] = 687;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[101] = 696;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[102] = 689;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[103] = 786;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[104] = 787;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[105] = 713;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[106] = 791;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[107] = 785;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[108] = 791;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[109] = 873;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[110] = 761;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[111] = 762;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[112] = 762;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[113] = 759;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[114] = 759;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[115] = 892;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[116] = 892;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[117] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[118] = 784;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[119] = 438;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[120] = 138;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[121] = 277;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[122] = 415;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[123] = 392;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[124] = 392;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[125] = 668;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[126] = 668;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[161] = 732;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[162] = 544;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[163] = 544;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[164] = 910;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[165] = 667;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[166] = 760;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[167] = 760;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[172] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[173] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[174] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[175] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[176] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[177] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[178] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[179] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[180] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[181] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[182] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[183] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[184] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[185] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[186] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[187] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[188] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[189] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[190] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[191] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[192] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[193] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[194] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[195] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[196] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[197] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[198] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[199] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[200] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[201] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[202] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[203] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[204] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[205] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[206] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[207] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[208] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[209] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[210] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[211] = 788;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[212] = 894;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[215] = 458;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[216] = 748;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[217] = 924;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[218] = 748;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[219] = 918;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[220] = 927;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[221] = 928;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[222] = 928;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[223] = 834;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[224] = 873;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[225] = 828;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[226] = 924;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[227] = 924;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[228] = 917;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[229] = 930;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[230] = 931;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[231] = 463;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[232] = 883;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[233] = 836;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[234] = 836;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[235] = 867;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[236] = 867;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[237] = 696;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[238] = 696;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[239] = 874;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[241] = 874;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[242] = 760;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[243] = 946;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[244] = 771;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[245] = 865;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[246] = 771;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[247] = 888;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[248] = 967;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[249] = 888;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[250] = 831;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[251] = 873;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[252] = 927;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[253] = 970;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[254] = 918;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[137] = 410;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[135] = 509;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[140] = 334;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[134] = 509;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[128] = 390;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[138] = 234;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[132] = 276;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[129] = 390;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[136] = 410;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[131] = 317;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[130] = 317;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[133] = 276;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[141] = 334;
+			Telerik.Web.Apoc.Render.Pdf.Fonts.ZapfDingbats.CodePointWidths[139] = 234;
+		}
+
+		// Token: 0x0400406B RID: 16491
+		private static readonly int[] CodePointWidths;
+
+		// Token: 0x0400406C RID: 16492
+		private static readonly CodePointMapping DefaultMapping = CodePointMapping.GetMapping("ZapfDingbatsEncoding");
+	}
+}

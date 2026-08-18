@@ -1,0 +1,655 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE25FD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClockWorkWeb</RootNamespace>
+    <AssemblyName>ClockWorkWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpeechLib\ISpeechVoice.cs" />
+    <Compile Include="SpeechLib\SpeechVoiceSpeakFlags.cs" />
+    <Compile Include="SpeechLib\SpVoice.cs" />
+    <Compile Include="SpeechLib\_ISpeechVoiceEvents.cs" />
+    <Compile Include="SpeechLib\_ISpeechVoiceEvents_Event.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Adapters\BooleanRequiredAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Adapters\ClaimTypesExtender.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Adapters\HttpPostedFileBaseAdapter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Adapters\RouteValueDictionaryAdapter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\admin\settings\admin_settings_AppSettingsMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\admin\settings\admin_settings_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\admin\settings\admin_settings_InstallCheck.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\admin\settings\admin_settings_report.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\admin\settings\admin_settings_update.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\AjaxHelpers\AjaxPagingHelpers.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\AlternateFormatAreaRegistration.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\AlternateFormatHomeController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\MediaContentController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\MessageHandlerController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\PendingRequestsCartController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\StudentConfidentialityAgreementController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\StudentFilesController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Controllers\StudentRequestsController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Infrastructure\AlternateFormatAccommodationRequiredAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Infrastructure\AlternateFormatConfidentialityAgreementRequiredAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Infrastructure\AlternateFormatLicenseRequiredAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Infrastructure\ClockWorkRegisteredStudentRequiredAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Infrastructure\NoCacheAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\AlternateFormatBaseViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\AlternateFormatHomeViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\ConfidentialityAgreement\StudentConfidentialityAgreementViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\ContentResultsByCourseViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\CoursesByAcademicTermViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MakeRequestViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MediaContentAddedViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MediaContentFileListViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MediaContentFilesToolStripViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MediaContentRequestedListViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MediaContent\MediaContentFormatViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\MediaContent\MediaContentThumbnailViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\PendingRequestsCartIndexViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\RequestsBySearchingViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\SearchingContentResultsViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentFilesViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentMediaContentFilesViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequestListViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequestsByTermViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequestsToolStripViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequests\PendingRequestsCart.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequests\RequestByCourseViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequests\StudentRequestWebViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequests\UploadProofOfPurchaseConfirmationViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequests\UploadProofOfPurchaseFileViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\StudentRequests\UploadProofOfPurchaseViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\AlternateFormat\Models\WebMediaContentRequest.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\ExternalAccess\Controllers\ExtAccommodationSingleLetterController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\ExternalAccess\ExternalAccessAreaRegistration.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\ExternalAccess\Models\AccommodationLetter\ExtAccommodationSingleLetterAccessViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\Loa\Controllers\LoaLogicController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\Loa\LoaAreaRegistration.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Areas\Loa\Models\StudentCourseForLogicEmailRulesViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Binders\Adapters\ModelBindingContextAdapter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Binders\AlternateFormatPendingRequestsModelBinder.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Binders\LogonStudentModelBinder.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Binders\MediaContentIdentifierModelBinder.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Binders\PersonBaseModelBinder.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\BundleConfig.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Common\ValidationAttributes\FileSizeAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Common\ValidationAttributes\FileTypesAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Controllers\AccountController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Controllers\ClockWorkLinkDisplayInfo.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Controllers\FilesStorageController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Controllers\HomeController.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\AppToVCal.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\appt\ctrls_appt_CtrlAppointmentMultiChooser.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\ClockWorkLoginControl.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Common\Captcha\ctrls_Common_Captcha_CaptchaControl.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Common\Captcha\ctrls_Common_Captcha_CaptchaText.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Common\ctrls_Common_CtrlCalendarSingleDayNavigator.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Courses\ctrls_Courses_CtrlCurrentCourseChooser.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Courses\RegisteredCourseWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\ctrls_AppointmentNotes.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\ctrls_CtrlMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\ctrls_ImageControl.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\ctrls_SiteMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\ctrls_UserMessage.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\DynamicForms\ctrls_DynamicForms_CtrlPerDateData.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\DynamicForms\PidNeededArgs.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\DynamicForms\ScreenNumberNeededArgs.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\CtrlInstructorExamUpload.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\CtrlInstructorTestExamDynamicFormData.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\ctrls_Instructor_CtrlInstructorConfirmViewedLetter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\ctrls_Instructor_CtrlInstructorCourseChooser.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\FinalExamUploadRequestsMode\CtrlInstructorExamConfirmExamDetails.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\FinalExamUploadRequestsMode\CtrlInstructorExamStudentList.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\FinalExamUploadRequestsMode\CtrlInstructorFinalExamDateTimeGrid.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Instructor\InstructorIdentityArgs.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\MyUpcomingAppointmentsControl.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\SmallControls\ctrls_SmallControls_DurationControl.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\AdvancedFormCS.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\AppointmentWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\AppType.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\ctrls_Staff_Calendar_CtrlAppointmentEdit.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\ctrls_Staff_Calendar_CtrlStaffCalendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\ctrls_Staff_Calendar_CtrlStaffCalendarListView.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\Calendar\RadSchedulerAdvancedFormAdvancedFormMode.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Staff\ctrls_Staff_CtrlStaffChooser.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\ctrls_Tutoring_CtrlChooseCourseOrTutor.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ctrls_Tutoring_Tutee_CtrlSubmitCommentTutee.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ctrls_Tutoring_Tutee_FrmTutorProfileViewForStudent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ScheduleAppointmentWizard\AvailabilityWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ScheduleAppointmentWizard\ctrls_Tutoring_Tutee_ScheduleAppointmentWizard_CtrlAvailabil.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ScheduleAppointmentWizard\ctrls_Tutoring_Tutee_ScheduleAppointmentWizard_CtrlBook.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ScheduleAppointmentWizard\ctrls_Tutoring_Tutee_ScheduleAppointmentWizard_CtrlSearchPar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutee\ScheduleAppointmentWizard\ctrls_Tutoring_Tutee_ScheduleAppointmentWizard_CtrlTutorSear.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\TutorWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\ctrls_Tutoring_Tutor_CtrlSelectedAvailabilityTimeEdit.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\ctrls_Tutoring_Tutor_CtrlSelectedAvailabilityTimeView.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\ctrls_Tutoring_Tutor_CtrlSubmitCommentTutor.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\ctrls_Tutoring_Tutor_CtrlTutorCalendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\ctrls_Tutoring_Tutor_CtrlTutorListCalendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\ctrls_Tutoring_Tutor_CtrlTutorMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\DateEventArgs.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\Tutoring\Tutor\TutorMenuItem.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\user_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\ctrls\vet\CtrlVetChangeInRequestSummary.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\custom_CustomMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\login\LoginS.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\misc\custom_home.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\misc\custom_misc_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\misc\custom_misc_Default2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\misc\custom_misc_home2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\custom\misc\custom_misc_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\FilterConfig.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\handlers\FileUploadHandler.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\HtmlHelpers\HtmlHelperAdapter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\HtmlHelpers\PagingHelpers.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Infrastructure\CacheHelper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Infrastructure\ErrorHandler\HandleModelStateExceptionAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Infrastructure\LogonPerson.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Models\Exceptions\ModelStateException.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Models\Home\ClockWorkGroupLinkModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Models\Home\ClockWorkHomeModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Models\LookupCourses\SessionViewModel.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Models\PagingInfo.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Models\ZipResult.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\MvcApplication.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\RouteConfig.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\AppointmentToUpdateWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\AppointmentWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\calendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\CalendarEvent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\SaveAppointmentResult.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\StaffMasterFullWidth.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule_LoginOptions.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule_ScheduleMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule_StaffCalendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\schedule\staff_schedule_StaffCalendarList.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\StaffMasterFullWidthR.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\StaffMasterR.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\staff\staff_StaffMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\Startup.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\avfeed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\bookfrm.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_appt_book.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_appt_bookList.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_appt_help.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_appt_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_appt_submitcomment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_TutorSchedule_ConfirmBooking.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_TutorSchedule_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_TutorSchedule_Message.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_TutorSchedule_MyUpcomingAppts.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_TutorSchedule_NewUser.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\appt\user_TutorSchedule_TutorMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\Form.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\FormList.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\FormListFeed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\OnlineFormNotAvailable.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\thankyou.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_FormA.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_FormB.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_FormC.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_Forms.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_Forms_noMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Forms\user_Forms_NotAllowed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\DefaultAuth.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\FinalExamUploadChooseCourse.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\StudentInTestWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_ChangePwd.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_courses.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_ExamUpload.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_ExamUploadComplete.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_ExamUploadComplete2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_FinalExamUpload.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_icourse.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_iletter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_ilettercontent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_InstructorMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_InstructorMaster_noMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_istudent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_letters.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_Message.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_ThankYou.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\instructor\user_instructor_UploadedExams.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_IntakeMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_IntakeMaster_noMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_msg.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_NotAllowed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_register.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\Intake\user_Intake_thankyou.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\Licensing.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\LoginPG.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\LoginSelect.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\logoutb.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\MiscMaster_nomenuR.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\NotAllowed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\pg.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\StudentLetters.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_Logout2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_CreateCWAccount.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_error.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_home.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_MiscMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_MiscMaster_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\misc\user_misc_MyUpcomingAppointments.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\DefaultAuth.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\LectureNoteWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_AddCourse.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_AdminTest.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_DontRequireNotetaker.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_err.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_help.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_Info1.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_Info2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_Message.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_NotesNotetaker.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_NotetakerApp.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_NotetakerAppNew.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_NotetakerBecomeUnavailable.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_notetakererrcreate.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_Notetakingb.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_NotetakingB_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_profile.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_SampleNotesNotetaker.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingNotetakers\user_NotetakingNotetakers_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\Message.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_ChooseNotetaker.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_courses.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_DontRequireNotetaker.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_DownloadHistory.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_help.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_Info1.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_Info2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_notesStudent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_NotetakerInfo.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_Notetakingb.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_NotetakingB_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_SampleNotesStudent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\NotetakingStudents\user_NotetakingStudents_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_courses.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_Help.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_NotAllowed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_request.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_SeeCounsellor.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_SelfRegCMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_SelfRegCMaster_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SelfRegC\user_SelfRegC_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\SessionKeepAlive.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\eFileIconType.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\FileIconExtension.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\FileIconTypeAttribute.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\files.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\filesfeed.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\filesupload.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\ReqForm.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\student\StudentMaster_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\survey.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\SurveyNotAvailable.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\user_survey_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\user_survey_SurveyMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\user_survey_SurveyMaster_noMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\survey\user_survey_thankyou.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\CourseRegistrationWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\TestWizardPage.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_AccommodationsLetter.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_AccommodationsLetters.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_book.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_bookexam.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_bookexam2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_bookexams.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_Message.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_TestMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_TestMaster_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_TestMaster_nomenu_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_Thankyou.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_ThankyouExam.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_test_ThankyouExam2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\test\user_TutorSchedule_MyUpcomingAppts2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\AvailabilityEvent.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\BookTutoringAppointmentAttemptResult.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\CalendarAppointmentWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\CourseReg.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\DeleteAppointmentResultWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\DynamicDataItemWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\eDynamicDataControlCodeWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\MyTutorWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\TutorInfoWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_agreement.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_book.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_Calendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_ConfirmBooking.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_Help.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_MyTutors.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_TutorCalendarConfirmBooking.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_TutoringStudents.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_TutoringStudents_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringStudents\user_TutoringStudents_TutorProfile.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\AddAvailabilityResult.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\AvailabilityDuration.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\AvailabilityScheduleDateAndTimesWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\AvailabilityScheduleDateAndTimeWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\AvailabilityScheduleTimeWrapper.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\SpecialDayItem.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_agreement.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_app.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_availability.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_availabilityEdit.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_availabilityRemove.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_bio.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_tutoringTutors_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_registration.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_TutorCalendar.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_TutorCalendarList.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_TutoringTutors.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_TutoringTutors_nomenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\TutoringTutors\user_TutoringTutors_WaitForApproval.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\UserMasterNoMenuR.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\UserMasterR.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\user_err.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\user_Logout.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\user_UserMaster.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\user_UserMasterNoMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_agreement.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_ben.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_benchange.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_err.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_Login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_register.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_vet.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\vet\user_vet_vet_noMenu.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_Default.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_login.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_Message.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_MyUpcomingAppts.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_Newuser.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_SubmitComment.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_thankyou.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_Workshop2.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_workshopapply.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_workshopattendance.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_workshopbook.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_workshoppost.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\user\workshop2\user_workshop2_workshops.cs" />
+    <Compile Include="TechnoPro\ClockWorkWeb\WebApiConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ClockWorkWeb.dll.licenses" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AjaxControlToolkit\AjaxControlToolkit.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25EB}</Project>
+      <Name>AjaxControlToolkit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkController\ClockWorkController.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F1}</Project>
+      <Name>ClockWorkController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkWebAPIWeb\ClockWorkWebAPIWeb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FF}</Project>
+      <Name>ClockWorkWebAPIWeb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkWebAPI\ClockWorkWebAPI.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FE}</Project>
+      <Name>ClockWorkWebAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ClientCaching\Common.ClientManager.ClientCaching.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2601}</Project>
+      <Name>Common.ClientManager.ClientCaching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Compression\Common.Compression.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2605}</Project>
+      <Name>Common.Compression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2606}</Project>
+      <Name>Common.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Impl\Common.DAO.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2625}</Project>
+      <Name>Common.DAO.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Auth\Common.UI.ClientManager.Web.Auth.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264A}</Project>
+      <Name>Common.UI.ClientManager.Web.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core.Impl.Local\Common.UI.ClientManager.Web.Core.Impl.Local.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264C}</Project>
+      <Name>Common.UI.ClientManager.Web.Core.Impl.Local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core\Common.UI.ClientManager.Web.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264B}</Project>
+      <Name>Common.UI.ClientManager.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.AccommodationsRequest\Common.UI.Web.AccommodationsRequest.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264D}</Project>
+      <Name>Common.UI.Web.AccommodationsRequest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.ClockWork\Common.UI.Web.ClockWork.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264F}</Project>
+      <Name>Common.UI.Web.ClockWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Entity\Common.UI.Web.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2653}</Project>
+      <Name>Common.UI.Web.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Mappers\Common.UI.Web.Mappers.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2656}</Project>
+      <Name>Common.UI.Web.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Veterans\Common.UI.Web.Veterans.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2658}</Project>
+      <Name>Common.UI.Web.Veterans</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web\Common.UI.Web.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2650}</Project>
+      <Name>Common.UI.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.AspNet.Identity.Core\Microsoft.AspNet.Identity.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2672}</Project>
+      <Name>Microsoft.AspNet.Identity.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.AspNet.Identity.Owin\Microsoft.AspNet.Identity.Owin.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2674}</Project>
+      <Name>Microsoft.AspNet.Identity.Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2677}</Project>
+      <Name>Microsoft.Owin.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Owin\Owin.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2682}</Project>
+      <Name>Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\skmValidators\skmValidators.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2685}</Project>
+      <Name>skmValidators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.IdentityModel\System.IdentityModel.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CE}</Project>
+      <Name>System.IdentityModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Extensions\System.Web.Extensions.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D5}</Project>
+      <Name>System.Web.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http.WebHost\System.Web.Http.WebHost.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269C}</Project>
+      <Name>System.Web.Http.WebHost</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http\System.Web.Http.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269A}</Project>
+      <Name>System.Web.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Mvc\System.Web.Mvc.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269D}</Project>
+      <Name>System.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Optimization\System.Web.Optimization.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269E}</Project>
+      <Name>System.Web.Optimization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.WebPages\System.Web.WebPages.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A1}</Project>
+      <Name>System.Web.WebPages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telerik.Web.UI\Telerik.Web.UI.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A3}</Project>
+      <Name>Telerik.Web.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

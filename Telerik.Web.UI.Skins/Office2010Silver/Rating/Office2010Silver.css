@@ -1,0 +1,1 @@
+.RadRating_Office2010Silver a,.RadRating_Office2010Silver a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Office2010Silver.Rating.Sprite.png")%>')}@media print{.RadRating_Office2010Silver a:before,.RadRating_Office2010Silver a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Office2010Silver.Rating.Sprite.png")%>')}}

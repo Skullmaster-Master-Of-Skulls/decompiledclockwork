@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2684}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ReportFunctions</RootNamespace>
+    <AssemblyName>ReportFunctions</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClockWorkDataAccessClassLibrary" />
+    <Reference Include="Common.UI.ClientManager.ClientCaching" />
+    <Reference Include="Common.UI.ClientManager.OldUserSettings" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core.Impl" />
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Reference Include="ImportExportClassLibraryMailMerge" />
+    <Reference Include="RemoteLoader" />
+    <Reference Include="SettingsPermissions" />
+    <Reference Include="TechnoPro.ClockWork.ClockWorkMigration" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatchEmail.cs" />
+    <Compile Include="BatchEmailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchEmailDialog.Designer.cs">
+      <DependentUpon>BatchEmailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BatchEmailOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchEmailOptions.Designer.cs">
+      <DependentUpon>BatchEmailOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClockWorkDataSync\Courses\ClockWorkDataSyncCourses.cs" />
+    <Compile Include="ClockWorkDataSync\Courses\DataSyncClockWorkCourse.cs" />
+    <Compile Include="ClockWorkDataSync\Courses\DataSyncCourseAction.cs" />
+    <Compile Include="ClockWorkDataSync\Courses\DataSyncExternalCourse.cs" />
+    <Compile Include="ClockWorkDataSync\Courses\DataSyncInstructor.cs" />
+    <Compile Include="ClockWorkDataSync\Courses\DataSyncTermScope.cs" />
+    <Compile Include="ClockWorkDataSync\Courses\DataSyncTimetableItem.cs" />
+    <Compile Include="ClockWorkDataSync\DataSyncAction.cs" />
+    <Compile Include="ClockWorkDataSync\DataSyncActionResult.cs" />
+    <Compile Include="ClockWorkDataSync\DataSyncActionType.cs" />
+    <Compile Include="ClockWorkDataSync\ServiceProviders\ServiceProviderCourses\ServiceProviderDataSyncCourses.cs" />
+    <Compile Include="ClockWorkDataSync\ServiceProviders\ServiceProviderData\eServiceProviderDataItemType.cs" />
+    <Compile Include="ClockWorkDataSync\ServiceProviders\ServiceProviderData\ServiceProviderDataSync.cs" />
+    <Compile Include="ClockWorkDataSync\ServiceProviders\ServiceProviderData\ServiceProviderDataSyncDataItem.cs" />
+    <Compile Include="ClockWorkDataSync\ServiceProviders\ServiceProviderData\ServiceProviderDataSyncDataItemAction.cs" />
+    <Compile Include="ClockWorkDataSync\Utility.cs" />
+    <Compile Include="ColumnIndexClass.cs" />
+    <Compile Include="ColumnIndexCollection.cs" />
+    <Compile Include="Compiler.cs" />
+    <Compile Include="CompilerImporter.cs" />
+    <Compile Include="CompilerReports.cs" />
+    <Compile Include="CsvStream.cs" />
+    <Compile Include="CustomReport.cs" />
+    <Compile Include="DataImportRule.cs" />
+    <Compile Include="DataReaderAdapter.cs" />
+    <Compile Include="DataSync\DataSyncCourse.cs" />
+    <Compile Include="DataSync\DataSyncCourseAction.cs" />
+    <Compile Include="DataSync\DataSyncCourseCompletionStatus.cs" />
+    <Compile Include="DataSync\DataSyncCourseError.cs" />
+    <Compile Include="DataSync\DataSyncDateScope.cs" />
+    <Compile Include="DataSync\Utility.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="DynamicDataColumn.cs" />
+    <Compile Include="ExecuteScriptCache.cs" />
+    <Compile Include="ExecuteScriptCacheItem.cs" />
+    <Compile Include="FunctionCode.cs" />
+    <Compile Include="IncrementProgressBar.cs" />
+    <Compile Include="InputList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputList.Designer.cs">
+      <DependentUpon>InputList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iReportFunctionParameter.cs" />
+    <Compile Include="MialingLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MialingLabels.Designer.cs">
+      <DependentUpon>MialingLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDataGridView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="ReportData.cs" />
+    <Compile Include="ReportDataCollection.cs" />
+    <Compile Include="ReportFormatted.cs" />
+    <Compile Include="ReportFunction.cs" />
+    <Compile Include="ReportFunctionCore.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControlsFactory.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_BatchEmail3.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_CommaSeparatedWithColumnChoos.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_ControlIdChooser.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_DataSyncDataMap.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_importFileDb.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_ParameterCollect.cs" />
+    <Compile Include="ReportFunctionParameterControls\ReportFunctionParameterControl_PlainText.cs" />
+    <Compile Include="ReportFunctionParameterControls\TextParameterType.cs" />
+    <Compile Include="ReportGroup.cs" />
+    <Compile Include="ReportGroupNode.cs" />
+    <Compile Include="ReportNode.cs" />
+    <Compile Include="ReportParameter.cs" />
+    <Compile Include="ReportParameterCollection.cs" />
+    <Compile Include="ReportReportNode.cs" />
+    <Compile Include="ReportResults.cs" />
+    <Compile Include="ReportStep.cs" />
+    <Compile Include="ReportType.cs" />
+    <Compile Include="SetupProgressBar.cs" />
+    <Compile Include="SetupProgressBar2.cs" />
+    <Compile Include="StringEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StringEdit.Designer.cs">
+      <DependentUpon>StringEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StringInt.cs" />
+    <Compile Include="TechnoProReports.cs" />
+    <Compile Include="Variable.cs" />
+    <Compile Include="VariableCollection.cs" />
+    <Compile Include="VariablesInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VariablesInput.Designer.cs">
+      <DependentUpon>VariablesInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WsProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BatchEmailDialog.resources" />
+    <EmbeddedResource Include="BatchEmailOptions.resources" />
+    <EmbeddedResource Include="InputList.resources" />
+    <EmbeddedResource Include="MialingLabels.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_BatchEmail3.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_CommaSeparatedWithColumnChoos.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_ControlIdChooser.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_DataSyncDataMap.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_importFileDb.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_ParameterCollect.resources" />
+    <EmbeddedResource Include="ReportFunctionParameterControls\ReportFunctionParameterControl_PlainText.resources" />
+    <EmbeddedResource Include="StringEdit.resources" />
+    <EmbeddedResource Include="VariablesInput.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoComboBox\AutoComboBox.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25ED}</Project>
+      <Name>AutoComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkAPI\ClockWorkAPI.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F0}</Project>
+      <Name>ClockWorkAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Mappers\Common.Core.Mappers.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2617}</Project>
+      <Name>Common.Core.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Impl\Common.DAO.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2625}</Project>
+      <Name>Common.DAO.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataFileIO.cs\Common.DataFileIO.cs.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE262F}</Project>
+      <Name>Common.DataFileIO.cs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicScreens\DynamicScreens.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2664}</Project>
+      <Name>DynamicScreens</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailClassLibrary\EmailClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2665}</Project>
+      <Name>EmailClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Services\System.Web.Services.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C1}</Project>
+      <Name>System.Web.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

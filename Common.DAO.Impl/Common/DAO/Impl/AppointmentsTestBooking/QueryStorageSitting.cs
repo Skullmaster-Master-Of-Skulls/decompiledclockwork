@@ -1,0 +1,32 @@
+﻿using System;
+
+namespace TechnoPro.Common.DAO.Impl.AppointmentsTestBooking
+{
+	// Token: 0x0200014F RID: 335
+	internal static class QueryStorageSitting
+	{
+		// Token: 0x040005B5 RID: 1461
+		private const string QS_BASE_SITTINGS_A = "SELECT es.sittingid,es.title AS sittingtitle,es.examdate AS sittingexamdate,\r\n es.datecreated AS sittingdatecreated,es.whocreated AS sittingwhocreated,\r\n es.invigilatorpid AS sittinginvigilatorpid,\r\n es.invigilatorconfirmed AS sittinginvigilatorconfirmed,es.rateofpay AS sittingrateofpay,\r\n es.roompid AS sittingroompid,es.location AS sittinglocation,\r\n es.privatenotes AS sittingprivatenotes,es.invigilatornotes AS sittinginvigilatornotes,\r\n es.scheduledstarttime AS sittingscheduledstarttime,es.scheduledendtime AS sittingscheduledendtime,\r\n es.actualtimein AS sittingactualtimein,es.actualtimeout AS sittingactualtimeout,\r\n es.cancelled AS sittingcancelled,es.paydate AS sittingpaydate,es.isprivate AS sittingisprivate,\r\n sittingroom.firstname AS sittingroomname,\r\n MIN(a.startdate) AS minstartdate,MAX(a.enddate) AS maxenddate\r\nFROM    examsitting es LEFT JOIN people ip ON ip.personid=es.invigilatorpid\r\n        LEFT JOIN people sittingroom ON sittingroom.personid=es.roompid\r\n\t\tLEFT JOIN appointments a ON a.sittingid=es.sittingid\r\n";
+
+		// Token: 0x040005B6 RID: 1462
+		private const string QS_BASE_SITTINGS_B = "\r\nGROUP BY es.sittingid,es.title,es.examdate,\r\nes.datecreated,es.whocreated,es.invigilatorpid,es.invigilatorconfirmed,es.rateofpay,\r\nes.roompid,es.location,\r\nes.privatenotes,es.invigilatornotes,\r\nes.scheduledstarttime,es.scheduledendtime,\r\nes.actualtimein,es.actualtimeout,\r\nes.cancelled,es.paydate,es.isprivate,\r\nsittingroom.firstname\r\nORDER BY es.examdate";
+
+		// Token: 0x040005B7 RID: 1463
+		internal const string QS_SITTING_BY_ID = "SELECT es.sittingid,es.title AS sittingtitle,es.examdate AS sittingexamdate,\r\n es.datecreated AS sittingdatecreated,es.whocreated AS sittingwhocreated,\r\n es.invigilatorpid AS sittinginvigilatorpid,\r\n es.invigilatorconfirmed AS sittinginvigilatorconfirmed,es.rateofpay AS sittingrateofpay,\r\n es.roompid AS sittingroompid,es.location AS sittinglocation,\r\n es.privatenotes AS sittingprivatenotes,es.invigilatornotes AS sittinginvigilatornotes,\r\n es.scheduledstarttime AS sittingscheduledstarttime,es.scheduledendtime AS sittingscheduledendtime,\r\n es.actualtimein AS sittingactualtimein,es.actualtimeout AS sittingactualtimeout,\r\n es.cancelled AS sittingcancelled,es.paydate AS sittingpaydate,es.isprivate AS sittingisprivate,\r\n sittingroom.firstname AS sittingroomname,\r\n MIN(a.startdate) AS minstartdate,MAX(a.enddate) AS maxenddate\r\nFROM    examsitting es LEFT JOIN people ip ON ip.personid=es.invigilatorpid\r\n        LEFT JOIN people sittingroom ON sittingroom.personid=es.roompid\r\n\t\tLEFT JOIN appointments a ON a.sittingid=es.sittingid\r\nWHERE   es.sittingid=@sittingid\r\nGROUP BY es.sittingid,es.title,es.examdate,\r\nes.datecreated,es.whocreated,es.invigilatorpid,es.invigilatorconfirmed,es.rateofpay,\r\nes.roompid,es.location,\r\nes.privatenotes,es.invigilatornotes,\r\nes.scheduledstarttime,es.scheduledendtime,\r\nes.actualtimein,es.actualtimeout,\r\nes.cancelled,es.paydate,es.isprivate,\r\nsittingroom.firstname\r\nORDER BY es.examdate";
+
+		// Token: 0x040005B8 RID: 1464
+		internal const string QS_SITTINGS_BY_DATE_RANGE = "SELECT es.sittingid,es.title AS sittingtitle,es.examdate AS sittingexamdate,\r\n es.datecreated AS sittingdatecreated,es.whocreated AS sittingwhocreated,\r\n es.invigilatorpid AS sittinginvigilatorpid,\r\n es.invigilatorconfirmed AS sittinginvigilatorconfirmed,es.rateofpay AS sittingrateofpay,\r\n es.roompid AS sittingroompid,es.location AS sittinglocation,\r\n es.privatenotes AS sittingprivatenotes,es.invigilatornotes AS sittinginvigilatornotes,\r\n es.scheduledstarttime AS sittingscheduledstarttime,es.scheduledendtime AS sittingscheduledendtime,\r\n es.actualtimein AS sittingactualtimein,es.actualtimeout AS sittingactualtimeout,\r\n es.cancelled AS sittingcancelled,es.paydate AS sittingpaydate,es.isprivate AS sittingisprivate,\r\n sittingroom.firstname AS sittingroomname,\r\n MIN(a.startdate) AS minstartdate,MAX(a.enddate) AS maxenddate\r\nFROM    examsitting es LEFT JOIN people ip ON ip.personid=es.invigilatorpid\r\n        LEFT JOIN people sittingroom ON sittingroom.personid=es.roompid\r\n\t\tLEFT JOIN appointments a ON a.sittingid=es.sittingid\r\nWHERE   es.examdate>=@startdate AND es.examdate<@enddate\r\nGROUP BY es.sittingid,es.title,es.examdate,\r\nes.datecreated,es.whocreated,es.invigilatorpid,es.invigilatorconfirmed,es.rateofpay,\r\nes.roompid,es.location,\r\nes.privatenotes,es.invigilatornotes,\r\nes.scheduledstarttime,es.scheduledendtime,\r\nes.actualtimein,es.actualtimeout,\r\nes.cancelled,es.paydate,es.isprivate,\r\nsittingroom.firstname\r\nORDER BY es.examdate";
+
+		// Token: 0x040005B9 RID: 1465
+		internal const string QI_EXAM_SITTING = "INSERT INTO examsitting (title,examdate,datecreated,whocreated,invigilatorpid\r\n    ,invigilatorconfirmed,rateofpay,roompid,location,privatenotes,invigilatornotes\r\n    ,scheduledstarttime,scheduledendtime,actualtimein,actualtimeout,cancelled\r\n    ,paydate,isprivate)\r\nVALUES (@title,@examdate,getdate(),@whocreated,@invigilatorpid\r\n    ,@invigilatorconfirmed,@rateofpay,@roompid,@location,@privatenotes,@invigilatornotes\r\n    ,@scheduledstarttime,@scheduledendtime,@actualtimein,@actualtimeout,@cancelled\r\n    ,@paydate,@isprivate);\r\nSELECT CAST(SCOPE_IDENTITY() AS int) AS sittingid";
+
+		// Token: 0x040005BA RID: 1466
+		internal const string QD_SITTING = "UPDATE appointments SET sittingid=NULL WHERE sittingid=@id;\r\nDELETE FROM examsitting WHERE sittingid=@id";
+
+		// Token: 0x040005BB RID: 1467
+		internal const string QU_TEST_SITTING = "UPDATE appointments SET sittingid=@sittingid WHERE appointmentid=@appid";
+
+		// Token: 0x040005BC RID: 1468
+		internal const string QU_EXAM_SITTING = "UPDATE examsitting SET title=@title,examdate=@examdate,invigilatorpid=@invigilatorpid\r\n    ,invigilatorconfirmed=@invigilatorconfirmed,rateofpay=@rateofpay,roompid=@roompid\r\n    ,location=@location,privatenotes=@privatenotes,invigilatornotes=@invigilatornotes\r\n    ,scheduledstarttime=@scheduledstarttime,scheduledendtime=@scheduledendtime\r\n    ,actualtimein=@actualtimein,actualtimeout=@actualtimeout,cancelled=@cancelled,paydate=@paydate\r\n    ,isprivate=@isprivate\r\nWHERE sittingid=@sittingid";
+	}
+}

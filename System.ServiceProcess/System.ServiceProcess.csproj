@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.ServiceProcess</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="ExternDll.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="HResults.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SafeServiceHandle.cs" />
+    <Compile Include="ServiceProcess\Design\ServiceInstallerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceProcess\Design\ServiceInstallerDialog.Designer.cs">
+      <DependentUpon>ServiceInstallerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProcess\Design\ServiceInstallerDialogResult.cs" />
+    <Compile Include="ServiceProcess\Design\ServiceNameConverter.cs" />
+    <Compile Include="ServiceProcess\NativeMethods.cs" />
+    <Compile Include="ServiceProcess\PowerBroadcastStatus.cs" />
+    <Compile Include="ServiceProcess\Res.cs" />
+    <Compile Include="ServiceProcess\ResCategoryAttribute.cs" />
+    <Compile Include="ServiceProcess\ResDescriptionAttribute.cs" />
+    <Compile Include="ServiceProcess\SafeNativeMethods.cs" />
+    <Compile Include="ServiceProcess\ServiceAccount.cs" />
+    <Compile Include="ServiceProcess\ServiceBase.cs" />
+    <Compile Include="ServiceProcess\ServiceController.cs" />
+    <Compile Include="ServiceProcess\ServiceControllerPermission.cs" />
+    <Compile Include="ServiceProcess\ServiceControllerPermissionAccess.cs" />
+    <Compile Include="ServiceProcess\ServiceControllerPermissionAttribute.cs" />
+    <Compile Include="ServiceProcess\ServiceControllerPermissionEntry.cs" />
+    <Compile Include="ServiceProcess\ServiceControllerPermissionEntryCollection.cs" />
+    <Compile Include="ServiceProcess\ServiceControllerStatus.cs" />
+    <Compile Include="ServiceProcess\ServiceInstaller.cs" />
+    <Compile Include="ServiceProcess\ServiceProcessDescriptionAttribute.cs" />
+    <Compile Include="ServiceProcess\ServiceProcessInstaller.cs" />
+    <Compile Include="ServiceProcess\ServiceStartMode.cs" />
+    <Compile Include="ServiceProcess\ServiceType.cs" />
+    <Compile Include="ServiceProcess\SessionChangeDescription.cs" />
+    <Compile Include="ServiceProcess\SessionChangeReason.cs" />
+    <Compile Include="ServiceProcess\Telemetry\ServiceProcessTraceLogger.cs" />
+    <Compile Include="ServiceProcess\TimeoutException.cs" />
+    <Compile Include="ServiceProcess\UnsafeNativeMethods.cs" />
+    <Compile Include="ThisAssembly.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServiceProcess\Design\ServiceInstallerDialog.resources" />
+    <EmbeddedResource Include="ServiceProcess\resources" />
+    <EmbeddedResource Include="ServiceProcess\ServiceController.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.Install\System.Configuration.Install.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B3}</Project>
+      <Name>System.Configuration.Install</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

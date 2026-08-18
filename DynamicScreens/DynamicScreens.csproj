@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2664}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicScreens</RootNamespace>
+    <AssemblyName>DynamicScreens</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aga.Controls" />
+    <Reference Include="Common.UI.ClientManager.ClientCaching" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core.Impl" />
+    <Reference Include="Common.UI.WinForms.CoreComponents" />
+    <Reference Include="Common.UI.WinForms.DynamicFormsControls" />
+    <Reference Include="Common.UI.WinForms.Entity" />
+    <Reference Include="Common.UI.WinForms.People" />
+    <Reference Include="Common.UI.WinForms.SigPlus" />
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Reference Include="MathCalc" />
+    <Reference Include="Microsoft.Data.Odbc" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accommodation.cs" />
+    <Compile Include="AddNewUserRequest.cs" />
+    <Compile Include="AdminTools\ControlCaptionsEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTools\ControlCaptionsEditor.Designer.cs">
+      <DependentUpon>ControlCaptionsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTools\LookupItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTools\LookupItemEdit.Designer.cs">
+      <DependentUpon>LookupItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTools\LookupListEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTools\LookupListEdit.Designer.cs">
+      <DependentUpon>LookupListEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTools\ScreenDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTools\ScreenDetails.Designer.cs">
+      <DependentUpon>ScreenDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTools\ScreensEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTools\ScreensEditor.Designer.cs">
+      <DependentUpon>ScreensEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminTools\ScreenTypeChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTools\ScreenTypeChooser.Designer.cs">
+      <DependentUpon>ScreenTypeChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cols.cs" />
+    <Compile Include="CompileFormCodeBehindHandler.cs" />
+    <Compile Include="ControlCodes.cs" />
+    <Compile Include="Controls\CalcControl.cs" />
+    <Compile Include="Controls\CalculationButton.cs" />
+    <Compile Include="Controls\CtrlLinkLabel.cs" />
+    <Compile Include="CustomControls\DynamicControlChooser.cs" />
+    <Compile Include="CustomControls\DynamicControls\AppointmentHistory.cs" />
+    <Compile Include="CustomControls\DynamicControls\CaseDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DynamicControls\CaseDetail.Designer.cs">
+      <DependentUpon>CaseDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\DynamicControls\CaseNewClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DynamicControls\CaseNewClient.Designer.cs">
+      <DependentUpon>CaseNewClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\DynamicControls\CaseSingle.cs" />
+    <Compile Include="CustomControls\DynamicControls\ClientType.cs" />
+    <Compile Include="CustomControls\DynamicControls\EmailHistory.cs" />
+    <Compile Include="CustomControls\DynamicControls\EmailHistoryMode.cs" />
+    <Compile Include="CustomControls\DynamicControls\PMTable.cs" />
+    <Compile Include="CustomControls\MultiDatabaseItemSelect.cs" />
+    <Compile Include="DataTables.cs" />
+    <Compile Include="DateDefaultValue.cs" />
+    <Compile Include="Dialogs\DynamicControlChooserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DynamicControlChooserForm.Designer.cs">
+      <DependentUpon>DynamicControlChooserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropListBehaviour.cs" />
+    <Compile Include="DynamicControl.cs" />
+    <Compile Include="DynamicControlCache.cs" />
+    <Compile Include="DynamicControlCacheCollection.cs" />
+    <Compile Include="DynamicControlCollection.cs" />
+    <Compile Include="DynamicControlControl.cs" />
+    <Compile Include="DynamicControlParameter.cs" />
+    <Compile Include="DynamicControlParameterCollection.cs" />
+    <Compile Include="DynamicControlParameterDataType.cs" />
+    <Compile Include="DynamicControlSetting.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_AccommodationChk.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_AccommodationCmb.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_AccommodationDtp.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_AccommodationTxt.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_AppointmentHistory.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_Base.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_BlankSpace.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_CalcButton.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_CaseComboBox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_Checkbox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_ColumnBreak.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_DatabaseListMultiChooser.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_Date.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_DropList.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_DynamicControlsChooser.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_DynamicTable.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_EmailHistory.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_FileTable.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_FormSettings.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_HelperClass.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_HRule.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_InfoBox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_Label.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_ListSelect.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_MaskedTextBox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_MultiCheckbox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_MultiCheckboxDroplist.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_MultiCheckboxTextbox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_MultiDatabaseItemChooser.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_MultiLineTextBox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_PanelStart.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_Picture.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_PMTable.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_RadioGroup.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_RichTextbox.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_StaffDropList.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_TabControl.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_Table.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_TableControl.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_TabPage.cs" />
+    <Compile Include="DynamicControlWrappers\DynamicControlWrapper_TextBox.cs" />
+    <Compile Include="DynamicControlWrappers\eCharacterCasing.cs" />
+    <Compile Include="DynamicControlWrappers\eLabelOrientation.cs" />
+    <Compile Include="DynamicControlWrappers\MultiItemDefaultSelection.cs" />
+    <Compile Include="DynamicControlWrappers\NameIntValue.cs" />
+    <Compile Include="DynamicControlWrappers\NameIntValueCollection.cs" />
+    <Compile Include="DynamicControlWrappers\SpecialPerAppointmentControlType.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\ClockWorkUserGroupIdConverter.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\DropListStyleEnumConverter.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\HE_GlobalVars.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\HE_GlobalVars_ClockWorkGroupList.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\RichTextPropertyEditor.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\RichTextPropertyEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicControlWrappers\TypeConverters\RichTextPropertyEditorForm.Designer.cs">
+      <DependentUpon>RichTextPropertyEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicControlWrappers\TypeConverters\RuleConverter.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\StringIntTypeConverter.cs" />
+    <Compile Include="DynamicControlWrappers\TypeConverters\StringIntValue.cs" />
+    <Compile Include="DynamicDataExtraInfo.cs" />
+    <Compile Include="DynamicDataExtraInfoCollection.cs" />
+    <Compile Include="DynamicDataField.cs" />
+    <Compile Include="DynamicDataFieldCollection.cs" />
+    <Compile Include="DynamicDataItemValue.cs" />
+    <Compile Include="DynamicData\DynamicDataField.cs" />
+    <Compile Include="DynamicData\DynamicDataStatus.cs" />
+    <Compile Include="DynamicData\DynamicDataStorageLocation.cs" />
+    <Compile Include="DynamicData\DynamicDataValue.cs" />
+    <Compile Include="DynamicListGroup.cs" />
+    <Compile Include="DynamicListGroupCollection.cs" />
+    <Compile Include="DynamicListItem.cs" />
+    <Compile Include="DynamicScreen.cs" />
+    <Compile Include="DynamicScreenAdapters.cs" />
+    <Compile Include="eDynamicDataItemValueType.cs" />
+    <Compile Include="EnforceType.cs" />
+    <Compile Include="MeasurementUnit.cs" />
+    <Compile Include="ModificationType.cs" />
+    <Compile Include="MyIconNode.cs" />
+    <Compile Include="PanelBorderStyle.cs" />
+    <Compile Include="PanelInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Reports.cs" />
+    <Compile Include="Screen.cs" />
+    <Compile Include="ScreenCollection.cs" />
+    <Compile Include="ScreenEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScreenEditor.Designer.cs">
+      <DependentUpon>ScreenEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenInfo.cs" />
+    <Compile Include="ScreenType.cs" />
+    <Compile Include="ShowListEditDialog.cs" />
+    <Compile Include="StaffDropListDefaultValue.cs" />
+    <Compile Include="StudentData.cs" />
+    <Compile Include="TextBoxEnterModifyBehaviour.cs" />
+    <Compile Include="UseDefaults.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminTools\ControlCaptionsEditor.resources" />
+    <EmbeddedResource Include="AdminTools\LookupItemEdit.resources" />
+    <EmbeddedResource Include="AdminTools\LookupListEdit.resources" />
+    <EmbeddedResource Include="AdminTools\ScreenDetails.resources" />
+    <EmbeddedResource Include="AdminTools\ScreensEditor.resources" />
+    <EmbeddedResource Include="AdminTools\ScreenTypeChooser.resources" />
+    <EmbeddedResource Include="Controls\CalculationButton.resources" />
+    <EmbeddedResource Include="CustomControls\DynamicControlChooser.resources" />
+    <EmbeddedResource Include="CustomControls\DynamicControls\AppointmentHistory.resources" />
+    <EmbeddedResource Include="CustomControls\DynamicControls\CaseDetail.resources" />
+    <EmbeddedResource Include="CustomControls\DynamicControls\CaseNewClient.resources" />
+    <EmbeddedResource Include="CustomControls\DynamicControls\EmailHistory.resources" />
+    <EmbeddedResource Include="CustomControls\DynamicControls\PMTable.resources" />
+    <EmbeddedResource Include="CustomControls\MultiDatabaseItemSelect.resources" />
+    <EmbeddedResource Include="Dialogs\DynamicControlChooserForm.resources" />
+    <EmbeddedResource Include="dll.licenses" />
+    <EmbeddedResource Include="DynamicControlWrappers\TypeConverters\RichTextPropertyEditorForm.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="ScreenEditor.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoComboBox\AutoComboBox.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25ED}</Project>
+      <Name>AutoComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

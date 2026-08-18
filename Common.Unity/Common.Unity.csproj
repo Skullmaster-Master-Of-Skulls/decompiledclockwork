@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2659}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.Unity</RootNamespace>
+    <AssemblyName>Common.Unity</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\AssemblyAdapter.cs" />
+    <Compile Include="Adapters\ObjectHelper.cs" />
+    <Compile Include="Adapters\TypesAdapter.cs" />
+    <Compile Include="IoC\ConventionInjection.cs" />
+    <Compile Include="IoC\DefaultFrameworkInjection.cs" />
+    <Compile Include="IoC\DefaultLifetime.cs" />
+    <Compile Include="IoC\IConventionInjection.cs" />
+    <Compile Include="IoC\IcwLifetimeManager.cs" />
+    <Compile Include="IoC\IcwObject.cs" />
+    <Compile Include="IoC\IObjectLifeTimeManager.cs" />
+    <Compile Include="IoC\NamedType.cs" />
+    <Compile Include="IoC\ObjectFactory.cs" />
+    <Compile Include="IoC\PerRegistrationContextLifeTimeManager.cs" />
+    <Compile Include="IoC\PerTypeContextLifeTimeManager.cs" />
+    <Compile Include="IoC\SingletonIcwObject.cs" />
+    <Compile Include="IoC\SingletonObjectLifetimeManager.cs" />
+    <Compile Include="IoC\TransientIcwObject.cs" />
+    <Compile Include="IoC\TransientObjectLifetimeManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Practices.Unity.Configuration\Microsoft.Practices.Unity.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2679}</Project>
+      <Name>Microsoft.Practices.Unity.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Practices.Unity\Microsoft.Practices.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE267A}</Project>
+      <Name>Microsoft.Practices.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

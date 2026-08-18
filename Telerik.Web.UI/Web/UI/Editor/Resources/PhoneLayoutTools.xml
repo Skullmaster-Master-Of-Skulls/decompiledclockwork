@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<headertools>
+		<tool name="Undo" position="Left" />
+		<tool name="Redo" position="Left" />
+		<tool name="MobileEdit" position="Right" />
+		<tool name="FindAndReplace" position="Right" />
+		<tool name="ToggleEditMode" position="Right" />
+		<tool name="ToggleScreenMode" position="Right" />
+	</headertools>
+	<tools tab="Home">
+		<tool name="FontName"/>
+		<tool separator="true"/>
+		<tool name="RealFontSize"/>
+		<tool separator="true"/>
+		<tool name="Bold"/>
+		<tool name="Italic"/>
+		<tool name="Underline"/>
+		<tool name="StrikeThrough"/>
+		<tool separator="true"/>
+		<tool name="ForeColor"/>
+		<tool separator="true"/>
+		<tool name="BackColor"/>
+		<tool separator="true"/>
+		<tool name="ApplyClass"/>
+		<tool name="FormatBlock"/>
+		<tool separator="true"/>
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+		<tool name="JustifyNone" />
+		<tool separator="true"/>
+		<tool name="InsertOrderedList" />
+		<tool name="InsertUnorderedList" />
+		<tool separator="true"/>
+		<tool name="Indent" />
+		<tool name="Outdent" />
+		<tool separator="true"/>
+		<tool name="FormatStripper"/>
+	</tools>
+	<tools tab="Insert">
+		<tool name="InsertTableDialog" showtext="true" />
+		<tool separator="true"/>
+		<tool name="ImageManager" showtext="true" />
+		<tool separator="true"/>
+		<tool name="LinkManager" showtext="true" />
+		<tool separator="true"/>
+	</tools>
+	<tools tab="Image" context="img">
+		<tool name="ImageSizeMargins" showtext="true" />
+		<tool separator="true" />
+		<tool name="ImageBorder" showtext="true" />
+		<tool separator="true" />
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+		<tool name="JustifyNone" />
+		<tool separator="true" />
+		<tool name="ApplyClass" />
+		<tool name="SetImageProperties" showtext="true" />
+	</tools>
+	<tools tab="Link" context="a">
+		<tool name="OpenLink" showtext="true" />
+	</tools>
+	<tools tab="Link" context="a">
+		<tool name="ApplyClass" />
+		<tool separator="true"/>
+		<tool name="SetLinkProperties" showtext="true" />
+		<tool separator="true"/>
+		<tool name="Unlink" title="Remove Link" showtext="true" />
+	</tools>
+	<tools tab="Table" context="table">
+		<tool name="InsertTableItems" />
+		<tool name="DeleteTableItems" />
+		<tool name="MergeSplitCells" />
+	</tools>
+	<tools tab="Table" context="table">
+		<tool name="TableBorder" showtext="true" />
+		<tool separator="true"/>
+		<tool name="BackColor" />
+		<tool name="ApplyClass" />
+		<tool name="MobileTableProperties" showtext="true" />
+	</tools>
+	<tools tab="Table" context="table">
+		<tool name="CellBorder" showtext="true" />
+	</tools>
+	<tools tab="Table" context="table">
+		<tool name="TopLeftCellAlign" />
+		<tool name="TopCenterCellAlign" />
+		<tool name="TopRightCellAlign" />
+		<tool name="MiddleLeftCellAlign" />
+		<tool name="MiddleCenterCellAlign" />
+		<tool separator="true" />
+		<tool name="MiddleRightCellAlign" />
+		<tool name="BottomLeftCellAlign" />
+		<tool name="BottomCenterCellAlign" />
+		<tool name="BottomRightCellAlign" />
+		<tool name="NoCellAlign" />
+	</tools>
+  <colors>
+    <color value=""/>
+    <color value="#ffffff"/>
+    <color value="#f2f2f2"/>
+    <color value="#d8d8d8"/>
+    <color value="#bfbfbf"/>
+    <color value="#a5a5a5"/>
+    <color value="#7f7f7f"/>
+    <color value="#000000"/>
+    <color value="#7f7f7f"/>
+    <color value="#595959"/>
+    <color value="#3f3f3f"/>
+    <color value="#262626"/>
+    <color value="#0c0c0c"/>
+    <color value="#eeece1"/>
+    <color value="#ddd9c3"/>
+    <color value="#c4bd97"/>
+    <color value="#938953"/>
+    <color value="#494429"/>
+    <color value="#1d1b10"/>
+    <color value="#1f497d"/>
+    <color value="#c6d9f0"/>
+    <color value="#8db3e2"/>
+    <color value="#548dd4"/>
+    <color value="#17365d"/>
+    <color value="#0f243e"/>
+    <color value="#4f81bd"/>
+    <color value="#dbe5f1"/>
+    <color value="#b8cce4"/>
+    <color value="#95b3d7"/>
+    <color value="#366092"/>
+    <color value="#244061"/>
+    <color value="#c0504d"/>
+    <color value="#f2dcdb"/>
+    <color value="#e5b9b7"/>
+    <color value="#d99694"/>
+    <color value="#953734"/>
+    <color value="#632423"/>
+    <color value="#9bbb59"/>
+    <color value="#ebf1dd"/>
+    <color value="#d7e3bc"/>
+    <color value="#c3d69b"/>
+    <color value="#76923c"/>
+    <color value="#4f6128"/>
+    <color value="#8064a2"/>
+    <color value="#e5e0ec"/>
+    <color value="#ccc1d9"/>
+    <color value="#b2a2c7"/>
+    <color value="#5f497a"/>
+    <color value="#3f3151"/>
+    <color value="#4bacc6"/>
+    <color value="#dbeef3"/>
+    <color value="#b7dde8"/>
+    <color value="#92cddc"/>
+    <color value="#31859b"/>
+    <color value="#205867"/>
+    <color value="#f79646"/>
+    <color value="#fdeada"/>
+    <color value="#fbd5b5"/>
+    <color value="#e8b285"/>
+    <color value="#e36c09"/>
+    <color value="#974806"/>
+  </colors>
+  <modules>
+    <module name="RadEditorDomInspector" visible="true" enabled="true"/>
+  </modules>
+</root>

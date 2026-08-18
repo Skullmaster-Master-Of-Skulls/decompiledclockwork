@@ -1,0 +1,38 @@
+﻿using System;
+
+namespace TechnoPro.Common.DAO.Impl.AppointmentSync
+{
+	// Token: 0x0200013F RID: 319
+	public class QueryStorageAppointments
+	{
+		// Token: 0x0400058A RID: 1418
+		internal const string QS_LOAD_ATTENDEES = "SELECT orderid AS appointmentid INTO #t1 FROM splitorderids(@appids,',')\r\n\r\nSELECT\tatt.AppointmentID,att.AttendeeID,att.PersonID,att.miscCode,att.noShow,\r\n\t\tp.firstName,p.lastName,p.student_no\r\nFROM\tAttendees att LEFT JOIN people p ON p.PersonID=att.PersonID\r\nWHERE\tatt.AppointmentID IN (SELECT appointmentid FROM #t1)\r\n\r\nDROP TABLE #t1";
+
+		// Token: 0x0400058B RID: 1419
+		internal const string QS_CLOCKWORK_APP_CHANGES_FROM_DATE = "IF DATEDIFF(day,@syncstate,getdate()) < 45\r\nBEGIN\r\n\tSELECT x.howModifiedCode,x.appointmentID,x.dateModified \r\n\tINTO #t1\r\n\tFROM\r\n\t(\r\n\tSELECT am.howModifiedCode,am.appointmentID,am.dateModified\r\n\t\tFROM    appointmentsmodifieddates am\r\n\t\tWHERE    am.dateModified>=@syncstate AND personid>0\r\n\t\tUNION\r\n\t\tSELECT    0 AS howModifiedCode,a.appointmentID,a.dateadded\r\n\t\tFROM    AppointmentsFastLoad a\r\n\t\tWHERE    a.dateadded>=@syncstate\r\n\t) x\r\n\r\n\tSELECT\tdistinct y.howModifiedCode,y.appointmentID,y.dateModified,y.isHidden,y.isAllDayEvent\r\n\tFROM\r\n\t(\r\n\tSELECT\tCASE WHEN COALESCE(a.cancelled,CAST(1 AS BIT))=1 THEN 2 ELSE #t1.howModifiedCode END AS howModifiedCode,#t1.appointmentID,#t1.dateModified,a.ishidden,\r\n\t\t\tCASE WHEN DATEPART(hour,a.startdate)=0 AND DATEPART(minute,a.startdate)=1 AND DATEPART(hour,a.enddate)=23 AND DATEPART(minute,a.enddate)=59 THEN CAST(1 AS bit) ELSE CAST(0 AS bit) END AS isAllDayEvent\r\n\tFROM\t#t1 LEFT JOIN appointments a ON a.appointmentid=#t1.appointmentid\r\n\t\t\tLEFT JOIN attendees att ON att.AppointmentID=#t1.appointmentID \r\n\tWHERE\tatt.PersonID=@pid AND not (DATEDIFF(mi,CAST( FLOOR( CAST( startdate AS FLOAT ) ) AS DATETIME ),startdate)=0\r\n\t\t\tAND DATEDIFF(mi,CAST( FLOOR( CAST( enddate AS FLOAT ) ) AS DATETIME ),enddate)=60)\r\n\tUNION ALL\r\n\tSELECT\t2 AS howModifiedCode,#t1.appointmentID,#t1.dateModified ,a.ishidden,\r\n\t\t\tCASE WHEN DATEPART(hour,a.startdate)=0 AND DATEPART(minute,a.startdate)=1 AND DATEPART(hour,a.enddate)=23 AND DATEPART(minute,a.enddate)=59 THEN CAST(1 AS bit) ELSE CAST(0 AS bit) END AS isAllDayEvent\r\n\tFROM\t#t1 LEFT JOIN archive_appointments a ON a.AppointmentID=#t1.appointmentID\r\n\t\t\tLEFT JOIN archive_attendees att ON att.AppointmentID=#t1.appointmentID\r\n\tWHERE\tNOT #t1.appointmentID IN (SELECT appointmentid FROM appointments) --appointment was deleted\r\n\t\t\tAND att.PersonID=@pid AND not (DATEDIFF(mi,CAST( FLOOR( CAST( startdate AS FLOAT ) ) AS DATETIME ),startdate)=0\r\n\t\t\tAND DATEDIFF(mi,CAST( FLOOR( CAST( enddate AS FLOAT ) ) AS DATETIME ),enddate)=60)\r\n\t) y\r\n\tORDER BY y.appointmentID, y.dateModified DESC\r\n\r\n\tDROP TABLE #t1\r\nEND\r\nELSE\r\nBEGIN\r\n\tSELECT x.howModifiedCode,x.appointmentID,x.dateModified\r\n\tINTO #t2\r\n\tFROM\r\n\t(\r\n\tSELECT am.howModifiedCode,am.appointmentID,am.dateModified\r\n\t\tFROM    appointmentsmodifieddates am\r\n\t\tWHERE    am.dateModified>=@syncstate AND personid>0\r\n\t\tUNION\r\n\t\tSELECT    0 AS howModifiedCode,a.appointmentID,a.dateadded\r\n\t\tFROM    appointments a\r\n\t\tWHERE    a.dateadded>=@syncstate\r\n\t) x\r\n\r\n\tSELECT\tdistinct y.howModifiedCode,y.appointmentID,y.dateModified,y.isHidden,y.isAllDayEvent\r\n\tFROM\r\n\t(\r\n\tSELECT\tCASE WHEN COALESCE(a.cancelled,CAST(1 AS BIT))=1 THEN 2 ELSE #t2.howModifiedCode END AS howModifiedCode,#t2.appointmentID,#t2.dateModified,a.ishidden,\r\n\t\t\tCASE WHEN DATEPART(hour,a.startdate)=0 AND DATEPART(minute,a.startdate)=1 AND DATEPART(hour,a.enddate)=23 AND DATEPART(minute,a.enddate)=59 THEN CAST(1 AS bit) ELSE CAST(0 AS bit) END AS isAllDayEvent\r\n\tFROM\t#t2 LEFT JOIN appointments a ON a.appointmentid=#t2.appointmentid\r\n\t\t\tLEFT JOIN attendees att ON att.AppointmentID=#t2.appointmentID \r\n\tWHERE\tatt.PersonID=@pid AND not (DATEDIFF(mi,CAST( FLOOR( CAST( startdate AS FLOAT ) ) AS DATETIME ),startdate)=0\r\n\t\t\tAND DATEDIFF(mi,CAST( FLOOR( CAST( enddate AS FLOAT ) ) AS DATETIME ),enddate)=60)\r\n\tUNION ALL\r\n\tSELECT\t2 AS howModifiedCode,#t2.appointmentID,#t2.dateModified ,a.ishidden,\r\n\t\t\tCASE WHEN DATEPART(hour,a.startdate)=0 AND DATEPART(minute,a.startdate)=1 AND DATEPART(hour,a.enddate)=23 AND DATEPART(minute,a.enddate)=59 THEN CAST(1 AS bit) ELSE CAST(0 AS bit) END AS isAllDayEvent\r\n\tFROM\t#t2 LEFT JOIN archive_appointments a ON a.AppointmentID=#t2.appointmentID\r\n\t\t\tLEFT JOIN archive_attendees att ON att.AppointmentID=#t2.appointmentID\r\n\tWHERE\tNOT #t2.appointmentID IN (SELECT appointmentid FROM appointments) --appointment was deleted\r\n\t\t\tAND att.PersonID=@pid AND not (DATEDIFF(mi,CAST( FLOOR( CAST( startdate AS FLOAT ) ) AS DATETIME ),startdate)=0\r\n\t\t\tAND DATEDIFF(mi,CAST( FLOOR( CAST( enddate AS FLOAT ) ) AS DATETIME ),enddate)=60)\r\n\t) y\r\n\tORDER BY y.appointmentID, y.dateModified DESC\r\n\r\n\tDROP TABLE #t2\r\nEND";
+
+		// Token: 0x0400058C RID: 1420
+		internal const string QI_ATTENDEE = "DECLARE @rm bit\r\nIF EXISTS(SELECT personid FROM peoplegroups WHERE personid=@pid AND groupid=3)\r\n\tSET @rm = 1\r\nELSE\r\n\tSET @rm = 0\r\nIF NOT EXISTS(SELECT attendeeid FROM attendees WHERE appointmentid=@appid AND personid=@pid)\r\nBEGIN\r\n    INSERT INTO attendees (personid,appointmentid,noshow,misccode) VALUES (@pid,@appid,@noshow,@misccode);\r\n    SELECT CAST(SCOPE_IDENTITY() AS int) AS attendeeid\r\nEND\r\nELSE\r\nBEGIN\r\n    UPDATE attendees SET noshow=@noshow,misccode=@misccode WHERE appointmentid=@appid AND personid=@pid;\r\n    SELECT attendeeid FROM attendees WHERE appointmentid=@appid AND personid=@pid;\r\nEND";
+
+		// Token: 0x0400058D RID: 1421
+		internal const string QI_APPOINTMENT_MEMO = "INSERT INTO appointmentmemos (appointmentid,memotext,isencrypted) VALUES (@appid,@memotext,1)";
+
+		// Token: 0x0400058E RID: 1422
+		internal const string QI_SYNCAPPOINTMENT = "INSERT INTO appointments (apptypeid,startdate,enddate,cancelled,dateadded,personid,ishidden,islocked\r\n                            ,overridecolour,extraattendeescount,appcode,groupcode,actualstarttime,actualendtime\r\n                            ,location,examid,caseid,totalbreakminutes,sittingid,subject)\r\nVALUES (@apptypeid,@startdate,@enddate,@iscancelled,getdate(),@whobooked,@ishidden,0\r\n        ,NULL,0,0,-1,NULL,NULL\r\n        ,@location,NULL,NULL,0,NULL,@subtitle);\r\nSELECT CAST(SCOPE_IDENTITY() AS int) AS appointmentid;";
+
+		// Token: 0x0400058F RID: 1423
+		internal const string QD_ATTENDEE = "DELETE FROM attendees WHERE appointmentid=@appid AND personid=@pid";
+
+		// Token: 0x04000590 RID: 1424
+		internal const string QU_APPOINTMENT_READONLY_STATUS = "UPDATE appointments SET islocked=@isreadonly WHERE appointmentid=@appid";
+
+		// Token: 0x04000591 RID: 1425
+		internal const string QU_APPOINTMENT_CANCEL_OR_UNCANCEL = "UPDATE appointments SET cancelled=@iscancelled WHERE appointmentid=@appid";
+
+		// Token: 0x04000592 RID: 1426
+		internal const string QU_SYNCAPPOINTMENT_MEMO = "IF EXISTS(SELECT appmemoid FROM appointmentmemos WHERE appointmentid=@appid)\r\n    UPDATE appointmentmemos SET memotext=@memotext,isencrypted=1 WHERE appointmentid=@appid\r\nELSE\r\n    INSERT INTO appointmentmemos(appointmentid,memotext,isencrypted) VALUES (@appid,@memotext,1)";
+
+		// Token: 0x04000593 RID: 1427
+		internal const string QU_SYNCAPPOINTMENT = "UPDATE appointments SET startdate=@startdate,enddate=@enddate,cancelled=@iscancelled,ishidden=@ishidden,\r\nsubject=@subtitle,location=@location --apptypeid=@apptypeid\r\nWHERE appointmentid=@appointmentid";
+	}
+}

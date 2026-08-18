@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Data.OracleClient</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bid.cs" />
+    <Compile Include="BidIdentityAttribute.cs" />
+    <Compile Include="BidMetaTextAttribute.cs" />
+    <Compile Include="Configuration\PrivilegedConfigurationManager.cs" />
+    <Compile Include="Data\Common\ADP.cs" />
+    <Compile Include="Data\Common\DbConnectionOptions.cs" />
+    <Compile Include="Data\Common\DbConnectionStringBuilderDescriptor.cs" />
+    <Compile Include="Data\Common\DbConnectionStringBuilderUtil.cs" />
+    <Compile Include="Data\Common\ReadOnlyCollection.cs" />
+    <Compile Include="Data\Common\SafeNativeMethods.cs" />
+    <Compile Include="Data\Common\UnsafeNativeMethods.cs" />
+    <Compile Include="Data\OracleClient\DBConnectionString.cs" />
+    <Compile Include="Data\OracleClient\DbSqlParser.cs" />
+    <Compile Include="Data\OracleClient\DbSqlParserColumn.cs" />
+    <Compile Include="Data\OracleClient\DbSqlParserColumnCollection.cs" />
+    <Compile Include="Data\OracleClient\DbSqlParserTable.cs" />
+    <Compile Include="Data\OracleClient\DbSqlParserTableCollection.cs" />
+    <Compile Include="Data\OracleClient\MetaType.cs" />
+    <Compile Include="Data\OracleClient\NameValuePair.cs" />
+    <Compile Include="Data\OracleClient\NameValuePermission.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer_Exception.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer_LongColumnData.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer_ParameterBuffer.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer_RowBuffer.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer_ScratchBuffer.cs" />
+    <Compile Include="Data\OracleClient\NativeBuffer_ServerVersion.cs" />
+    <Compile Include="Data\OracleClient\OCI.cs" />
+    <Compile Include="Data\OracleClient\OciBindHandle.cs" />
+    <Compile Include="Data\OracleClient\OciDateTimeDescriptor.cs" />
+    <Compile Include="Data\OracleClient\OciDefineHandle.cs" />
+    <Compile Include="Data\OracleClient\OciEnlistContext.cs" />
+    <Compile Include="Data\OracleClient\OciEnvironmentHandle.cs" />
+    <Compile Include="Data\OracleClient\OciErrorHandle.cs" />
+    <Compile Include="Data\OracleClient\OciFileDescriptor.cs" />
+    <Compile Include="Data\OracleClient\OciHandle.cs" />
+    <Compile Include="Data\OracleClient\OciIntervalDescriptor.cs" />
+    <Compile Include="Data\OracleClient\OciLobDescriptor.cs" />
+    <Compile Include="Data\OracleClient\OciLobLocator.cs" />
+    <Compile Include="Data\OracleClient\OciNlsEnvironmentHandle.cs" />
+    <Compile Include="Data\OracleClient\OciParameterDescriptor.cs" />
+    <Compile Include="Data\OracleClient\OciRowidDescriptor.cs" />
+    <Compile Include="Data\OracleClient\OciServerHandle.cs" />
+    <Compile Include="Data\OracleClient\OciServiceContextHandle.cs" />
+    <Compile Include="Data\OracleClient\OciSessionHandle.cs" />
+    <Compile Include="Data\OracleClient\OciSimpleHandle.cs" />
+    <Compile Include="Data\OracleClient\OciStatementHandle.cs" />
+    <Compile Include="Data\OracleClient\OracleBFile.cs" />
+    <Compile Include="Data\OracleClient\OracleBinary.cs" />
+    <Compile Include="Data\OracleClient\OracleBoolean.cs" />
+    <Compile Include="Data\OracleClient\OracleClientFactory.cs" />
+    <Compile Include="Data\OracleClient\OracleColumn.cs" />
+    <Compile Include="Data\OracleClient\OracleCommand.cs" />
+    <Compile Include="Data\OracleClient\OracleCommandBuilder.cs" />
+    <Compile Include="Data\OracleClient\OracleCommandSet.cs" />
+    <Compile Include="Data\OracleClient\OracleConnection.cs" />
+    <Compile Include="Data\OracleClient\OracleConnectionFactory.cs" />
+    <Compile Include="Data\OracleClient\OracleConnectionString.cs" />
+    <Compile Include="Data\OracleClient\OracleConnectionStringBuilder.cs" />
+    <Compile Include="Data\OracleClient\OracleDataAdapter.cs" />
+    <Compile Include="Data\OracleClient\OracleDataReader.cs" />
+    <Compile Include="Data\OracleClient\OracleDateTime.cs" />
+    <Compile Include="Data\OracleClient\OracleEncoding.cs" />
+    <Compile Include="Data\OracleClient\OracleException.cs" />
+    <Compile Include="Data\OracleClient\OracleInfoMessageEventArgs.cs" />
+    <Compile Include="Data\OracleClient\OracleInfoMessageEventHandler.cs" />
+    <Compile Include="Data\OracleClient\OracleInternalConnection.cs" />
+    <Compile Include="Data\OracleClient\OracleLob.cs" />
+    <Compile Include="Data\OracleClient\OracleLobOpenMode.cs" />
+    <Compile Include="Data\OracleClient\OracleMonthSpan.cs" />
+    <Compile Include="Data\OracleClient\OracleNumber.cs" />
+    <Compile Include="Data\OracleClient\OracleParameter.cs" />
+    <Compile Include="Data\OracleClient\OracleParameterBinding.cs" />
+    <Compile Include="Data\OracleClient\OracleParameterCollection.cs" />
+    <Compile Include="Data\OracleClient\OraclePerformanceCounters.cs" />
+    <Compile Include="Data\OracleClient\OraclePermission.cs" />
+    <Compile Include="Data\OracleClient\OraclePermissionAttribute.cs" />
+    <Compile Include="Data\OracleClient\OracleRowUpdatedEventArgs.cs" />
+    <Compile Include="Data\OracleClient\OracleRowUpdatedEventHandler.cs" />
+    <Compile Include="Data\OracleClient\OracleRowUpdatingEventArgs.cs" />
+    <Compile Include="Data\OracleClient\OracleRowUpdatingEventHandler.cs" />
+    <Compile Include="Data\OracleClient\OracleSqlParser.cs" />
+    <Compile Include="Data\OracleClient\OracleString.cs" />
+    <Compile Include="Data\OracleClient\OracleTimeSpan.cs" />
+    <Compile Include="Data\OracleClient\OracleTransaction.cs" />
+    <Compile Include="Data\OracleClient\OracleType.cs" />
+    <Compile Include="Data\OracleClient\Res.cs" />
+    <Compile Include="Data\OracleClient\ResCategoryAttribute.cs" />
+    <Compile Include="Data\OracleClient\ResDescriptionAttribute.cs" />
+    <Compile Include="Data\OracleClient\TempEnvironment.cs" />
+    <Compile Include="Data\OracleClient\TracedNativeMethods.cs" />
+    <Compile Include="Data\OracleClient\TransactionState.cs" />
+    <Compile Include="Data\ProviderBase\DbBuffer.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionBusy.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionClosed.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionClosedBusy.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionClosedConnecting.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionClosedNeverOpened.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionClosedPreviouslyOpened.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionFactory.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionInternal.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionOpenBusy.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPool.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolCounters.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolCountersNoCounters.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolGroup.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolGroupOptions.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolGroupProviderInfo.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolIdentity.cs" />
+    <Compile Include="Data\ProviderBase\DbConnectionPoolProviderInfo.cs" />
+    <Compile Include="Data\ProviderBase\DbMetaDataFactory.cs" />
+    <Compile Include="Data\ProviderBase\DbReferenceCollection.cs" />
+    <Compile Include="Data\ProviderBase\FieldNameLookup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Data\OracleClient\OracleCommand.bmp" />
+    <EmbeddedResource Include="Data\OracleClient\OracleConnection.bmp" />
+    <EmbeddedResource Include="Data\OracleClient\OracleDataAdapter.bmp" />
+    <EmbeddedResource Include="Data\OracleClient\OracleMetaData.xml" />
+    <EmbeddedResource Include="Data\OracleClient\resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration\System.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B4}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.EnterpriseServices\System.EnterpriseServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AD}</Project>
+      <Name>System.EnterpriseServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Transactions\System.Transactions.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AF}</Project>
+      <Name>System.Transactions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

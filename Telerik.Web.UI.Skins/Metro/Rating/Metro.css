@@ -1,0 +1,1 @@
+.RadRating_Metro a,.RadRating_Metro a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Metro.Rating.Sprite.png")%>')}@media print{.RadRating_Metro a:before,.RadRating_Metro a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Metro.Rating.Sprite.png")%>')}}

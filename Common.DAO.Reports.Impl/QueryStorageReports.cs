@@ -1,0 +1,116 @@
+﻿using System;
+
+namespace TechnoPro.Common.DAO.Reports.Impl
+{
+	// Token: 0x02000006 RID: 6
+	public class QueryStorageReports
+	{
+		// Token: 0x04000007 RID: 7
+		internal const string QS_REPORT_GROUPS_IN_A_GROUP = "SELECT    g.searchgroupinfoid AS searchgroupid,g.grouptitle,g.groupdescription,g.ordernum,\r\n            g.parentsearchgroupinfoid AS parentsearchgroupid,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription\r\nFROM        searchgroupinfo g LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\nWHERE       ((@gid IS NULL OR @gid < 0) AND g.parentsearchgroupinfoid IS NULL) OR ( NOT g.parentsearchgroupinfoid IS NULL AND NOT @gid IS NULL AND g.parentsearchgroupinfoid=@gid)\r\nORDER BY g.ordernum,g.grouptitle";
+
+		// Token: 0x04000008 RID: 8
+		internal const string QS_REPORT_GROUP_BY_ID = "SELECT    g.searchgroupinfoid AS searchgroupid,g.grouptitle,g.groupdescription,g.ordernum,\r\n            g.parentsearchgroupinfoid AS parentsearchgroupid,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription\r\nFROM    searchgroupinfo g LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\nWHERE       g.searchgroupinfoid=@gid\r\nORDER BY g.ordernum,g.grouptitle";
+
+		// Token: 0x04000009 RID: 9
+		internal const string QS_BUILTBYTPRO = "SELECT BuiltByTpro FROM searchinfo WHERE searchinfoid=@rid";
+
+		// Token: 0x0400000A RID: 10
+		internal const string QS_TECHNOPRO_NOTE = "SELECT tpronote FROM searchinfo WHERE searchinfoid=@rid";
+
+		// Token: 0x0400000B RID: 11
+		internal const string QS_REPORT_EXECUTION_INFO_BY_MIN_REPORTID = "SELECT    le.reportid AS searchinfoid,le.personid AS wholastexecutedpid,le.firstname AS wholastexecutedfirstname,le.middlename AS wholastexecutedmiddlename,le.lastname AS wholastexecutedlastname,le.DateExecuted AS datelastexecuted\r\nFROM    ReportLastExecutions le \r\nWHERE   le.reportid>=@minreportid";
+
+		// Token: 0x0400000C RID: 12
+		internal const string QS_FORMATTED_REPORTS_WITH_FILE_BYTES_BY_ID = "SELECT    rim.reportfileid,rf.reportfilename AS formattedreportfilename,rf.title AS formattedreporttitle,rf.description AS formattedreportdescription,CASE WHEN @loadformattedreportbytes=1 THEN rf.reportfile ELSE CAST(NULL AS image) END AS formattedreportbytes,rf.filechecksum,rim.ordernum AS formattedreportordernum\r\nFROM        ReportFileReportIdMatching rim LEFT JOIN reportfiles rf ON rf.reportfileid=rim.reportfileid AND rf.isactive=1\r\nWHERE       rim.reportid=@reportid\r\nORDER BY    rim.ordernum,rf.title";
+
+		// Token: 0x0400000D RID: 13
+		internal const string QS_REPORT_BY_ID = "SELECT    s.searchinfoid,s.title,s.description,s.searchgroupid,s.reportoptions,\r\n            s.datecreated,s.datelastmodified,s.whocreated AS whocreatedpid,\r\n            s.wholastmodified AS wholastmodifiedpid,s.ordernum,s.searchchartinfoid,\r\n            p1.firstname AS whocreatedfirstname,p1.lastname AS whocreatedlastname,p1.student_no AS whocreatedstudent_no,\r\n            p2.firstname AS wholastmodifiedfirstname,p2.lastname AS wholastmodifiedlastname,p2.student_no AS wholastmodifiedstudent_no,\r\n            g.grouptitle,g.groupdescription,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription,g2.searchgroupinfoid AS parentsearchgroupid,\r\n            sf.searchfunctionid,sf.functioncode,sf.functionparameters,sf.ordernum AS functionordernum,sf.custom,\r\n            sf.customsqlinjection,sf.CustomSQLInjectionOperator,sf.isactive,sf.RunOnClient,s.overrideDynamicControlsScreenNum,\r\n            rim.reportfileid,rf.reportfilename AS formattedreportfilename,rf.title AS formattedreporttitle,rf.description AS formattedreportdescription,CASE WHEN @loadformattedreportbytes=1 THEN rf.reportfile ELSE CAST(NULL AS image) END AS formattedreportbytes,rf.filechecksum,rim.ordernum AS formattedreportordernum,\r\n            le.personid AS wholastexecutedpid,le.firstname AS wholastexecutedfirstname,le.middlename AS wholastexecutedmiddlename,le.lastname AS wholastexecutedlastname,\r\n            le.DateExecuted AS datelastexecuted,CASE WHEN s.BuiltByTpro IS NULL THEN CAST(0 AS bit) ELSE CAST(1 AS bit) END AS IsBuiltByTpro,\r\n            s.reportuniqueid,s.createdbylocation\r\nFROM        searchinfo s LEFT JOIN searchgroupinfo g ON g.searchgroupinfoid=s.searchgroupid\r\n            LEFT JOIN people p1 ON p1.personid=s.whocreated\r\n            LEFT JOIN people p2 ON p2.personid=s.wholastmodified\r\n            LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\n            LEFT JOIN searchfunctions sf ON sf.searchinfoid=s.searchinfoid\r\n            LEFT JOIN ReportFileReportIdMatching rim ON rim.reportid=s.searchinfoid AND rim.isactive=1\r\n            LEFT JOIN reportfiles rf ON rf.reportfileid=rim.reportfileid AND rf.isactive=1\r\n            LEFT JOIN ReportLastExecutions le ON le.ReportId=s.searchinfoid\r\nWHERE       s.searchinfoid=@rid\r\nORDER BY    g.ordernum,g.grouptitle,s.ordernum,s.title,s.searchinfoid,sf.ordernum,rim.ordernum,rf.title";
+
+		// Token: 0x0400000E RID: 14
+		internal const string QS_REPORT_BY_UNIQUE_ID = "SELECT    s.searchinfoid,s.title,s.description,s.searchgroupid,s.reportoptions,\r\n            s.datecreated,s.datelastmodified,s.whocreated AS whocreatedpid,\r\n            s.wholastmodified AS wholastmodifiedpid,s.ordernum,s.searchchartinfoid,\r\n            p1.firstname AS whocreatedfirstname,p1.lastname AS whocreatedlastname,p1.student_no AS whocreatedstudent_no,\r\n            p2.firstname AS wholastmodifiedfirstname,p2.lastname AS wholastmodifiedlastname,p2.student_no AS wholastmodifiedstudent_no,\r\n            g.grouptitle,g.groupdescription,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription,g2.searchgroupinfoid AS parentsearchgroupid,\r\n            sf.searchfunctionid,sf.functioncode,sf.functionparameters,sf.ordernum AS functionordernum,sf.custom,\r\n            sf.customsqlinjection,sf.CustomSQLInjectionOperator,sf.isactive,sf.RunOnClient,s.overrideDynamicControlsScreenNum,\r\n            rim.reportfileid,rf.reportfilename AS formattedreportfilename,rf.title AS formattedreporttitle,rf.description AS formattedreportdescription,CASE WHEN @loadformattedreportbytes=1 THEN rf.reportfile ELSE CAST(NULL AS image) END AS formattedreportbytes,rf.filechecksum,rim.ordernum AS formattedreportordernum,\r\n            le.personid AS wholastexecutedpid,le.firstname AS wholastexecutedfirstname,le.middlename AS wholastexecutedmiddlename,le.lastname AS wholastexecutedlastname,\r\n            le.DateExecuted AS datelastexecuted,CASE WHEN s.BuiltByTpro IS NULL THEN CAST(0 AS bit) ELSE CAST(1 AS bit) END AS IsBuiltByTpro,\r\n            s.reportuniqueid,s.createdbylocation\r\nFROM        searchinfo s LEFT JOIN searchgroupinfo g ON g.searchgroupinfoid=s.searchgroupid\r\n            LEFT JOIN people p1 ON p1.personid=s.whocreated\r\n            LEFT JOIN people p2 ON p2.personid=s.wholastmodified\r\n            LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\n            LEFT JOIN searchfunctions sf ON sf.searchinfoid=s.searchinfoid\r\n            LEFT JOIN ReportFileReportIdMatching rim ON rim.reportid=s.searchinfoid AND rim.isactive=1\r\n            LEFT JOIN reportfiles rf ON rf.reportfileid=rim.reportfileid AND rf.isactive=1\r\n            LEFT JOIN ReportLastExecutions le ON le.ReportId=s.searchinfoid\r\nWHERE       s.reportuniqueid=@uniqueid\r\nORDER BY    g.ordernum,g.grouptitle,s.ordernum,s.title,s.searchinfoid,sf.ordernum,rim.ordernum,rf.title";
+
+		// Token: 0x0400000F RID: 15
+		internal const string QS_REPORT_BY_IDS = "SELECT    s.searchinfoid,s.title,s.description,s.searchgroupid,s.reportoptions,\r\n            s.datecreated,s.datelastmodified,s.whocreated AS whocreatedpid,\r\n            s.wholastmodified AS wholastmodifiedpid,s.ordernum,s.searchchartinfoid,\r\n            p1.firstname AS whocreatedfirstname,p1.lastname AS whocreatedlastname,p1.student_no AS whocreatedstudent_no,\r\n            p2.firstname AS wholastmodifiedfirstname,p2.lastname AS wholastmodifiedlastname,p2.student_no AS wholastmodifiedstudent_no,\r\n            g.grouptitle,g.groupdescription,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription,g2.searchgroupinfoid AS parentsearchgroupid,\r\n            sf.searchfunctionid,sf.functioncode,sf.functionparameters,sf.ordernum AS functionordernum,sf.custom,\r\n            sf.customsqlinjection,sf.CustomSQLInjectionOperator,sf.isactive,sf.RunOnClient,s.overrideDynamicControlsScreenNum,\r\n            rim.reportfileid,rf.reportfilename AS formattedreportfilename,rf.title AS formattedreporttitle,rf.description AS formattedreportdescription,CASE WHEN @loadformattedreportbytes=1 THEN rf.reportfile ELSE CAST(NULL AS image) END AS formattedreportbytes,rf.filechecksum,rim.ordernum AS formattedreportordernum,\r\n            le.personid AS wholastexecutedpid,le.firstname AS wholastexecutedfirstname,le.middlename AS wholastexecutedmiddlename,le.lastname AS wholastexecutedlastname,\r\n            le.DateExecuted AS datelastexecuted,CASE WHEN s.BuiltByTpro IS NULL THEN CAST(0 AS bit) ELSE CAST(1 AS bit) END AS IsBuiltByTpro,\r\n            s.reportuniqueid,s.createdbylocation\r\nFROM        searchinfo s LEFT JOIN searchgroupinfo g ON g.searchgroupinfoid=s.searchgroupid\r\n            LEFT JOIN people p1 ON p1.personid=s.whocreated\r\n            LEFT JOIN people p2 ON p2.personid=s.wholastmodified\r\n            LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\n            LEFT JOIN searchfunctions sf ON @loadfunctions=1 AND sf.searchinfoid=s.searchinfoid\r\n            LEFT JOIN ReportFileReportIdMatching rim ON rim.reportid=s.searchinfoid AND rim.isactive=1\r\n            LEFT JOIN reportfiles rf ON rf.reportfileid=rim.reportfileid AND rf.isactive=1\r\n            LEFT JOIN ReportLastExecutions le ON le.ReportId=s.searchinfoid\r\nWHERE       @loadall=1 OR s.searchinfoid IN (SELECT orderid AS searchinfoid FROM splitorderids(@rids,','))\r\nORDER BY    g.ordernum,g.grouptitle,s.ordernum,s.title,s.searchinfoid,sf.ordernum,rim.ordernum,rf.title";
+
+		// Token: 0x04000010 RID: 16
+		internal const string QS_REPORTS_BY_GROUP_IDS = "SELECT    s.searchinfoid,s.title,s.description,s.searchgroupid,s.reportoptions,\r\n            s.datecreated,s.datelastmodified,s.whocreated AS whocreatedpid,\r\n            s.wholastmodified AS wholastmodifiedpid,s.ordernum,s.searchchartinfoid,\r\n            p1.firstname AS whocreatedfirstname,p1.lastname AS whocreatedlastname,p1.student_no AS whocreatedstudent_no,\r\n            p2.firstname AS wholastmodifiedfirstname,p2.lastname AS wholastmodifiedlastname,p2.student_no AS wholastmodifiedstudent_no,\r\n            g.grouptitle,g.groupdescription,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription,g2.searchgroupinfoid AS parentsearchgroupid,\r\n            sf.searchfunctionid,sf.functioncode,sf.functionparameters,sf.ordernum AS functionordernum,sf.custom,\r\n            sf.customsqlinjection,sf.CustomSQLInjectionOperator,sf.isactive,sf.RunOnClient,s.overrideDynamicControlsScreenNum,\r\n            rim.reportfileid,rf.reportfilename AS formattedreportfilename,rf.title AS formattedreporttitle,rf.description AS formattedreportdescription,CASE WHEN @loadformattedreportbytes=1 THEN rf.reportfile ELSE CAST(NULL AS image) END AS formattedreportbytes,\r\n            rf.filechecksum,rim.ordernum AS formattedreportordernum,\r\n            le.personid AS wholastexecutedpid,le.firstname AS wholastexecutedfirstname,le.middlename AS wholastexecutedmiddlename,le.lastname AS wholastexecutedlastname,\r\n            le.DateExecuted AS datelastexecuted,CASE WHEN s.BuiltByTpro IS NULL THEN CAST(0 AS bit) ELSE CAST(1 AS bit) END AS IsBuiltByTpro,\r\n            s.reportuniqueid,s.createdbylocation\r\nFROM        searchgroupinfo g LEFT JOIN searchinfo s ON s.searchgroupid=g.searchgroupinfoid\r\n            LEFT JOIN people p1 ON p1.personid=s.whocreated\r\n            LEFT JOIN people p2 ON p2.personid=s.wholastmodified\r\n            LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\n            LEFT JOIN searchfunctions sf ON @loadfunctions=1 AND sf.searchinfoid=s.searchinfoid\r\n            LEFT JOIN ReportFileReportIdMatching rim ON rim.reportid=s.searchinfoid AND rim.isactive=1\r\n            LEFT JOIN reportfiles rf ON rf.reportfileid=rim.reportfileid AND rf.isactive=1\r\n            LEFT JOIN ReportLastExecutions le ON le.ReportId=s.searchinfoid\r\nWHERE       g.searchgroupinfoid IN (SELECT orderid AS searchgroupinfoid FROM splitstrings2( @groupids,','))\r\nORDER BY    g.ordernum,g.grouptitle,s.ordernum,s.title,s.searchinfoid,sf.ordernum,rim.ordernum,rf.title";
+
+		// Token: 0x04000011 RID: 17
+		internal const string QS_REPORTS_BY_GROUP_TITLES = "SELECT    s.searchinfoid,s.title,s.description,s.searchgroupid,s.reportoptions,\r\n            s.datecreated,s.datelastmodified,s.whocreated AS whocreatedpid,\r\n            s.wholastmodified AS wholastmodifiedpid,s.ordernum,s.searchchartinfoid,\r\n            p1.firstname AS whocreatedfirstname,p1.lastname AS whocreatedlastname,p1.student_no AS whocreatedstudent_no,\r\n            p2.firstname AS wholastmodifiedfirstname,p2.lastname AS wholastmodifiedlastname,p2.student_no AS wholastmodifiedstudent_no,\r\n            g.grouptitle,g.groupdescription,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription,g2.searchgroupinfoid AS parentsearchgroupid,\r\n            sf.searchfunctionid,sf.functioncode,sf.functionparameters,sf.ordernum AS functionordernum,sf.custom,\r\n            sf.customsqlinjection,sf.CustomSQLInjectionOperator,sf.isactive,sf.RunOnClient,s.overrideDynamicControlsScreenNum,\r\n            rim.reportfileid,rf.reportfilename AS formattedreportfilename,rf.title AS formattedreporttitle,rf.description AS formattedreportdescription,CASE WHEN @loadformattedreportbytes=1 THEN rf.reportfile ELSE CAST(NULL AS image) END AS formattedreportbytes,\r\n            rf.filechecksum,rim.ordernum AS formattedreportordernum,\r\n            le.personid AS wholastexecutedpid,le.firstname AS wholastexecutedfirstname,le.middlename AS wholastexecutedmiddlename,le.lastname AS wholastexecutedlastname,\r\n            le.DateExecuted AS datelastexecuted,CASE WHEN s.BuiltByTpro IS NULL THEN CAST(0 AS bit) ELSE CAST(1 AS bit) END AS IsBuiltByTpro,\r\n            s.reportuniqueid,s.createdbylocation\r\nFROM        searchgroupinfo g LEFT JOIN searchinfo s ON s.searchgroupid=g.searchgroupinfoid\r\n            LEFT JOIN people p1 ON p1.personid=s.whocreated\r\n            LEFT JOIN people p2 ON p2.personid=s.wholastmodified\r\n            LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\n            LEFT JOIN searchfunctions sf ON @loadfunctions=1 AND sf.searchinfoid=s.searchinfoid\r\n            LEFT JOIN ReportFileReportIdMatching rim ON rim.reportid=s.searchinfoid AND rim.isactive=1\r\n            LEFT JOIN reportfiles rf ON rf.reportfileid=rim.reportfileid AND rf.isactive=1\r\n            LEFT JOIN ReportLastExecutions le ON le.ReportId=s.searchinfoid\r\nWHERE       g.grouptitle IN (SELECT orderid AS grouptitle FROM splitstrings2( @grouptitles,','))\r\nORDER BY    g.ordernum,g.grouptitle,s.ordernum,s.title,s.searchinfoid,sf.ordernum,rim.ordernum,rf.title";
+
+		// Token: 0x04000012 RID: 18
+		internal const string QS_REPORT_UNUSED_GROUPS = "SELECT   g.searchgroupinfoid AS searchgroupid,g.grouptitle,g.groupdescription,g.ordernum,\r\n            g.parentsearchgroupinfoid AS parentsearchgroupid,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription\r\nFROM    searchgroupinfo g LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\nWHERE   NOT g.searchgroupinfoid IN (SELECT searchgroupid AS searchgroupinfoid FROM searchinfo)\r\nORDER BY g.ordernum,g.grouptitle";
+
+		// Token: 0x04000013 RID: 19
+		internal const string QS_REPORT_GROUPS_ALL = "SELECT    g.searchgroupinfoid AS searchgroupid,g.grouptitle,g.groupdescription,g.ordernum,\r\n            g.parentsearchgroupinfoid AS parentsearchgroupid,\r\n            g2.grouptitle AS parentgrouptitle,g2.groupdescription AS parentgroupdescription\r\nFROM    searchgroupinfo g LEFT JOIN searchgroupinfo g2 ON g2.searchgroupinfoid=g.parentsearchgroupinfoid\r\nORDER BY g.ordernum,g.grouptitle";
+
+		// Token: 0x04000014 RID: 20
+		internal const string QS_REPORT_ALL_FUNCTION_IDS = "SELECT searchfunctionid FROM searchfunctions WHERE searchinfoid=@reportid";
+
+		// Token: 0x04000015 RID: 21
+		internal const string QI_MARK_REPORT_CHANGE = "INSERT INTO SearchInfoArchive (reportid,whomodified,xmlafterchange,iscompressed) VALUES (@rid,@who,@xmlafterchange,@iscompressed)";
+
+		// Token: 0x04000016 RID: 22
+		internal const string QI_LOG_REPORT_EXECUTION = "INSERT INTO SearchInfoExecuteLog (ReportId,WhoExecutedPersonId,ExecutedFromContext) VALUES (@rid,@pid,@location)";
+
+		// Token: 0x04000017 RID: 23
+		internal const string QI_ASSIGN_FORMATTED_REPORT_TO_REPORT = "INSERT INTO ReportFileReportIdMatching(reportfileid,reportid,ordernum,isactive) VALUES (@reportfileid,@reportid,@ordernum,1)";
+
+		// Token: 0x04000018 RID: 24
+		internal const string QI_REPORT = "IF @createdbylocation IS NULL \r\n    SET @createdbylocation=(SELECT TOP 1 UniqueName FROM UniqueDatabaseName2())\r\n\r\nIF @uniqueid IS NULL OR EXISTS(SELECT searchinfoid FROM searchinfo WHERE reportuniqueid=@uniqueid)\r\n    INSERT INTO searchinfo \r\n        (title,description,searchgroupid,datecreated,datelastmodified,whocreated,wholastmodified,ordernum,searchchartinfoid,overridedynamiccontrolsscreennum,reportoptions,createdbylocation) \r\n    VALUES\r\n        (@title,@description,@searchgroupid,@datecreated,@datelastmodified,@whoami,@whoami,@ordernum,@searchchartinfoid,@overridedynamiccontrolsscreennum,@reportoptions,@createdbylocation) \r\nELSE\r\n    INSERT INTO searchinfo \r\n        (title,description,searchgroupid,datecreated,datelastmodified,whocreated,wholastmodified,ordernum,searchchartinfoid,overridedynamiccontrolsscreennum,reportoptions,reportuniqueid,createdbylocation) \r\n    VALUES\r\n        (@title,@description,@searchgroupid,@datecreated,@datelastmodified,@whoami,@whoami,@ordernum,@searchchartinfoid,@overridedynamiccontrolsscreennum,@reportoptions,@uniqueid,@createdbylocation) \r\n\r\nSET @reportid=(SELECT CAST(SCOPE_IDENTITY() AS int))\r\nSET @reportuniqueid=(SELECT TOP 1 reportuniqueid FROM searchinfo WHERE searchinfoid=@reportid)";
+
+		// Token: 0x04000019 RID: 25
+		internal const string QI_REPORT_FUNCTION = "INSERT INTO searchfunctions \r\n    (searchinfoid,functioncode,functionparameters,ordernum,custom,customsqlinjection,customsqlinjectionoperator,RunOnClient) \r\nVALUES \r\n    (@searchinfoid,@functioncode,@functionparameters,@ordernum,@custom,@customsqlinjection,@customsqlinjectionoperator,@RunOnClient);\r\nSET @reportfunctionid=(SELECT CAST(SCOPE_IDENTITY() AS int))";
+
+		// Token: 0x0400001A RID: 26
+		internal const string QI_REPORT_GROUP = "INSERT INTO searchgroupinfo\r\n    (grouptitle,groupdescription,iconindex,ordernum,parentsearchgroupinfoid)\r\nVALUES\r\n    (@grouptitle,@groupdescription,@iconindex,@ordernum,@parentsearchgroupinfoid);\r\nSET @groupid=(SELECT CAST(SCOPE_IDENTITY() AS int))";
+
+		// Token: 0x0400001B RID: 27
+		internal const string QI_FORMATTED_REPORT = "INSERT INTO reportfiles\r\n    (reportfile,reportfilename,title,description,isactive,filechecksum,ordernum)\r\nVALUES\r\n    (@bytes,@filename,@title,@description,1,@checksum,@ordernum);\r\nSET @fileid=(SELECT CAST(SCOPE_IDENTITY() AS int))";
+
+		// Token: 0x0400001C RID: 28
+		internal const string QU_FORMATTED_REPORT = "UPDATE reportfiles SET title=@title,description=@description,reportfile=COALESCE(@bytes,reportfile),ordernum=@ordernum,filechecksum=@checksum WHERE reportfileid=@fileid";
+
+		// Token: 0x0400001D RID: 29
+		internal const string QU_REPORT = "UPDATE    searchinfo SET title=@title,description=@description,searchgroupid=@searchgroupid,datelastmodified=getdate(),\r\n            wholastmodified=@whoami,ordernum=@ordernum,searchchartinfoid=@searchchartinfoid,\r\n            overridedynamiccontrolsscreennum=@overridedynamiccontrolsscreennum,\r\n            reportoptions=@reportoptions\r\nWHERE       searchinfoid=@reportid";
+
+		// Token: 0x0400001E RID: 30
+		internal const string QU_REPORT_FUNCTION = "UPDATE searchfunctions SET functioncode=@functioncode,functionparameters=@functionparameters,ordernum=@ordernum,custom=@custom,\r\n        customsqlinjection=@customsqlinjection,customsqlinjectionoperator=@customsqlinjectionoperator,RunOnClient=@RunOnClient\r\nWHERE   searchfunctionid=@reportfunctionid";
+
+		// Token: 0x0400001F RID: 31
+		internal const string QU_REPORT_ORDERNUM = "UPDATE searchinfo SET ordernum=@ordernum WHERE searchinfoid=@rid";
+
+		// Token: 0x04000020 RID: 32
+		internal const string QU_REPORT_GROUP_ORDERNUM = "UPDATE searchgroupinfo SET ordernum=@ordernum WHERE searchgroupinfoid=@gid";
+
+		// Token: 0x04000021 RID: 33
+		internal const string QU_REPORT_GROUP = "UPDATE searchinfo SET searchgroupid=@gid WHERE searchinfoid=@rid";
+
+		// Token: 0x04000022 RID: 34
+		internal const string QU_REPORT_GROUP_PARENT_GROUP = "UPDATE searchgroupinfo SET parentsearchgroupinfoid=@parentgid WHERE searchgroupinfoid=@gid";
+
+		// Token: 0x04000023 RID: 35
+		internal const string QD_REPORT_FUNCTION = "DELETE FROM searchfunctions WHERE searchfunctionid=@reportfunctionid";
+
+		// Token: 0x04000024 RID: 36
+		internal const string QD_ALL_REPORT_FUNCTIONS = "DELETE FROM searchfunctions WHERE searchinfoid=@reportid";
+
+		// Token: 0x04000025 RID: 37
+		internal const string QD_REPORT = "DELETE FROM searchinfo WHERE searchinfoid=@reportid";
+
+		// Token: 0x04000026 RID: 38
+		internal const string QD_FORMATTED_REPORT = "DELETE FROM reportfiles WHERE reportfileid=@fileid;\r\nDELETE FROM ReportFileReportIdMatching WHERE reportfileid=@fileid";
+
+		// Token: 0x04000027 RID: 39
+		internal const string QD_ALL_REPORT_FORMATTED_REPORTS = "DELETE FROM reportfiles WHERE reportfileid IN (SELECT reportfileid FROM reportfilereportidmatching WHERE reportid=@reportid);\r\nDELETE FROM reportfilereportidmatching WHERE reportid=@reportid";
+
+		// Token: 0x04000028 RID: 40
+		internal const string QD_REPORT_GROUP = "DELETE FROM searchgroupinfo \r\nWHERE   searchgroupinfoid=@reportgroupid \r\n        AND NOT searchgroupinfoid IN (SELECT parentsearchgroupinfoid AS searchgroupinfoid FROM searchgroupinfo WHERE NOT parentsearchgroupinfoid IS NULL) \r\n        AND NOT searchgroupinfoid IN (SELECT searchgroupid AS searchgroupinfoid FROM searchinfo WHERE NOT searchgroupid IS NULL)";
+
+		// Token: 0x04000029 RID: 41
+		internal const string QU_TECHNOPRO_NOTE = "UPDATE searchinfo SET tpronote=@rtf WHERE searchinfoid=@rid";
+
+		// Token: 0x0400002A RID: 42
+		internal const string QU_BuiltByTpro = "UPDATE searchinfo SET BuiltByTpro=@builtbytpro WHERE searchinfoid=@rid";
+	}
+}

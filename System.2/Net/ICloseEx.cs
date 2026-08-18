@@ -1,0 +1,11 @@
+﻿using System;
+
+namespace System.Net
+{
+	// Token: 0x020001BA RID: 442
+	internal interface ICloseEx
+	{
+		// Token: 0x0600114D RID: 4429
+		void CloseEx(CloseExState closeState);
+	}
+}

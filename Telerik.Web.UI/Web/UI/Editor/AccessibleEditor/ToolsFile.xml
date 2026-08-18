@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<modules>
+	</modules>
+	<tools>
+		<tool name="MoveFocusToTextEditor" text="Move Focus To Text Editor"/>
+		<tool name="Bold" shortcut="CTRL+B"/>
+		<tool name="Indent" text="Comment"/>
+		<tool name="Outdent" text="Uncomment"/>
+		<tool name="InsertParagraph" shortcut="CTRL+ALT+P"/>
+		<tool separator="true"/>
+		<tool name="InsertOrderedList" shortcut="CTRL+ALT+L"/>
+		<tool name="InsertUnorderedList" shortcut="CTRL+ALT+U"/>
+		<tool name="XhtmlValidator"/>
+		<tool name="ImageManager" shortcut="CTRL+M"/>
+		<tool name="LinkManager"/>
+		<tool name="Unlink" shortcut="CTRL+SHIFT+K"/>
+		<tool name="InsertTable" shortcut="CTRL+ALT+T"/>
+		<tool separator="true"/>
+		<tool name="FormatBlock" text="Structure" width="150px"/>
+		<tool name="Undo" shortcut="CTRL+Z"/>
+		<tool name="Redo" shortcut="CTRL+Y"/>
+		<tool name="Help" shortcut="CTRL+H"/>
+	</tools>
+	<paragraphs>
+		<paragraph name="Clear Formatting" value="&lt;p>"/>
+		<paragraph name="Heading 2" value="&lt;h2>"/>
+		<paragraph name="Heading 3" value="&lt;h3>"/>
+		<paragraph name="Heading 4" value="&lt;h4>"/>
+		<paragraph name="Heading 5" value="&lt;h5>"/>
+	</paragraphs>
+	<cssFiles>
+	</cssFiles>
+</root>

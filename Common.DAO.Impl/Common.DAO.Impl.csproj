@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2625}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro</RootNamespace>
+    <AssemblyName>Common.DAO.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClockWorkServer\DAO\Impl\QueryStorage\AuthenticationSessionQueryStorage.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderApplicationStatusLookupDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalApplicationAvailabilityDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalApplicationCourseDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalApplicationDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalMatchingDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalProviderDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalRequestDAO.cs" />
+    <Compile Include="Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalRequestDetailDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Academic\QueryStorageSemester.cs" />
+    <Compile Include="Common\DAO\Impl\Academic\SemesterDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\ArrayAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\AvailabilityStorageAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\ClockWorkSyncAppointmentAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\DataTableAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\DbConnectionInfoAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\FtpFileInfoAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\FullTextSearchAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\IDataReaderAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\ImageAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\MemoAdapters.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\PasswordAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\PeopleGroupAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\ServerInstanceInfoAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\ServiceProvidersOriginal.cs" />
+    <Compile Include="Common\DAO\Impl\Adapters\WebApplicationUtilityAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\AlertTrigger\AlertTriggerDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlertTrigger\QueryStorage\QueryStorageAlertTrigger.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaContentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaContentFileDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaJobDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaJobStatusDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaPublisherDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaVendorDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\MediaVolunteerDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageMediaContent.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageMediaContentFile.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageMediaJob.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageMediaJobStatus.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageMediaVolunteer.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStoragePublisher.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageStudentMediaRequest.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\QueryStorage\QueryStorageVendor.cs" />
+    <Compile Include="Common\DAO\Impl\AlternativeFormat\StudentMediaRequestDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\AppointmentBookingStudentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\AppointmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\AppointmentFastLoadDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\AppointmentHolidayDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\AppointmentInsertException.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\AppointmentNotFoundException.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\QueryStorageAppointmentFastLoad.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\QueryStorageAppointmentHoliday.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsCalendar\QueryStorageAppointments.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsList\ListAppointmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsList\QueryStorageListAppointments.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsPointOfContact\PointOfContactDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsPointOfContact\QueryStoragePointOfContacts.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsRecurring\RecurringAppointmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsReminder\AppointmentsReminderDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsReminder\QueryStorage\AppointmentsReminderQueryStorage.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\ClassTestDefinitionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\ExamFileDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\ExamRequestDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageAutoTestBooking.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageSitting.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTestBooking.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageClassTestDefinitions.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageExamFile.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageExamRequest.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageStudentClassTestInfo.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageTestExamBookingView.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageTestExamBrowser.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\QueryStorageTests\QueryStorageTestProctor.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\SittingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\StudentClassTestInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\TestBookingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\TestExamBookingViewDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\TestExamBrowserDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestBooking\TestProctorDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestExamViews\FinalExamsViewDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestExamViews\QueryStorageAppointmentsTestExamViews\QueryStorageFinalExamsView.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestExamViews\QueryStorageAppointmentsTestExamViews\QueryStorageTestBookingsView.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsTestExamViews\TestBookingsViewDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsWorkshops\QueryStorageWorkshopAppointments.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsWorkshops\QueryStorageWorkshopDefinition.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentsWorkshops\WorkshopDefinitionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentSync\AppointmentSyncMappingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentSync\ClockWorkSyncDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentSync\QueryStorageAppointmentMappings.cs" />
+    <Compile Include="Common\DAO\Impl\AppointmentSync\QueryStorageAppointments.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentAttendeeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentCancelInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentCancelReasonDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentHistoryDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentIconDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentLogDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentRoomDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentShowTimeAsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\AppointmentTypeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\BaseAppointmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\IconInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageAppointmentIcon.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageAppointmentLog.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageAppointmentType.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageApps\QueryStorageAppointmentHistory.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageApps\QueryStorageAppointmentRoom.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageApps\QueryStorageRecurringAppointment.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageAttendee.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageBaseAppointment.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageCancelInfo.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageCancelReason.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageIconInfo.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\QueryStorageShowTimeAs.cs" />
+    <Compile Include="Common\DAO\Impl\Appointments\WorkshopAppointmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AvailabilitySchedule\AvailabilityScheduleDAO.cs" />
+    <Compile Include="Common\DAO\Impl\AvailabilitySchedule\QueryStorageAvailabilitySchedule.cs" />
+    <Compile Include="Common\DAO\Impl\Cache\UserDatabaseCacheDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CampusDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Cases\CaseDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Cases\QueryStorageCases.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkAudit\ClockWorkAuditDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkClientConnectionInfo\ClockWorkClientConnectionInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkDailyJob\DailyJobDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkDailyJob\QueryStorageDailyJob.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkDatabase\ClockWorkDatabaseDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkDatabase\QueryStorageClockWorkDatabase.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkServerJob\ClockWorkServerJobDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkServerJob\QueryStorage\ClockWorkServerJobQueryStorage.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkSnapshots\ClockWorkSnapshotDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ClockWorkSnapshots\QueryStorageSnapshot.cs" />
+    <Compile Include="Common\DAO\Impl\Communications\CommunicationsSentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Communications\QueryStorage\QueryStorageCommunicationsSent.cs" />
+    <Compile Include="Common\DAO\Impl\ConfidentialityAgreement\QueryStorageConfidentialityAgreement.cs" />
+    <Compile Include="Common\DAO\Impl\ConfidentialityAgreement\StudentConfidentialityAgreementDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ConnectionString\ClockWorkConnectionStringDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CourseRegistrations\CourseRegistrationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CourseRegistrations\QueryStorageCourseRegistration.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\CustomDataDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\CustomFieldDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\CustomFormDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\CustomFormListItemDAO.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\QueryStorage\QueryStorageCustomData.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\QueryStorage\QueryStorageCustomField.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\QueryStorage\QueryStorageCustomForm.cs" />
+    <Compile Include="Common\DAO\Impl\CustomForms\QueryStorage\QueryStorageCustomFormListItem.cs" />
+    <Compile Include="Common\DAO\Impl\Database\DatabaseDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\DataSyncCourseDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\DataSyncCourseExtendedDataDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\DataSyncDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\DataSyncInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\QueryStorageDataSync.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\QueryStorageDataSyncCourse.cs" />
+    <Compile Include="Common\DAO\Impl\DataSync\QueryStorageDataSyncCourseExtendedData.cs" />
+    <Compile Include="Common\DAO\Impl\Data\DataMaintenanceDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Data\QueryStorageDataMaintenance.cs" />
+    <Compile Include="Common\DAO\Impl\Departments\DepartmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Departments\QueryStorageDepartment.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicCompile\DynamicCompileDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\AccommodationBatchLetterEmailsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\AccommodationsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\Adapters\DynamicListExtension.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\AppointmentNotesDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\DynamicDataDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\DynamicDataForReportsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\DynamicFieldDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\DynamicFileStorageDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\DynamicFormsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\DynamicPerDateDataDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\FormApproval\FormApprovalDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\FormApproval\FormApprovalSupervisorDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\FormApproval\FormApprovalTraineeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\Legacy\LegacyDynamicFieldSaveLoadDAO.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorageAccommodations.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorageDynamicData.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorageDynamicField.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorageDynamicForms.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageAccommodationBatchLetterEmails.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageAppointmentNotes.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageDataForReports.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageDynamicFileStorage.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageFormApproval.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageFormApprovalSupervisor.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicForms\QueryStorage\QueryStorageFormApprovalTrainee.cs" />
+    <Compile Include="Common\DAO\Impl\DynamicQueries\DynamicQueryDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Email\AppointmentReminderEmailDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Email\EmailAttachmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Email\EmailHistoryLoggerDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Email\QueryStorage\QueryStorageAppointmentReminderEmail.cs" />
+    <Compile Include="Common\DAO\Impl\Email\QueryStorage\QueryStorageEmailAttachment.cs" />
+    <Compile Include="Common\DAO\Impl\Encryption\EncryptionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Encryption\LegacyEncryptionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\FileStorageDAO.cs" />
+    <Compile Include="Common\DAO\Impl\FileStorages\DbFilesStorageDAO.cs" />
+    <Compile Include="Common\DAO\Impl\FileStorages\FilesStorageDAO.cs" />
+    <Compile Include="Common\DAO\Impl\FileStorages\FileSystemStorageDAO.cs" />
+    <Compile Include="Common\DAO\Impl\FileStorages\FileTypeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\FileStorages\QueryStorageFileStorage.cs" />
+    <Compile Include="Common\DAO\Impl\General\ModificationHistoryItemDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Institution\InstitutionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Institution\QueryStorageInstitution.cs" />
+    <Compile Include="Common\DAO\Impl\Intake\IntakeAccountDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Intake\QueryStorage\QueryStorageIntake.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\Adapters\InventoryProductAccessoryAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryAttachmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryCatalogDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryCategoryDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryGroupDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryLoanDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryLoanStatusDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryLocationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryProductDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryProductStatusDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\InventoryReservationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorageInventoryReservation.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryAttachments.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryCatalog.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryCategory.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryLoan.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryLoanStatus.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryLocation.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryProduct.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryProductGroup.cs" />
+    <Compile Include="Common\DAO\Impl\Inventory\QueryStorage\QueryStorageInventoryProductStatus.cs" />
+    <Compile Include="Common\DAO\Impl\IoC\CommonDAOImplConventionInjection.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\LegacyAccommodationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\LegacyActionPlanDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\LegacyAppointmentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\LegacyDynamicDataDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\LegacyServiceProviderDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\LegacyWebSettingsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\QueryStorage\QueryStorageLegacyAccommodation.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\QueryStorage\QueryStorageLegacyActionPlan.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\QueryStorage\QueryStorageLegacyAppointment.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\QueryStorage\QueryStorageLegacyDynamicData.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\QueryStorage\QueryStorageLegacyServiceProvider.cs" />
+    <Compile Include="Common\DAO\Impl\Legacy\QueryStorage\QueryStorageLegacyWebSettings.cs" />
+    <Compile Include="Common\DAO\Impl\LicenseKeyDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\AcademicTermDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\AlternateContactDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\LookupCourseDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\LookupInstructorDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\LookupSubjectDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\LookupTimetableItemDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\Management\LookupInstructorManagementDAO.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\Management\QueryStorageLookupInstructorManagement.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\QueryStorageAlternateContact.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\QueryStorageInstructor.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\QueryStorageLookupCourses.cs" />
+    <Compile Include="Common\DAO\Impl\LookupCourses\SessionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\MailMerging\MailMergingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\MailMerging\MergedDocumentFactory.cs" />
+    <Compile Include="Common\DAO\Impl\MailMerging\QueryStorageMailMerging.cs" />
+    <Compile Include="Common\DAO\Impl\MarkedForDeletion\MarkedForDeletionItemDAO.cs" />
+    <Compile Include="Common\DAO\Impl\MarkedForDeletion\MarkedForDeletionJobDAO.cs" />
+    <Compile Include="Common\DAO\Impl\MarkedForDeletion\QueryStorage\QueryStorageMarkedForDeletion.cs" />
+    <Compile Include="Common\DAO\Impl\MarkedForDeletion\QueryStorage\QueryStorageMarkedForDeletionItem.cs" />
+    <Compile Include="Common\DAO\Impl\Membership\AuthenticationSessionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Membership\QueryStorageUserMembership.cs" />
+    <Compile Include="Common\DAO\Impl\Membership\UserDAO.cs" />
+    <Compile Include="Common\DAO\Impl\MergeDuplicates\MergeDuplicateCoursesDAO.cs" />
+    <Compile Include="Common\DAO\Impl\MergeDuplicates\MergeDuplicateStudentDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Messaging\DropBox_Att_DAO.cs" />
+    <Compile Include="Common\DAO\Impl\Messaging\DropBox_IM_DAO.cs" />
+    <Compile Include="Common\DAO\Impl\Messaging\QueryStorageDropBox.cs" />
+    <Compile Include="Common\DAO\Impl\MiscSafeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Misc\MiscDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Notetaking\NotetakeeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Notetaking\NotetakerNotesDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Notetaking\NotetakingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Notetaking\QueryStorageNotetakee.cs" />
+    <Compile Include="Common\DAO\Impl\Notetaking\QueryStorageNotetakerNotes.cs" />
+    <Compile Include="Common\DAO\Impl\Notetaking\QueryStorageNotetaking.cs" />
+    <Compile Include="Common\DAO\Impl\OnlineForms\OnlineFormDAO.cs" />
+    <Compile Include="Common\DAO\Impl\OnlineForms\OnlineFormQueueDAO.cs" />
+    <Compile Include="Common\DAO\Impl\OnlineForms\QueryStorageOnlineForms.cs" />
+    <Compile Include="Common\DAO\Impl\People\AdminGroupDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\GroupDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\PeopleDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\PeopleGroupDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStoragePeople.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStoragePeopleGroups.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStorage\QueryStorageAdminGroup.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStorage\QueryStorageGroups.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStorage\QueryStorageStaffCommonInfo.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStorage\QueryStorageStudentActivation.cs" />
+    <Compile Include="Common\DAO\Impl\People\QueryStorage\QueryStorageStudentManagement.cs" />
+    <Compile Include="Common\DAO\Impl\People\StaffCommonInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\StudentActivationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\StudentCommonInfoDAO.cs" />
+    <Compile Include="Common\DAO\Impl\People\StudentManagementDAO.cs" />
+    <Compile Include="Common\DAO\Impl\PerformanceTesting\PerformanceTestDAO.cs" />
+    <Compile Include="Common\DAO\Impl\PersonDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Properties\Resource.cs" />
+    <Compile Include="Common\DAO\Impl\Properties\Resources.cs" />
+    <Compile Include="Common\DAO\Impl\QueryingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\QueryStorage\QueryStorage.cs" />
+    <Compile Include="Common\DAO\Impl\QueryStorage\QueryStorageCache.cs" />
+    <Compile Include="Common\DAO\Impl\QueryStorage\QueryStorageCampus.cs" />
+    <Compile Include="Common\DAO\Impl\QueryStorage\QueryStorageMisc.cs" />
+    <Compile Include="Common\DAO\Impl\QueryStorage\QueryStorageUserCache.cs" />
+    <Compile Include="Common\DAO\Impl\Reports\OracleQueryDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Room\QueryStorageRoom\QueryStorageRoom.cs" />
+    <Compile Include="Common\DAO\Impl\Room\RoomDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\QueryStorageServiceProvidersOriginal\QueryStorageApplicationCourse.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\QueryStorageServiceProvidersOriginal\QueryStorageMatching.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\QueryStorageServiceProvidersOriginal\QueryStorageNotes.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\QueryStorageServiceProvidersOriginal\QueryStorageOriginalRequestDetail.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\QueryStorageServiceProvidersOriginal\QueryStorageProviders.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\QueryStorageServiceProvidersOriginal\QueryStorageServiceProviderOriginalApplications.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvidersOriginal\ServiceProviderOriginalNotesDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\QueryStorage\QueryStorageServiceProviderApplication.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\QueryStorage\QueryStorageServiceProviderLookup.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\QueryStorage\QueryStorageServiceProviderType.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\QueryStorage\QueryStorageServiceRequest.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceProviderApplicationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceProviderCourseRegistrationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceProviderDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceProviderLookupDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceProviderMatchingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceProviderTypeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\ServiceProvider\ServiceRequestDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\Adapters\SettingBinarySerializerAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\BooleanBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\ColorBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\DatetimeBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\ImageBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\IntBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\ISettingBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\ReferenceArrayBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\SettingBinarySerializerFactory.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\BinarySerializers\StringBinarySerializer.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\MiscTableSettingsDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\QueryStorageMiscTable.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\QueryStorageSettings.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\QueryStorageSpecialControl.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\ReferenceTableSettingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\SettingAdapter.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\SettingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Settings\SpecialControlDAO.cs" />
+    <Compile Include="Common\DAO\Impl\StudentAccommodationRequests\QueryStorageSelfRegTracking.cs" />
+    <Compile Include="Common\DAO\Impl\StudentAccommodationRequests\QueryStorageStudentAccommodationRequest.cs" />
+    <Compile Include="Common\DAO\Impl\StudentAccommodationRequests\SelfRegDAO.cs" />
+    <Compile Include="Common\DAO\Impl\StudentAccommodationRequests\SelfRegTrackingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\StudentAccommodationRequests\StudentAccommodationRequestDAO.cs" />
+    <Compile Include="Common\DAO\Impl\StudentFiles\StudentFilesQueueDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Surveys\QueryStorageSurveys.cs" />
+    <Compile Include="Common\DAO\Impl\Surveys\SurveyDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Surveys\SurveyQueueDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Tasks\QueryStorageTask.cs" />
+    <Compile Include="Common\DAO\Impl\Tasks\TaskDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Tasks\TaskGroupDAO.cs" />
+    <Compile Include="Common\DAO\Impl\TempFiles\QueryStorageTempFiles.cs" />
+    <Compile Include="Common\DAO\Impl\TempFiles\TempFileDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Templates\QueryStorageTemplates.cs" />
+    <Compile Include="Common\DAO\Impl\Templates\TemplateDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Tutoring\QueryStorage\QueryStorageStudentTutee.cs" />
+    <Compile Include="Common\DAO\Impl\Tutoring\QueryStorage\QueryStorageTutor.cs" />
+    <Compile Include="Common\DAO\Impl\Tutoring\StudentTuteeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Tutoring\TutorDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Updates\QueryStorageUpdating.cs" />
+    <Compile Include="Common\DAO\Impl\Updates\UpdateDAO.cs" />
+    <Compile Include="Common\DAO\Impl\UserAccount\QueryStorage\QueryStorageLoginTracking.cs" />
+    <Compile Include="Common\DAO\Impl\UserAccount\QueryStorage\QueryStorageUserAccount.cs" />
+    <Compile Include="Common\DAO\Impl\UserAccount\UserAccountDAO.cs" />
+    <Compile Include="Common\DAO\Impl\UserAccount\UserLoginTrackingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\UserSettingsPermissions\MiscCodeDAO.cs" />
+    <Compile Include="Common\DAO\Impl\UserSettingsPermissions\OldSettingDAO.cs" />
+    <Compile Include="Common\DAO\Impl\UserSettingsPermissions\PermissionDAO.cs" />
+    <Compile Include="Common\DAO\Impl\UserSettingsPermissions\QueryStorage\QueryStorageMiscCode.cs" />
+    <Compile Include="Common\DAO\Impl\UserSettingsPermissions\QueryStorage\QueryStorageOldSetting.cs" />
+    <Compile Include="Common\DAO\Impl\UserSettingsPermissions\QueryStorage\QueryStoragePermissions.cs" />
+    <Compile Include="Common\DAO\Impl\Veteran\QueryStorageVeteran.cs" />
+    <Compile Include="Common\DAO\Impl\Veteran\VeteranDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Vets\QueryStorage\QueryStorageVetsBenefitApplication.cs" />
+    <Compile Include="Common\DAO\Impl\Vets\QueryStorage\QueryStorageVetsChapter.cs" />
+    <Compile Include="Common\DAO\Impl\Vets\VetsBenefitApplicationDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Vets\VetsChangeInBenefitDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Vets\VetsChapterDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Workflows\QueryStorage\QueryStorageWorkflowProgressStep.cs" />
+    <Compile Include="Common\DAO\Impl\Workflows\WorkflowDAO.cs" />
+    <Compile Include="Common\DAO\Impl\Workflows\WorkflowProgressStepDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common\DAO\Impl\Properties\Resource.resources" />
+    <EmbeddedResource Include="Common\DAO\Impl\Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Converter\Common.Converter.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2607}</Project>
+      <Name>Common.Converter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Entity\Common.DAO.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2620}</Project>
+      <Name>Common.DAO.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Helper\Common.DAO.Helper.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2624}</Project>
+      <Name>Common.DAO.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO\Common.DAO.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE261F}</Project>
+      <Name>Common.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Security\Common.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2644}</Project>
+      <Name>Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms.2\System.Windows.Forms.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D6}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

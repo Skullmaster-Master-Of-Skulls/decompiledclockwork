@@ -1,0 +1,57 @@
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Security;
+
+namespace System.Deployment.Internal.Isolation.Manifest
+{
+	// Token: 0x020000AA RID: 170
+	[InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+	[Guid("C31FF59E-CD25-47b8-9EF3-CF4433EB97CC")]
+	[ComImport]
+	internal interface IAssemblyReferenceDependentAssemblyEntry
+	{
+		// Token: 0x170000A9 RID: 169
+		// (get) Token: 0x0600028B RID: 651
+		AssemblyReferenceDependentAssemblyEntry AllData { [SecurityCritical] get; }
+
+		// Token: 0x170000AA RID: 170
+		// (get) Token: 0x0600028C RID: 652
+		string Group { [SecurityCritical] [return: MarshalAs(UnmanagedType.LPWStr)] get; }
+
+		// Token: 0x170000AB RID: 171
+		// (get) Token: 0x0600028D RID: 653
+		string Codebase { [SecurityCritical] [return: MarshalAs(UnmanagedType.LPWStr)] get; }
+
+		// Token: 0x170000AC RID: 172
+		// (get) Token: 0x0600028E RID: 654
+		ulong Size { [SecurityCritical] get; }
+
+		// Token: 0x170000AD RID: 173
+		// (get) Token: 0x0600028F RID: 655
+		object HashValue { [SecurityCritical] [return: MarshalAs(UnmanagedType.Interface)] get; }
+
+		// Token: 0x170000AE RID: 174
+		// (get) Token: 0x06000290 RID: 656
+		uint HashAlgorithm { [SecurityCritical] get; }
+
+		// Token: 0x170000AF RID: 175
+		// (get) Token: 0x06000291 RID: 657
+		uint Flags { [SecurityCritical] get; }
+
+		// Token: 0x170000B0 RID: 176
+		// (get) Token: 0x06000292 RID: 658
+		string ResourceFallbackCulture { [SecurityCritical] [return: MarshalAs(UnmanagedType.LPWStr)] get; }
+
+		// Token: 0x170000B1 RID: 177
+		// (get) Token: 0x06000293 RID: 659
+		string Description { [SecurityCritical] [return: MarshalAs(UnmanagedType.LPWStr)] get; }
+
+		// Token: 0x170000B2 RID: 178
+		// (get) Token: 0x06000294 RID: 660
+		string SupportUrl { [SecurityCritical] [return: MarshalAs(UnmanagedType.LPWStr)] get; }
+
+		// Token: 0x170000B3 RID: 179
+		// (get) Token: 0x06000295 RID: 661
+		ISection HashElements { [SecurityCritical] get; }
+	}
+}

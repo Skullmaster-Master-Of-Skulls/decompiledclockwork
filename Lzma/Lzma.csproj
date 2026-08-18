@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2670}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LzmaAlone.Properties</RootNamespace>
+    <AssemblyName>Lzma</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SevenZip\CoderPropID.cs" />
+    <Compile Include="SevenZip\Compression\LZMA\Base.cs" />
+    <Compile Include="SevenZip\Compression\LZMA\Decoder.cs" />
+    <Compile Include="SevenZip\Compression\LZMA\Encoder.cs" />
+    <Compile Include="SevenZip\Compression\LZMA\SevenZipHelper.cs" />
+    <Compile Include="SevenZip\Compression\LZ\BinTree.cs" />
+    <Compile Include="SevenZip\Compression\LZ\IInWindowStream.cs" />
+    <Compile Include="SevenZip\Compression\LZ\IMatchFinder.cs" />
+    <Compile Include="SevenZip\Compression\LZ\InWindow.cs" />
+    <Compile Include="SevenZip\Compression\LZ\OutWindow.cs" />
+    <Compile Include="SevenZip\Compression\RangeCoder\BitDecoder.cs" />
+    <Compile Include="SevenZip\Compression\RangeCoder\BitEncoder.cs" />
+    <Compile Include="SevenZip\Compression\RangeCoder\BitTreeDecoder.cs" />
+    <Compile Include="SevenZip\Compression\RangeCoder\BitTreeEncoder.cs" />
+    <Compile Include="SevenZip\Compression\RangeCoder\Decoder.cs" />
+    <Compile Include="SevenZip\Compression\RangeCoder\Encoder.cs" />
+    <Compile Include="SevenZip\CRC.cs" />
+    <Compile Include="SevenZip\DataErrorException.cs" />
+    <Compile Include="SevenZip\ICodeProgress.cs" />
+    <Compile Include="SevenZip\ICoder.cs" />
+    <Compile Include="SevenZip\InvalidParamException.cs" />
+    <Compile Include="SevenZip\ISetCoderProperties.cs" />
+    <Compile Include="SevenZip\ISetDecoderProperties.cs" />
+    <Compile Include="SevenZip\IWriteCoderProperties.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

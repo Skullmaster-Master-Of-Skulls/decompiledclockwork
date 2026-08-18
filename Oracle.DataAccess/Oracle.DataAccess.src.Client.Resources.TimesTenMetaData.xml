@@ -1,0 +1,1218 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:oradata="urn:schemas-oracle-com:xml-oradata">
+    <xs:element name="NewDataSet" oradata:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="MetaDataCollections" oradata:MinimumCapacity="9">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CollectionName" type="xs:string" minOccurs="0" />
+                <xs:element name="NumberOfRestrictions" type="xs:int" minOccurs="0" />
+                <xs:element name="NumberOfIdentifierParts" type="xs:int" minOccurs="0" />
+                <xs:element name="PopulationMechanism" type="xs:string" minOccurs="0" />
+                <xs:element name="PopulationString" type="xs:string" minOccurs="0" />
+                <xs:element name="MinimumVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="MaximumVersion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Restrictions" oradata:MinimumCapacity="5">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CollectionName" type="xs:string" minOccurs="0" />
+                <xs:element name="RestrictionName" type="xs:string" minOccurs="0" />
+                <xs:element name="ParameterName" type="xs:string" minOccurs="0" />
+                <xs:element name="RestrictionDefault" type="xs:string" minOccurs="0" />
+                <xs:element name="RestrictionNumber" type="xs:int" minOccurs="0" />
+                <xs:element name="MinimumVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="MaximumVersion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DataSourceInformation" oradata:MinimumCapacity="18">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="CompositeIdentifierSeparatorPattern" type="xs:string" minOccurs="0" />
+                <xs:element name="DataSourceProductName" type="xs:string" minOccurs="0" />
+                <xs:element name="DataSourceProductVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="DataSourceProductVersionNormalized" type="xs:string" minOccurs="0" />
+                <xs:element name="GroupByBehavior" oradata:DataType="System.Data.Common.GroupByBehavior, System.Data, Version=10.2.0.100, Culture=neutral, PublicKeyToken=89b483f429c47342" type="xs:string" minOccurs="0" />
+                <xs:element name="IdentifierPattern" type="xs:string" minOccurs="0" />
+                <xs:element name="IdentifierCase" oradata:DataType="System.Data.Common.IdentifierCase, System.Data, Version=10.2.0.100, Culture=neutral, PublicKeyToken=89b483f429c47342" type="xs:string" minOccurs="0" />
+                <xs:element name="OrderByColumnsInSelect" type="xs:boolean" minOccurs="0" />
+                <xs:element name="ParameterMarkerFormat" type="xs:string" minOccurs="0" />
+                <xs:element name="ParameterMarkerPattern" type="xs:string" minOccurs="0" />
+                <xs:element name="ParameterNameMaxLength" type="xs:int" minOccurs="0" />
+                <xs:element name="ParameterNamePattern" type="xs:string" minOccurs="0" />
+                <xs:element name="QuotedIdentifierPattern" type="xs:string" minOccurs="0" />
+                <xs:element name="QuotedIdentifierCase" oradata:DataType="System.Data.Common.IdentifierCase, System.Data, Version=10.2.0.100, Culture=neutral, PublicKeyToken=89b483f429c47342" type="xs:string" minOccurs="0" />
+                <xs:element name="StatementSeparatorPattern" type="xs:string" minOccurs="0" />
+                <xs:element name="StringLiteralPattern" type="xs:string" minOccurs="0" />
+                <xs:element name="SupportedJoinOperators" oradata:DataType="System.Data.Common.SupportedJoinOperators, System.Data, Version=10.2.0.100, Culture=neutral, PublicKeyToken=89b483f429c47342" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="DataTypes" oradata:MinimumCapacity="18">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="TypeName" type="xs:string" minOccurs="0" />
+                <xs:element name="ProviderDbType" type="xs:int" minOccurs="0" />
+                <xs:element name="ColumnSize" type="xs:long" minOccurs="0" />
+                <xs:element name="CreateFormat" type="xs:string" minOccurs="0" />
+                <xs:element name="CreateParameters" type="xs:string" minOccurs="0" />
+                <xs:element name="DataType" type="xs:string" minOccurs="0" />
+                <xs:element name="IsAutoIncrementable" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsBestMatch" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsCaseSensitive" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsFixedLength" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsFixedPrecisionScale" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsLong" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsNullable" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsSearchable" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsSearchableWithLike" type="xs:boolean" minOccurs="0" />
+                <xs:element name="IsUnsigned" type="xs:boolean" minOccurs="0" />
+                <xs:element name="MaximumScale" type="xs:short" minOccurs="0" />
+                <xs:element name="MinimumScale" type="xs:short" minOccurs="0" />
+                <xs:element name="IsConcurrencyType" type="xs:boolean" minOccurs="0" />
+                <xs:element name="MaximumVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="MinimumVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="IsLiteralSupported" type="xs:boolean" minOccurs="0" />
+                <xs:element name="LiteralPrefix" type="xs:string" minOccurs="0" />
+                <xs:element name="LiteralSuffix" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="ReservedWords" oradata:MinimumCapacity="3">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ReservedWord" type="xs:string" minOccurs="0" />
+                <xs:element name="MaximumVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="MinimumVersion" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <MetaDataCollections>
+    <CollectionName>MetaDataCollections</CollectionName>
+    <NumberOfRestrictions>0</NumberOfRestrictions>
+    <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+    <PopulationMechanism>DataTable</PopulationMechanism>
+    <PopulationString>MetaDataCollections</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>DataSourceInformation</CollectionName>
+    <NumberOfRestrictions>0</NumberOfRestrictions>
+    <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+    <PopulationMechanism>DataTable</PopulationMechanism>
+    <PopulationString>DataSourceInformation</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>DataTypes</CollectionName>
+    <NumberOfRestrictions>0</NumberOfRestrictions>
+    <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+    <PopulationMechanism>DataTable</PopulationMechanism>
+    <PopulationString>DataTypes</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Restrictions</CollectionName>
+    <NumberOfRestrictions>0</NumberOfRestrictions>
+    <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+    <PopulationMechanism>DataTable</PopulationMechanism>
+    <PopulationString>Restrictions</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>ReservedWords</CollectionName>
+    <NumberOfRestrictions>0</NumberOfRestrictions>
+    <NumberOfIdentifierParts>0</NumberOfIdentifierParts>
+    <PopulationMechanism>DataTable</PopulationMechanism>
+    <PopulationString>ReservedWords</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Users</CollectionName>
+    <NumberOfRestrictions>1</NumberOfRestrictions>
+    <NumberOfIdentifierParts>1</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT USERNAME AS Name, USER_ID AS ID, CREATED AS CreateDate FROM ALL_USERS WHERE (USERNAME=:NAME or :NAME is null) ORDER BY USERNAME</PopulationString> -->
+    <PopulationString>SELECT USERNAME AS Name, USER_ID AS ID, CREATED AS CreateDate FROM SYS.ALL_USERS WHERE (USERNAME=:NAME or CAST (:NAME AS VARCHAR2 (30)) IS NULL) ORDER BY USERNAME</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Tables</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, TABLE_NAME, DECODE(OWNER, 'SYS', 'System', 'SYSTEM', 'System', 'SYSMAN', 'System','CTXSYS', 'System','MDSYS', 'System','OLAPSYS', 'System', 'ORDSYS', 'System','OUTLN', 'System', 'WKSYS', 'System','WMSYS', 'System','XDB', 'System','ORDPLUGINS', 'System','User') AS Type FROM ALL_TABLES WHERE (OWNER=:OWNER or :OWNER IS NULL) AND (TABLE_NAME = :TABLENAME or :TABLENAME is NULL) ORDER BY OWNER, TABLE_NAME</PopulationString> -->
+    <PopulationString>SELECT OWNER, OBJECT_NAME AS TABLE_NAME, DECODE(OWNER, 'SYS', 'System', 'SYSTEM', 'System', 'SYSMAN', 'System','CTXSYS', 'System','MDSYS', 'System','OLAPSYS', 'System', 'ORDSYS', 'System','OUTLN', 'System', 'WKSYS', 'System','WMSYS', 'System','XDB', 'System','ORDPLUGINS', 'System', 'TTREP', 'System', 'GRID', 'System', 'User') AS Type FROM SYS.ALL_OBJECTS WHERE (OWNER=:OWNER or CAST (:OWNER AS VARCHAR2 (30)) IS NULL) AND (OBJECT_NAME = :TABLENAME or CAST (:TABLENAME AS VARCHAR2 (30)) is NULL) AND OBJECT_TYPE = 'TABLE' ORDER BY OWNER, OBJECT_NAME</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Columns</CollectionName>
+    <NumberOfRestrictions>3</NumberOfRestrictions>
+    <NumberOfIdentifierParts>3</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, TABLE_NAME, COLUMN_NAME, COLUMN_ID AS ID, DATA_TYPE AS DataType, DATA_LENGTH AS Length, DATA_PRECISION AS Precision, DATA_SCALE AS Scale, NULLABLE AS Nullable, CHAR_USED, CHAR_LENGTH AS LengthInChars FROM ALL_TAB_COLUMNS WHERE (OWNER = :OWNER or :OWNER is null) AND (TABLE_NAME = :TABLENAME OR :TABLENAME is null) AND (COLUMN_NAME = :COLUMNNAME OR :COLUMNNAME is null) ORDER BY OWNER, TABLE_NAME, ID</PopulationString> -->
+    <PopulationString>
+      SELECT RTRIM (TABLES.TBLOWNER) AS OWNER, RTRIM (TABLES.TBLNAME) AS TABLE_NAME, RTRIM (COLUMNS.COLNAME) AS COLUMN_NAME, COLNUM AS ID,
+      CASE
+      WHEN COLUMNS.COLTYPE = 1 THEN 'TT_SMALLINT'
+      WHEN COLUMNS.COLTYPE = 2 THEN 'TT_INTEGER'
+      WHEN COLUMNS.COLTYPE = 3 THEN 'BINARY_FLOAT'
+      WHEN COLUMNS.COLTYPE = 4 THEN 'BINARY_DOUBLE'
+      WHEN COLUMNS.COLTYPE = 5 THEN 'TT_CHAR'
+      WHEN COLUMNS.COLTYPE = 6 THEN 'TT_VARCHAR'
+      WHEN COLUMNS.COLTYPE = 7 THEN 'BINARY'
+      WHEN COLUMNS.COLTYPE = 8 THEN 'VARBINARY'
+      WHEN COLUMNS.COLTYPE = 11 THEN 'TT_DECIMAL'
+      WHEN COLUMNS.COLTYPE = 12 THEN 'TT_NCHAR'
+      WHEN COLUMNS.COLTYPE = 13 THEN 'TT_NVARCHAR'
+      WHEN COLUMNS.COLTYPE = 14 THEN 'TT_DATE'
+      WHEN COLUMNS.COLTYPE = 15 THEN 'TIME'
+      WHEN COLUMNS.COLTYPE = 16 THEN 'TT_TIMESTAMP'
+      WHEN COLUMNS.COLTYPE = 20 THEN 'TT_TINYINT'
+      WHEN COLUMNS.COLTYPE = 21 THEN 'TT_BIGINT'
+      WHEN COLUMNS.COLTYPE = 22 THEN 'TT_VARCHAR'
+      WHEN COLUMNS.COLTYPE = 23 THEN 'VARBINARY'
+      WHEN COLUMNS.COLTYPE = 24 THEN 'TT_NVARCHAR'
+      WHEN COLUMNS.COLTYPE = 25 AND COLUMNS.SYS10 = 128 AND COLUMNS.TYPE_ATTR != 0 THEN 'FLOAT'
+      WHEN COLUMNS.COLTYPE = 25 THEN 'NUMBER'
+      WHEN COLUMNS.COLTYPE = 26 THEN 'CHAR'
+      WHEN COLUMNS.COLTYPE = 27 THEN 'VARCHAR2'
+      WHEN COLUMNS.COLTYPE = 28 THEN 'NCHAR'
+      WHEN COLUMNS.COLTYPE = 29 THEN 'NVARCHAR2'
+      WHEN COLUMNS.COLTYPE = 30 THEN 'DATE'
+      WHEN COLUMNS.COLTYPE = 31 THEN 'TIMESTAMP (' || TO_CHAR (COLUMNS.SYS10) || ')'
+      WHEN COLUMNS.COLTYPE = 32 THEN 'VARCHAR2'
+      WHEN COLUMNS.COLTYPE = 33 THEN 'NVARCHAR2'
+      WHEN COLUMNS.COLTYPE = 34 THEN 'ROWID'
+      END AS DATATYPE,
+      COLLEN AS LENGTH,
+      CASE WHEN COLUMNS.COLTYPE IN (5,6,22,26,27,32,12,13,24,28,29,33) THEN NULL
+      WHEN COLUMNS.SYS10 = 128 AND COLUMNS.TYPE_ATTR != 0 THEN COLUMNS.TYPE_ATTR
+      WHEN COLUMNS.SYS10 = 128 OR COLUMNS.COLTYPE IN (14,15,16,30,31) THEN NULL
+      ELSE COLUMNS.SYS9 END AS PRECISION,
+      CASE WHEN COLUMNS.COLTYPE IN (5,6,22,26,27,32,12,13,24,28,29,33) THEN NULL
+      WHEN COLUMNS.SYS10 = 128 THEN NULL
+      ELSE COLUMNS.SYS10 END AS SCALE,
+      CASE WHEN COLUMNS.COLOPTIONS IN (0x00,0x01,0x02) THEN 'N' ELSE 'Y' END AS NULLABLE,
+      CHAR_USED,
+      CASE WHEN COLUMNS.COLTYPE IN (5,6,22,26,27,32) THEN COLLEN
+      WHEN COLUMNS.COLTYPE IN (12,13,24,28,29,33) THEN COLLEN / 2 ELSE 0 END AS LENGTHINCHARS
+      FROM SYS.TABLES, SYS.COLUMNS
+      WHERE TABLES.TBLID = COLUMNS.ID AND (TABLES.TBLOWNER = :OWNER OR CAST (:OWNER AS TT_VARCHAR (31)) IS NULL) AND (TABLES.TBLNAME = :TABLENAME OR CAST (:TABLENAME AS TT_VARCHAR (31)) IS NULL) AND (COLUMNS.COLNAME = :COLUMNNAME OR CAST (:COLUMNNAME AS TT_VARCHAR (31)) IS NULL)
+      ORDER BY TABLES.TBLOWNER, TABLES.TBLNAME, COLUMNS.COLNUM
+    </PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Views</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT * FROM ALL_VIEWS WHERE (OWNER = :OWNER OR :OWNER is null) AND (VIEW_NAME = :VIEWNAME OR :VIEWNAME is null)</PopulationString> -->
+    <PopulationString>SELECT RTRIM (OWNER) AS OWNER, RTRIM (NAME) AS VIEW_NAME, LENGTH (SQL) AS TEXT_LENGTH, SQL AS TEXT, CAST (NULL AS NUMBER) AS TYPE_TEXT_LENGTH, CAST (NULL AS VARCHAR2 (4000)) AS TYPE_TEXT, CAST (NULL AS NUMBER) AS OID_TEXT_LENGTH, CAST (NULL AS VARCHAR2 (4000)) AS OID_TEXT, CAST (NULL AS VARCHAR2 (30)) AS VIEW_TYPE_OWNER, CAST (NULL AS VARCHAR2 (30)) AS VIEW_TYPE, CAST (NULL AS VARCHAR2 (30)) AS SUPERVIEW_NAME, CAST (NULL AS VARCHAR2 (1)) AS EDITIONING_VIEW, 'Y' AS READ_ONLY FROM SYS.VIEWS WHERE (OWNER = :OWNER OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) AND (NAME = :VIEWNAME OR CAST (:VIEWNAME AS VARCHAR2 (30)) IS NULL)</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Synonyms</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT * FROM ALL_SYNONYMS WHERE (OWNER = :OWNER OR :OWNER is null) AND (SYNONYM_NAME = :SYNONYMNAME OR :SYNONYMNAME is null)</PopulationString> -->
+    <PopulationString>SELECT * FROM SYS.ALL_SYNONYMS WHERE (OWNER = :OWNER OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) AND (SYNONYM_NAME = :SYNONYMNAME OR CAST (:SYNONYMNAME AS VARCHAR2 (30)) IS NULL)</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Sequences</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT * FROM ALL_SEQUENCES WHERE (SEQUENCE_OWNER = :OWNER OR :OWNER is null) AND (SEQUENCE_NAME = :SEQUENCENAME OR :SEQUENCENAME is null)</PopulationString> -->
+    <PopulationString>SELECT RTRIM (OWNER) AS SEQUENCE_OWNER, RTRIM (NAME) AS SEQUENCE_NAME, MINVAL AS MIN_VALUE, MAXVAL AS MAX_VALUE, INCREMENT AS INCREMENT_BY, CASE CYCLE WHEN 0x00 THEN 'N' ELSE 'Y' END AS CYCLE_FLAG, NULL AS ORDER_FLAG, CACHESIZE AS CACHE_SIZE, LASTNUMBER AS LAST_NUMBER FROM SYS.SEQUENCES WHERE (OWNER = :OWNER OR CAST (:OWNER AS TT_CHAR (31)) IS NULL) AND (NAME = :SEQUENCENAME OR CAST (:SEQUENCENAME AS TT_CHAR (31)) IS NULL)</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Functions</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID, CREATED, LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY FROM ALL_OBJECTS WHERE (OWNER = :OWNER  OR :OWNER is null) AND (OBJECT_NAME = :OBJECTNAME OR :OBJECTNAME is null) AND OBJECT_TYPE = 'FUNCTION'</PopulationString> -->
+    <PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID, CREATED, LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY FROM SYS.ALL_OBJECTS WHERE (OWNER = :OWNER  OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) AND (OBJECT_NAME = :OBJECTNAME OR CAST (:OBJECTNAME AS VARCHAR2 (30)) IS NULL) AND OBJECT_TYPE = 'FUNCTION'</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Procedures</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID, CREATED, LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY FROM ALL_OBJECTS WHERE (OWNER= :OWNER OR :OWNER is null) and (OBJECT_NAME = :OBJECTNAME OR :OBJECTNAME is null) AND OBJECT_TYPE = 'PROCEDURE'</PopulationString> -->
+    <PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID, CREATED, LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY FROM SYS.ALL_OBJECTS WHERE (OWNER= :OWNER OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) and (OBJECT_NAME = :OBJECTNAME OR CAST (:OBJECTNAME AS VARCHAR2 (30)) IS NULL) AND OBJECT_TYPE = 'PROCEDURE'</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Packages</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID,  LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY, CREATED FROM ALL_OBJECTS WHERE (OWNER= :OWNER OR :OWNER is null) and (OBJECT_NAME = :PACKAGENAME OR :PACKAGENAME is null) AND OBJECT_TYPE = 'PACKAGE'</PopulationString> -->
+    <PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID,  LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY, CREATED FROM SYS.ALL_OBJECTS WHERE (OWNER= :OWNER OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) and (OBJECT_NAME = :PACKAGENAME OR CAST (:PACKAGENAME AS VARCHAR2 (30)) IS NULL) AND OBJECT_TYPE = 'PACKAGE'</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>PackageBodies</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID, LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY, CREATED FROM ALL_OBJECTS WHERE (OWNER= :OWNER OR :OWNER is null) and (OBJECT_NAME = :PKGBODYNAME OR :PKGBODYNAME is null) AND OBJECT_TYPE = 'PACKAGE BODY'</PopulationString> -->
+    <PopulationString>SELECT OWNER, OBJECT_NAME, SUBOBJECT_NAME, OBJECT_ID, DATA_OBJECT_ID, LAST_DDL_TIME, TIMESTAMP, STATUS, TEMPORARY, GENERATED, SECONDARY, CREATED FROM SYS.ALL_OBJECTS WHERE (OWNER= :OWNER OR CAST (:OWNER AS VARCHAR2 (30))  IS NULL) and (OBJECT_NAME = :PKGBODYNAME OR CAST (:PKGBODYNAME AS VARCHAR2 (30)) IS NULL) AND OBJECT_TYPE = 'PACKAGE BODY'</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>IndexColumns</CollectionName>
+    <NumberOfRestrictions>5</NumberOfRestrictions>
+    <NumberOfIdentifierParts>3</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT INDEX_OWNER, INDEX_NAME, TABLE_OWNER, TABLE_NAME, COLUMN_NAME, COLUMN_POSITION, COLUMN_LENGTH, CHAR_LENGTH, DESCEND FROM ALL_IND_COLUMNS WHERE (INDEX_OWNER = :OWNER OR :OWNER is null) AND (INDEX_NAME = :INDEXNAME OR :INDEXNAME is null) AND (TABLE_OWNER = :TABLEOWNER OR :TABLEOWNER is null) AND (TABLE_NAME = :TABLENAME OR :TABLENAME is null) AND (COLUMN_NAME = :COLUMNNAME OR :COLUMNNAME is null)</PopulationString> -->
+    <PopulationString>
+      SELECT RTRIM (IXOWNER) AS INDEX_OWNER, RTRIM (IXNAME) AS INDEX_NAME, RTRIM (TBLOWNER) AS TABLE_OWNER, RTRIM (TBLNAME) AS TABLE_NAME, RTRIM (COLNAME) AS COLUMN_NAME, COLNUM AS COLUMN_POSITION, COLLEN AS COLUMN_LENGTH, CAST (NULL AS NUMBER) AS CHAR_LENGTH, CAST (NULL AS VARCHAR2 (4)) AS DESCEND
+      FROM SYS.INDEXES INDEXES, SYS.TABLES TABLES, SYS.COLUMNS COLUMNS
+      WHERE INDEXES.TBLID = TABLES.TBLID AND INDEXES.TBLID = COLUMNS.ID
+      AND (IXOWNER=:OWNER OR CAST (:OWNER AS CHAR (31)) IS NULL)
+      AND (IXNAME = :INDEXNAME OR CAST (:INDEXNAME AS CHAR (31)) IS NULL)
+      AND (TBLOWNER = :TABLEOWNER OR CAST (:TABLEOWNER  AS CHAR (31)) IS NULL)
+      AND (TBLNAME = :TABLENAME OR CAST (:TABLENAME AS CHAR (31)) IS NULL)
+      AND (COLNAME = :COLUMNNAME OR CAST (:COLUMNNAME AS CHAR (31)) IS NULL)
+      AND (CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0XFFFF000000000000000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000FFFF00000000000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000FFFF0000000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000FFFF000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000FFFF00000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000FFFF0000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000FFFF000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000000000000000FFFF00000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000000000000000FFFF0000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000000000000000FFFF000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000000000000000000000000000FFFF00000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000000000000000000000000000FFFF0000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000000000000000000000000000FFFF000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000000000000000000000000000000000000000FFFF00000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000000000000000000000000000000000000000FFFF0000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000000000000000000000000000000000000000FFFF AS VARCHAR2 (32))))
+      ORDER BY IXOWNER, IXNAME, TBLNAME
+    </PopulationString>
+  </MetaDataCollections>  
+  <MetaDataCollections>
+    <CollectionName>Indexes</CollectionName>
+    <NumberOfRestrictions>4</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT * FROM ALL_INDEXES WHERE (OWNER = :OWNER OR :OWNER is null) AND (INDEX_NAME = :INDEXNAME OR :INDEXNAME is null) AND (TABLE_OWNER = :TABLEOWNER OR :TABLEOWNER is null) AND (TABLE_NAME = :TABLENAME OR :TABLENAME is null)</PopulationString> -->
+    <PopulationString>SELECT RTRIM (INDEXES.IXOWNER) AS OWNER,  RTRIM (INDEXES.IXNAME) AS INDEX_NAME, 'NORMAL' AS INDEX_TYPE, RTRIM (TABLES.TBLOWNER) AS TABLE_OWNER, RTRIM (TABLES.TBLNAME) AS TABLE_NAME, 'TABLE' AS TABLE_TYPE, CASE INDEXES.ISUNIQUE WHEN 0x00 THEN 'NONUNIQUE' ELSE 'UNIQUE' END AS UNIQUENESS, CAST (NULL AS VARCHAR2 (8)) AS COMPRESSION,  CAST (NULL AS NUMBER) AS PREFIX_LENGTH,  CAST (NULL AS VARCHAR2 (30)) AS TABLESPACE_NAME,  CAST (NULL AS NUMBER) AS INI_TRANS,  CAST (NULL AS NUMBER) AS MAX_TRANS,  CAST (NULL AS NUMBER) AS INITIAL_EXTENT, CAST (NULL AS NUMBER) AS NEXT_EXTENT, CAST (NULL AS NUMBER) AS MIN_EXTENTS, CAST (NULL AS NUMBER) AS MAX_EXTENTS, CAST (NULL AS NUMBER) AS PCT_INCREASE, CAST (NULL AS NUMBER) AS PCT_THRESHOLD, CAST (NULL AS NUMBER) AS INCLUDE_COLUMN, CAST (NULL AS NUMBER) AS FREELISTS, CAST (NULL AS NUMBER) AS FREELIST_GROUPS, CAST (NULL AS NUMBER) AS PCT_FREE, CAST (NULL AS VARCHAR2 (3)) AS LOGGING, CAST (NULL AS NUMBER) AS BLEVEL, CAST (NULL AS NUMBER) AS LEAF_BLOCKS, CAST (NULL AS NUMBER) AS DISTINCT_KEYS, CAST (NULL AS NUMBER) AS AVG_LEAF_BLOCKS_PER_KEY, CAST (NULL AS NUMBER) AS AVG_DATA_BLOCKS_PER_KEY, CAST (NULL AS NUMBER) AS CLUSTERING_FACTOR, 'VALID' AS STATUS, CAST (NULL AS NUMBER) AS NUM_ROWS, CAST (NULL AS NUMBER) AS SAMPLE_SIZE, CAST (NULL AS DATE) AS LAST_ANALYZED, CAST (NULL AS VARCHAR2 (40)) AS DEGREE, CAST (NULL AS VARCHAR2 (40)) AS INSTANCES, CAST (NULL AS VARCHAR2 (3)) AS PARTITIONED, CAST (NULL AS VARCHAR2 (1)) AS TEMPORARY, CAST (NULL AS VARCHAR2 (1)) AS GENERATED, CAST (NULL AS VARCHAR2 (1)) AS SECONDARY, CAST (NULL AS VARCHAR2 (7)) AS BUFFER_POOL, CAST (NULL AS VARCHAR2 (3)) AS USER_STATS, CAST (NULL AS VARCHAR2 (15)) AS DURATION, CAST (NULL AS NUMBER) AS PCT_DIRECT_ADDRESS, CAST (NULL AS VARCHAR2 (30)) AS ITYP_OWNER, CAST (NULL AS VARCHAR2 (30)) AS ITYP_NAME, CAST (NULL AS VARCHAR2 (1000)) AS PARAMETERS, CAST (NULL AS VARCHAR2 (3)) AS GLOBAL_STATS, CAST (NULL AS VARCHAR2 (12)) AS DOMIDX_STATUS, CAST (NULL AS VARCHAR2 (6)) AS DOMIDX_OPSTATUS, CAST (NULL AS VARCHAR2 (8)) AS FUNCIDX_STATUS, CAST (NULL AS VARCHAR2 (3)) AS JOIN_INDEX, CAST (NULL AS VARCHAR2 (3)) AS IOT_REDUNDANT_PKEY_ELIM, CAST (NULL AS VARCHAR2 (3)) AS DROPPED, CAST (NULL AS VARCHAR2 (9)) AS VISIBILITY, CAST (NULL AS VARCHAR2 (14)) AS DOMIDX_MANAGEMENT  FROM SYS.INDEXES, SYS.TABLES WHERE INDEXES.TBLID = TABLES.TBLID AND (INDEXES.IXOWNER = :OWNER OR CAST (:OWNER AS TT_CHAR (31)) IS NULL) AND (INDEXES.IXNAME = :INDEXNAME OR CAST (:INDEXNAME AS TT_CHAR (31)) IS NULL) AND (TABLES.TBLOWNER = :TABLEOWNER OR CAST (:TABLEOWNER AS TT_CHAR (31)) IS NULL) AND (TABLES.TBLNAME = :TABLENAME OR CAST (:TABLENAME AS TT_CHAR (31)) IS NULL)</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <NumberOfRestrictions>2</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:    <PopulationString>SELECT * FROM ALL_ARGUMENTS WHERE DATA_LEVEL = 0 AND (OWNER = :OWNER  OR :OWNER is null) AND (OBJECT_NAME = :OBJECTNAME  OR :OBJECTNAME is null)</PopulationString> -->
+    <PopulationString>SELECT * FROM SYS.ALL_ARGUMENTS WHERE DATA_LEVEL = 0 AND (OWNER = :OWNER  OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) AND (OBJECT_NAME = :OBJECTNAME  OR CAST (:OBJECTNAME AS VARCHAR2 (30)) IS NULL)</PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>Arguments</CollectionName>
+    <NumberOfRestrictions>4</NumberOfRestrictions>
+    <NumberOfIdentifierParts>4</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, PACKAGE_NAME, OBJECT_NAME, ARGUMENT_NAME, POSITION, SEQUENCE, DEFAULT_VALUE, DEFAULT_LENGTH, IN_OUT, DATA_LENGTH, DATA_PRECISION, DATA_SCALE, DATA_TYPE, CHAR_USED FROM ALL_ARGUMENTS WHERE (OWNER= :OWNER OR :OWNER is null) AND (PACKAGE_NAME = :PACKAGENAME OR :PACKAGENAME is null) AND (OBJECT_NAME = :OBJECTNAME OR :OBJECTNAME is null) AND (ARGUMENT_NAME = :ARGUMENTNAME OR :ARGUMENTNAME is null)</PopulationString> -->
+    <PopulationString>SELECT OWNER, PACKAGE_NAME, OBJECT_NAME, ARGUMENT_NAME, POSITION, SEQUENCE, DEFAULT_VALUE, DEFAULT_LENGTH, IN_OUT, DATA_LENGTH, DATA_PRECISION, DATA_SCALE, DATA_TYPE, CHAR_USED FROM SYS.ALL_ARGUMENTS WHERE (OWNER= :OWNER OR CAST (:OWNER AS VARCHAR2 (30)) IS NULL) AND (PACKAGE_NAME = :PACKAGENAME OR CAST (:PACKAGENAME AS VARCHAR2 (30)) IS NULL) AND (OBJECT_NAME = :OBJECTNAME OR CAST (:OBJECTNAME AS VARCHAR2 (30)) IS NULL) AND (ARGUMENT_NAME = :ARGUMENTNAME OR CAST (:ARGUMENTNAME AS VARCHAR2 (30)) IS NULL)</PopulationString>
+  </MetaDataCollections>
+ <MetaDataCollections>
+    <CollectionName>UniqueKeys</CollectionName>
+    <NumberOfRestrictions>3</NumberOfRestrictions>
+    <NumberOfIdentifierParts>3</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, CONSTRAINT_NAME, TABLE_NAME, SEARCH_CONDITION, R_OWNER, R_CONSTRAINT_NAME, DELETE_RULE, STATUS, DEFERRABLE, VALIDATED, GENERATED, BAD, RELY, LAST_CHANGE, INDEX_OWNER, INDEX_NAME FROM ALL_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'U' AND (OWNER = :OWNER OR :OWNER is null) AND (TABLE_NAME = :TABLENAME OR :TABLENAME is null) AND (CONSTRAINT_NAME = :CONSTRAINTNAME OR :CONSTRAINTNAME is null)</PopulationString> -->
+    <PopulationString>
+      SELECT RTRIM (IXOWNER) AS OWNER, RTRIM (IXNAME) AS CONSTRAINT_NAME, CAST (NULL AS VARCHAR2 (30)) AS SEARCH_CONDITION, CAST (NULL AS VARCHAR2 (30)) AS R_OWNER, CAST (NULL AS VARCHAR2 (30)) AS R_CONSTRAINT_NAME, CAST (NULL AS VARCHAR2 (9)) AS DELETE_RULE, 'ENABLED' AS STATUS, CAST (NULL AS VARCHAR2 (14)) AS DEFERRABLE, 'VALIDATED' AS VALIDATED, CAST (NULL AS VARCHAR2 (14)) AS GENERATED, CAST (NULL AS VARCHAR2 (3)) AS BAD, CAST (NULL AS VARCHAR2 (4)) AS RELY, CAST (NULL AS DATE) AS LAST_CHANGE, RTRIM (IXOWNER) AS INDEX_OWNER, RTRIM (IXNAME) AS INDEX_NAME
+      FROM SYS.INDEXES INDEXES, SYS.TABLES TABLES
+      WHERE INDEXES.TBLID = TABLES.TBLID 
+      AND ISUNIQUE = 0x01 AND (TBLOWNER = :OWNER OR CAST (:OWNER AS CHAR (31))  IS NULL) AND (TBLNAME = :TABLENAME OR CAST (:TABLENAME AS CHAR (31)) IS NULL) AND (IXNAME = :CONSTRAINTNAME OR CAST (:CONSTRAINTNAME AS CHAR (31)) IS NULL)
+    </PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>PrimaryKeys</CollectionName>
+    <NumberOfRestrictions>3</NumberOfRestrictions>
+    <NumberOfIdentifierParts>3</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT OWNER, CONSTRAINT_NAME, TABLE_NAME, SEARCH_CONDITION, R_OWNER, R_CONSTRAINT_NAME, DELETE_RULE, STATUS, DEFERRABLE, VALIDATED, GENERATED, BAD, RELY, LAST_CHANGE, INDEX_OWNER, INDEX_NAME FROM ALL_CONSTRAINTS WHERE CONSTRAINT_TYPE = 'P' AND (OWNER = :OWNER OR :OWNER is null) AND (TABLE_NAME = :TABLENAME OR :TABLENAME is null) AND (CONSTRAINT_NAME = :CONSTRAINTNAME OR :CONSTRAINTNAME is null)</PopulationString>-->
+    <PopulationString>
+      SELECT RTRIM (IXOWNER) AS OWNER, RTRIM (IXNAME) AS CONSTRAINT_NAME, RTRIM (TBLNAME) AS TABLE_NAME, CAST (NULL AS VARCHAR2 (30)) AS SEARCH_CONDITION, CAST (NULL AS VARCHAR2 (30)) AS R_OWNER, CAST (NULL AS VARCHAR2 (30)) AS R_CONSTRAINT_NAME, CAST (NULL AS VARCHAR2 (9)) AS DELETE_RULE, 'ENABLED' AS STATUS, CAST (NULL AS VARCHAR2 (14)) AS DEFERRABLE, 'VALIDATED' AS VALIDATED, CAST (NULL AS VARCHAR2 (14)) AS GENERATED, CAST (NULL AS VARCHAR2 (3)) AS BAD, CAST (NULL AS VARCHAR2 (4)) AS RELY, CAST (NULL AS DATE) AS LAST_CHANGE, RTRIM (IXOWNER) AS INDEX_OWNER, RTRIM (IXNAME) AS INDEX_NAME
+      FROM SYS.INDEXES INDEXES, SYS.TABLES TABLES
+      WHERE INDEXES.TBLID = TABLES.TBLID
+      AND ISPRIMARY = 0x01 AND (TBLOWNER = :OWNER OR CAST (:OWNER AS CHAR (31))  IS NULL) AND (TBLNAME = :TABLENAME OR CAST (:TABLENAME AS CHAR (31)) IS NULL) AND (IXNAME = :CONSTRAINTNAME OR CAST (:CONSTRAINTNAME AS CHAR (31)) IS NULL)
+    </PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>ForeignKeys</CollectionName>
+    <NumberOfRestrictions>3</NumberOfRestrictions>
+    <NumberOfIdentifierParts>3</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT PKCON.CONSTRAINT_NAME AS PRIMARY_KEY_CONSTRAINT_NAME, PKCON.OWNER AS PRIMARY_KEY_OWNER, PKCON.TABLE_NAME AS PRIMARY_KEY_TABLE_NAME,FKCON.OWNER AS FOREIGN_KEY_OWNER, FKCON.CONSTRAINT_NAME AS FOREIGN_KEY_CONSTRAINT_NAME,FKCON.TABLE_NAME AS FOREIGN_KEY_TABLE_NAME, FKCON.SEARCH_CONDITION, FKCON.R_OWNER, FKCON.R_CONSTRAINT_NAME, FKCON.DELETE_RULE, FKCON.STATUS, FKCON.VALIDATED, FKCON.GENERATED, FKCON.RELY, FKCON.LAST_CHANGE, FKCON.INDEX_OWNER, FKCON.INDEX_NAME FROM ALL_CONSTRAINTS FKCON, ALL_CONSTRAINTS PKCON WHERE PKCON.OWNER = FKCON.R_OWNER AND PKCON.CONSTRAINT_NAME = FKCON.R_CONSTRAINT_NAME AND FKCON.CONSTRAINT_TYPE = 'R' and (FKCON.OWNER= :OWNER OR :OWNER is null) AND (FKCON.TABLE_NAME = :TABLENAME OR :TABLENAME is null) AND (FKCON.CONSTRAINT_NAME = :CONSTRAINTNAME OR :CONSTRAINTNAME is null)</PopulationString> -->
+    <PopulationString>
+      SELECT RTRIM (PKCON_IX.IXNAME) AS PRIMARY_KEY_CONSTRAINT_NAME, RTRIM (PKCON_IX.IXOWNER) AS PRIMARY_KEY_OWNER, RTRIM (PKCON_TAB.TBLNAME) AS PRIMARY_KEY_TABLE_NAME, RTRIM (FKCON_IX.IXOWNER) AS FOREIGN_KEY_OWNER, RTRIM (FKCON_IX.IXNAME) AS FOREIGN_KEY_CONSTRAINT_NAME, RTRIM (FKCON_TAB.TBLNAME) AS FOREIGN_KEY_TABLE_NAME,CAST (NULL AS VARCHAR2 (30)) AS SEARCH_CONDITION, RTRIM (PKCON_TAB.TBLOWNER) AS R_OWNER, RTRIM (PKCON_IX.IXNAME) AS R_CONSTRAINT_NAME, CAST (NULL AS VARCHAR2 (9)) AS DELETE_RULE, 'ENABLED' AS STATUS, 'VALIDATED' AS VALIDATED, CAST (NULL AS VARCHAR2 (14)) AS GENERATED, CAST (NULL AS VARCHAR2 (4)) AS RELY, CAST (NULL AS DATE) AS LAST_CHANGE, RTRIM (FKCON_IX.IXOWNER) AS INDEX_OWNER, RTRIM (FKCON_IX.IXNAME) AS INDEX_NAME
+      FROM SYS.INDEXES FKCON_IX, SYS.TABLES FKCON_TAB, SYS.INDEXES PKCON_IX, SYS.TABLES PKCON_TAB
+      WHERE FKCON_IX.TBLID = FKCON_TAB.TBLID
+      AND PKCON_IX.TBLID = PKCON_TAB.TBLID
+      AND FKCON_IX.IXNAME LIKE 'TTFOREIGN%'
+      AND FKCON_IX.SYS6 = PKCON_IX.IXID
+      AND (FKCON_IX.IXOWNER= :OWNER OR CAST (:OWNER AS CHAR (31)) IS NULL)
+      AND (FKCON_TAB.TBLNAME = :TABLENAME OR CAST (:TABLENAME AS CHAR (31)) IS NULL)
+      AND (FKCON_IX.IXNAME = :CONSTRAINTNAME OR CAST (:CONSTRAINTNAME AS CHAR (31)) IS NULL)
+    </PopulationString>
+  </MetaDataCollections>
+  <MetaDataCollections>
+    <CollectionName>ForeignKeyColumns</CollectionName>
+    <NumberOfRestrictions>3</NumberOfRestrictions>
+    <NumberOfIdentifierParts>2</NumberOfIdentifierParts>
+    <PopulationMechanism>OracleCommand</PopulationMechanism>
+    <!-- Oracle:<PopulationString>SELECT FKCOLS.OWNER, FKCOLS.CONSTRAINT_NAME, FKCOLS.TABLE_NAME, FKCOLS.COLUMN_NAME, FKCOLS.POSITION FROM ALL_CONS_COLUMNS FKCOLS, ALL_CONSTRAINTS FKCON where FKCOLS.OWNER = FKCON.OWNER and FKCOLS.TABLE_NAME = FKCON.TABLE_NAME and FKCOLS.CONSTRAINT_NAME = FKCON.CONSTRAINT_NAME AND FKCOLS.OWNER= FKCON.OWNER and FKCOLS.TABLE_NAME= FKCON.TABLE_NAME and FKCON.CONSTRAINT_TYPE = 'R' AND (FKCOLS.OWNER=:OWNER OR :OWNER is null) and (FKCOLS.TABLE_NAME = :TABLENAME OR :TABLENAME is null) and (FKCOLS.CONSTRAINT_NAME = :CONSTRAINTNAME OR :CONSTRAINTNAME is null) ORDER BY FKCOLS.OWNER, FKCOLS.CONSTRAINT_NAME, FKCOLS.TABLE_NAME</PopulationString> -->
+    <PopulationString>
+      SELECT RTRIM (IXOWNER) AS OWNER, RTRIM (IXNAME) AS CONSTRAINT_NAME, RTRIM (TBLNAME) AS TABLE_NAME, RTRIM (COLNAME) AS COLUMN_NAME, COLNUM AS POSITION
+      FROM SYS.INDEXES INDEXES, SYS.TABLES TABLES, SYS.COLUMNS COLUMNS
+      WHERE INDEXES.TBLID = TABLES.TBLID AND INDEXES.TBLID = COLUMNS.ID
+      AND IXNAME LIKE 'TTFOREIGN%'
+      AND (IXOWNER= :OWNER OR CAST (:OWNER AS CHAR (31)) IS NULL)
+      AND (TBLNAME = :TABLENAME OR CAST (:TABLENAME AS CHAR (31)) IS NULL)
+      AND (IXNAME = :CONSTRAINTNAME OR CAST (:CONSTRAINTNAME AS CHAR (31)) IS NULL)
+      AND (CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0XFFFF000000000000000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000FFFF00000000000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000FFFF0000000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000FFFF000000000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000FFFF00000000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000FFFF0000000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000FFFF000000000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000000000000000FFFF00000000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000000000000000FFFF0000000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000000000000000FFFF000000000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000000000000000000000000000FFFF00000000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000000000000000000000000000FFFF0000000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000000000000000000000000000FFFF000000000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X0000000000000000000000000000000000000000000000000000FFFF00000000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X00000000000000000000000000000000000000000000000000000000FFFF0000 AS VARCHAR2 (32))) OR
+      CHR (COLUMNS.COLNUM) = TRIM (BOTH CHR (0) FROM CAST (KEYCOLS &amp; 0X000000000000000000000000000000000000000000000000000000000000FFFF AS VARCHAR2 (32))))
+      ORDER BY IXOWNER, IXNAME, TBLNAME
+    </PopulationString>
+  </MetaDataCollections>
+  <Restrictions>
+    <CollectionName>Users</CollectionName>
+    <RestrictionName>UserName</RestrictionName>
+    <ParameterName>NAME</ParameterName>
+    <RestrictionDefault>USERNAME</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Tables</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Tables</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Columns</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Columns</CollectionName>
+    <RestrictionName>Table</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Columns</CollectionName>
+    <RestrictionName>Column</RestrictionName>
+    <ParameterName>COLUMNNAME</ParameterName>
+    <RestrictionDefault>COLUMN_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Views</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Views</CollectionName>
+    <RestrictionName>View</RestrictionName>
+    <ParameterName>VIEWNAME</ParameterName>
+    <RestrictionDefault>VIEW_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Synonyms</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Synonyms</CollectionName>
+    <RestrictionName>Synonym</RestrictionName>
+    <ParameterName>SYNONYMNAME</ParameterName>
+    <RestrictionDefault>SYNONYM_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Sequences</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>SEQUENCE_OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Sequences</CollectionName>
+    <RestrictionName>Sequence</RestrictionName>
+    <ParameterName>SEQUENCENAME</ParameterName>
+    <RestrictionDefault>SEQUENCE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ProcedureParameters</CollectionName>
+    <RestrictionName>ObjectName</RestrictionName>
+    <ParameterName>OBJECTNAME</ParameterName>
+    <RestrictionDefault>OBJECT_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Functions</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Functions</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>OBJECTNAME</ParameterName>
+    <RestrictionDefault>OBJECT_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>INDEX_OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>INDEXNAME</ParameterName>
+    <RestrictionDefault>INDEX_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>TableOwner</RestrictionName>
+    <ParameterName>TABLEOWNER</ParameterName>
+    <RestrictionDefault>TABLE_OWNER</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>TableName</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>IndexColumns</CollectionName>
+    <RestrictionName>Column</RestrictionName>
+    <ParameterName>COLUMNNAME</ParameterName>
+    <RestrictionDefault>COLUMN_NAME</RestrictionDefault>
+    <RestrictionNumber>5</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>INDEXNAME</ParameterName>
+    <RestrictionDefault>INDEX_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>TableOwner</RestrictionName>
+    <ParameterName>TABLEOWNER</ParameterName>
+    <RestrictionDefault>TABLE_OWNER</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Indexes</CollectionName>
+    <RestrictionName>TableName</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Packages</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Packages</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>PACKAGENAME</ParameterName>
+    <RestrictionDefault>OBJECT_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>PackageBodies</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>PackageBodies</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>PKGBODYNAME</ParameterName>
+    <RestrictionDefault>OBJECT_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Arguments</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Arguments</CollectionName>
+    <RestrictionName>PackageName</RestrictionName>
+    <ParameterName>PACKAGENAME</ParameterName>
+    <RestrictionDefault>PACKAGE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Arguments</CollectionName>
+    <RestrictionName>ObjectName</RestrictionName>
+    <ParameterName>OBJECTNAME</ParameterName>
+    <RestrictionDefault>OBJECT_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Arguments</CollectionName>
+    <RestrictionName>ArgumentName</RestrictionName>
+    <ParameterName>ARGUMENTNAME</ParameterName>
+    <RestrictionDefault>ARGUMENT_NAME</RestrictionDefault>
+    <RestrictionNumber>4</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Procedures</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>Procedures</CollectionName>
+    <RestrictionName>Name</RestrictionName>
+    <ParameterName>OBJECTNAME</ParameterName>
+    <RestrictionDefault>OBJECT_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>UniqueKeys</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>UniqueKeys</CollectionName>
+    <RestrictionName>Table_Name</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>UniqueKeys</CollectionName>
+    <RestrictionName>Constraint_Name</RestrictionName>
+    <ParameterName>CONSTRAINTNAME</ParameterName>
+    <RestrictionDefault>CONSTRAINT_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>PrimaryKeys</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>PrimaryKeys</CollectionName>
+    <RestrictionName>Table_Name</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>PrimaryKeys</CollectionName>
+    <RestrictionName>Constraint_Name</RestrictionName>
+    <ParameterName>CONSTRAINTNAME</ParameterName>
+    <RestrictionDefault>CONSTRAINT_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Foreign_Key_Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>FKCON.OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Foreign_Key_Table_Name</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>FKCON.TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeys</CollectionName>
+    <RestrictionName>Foreign_Key_Constraint_Name</RestrictionName>
+    <ParameterName>CONSTRAINTNAME</ParameterName>
+    <RestrictionDefault>FKCON.CONSTRAINT_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeyColumns</CollectionName>
+    <RestrictionName>Owner</RestrictionName>
+    <ParameterName>OWNER</ParameterName>
+    <RestrictionDefault>FKCOLS.OWNER</RestrictionDefault>
+    <RestrictionNumber>1</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeyColumns</CollectionName>
+    <RestrictionName>Table_Name</RestrictionName>
+    <ParameterName>TABLENAME</ParameterName>
+    <RestrictionDefault>FKCOLS.TABLE_NAME</RestrictionDefault>
+    <RestrictionNumber>2</RestrictionNumber>
+  </Restrictions>
+  <Restrictions>
+    <CollectionName>ForeignKeyColumns</CollectionName>
+    <RestrictionName>Constraint_Name</RestrictionName>
+    <ParameterName>CONSTRAINTNAME</ParameterName>
+    <RestrictionDefault>FKCOLS.CONSTRAINT_NAME</RestrictionDefault>
+    <RestrictionNumber>3</RestrictionNumber>
+  </Restrictions>
+  <DataSourceInformation>
+    <CompositeIdentifierSeparatorPattern>@|\.</CompositeIdentifierSeparatorPattern>
+    <DataSourceProductName>Oracle TimesTen IMDB</DataSourceProductName>
+    <GroupByBehavior>3</GroupByBehavior>
+    <IdentifierPattern>^[\p{Lo}\p{Lu}\p{Ll}\p{Lm}__#$][\p{Lo}\p{Lu}\p{Ll}\p{Lm}\p{Nd}__#$]*$</IdentifierPattern>
+    <IdentifierCase>1</IdentifierCase>
+    <OrderByColumnsInSelect>false</OrderByColumnsInSelect>
+    <ParameterMarkerFormat>:{0}</ParameterMarkerFormat>
+    <ParameterMarkerPattern>:([\p{Lo}\p{Lu}\p{Ll}\p{Lm}__#$][\p{Lo}\p{Lu}\p{Ll}\p{Lm}\p{Nd}__#$]*)</ParameterMarkerPattern>
+    <ParameterNameMaxLength>30</ParameterNameMaxLength>
+    <ParameterNamePattern>^[\p{Lo}\p{Lu}\p{Ll}\p{Lm}__#$][\p{Lo}\p{Lu}\p{Ll}\p{Lm}\p{Nd}__#$]*$</ParameterNamePattern>
+    <QuotedIdentifierPattern>"^(([^"]|"")*)$"</QuotedIdentifierPattern>
+    <QuotedIdentifierCase>2</QuotedIdentifierCase>
+    <StringLiteralPattern>'(([^']|'')*)'</StringLiteralPattern>
+    <SupportedJoinOperators>15</SupportedJoinOperators>
+  </DataSourceInformation>
+  <DataTypes>
+    <TypeName>BINARY_DOUBLE</TypeName>
+    <ProviderDbType>132</ProviderDbType>
+    <ColumnSize>8</ColumnSize>
+    <CreateFormat>BINARY_DOUBLE</CreateFormat>
+    <DataType>System.Double</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>true</IsBestMatch>
+    <IsCaseSensitive>false</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>false</IsSearchableWithLike>
+    <IsUnsigned>false</IsUnsigned>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <MinimumVersion>10.00.00.00.00</MinimumVersion>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix />
+    <LiteralSuffix />
+  </DataTypes>
+  <DataTypes>
+    <TypeName>BINARY_FLOAT</TypeName>
+    <ProviderDbType>133</ProviderDbType>
+    <ColumnSize>4</ColumnSize>
+    <CreateFormat>BINARY_FLOAT</CreateFormat>
+    <DataType>System.Single</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>true</IsBestMatch>
+    <IsCaseSensitive>false</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>false</IsSearchableWithLike>
+    <IsUnsigned>false</IsUnsigned>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <MinimumVersion>10.00.00.00.00</MinimumVersion>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix />
+    <LiteralSuffix />
+  </DataTypes>
+  <DataTypes>
+    <TypeName>CHAR</TypeName>
+    <ProviderDbType>104</ProviderDbType>
+    <ColumnSize>2000</ColumnSize>
+    <CreateFormat>CHAR({0})</CreateFormat>
+    <CreateParameters>size</CreateParameters>
+    <DataType>System.String</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>false</IsBestMatch>
+    <IsCaseSensitive>true</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>true</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>'</LiteralPrefix>
+    <LiteralSuffix>'</LiteralSuffix>
+  </DataTypes>
+  <DataTypes>
+    <TypeName>DATE</TypeName>
+    <ProviderDbType>106</ProviderDbType>
+    <ColumnSize>19</ColumnSize> 
+    <CreateFormat>DATE</CreateFormat>
+    <DataType>System.DateTime</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>true</IsBestMatch>
+    <IsCaseSensitive>false</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>false</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>TO_DATE('</LiteralPrefix>
+    <LiteralSuffix>','YYYY-MM-DD HH24:MI:SS')</LiteralSuffix>
+  </DataTypes>
+  <DataTypes>
+    <TypeName>FLOAT</TypeName>
+    <ProviderDbType>108</ProviderDbType>
+    <ColumnSize>38</ColumnSize>
+    <CreateFormat>FLOAT({0})</CreateFormat>
+    <CreateParameters>precision</CreateParameters>
+    <DataType>System.Decimal</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>false</IsBestMatch>
+    <IsCaseSensitive>false</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>false</IsSearchableWithLike>
+    <IsUnsigned>false</IsUnsigned>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix />
+    <LiteralSuffix />
+  </DataTypes>
+  <DataTypes>
+    <TypeName>NCHAR</TypeName>
+    <ProviderDbType>117</ProviderDbType>
+    <ColumnSize>2000</ColumnSize>
+    <CreateFormat>NCHAR({0})</CreateFormat>
+    <CreateParameters>size</CreateParameters>
+    <DataType>System.String</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>false</IsBestMatch>
+    <IsCaseSensitive>true</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>true</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <MinimumVersion>08.00.00.00.00</MinimumVersion>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>N'</LiteralPrefix>
+    <LiteralSuffix>'</LiteralSuffix>
+  </DataTypes>
+  <DataTypes>
+    <TypeName>NUMBER</TypeName>
+    <ProviderDbType>107</ProviderDbType>
+    <ColumnSize>38</ColumnSize>
+    <CreateFormat>NUMBER ({0},{1})</CreateFormat>
+    <CreateParameters>precision,scale</CreateParameters>
+    <DataType>System.Decimal</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>true</IsBestMatch>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>false</IsSearchableWithLike>
+    <IsUnsigned>false</IsUnsigned>
+    <MaximumScale>127</MaximumScale>
+    <MinimumScale>-84</MinimumScale>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix />
+    <LiteralSuffix />
+  </DataTypes>
+  <DataTypes>
+    <TypeName>NVARCHAR2</TypeName>
+    <ProviderDbType>119</ProviderDbType>
+    <ColumnSize>4000</ColumnSize>
+    <CreateFormat>NVARCHAR2({0})</CreateFormat>
+    <CreateParameters>size</CreateParameters>
+    <DataType>System.String</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>false</IsBestMatch>
+    <IsCaseSensitive>true</IsCaseSensitive>
+    <IsFixedLength>false</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>true</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <MinimumVersion>08.00.00.00.00</MinimumVersion>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>N'</LiteralPrefix>
+    <LiteralSuffix>'</LiteralSuffix>
+  </DataTypes>
+  <DataTypes>
+    <TypeName>TIMESTAMP</TypeName>
+    <ProviderDbType>123</ProviderDbType>
+    <ColumnSize>29</ColumnSize>
+    <CreateFormat>TIMESTAMP({0})</CreateFormat>
+    <CreateParameters>precision of fractional seconds</CreateParameters>
+    <DataType>System.DateTime</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>false</IsBestMatch>
+    <IsCaseSensitive>false</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>false</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <MinimumVersion>09.00.00.00.00</MinimumVersion>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>TO_TIMESTAMP('</LiteralPrefix>
+    <LiteralSuffix>','YYYY-MM-DD HH24:MI:SS.FF')</LiteralSuffix>
+  </DataTypes>
+  <DataTypes>
+    <TypeName>VARCHAR2</TypeName>
+    <ProviderDbType>126</ProviderDbType>
+    <ColumnSize>4000</ColumnSize>
+    <CreateFormat>VARCHAR2({0})</CreateFormat>
+    <CreateParameters>size</CreateParameters>
+    <DataType>System.String</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>true</IsBestMatch>
+    <IsCaseSensitive>true</IsCaseSensitive>
+    <IsFixedLength>false</IsFixedLength>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>true</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>'</LiteralPrefix>
+    <LiteralSuffix>'</LiteralSuffix>
+  </DataTypes>
+  <DataTypes>
+    <TypeName>ROWID</TypeName>
+    <ProviderDbType>126</ProviderDbType>
+    <ColumnSize>18</ColumnSize>
+    <CreateFormat>ROWID</CreateFormat>
+    <DataType>System.String</DataType>
+    <IsAutoIncrementable>false</IsAutoIncrementable>
+    <IsBestMatch>false</IsBestMatch>
+    <IsCaseSensitive>true</IsCaseSensitive>
+    <IsFixedLength>true</IsFixedLength>
+    <IsFixedPrecisionScale>false</IsFixedPrecisionScale>
+    <IsLong>false</IsLong>
+    <IsNullable>true</IsNullable>
+    <IsSearchable>true</IsSearchable>
+    <IsSearchableWithLike>true</IsSearchableWithLike>
+    <IsConcurrencyType>false</IsConcurrencyType>
+    <IsLiteralSupported>true</IsLiteralSupported>
+    <LiteralPrefix>'</LiteralPrefix>
+    <LiteralSuffix>'</LiteralSuffix>
+  </DataTypes>
+  <ReservedWords>
+    <ReservedWord>ALL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>ALTER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>AND</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>ANY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>AS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>ASC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>BETWEEN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>BY</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>CHAR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>CHECK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>CLUSTER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>COMPRESS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>CONNECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>CREATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DECIMAL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DEFAULT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DELETE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DESC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DISTINCT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>DROP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>ELSE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>EXCLUSIVE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>EXISTS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>FLOAT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>FOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>FROM</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>GRANT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>GROUP</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>HAVING</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>IDENTIFIED</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>IN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>INDEX</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>INSERT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>INTEGER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>INTERSECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>INTO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>IS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>LIKE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>LOCK</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>LONG</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>MINUS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>MODE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>NOCOMPRESS</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>NOT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>NOWAIT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>NULL</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>NUMBER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>OF</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>ON</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>OPTION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>OR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>ORDER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>PCTFREE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>PRIOR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>PUBLIC</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>RAW</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>RENAME</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>RESOURCE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>REVOKE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>SELECT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>SET</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>SHARE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>SIZE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>SMALLINT</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>START</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>SYNONYM</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>TABLE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>THEN</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>TO</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>TRIGGER</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>UNION</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>UNIQUE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>UPDATE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>VALUES</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>VARCHAR</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>VARCHAR2</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>VIEW</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>WHERE</ReservedWord>
+  </ReservedWords>
+  <ReservedWords>
+    <ReservedWord>WITH</ReservedWord>
+  </ReservedWords>
+</NewDataSet>

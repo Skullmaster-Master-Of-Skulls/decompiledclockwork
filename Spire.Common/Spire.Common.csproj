@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2686}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spire.Xls</RootNamespace>
+    <AssemblyName>Spire.Common</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spire.Pdf">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Spire.Pdf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conversion\Element\HeaderFooter\HFFieldType.cs" />
+    <Compile Include="Converter\FitToPageType.cs" />
+    <Compile Include="Converter\PdfConverter.cs" />
+    <Compile Include="Converter\PdfConverterSettings.cs" />
+    <Compile Include="Converter\ProgressEventArgs.cs" />
+    <Compile Include="Converter\ProgressEventHandler.cs" />
+    <Compile Include="Converter\SheetFinishedEventArgs.cs" />
+    <Compile Include="Converter\SheetFinishedEventHandler.cs" />
+    <Compile Include="Converter\SheetStartEventArgs.cs" />
+    <Compile Include="Converter\SheetStartEventHandler.cs" />
+    <Compile Include="jp3E9FF5BED7F5.cs" />
+    <Compile Include="PdfConvertionHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spr᜙.cs" />
+    <Compile Include="sprៅ.cs" />
+    <Compile Include="sprᯏ.cs" />
+    <Compile Include="sprᲽ.cs" />
+    <Compile Include="sprᴘ.cs" />
+    <Compile Include="sprᷪ.cs" />
+    <Compile Include="sprḧ.cs" />
+    <Compile Include="sprṶ.cs" />
+    <Compile Include="spr὿.cs" />
+    <Compile Include="spr₽.cs" />
+    <Compile Include="spr↽.cs" />
+    <Compile Include="spr⇾.cs" />
+    <Compile Include="spr≊.cs" />
+    <Compile Include="spr⌾.cs" />
+    <Compile Include="spr⑔.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.License\Spire.License.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE268A}</Project>
+      <Name>Spire.License</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.XLS\Spire.XLS.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE268B}</Project>
+      <Name>Spire.XLS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

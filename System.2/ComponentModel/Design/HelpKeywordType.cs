@@ -1,0 +1,15 @@
+﻿using System;
+
+namespace System.ComponentModel.Design
+{
+	// Token: 0x020005E2 RID: 1506
+	public enum HelpKeywordType
+	{
+		// Token: 0x04002B11 RID: 11025
+		F1Keyword,
+		// Token: 0x04002B12 RID: 11026
+		GeneralKeyword,
+		// Token: 0x04002B13 RID: 11027
+		FilterKeyword
+	}
+}

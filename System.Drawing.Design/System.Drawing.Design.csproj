@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Drawing.Design</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drawing\Design\BitmapEditor.cs" />
+    <Compile Include="Drawing\Design\ColorEditor.cs" />
+    <Compile Include="Drawing\Design\ContentAlignmentEditor.cs" />
+    <Compile Include="Drawing\Design\CursorEditor.cs" />
+    <Compile Include="Drawing\Design\DesignerToolboxInfo.cs" />
+    <Compile Include="Drawing\Design\FontEditor.cs" />
+    <Compile Include="Drawing\Design\FontNameEditor.cs" />
+    <Compile Include="Drawing\Design\IconEditor.cs" />
+    <Compile Include="Drawing\Design\ImageEditor.cs" />
+    <Compile Include="Drawing\Design\MetafileEditor.cs" />
+    <Compile Include="Drawing\Design\NativeMethods.cs" />
+    <Compile Include="Drawing\Design\SR.cs" />
+    <Compile Include="Drawing\Design\SRCategoryAttribute.cs" />
+    <Compile Include="Drawing\Design\SRDescriptionAttribute.cs" />
+    <Compile Include="Drawing\Design\ToolboxItemContainer.cs" />
+    <Compile Include="Drawing\Design\ToolboxItemCreator.cs" />
+    <Compile Include="Drawing\Design\ToolboxService.cs" />
+    <Compile Include="Drawing\Design\UnsafeNativeMethods.cs" />
+    <Compile Include="ExternDll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Drawing\Design\colordlg.data" />
+    <EmbeddedResource Include="Drawing\Design\SR.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE264D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.UI.Web.AccommodationsRequest</RootNamespace>
+    <AssemblyName>Common.UI.Web.AccommodationsRequest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\AccommodationData.cs" />
+    <Compile Include="Adapters\LookupCoursesAdapter.cs" />
+    <Compile Include="Controls\AbortSelfRegHandler.cs" />
+    <Compile Include="Controls\CtrlAccommodationRequestCoursesList.cs" />
+    <Compile Include="Controls\CtrlAccommodationRequestGroup.cs" />
+    <Compile Include="Controls\MyListItem.cs" />
+    <Compile Include="Controls\RequestEmailInfo.cs" />
+    <Compile Include="Entity\CourseWithStudentAccommodationRequestView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TechnoPro.Common.UI.Web.AccommodationsRequest.js.js_accommod.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Auth\Common.UI.ClientManager.Web.Auth.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264A}</Project>
+      <Name>Common.UI.ClientManager.Web.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core.Impl.Local\Common.UI.ClientManager.Web.Core.Impl.Local.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264C}</Project>
+      <Name>Common.UI.ClientManager.Web.Core.Impl.Local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core\Common.UI.ClientManager.Web.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264B}</Project>
+      <Name>Common.UI.ClientManager.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Entity\Common.UI.Web.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2653}</Project>
+      <Name>Common.UI.Web.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\skmValidators\skmValidators.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2685}</Project>
+      <Name>skmValidators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Telerik.Web.UI\Telerik.Web.UI.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A3}</Project>
+      <Name>Telerik.Web.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

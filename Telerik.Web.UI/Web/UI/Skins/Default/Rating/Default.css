@@ -1,0 +1,1 @@
+.RadRating_Default a,.RadRating_Default a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Default.Rating.Sprite.png")%>')}@media print{.RadRating_Default a:before,.RadRating_Default a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Default.Rating.Sprite.png")%>')}}

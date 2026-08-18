@@ -1,0 +1,91 @@
+﻿using System;
+
+namespace Oracle.DataAccess.Client
+{
+	// Token: 0x020000AC RID: 172
+	internal enum OraType
+	{
+		// Token: 0x04000507 RID: 1287
+		ORA_CHARN = 1,
+		// Token: 0x04000508 RID: 1288
+		ORA_NUMBER,
+		// Token: 0x04000509 RID: 1289
+		ORA_SB1,
+		// Token: 0x0400050A RID: 1290
+		ORA_SB2 = 3,
+		// Token: 0x0400050B RID: 1291
+		ORA_SB4 = 3,
+		// Token: 0x0400050C RID: 1292
+		ORA_FLOAT,
+		// Token: 0x0400050D RID: 1293
+		ORA_NULLSTR,
+		// Token: 0x0400050E RID: 1294
+		ORA_VARNUM,
+		// Token: 0x0400050F RID: 1295
+		ORA_LONG = 8,
+		// Token: 0x04000510 RID: 1296
+		ORA_VARCHAR,
+		// Token: 0x04000511 RID: 1297
+		ORA_ROWID = 11,
+		// Token: 0x04000512 RID: 1298
+		ORA_DATE,
+		// Token: 0x04000513 RID: 1299
+		ORA_VARRAW = 15,
+		// Token: 0x04000514 RID: 1300
+		ORA_IBFLOAT = 100,
+		// Token: 0x04000515 RID: 1301
+		ORA_IBDOUBLE,
+		// Token: 0x04000516 RID: 1302
+		ORA_RAW = 23,
+		// Token: 0x04000517 RID: 1303
+		ORA_LONGRAW,
+		// Token: 0x04000518 RID: 1304
+		ORA_UINT = 68,
+		// Token: 0x04000519 RID: 1305
+		ORA_LONGVARCHAR = 94,
+		// Token: 0x0400051A RID: 1306
+		ORA_LONGVARRAW,
+		// Token: 0x0400051B RID: 1307
+		ORA_CHAR,
+		// Token: 0x0400051C RID: 1308
+		ORA_CHARZ,
+		// Token: 0x0400051D RID: 1309
+		ORA_OCIRowid = 104,
+		// Token: 0x0400051E RID: 1310
+		ORA_NDT = 108,
+		// Token: 0x0400051F RID: 1311
+		ORA_OCIRef = 110,
+		// Token: 0x04000520 RID: 1312
+		ORA_OCICLobLocator = 112,
+		// Token: 0x04000521 RID: 1313
+		ORA_OCIBLobLocator,
+		// Token: 0x04000522 RID: 1314
+		ORA_OCIBFileLocator,
+		// Token: 0x04000523 RID: 1315
+		ORA_OCIString = 155,
+		// Token: 0x04000524 RID: 1316
+		ORA_OCIDate,
+		// Token: 0x04000525 RID: 1317
+		ORA_RESULTSET = 116,
+		// Token: 0x04000526 RID: 1318
+		ORA_TIME_TZ = 186,
+		// Token: 0x04000527 RID: 1319
+		ORA_TIMESTAMP,
+		// Token: 0x04000528 RID: 1320
+		ORA_TIMESTAMP_TZ,
+		// Token: 0x04000529 RID: 1321
+		ORA_INTERVAL_YM,
+		// Token: 0x0400052A RID: 1322
+		ORA_INTERVAL_DS,
+		// Token: 0x0400052B RID: 1323
+		ORA_TIMESTAMP_LTZ = 232,
+		// Token: 0x0400052C RID: 1324
+		ORA_OCIXMLType = 108,
+		// Token: 0x0400052D RID: 1325
+		ORA_BFLOAT = 21,
+		// Token: 0x0400052E RID: 1326
+		ORA_BDOUBLE,
+		// Token: 0x0400052F RID: 1327
+		ORA_NCO = 122
+	}
+}

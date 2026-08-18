@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace Spire.CompoundFile.XLS.Native
+{
+	// Token: 0x02000648 RID: 1608
+	[Flags]
+	internal enum STGC
+	{
+		// Token: 0x04002F60 RID: 12128
+		STGC_DEFAULT = 0,
+		// Token: 0x04002F61 RID: 12129
+		STGC_OVERWRITE = 1,
+		// Token: 0x04002F62 RID: 12130
+		STGC_ONLYIFCURRENT = 2,
+		// Token: 0x04002F63 RID: 12131
+		STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE = 4,
+		// Token: 0x04002F64 RID: 12132
+		STGC_CONSOLIDATE = 8
+	}
+}

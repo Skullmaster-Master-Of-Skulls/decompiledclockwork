@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2607}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.Converter</RootNamespace>
+    <AssemblyName>Common.Converter</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertTriggers\AlertTriggerFactory.cs" />
+    <Compile Include="AlertTriggers\IAlertTriggerDefinitionSerializer.cs" />
+    <Compile Include="AlertTriggers\Serializers\AlertTriggerDefinitionExistingInfoSerializer.cs" />
+    <Compile Include="AlertTriggers\Serializers\AlertTriggerDefinitionExpiredAccommodationsSerializer.cs" />
+    <Compile Include="AlertTriggers\Serializers\AlertTriggerDefinitionMissingInfoSerializer.cs" />
+    <Compile Include="AlertTriggers\Serializers\AlertTriggerDefinitionRequiredSessionFormSerializer.cs" />
+    <Compile Include="AlertTriggers\Serializers\AlertTriggerDefinitionTempStudentNumberSerializer.cs" />
+    <Compile Include="CustomFormControls\CustomControlBuilderFactory.cs" />
+    <Compile Include="CustomFormControls\CustomControlSerializerAdapter.cs" />
+    <Compile Include="CustomFormControls\ICustomContainerBuilder.cs" />
+    <Compile Include="CustomFormControls\ICustomControlBuilder.cs" />
+    <Compile Include="CustomFormControls\ICustomControlSerializer.2.cs" />
+    <Compile Include="CustomFormControls\ICustomControlSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomCheckBoxSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomDropListSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomGroupBoxPopupSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomGroupBoxSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomLabelSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomRadioGroupSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomRecaptchaSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomRichTextBoxSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomSingleFileSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomTextBoxListSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomTextBoxNumberSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomTextBoxSerializer.cs" />
+    <Compile Include="CustomFormControls\Serializers\CustomYesNoChooserSerializer.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataBooleanConverter.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataBooleanNullableConverter.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataDateTimeConverter.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataFileConverter.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataIntConverter.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataListItemConverter.cs" />
+    <Compile Include="CustomForms\Converters\CustomDataStringConverter.cs" />
+    <Compile Include="CustomForms\CustomDataFactory.cs" />
+    <Compile Include="CustomForms\ICustomDataConverter.cs" />
+    <Compile Include="CustomForms\ICustomDataHolderConverter.cs" />
+    <Compile Include="CustomForms\ICustomDataSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataBooleanNullableSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataBooleanSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataDateTimeSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataFileSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataIntSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataListItemSerializer.cs" />
+    <Compile Include="CustomForms\Serializers\CustomDataStringSerializer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

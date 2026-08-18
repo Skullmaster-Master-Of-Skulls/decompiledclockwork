@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE260F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Core</RootNamespace>
+    <AssemblyName>Common.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Messaging" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infralution\Licensing\EncryptedLicense.cs" />
+    <Compile Include="Infralution\Licensing\EncryptedLicenseProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechnoPro\Common\Core\Academic\SemesterManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\DateTimeAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\DynamicFormAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\EmailAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\ExternalAppointmentAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\FileTypeAdapters.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\LicenseKeyAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\LicenseTypeAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\ReportAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\ReportAdapters.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\ServiceProvidersOriginal.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\StringAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\TemplateAdapters.cs" />
+    <Compile Include="TechnoPro\Common\Core\Adapters\UpdateFileTypeAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerFunctions\AlertTriggerFunctionExistingInfo.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerFunctions\AlertTriggerFunctionExpiredAccommodations.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerFunctions\AlertTriggerFunctionMissingInfo.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerFunctions\AlertTriggerFunctionRequiredSessionForm.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerFunctions\AlertTriggerFunctionTempStudentNumber.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerFunctions\IAlertTriggerFunction.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerHelperManagers.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlertTrigger\AlertTriggerManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\Adapters\CourseAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\Adapters\EBookSearchRequestAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\Adapters\MediaContentRequestedExtensions.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\BookSearch\BookSearchManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\BookSearch\BookSearchProviderFactory.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\BookSearch\SchoolBookSearchProvider.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaContentFileManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaContentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaJobManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaJobStatusManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaPublisherManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaVendorManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\MediaVolunteerManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AlternativeFormat\StudentMediaRequestManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentLog\AppointmentLogManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleCheckCutoffTimeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleCheckStaffDoubleBookedManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleCheckStudentDoubleBookedManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleFactory.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleMaxNumberAppsInDayManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleMaxNumberAppsInFutureManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleMaxNumberAppsInWeekManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleStudentBannedManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleStudentCheckValidDateTimeManage.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentBookingStudentRules\StudentAppointmentBookingRuleStudentMaxNumNoshowsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentFastLoadManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentHolidayManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsCalendar\AppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsList\ListAppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsPointOfContact\PointOfContactManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsRecurring\RecurringAppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsReminder\AppointmentsReminderManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\AutoBooker2Manager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\AutoTestBookingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\ClassTestDefinitionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\ExamFileManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\ExamRequestManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\SittingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\StudentClassTestInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\TestBookingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\TestExamBookingViewManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\TestExamBrowserManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\TestExamSeatManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestBooking\TestProctorManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestExamViews\FinalExamsViewManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsTestExamViews\TestBookingsViewManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsWorkshops\WorkshopAppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentsWorkshops\WorkshopDefinitionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentSync\AppointmentSyncMappingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentSync\AppointmentSyncSettingsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentSync\CalendarSyncManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AppointmentSync\ClockWorkSyncAppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentAttendeeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentCancelInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentCancelReasonManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentHistoryManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentIconManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentRoomManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentShowTimeAsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\AppointmentTypeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Appointments\BaseAppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Authentication\HashingAuthenticationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\AvailabilitySchedule\AvailabilityScheduleManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\CampusManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Cards\CardLoaders\CardLoaderVetsApplicationsStudent.cs" />
+    <Compile Include="TechnoPro\Common\Core\Cards\CardLoaders\ICardLoader.cs" />
+    <Compile Include="TechnoPro\Common\Core\Cards\CardManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Cases\CaseManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ClockWorkDailyJob\DailyJobManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ClockWorkDatabase\ClockWorkDatabaseManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ClockWorkServerConnection\ClockWorkServerConnectionInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ClockWorkServer\ServerInstanceInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ClockWorkSnapshots\ClockWorkSnapshotManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Communications\CommunicationsSentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ConfidentialityAgreement\StudentConfidentialityAgreementManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ConnectionString\ClockWorkConnectionStringManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\CourseRegistrations\CourseRegistrationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\CustomForms\CustomDataManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\CustomForms\CustomFieldManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\CustomForms\CustomFormListItemManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\CustomForms\CustomFormManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataMigration\DataMigrationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DataSyncCourseExtendedDataManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DataSyncCourseManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DataSyncCourseManagerAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DataSyncDataManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DataSyncInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DataSyncManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\DayOfWeekAttribute.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\EDayOfWeek.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\ESpecialColumnType.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\ExternalExamInfo.cs" />
+    <Compile Include="TechnoPro\Common\Core\DataSync\SpecialColumnTypeAttribute.cs" />
+    <Compile Include="TechnoPro\Common\Core\Data\DataMaintenanceManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Departments\DepartmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicCompile\DynamicCompileManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\AccommodationsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\AppointmentNotesManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\ConfidentialityFormSignedManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicDataForReportsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicDataManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicFieldConversionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicFieldManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicFileStorageManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicFormManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\DynamicPerDateDataManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\FormApproval\FormApprovalManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\FormApproval\FormApprovalSupervisorManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\FormApproval\FormApprovalTraineeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\DynamicForms\Legacy\LegacyDynamicDataSaveLoadManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Emailing\AppointmentReminderEmailManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Emailing\EmailAttachmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Emailing\EmailHistoryLoggerManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\EmailManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Encryption\LegacyEncryptionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\FileStorageManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\FileStorages\DbFilesStorageManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\FileStorages\FileSignManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\FileStorages\FileSystemStorageManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\InstanceInfo\ClockWorkInstanceInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\InstanceInfo\WebInstanceInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Institution\InstitutionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Intake\IntakeAccountManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\Adapters\OperationContextAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryAdminCatalogManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryAttachmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryCatalogManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryCategoryManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryGroupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryLoanManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryLoanStatusManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryLocationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryProductManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryProductStatusManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Inventory\InventoryReservationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\IoC\CommonCoreConventionInjection.cs" />
+    <Compile Include="TechnoPro\Common\Core\Legacy\LegacyAccommodationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Legacy\LegacyActionPlanManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Legacy\LegacyAppointmentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Legacy\LegacyDynamicDataManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Legacy\LegacyServiceProviderManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Legacy\LegacyWebSettingsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LicensingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\AcademicTermManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\AlternateContactManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\LookupCourseManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\LookupInstructorManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\LookupSubjectManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\LookupTimetableItemManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\Management\LookupInstructorManagementManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\LookupCourses\SessionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\eMultipleFieldDisplayMethod.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\MailMergingEmailManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\MailMergingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\Output\EmailMailMergeOutputManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\Output\HtmlMailMergeOutputManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\Output\MailMergeOutputFactory.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\Output\TextMailMergeOutputManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MailMerging\Output\WordMailMergeOutputManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionArchiveManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionFactory.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\IMarkedForDeletion.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionAltFormatFiles.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionArchivedAppointments.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionArchivedReports.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionDynamicFormFileList.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionDynamicFormSingleFile.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionExamFiles.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionInventoryFiles.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionLookupCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionNotetakerFiles.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletionStudents.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionImplementations\MarkedForDeletion_Base.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionItemManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MarkedForDeletion\MarkedForDeletionJobManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Membership\AuthenticationSessionAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Membership\MembershipManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Membership\UserManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MergeDuplicates\MergeDuplicateCoursesManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MergeDuplicates\MergeDuplicateStudentManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MessagingQueue\MessagingQueueManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Messaging\AttachmentDropBoxManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Messaging\DropBoxAdapter.cs" />
+    <Compile Include="TechnoPro\Common\Core\Messaging\MessagingDropBoxManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\MiscSafeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Notetaking\NotetakeeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Notetaking\NotetakerNotesManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Notetaking\NotetakingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\OnlineForms\OnlineFormManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\OnlineForms\OnlineFormQueueManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\AdminGroupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\AdminPeopleManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\GroupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\PeopleGroupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\PeopleManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\StaffCommonInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\StudentActivationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\StudentCommonInfoManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\People\StudentManagementManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\PerformanceTesting\PerformanceTestManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\PersonManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\QueryingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\RegistryManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ActiveStudents.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ActiveStudentsWithAccommodations.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ActiveStudentsWithCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\AddColumns.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\AddStudentsToMasterStudentTableInMemory.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\BatchDataSync.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\BatchDataSyncOldCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\BatchEmailWithMailMerge3.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\BreakdownCheckboxCounts.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\BreakdownNumbers.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\BreakdownNumbersDynamicData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\CreateNewBooleanColumns.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\CrossReferenceAccommodationData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\CrossReferenceActiveCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\CrossReferencePerStudentData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\CustomDataLoad.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\CustomDataWrite.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSyncCourses2.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSyncIntakeData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSyncLookupCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSyncOldCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSync_AddLastDataSync.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSync_ExecuteRestWebService.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSync_FixAddressesForNotetaking.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSync_FixTimetable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSync_LoadDataFromClockWork.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DataSync_MoveDataIntoClockWork.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DecodeDynamicData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\DecryptData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\EncryptData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ExecuteCSharp.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ExecuteCSharpCode.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ExecuteFunctionAgainstMemoryTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ExpandListViewOrFileList.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ExportToCSV.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ExtractUniqueRows.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\FilterRows.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\HideColumns.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ImportCsvDirectlyToClockWorkTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ImportCustomCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ImportExcel.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ImportStudentCourses.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ImportTabDelimiteredDirectlyToClockWorkTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ImportUserData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LegacyOperation.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LoadAccommodationData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LoadAppointments.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LoadOnlineIntakeData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LoadPerAppointmentData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LoadPerDateData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\LoadPerStudentData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\MakeATableTheCurrentTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\NameATable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\Nop.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\OracleQuery.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\PullInDataUsingSql.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\RenameColumns.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\ReportDataColumn.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\RunAnotherReport.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\RunAnotherReportAndConcatenateResultsToCurrentTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\RunAnotherReportAndConcatenateUniqueResultsToCurrentTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\RunAnotherReportAndMergeInToCurrentTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\RunAnotherReportWithStaticParameters.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\SetVariables.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\Sort.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\SqlQuery.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\SqlQueryDynamicData.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\SqlQueryExtended.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\SqlQueryFromExternalTable.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportFunctionExecutions\TrimSpacesFromNames.cs" />
+    <Compile Include="TechnoPro\Common\Core\Reports\ReportManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Repository.cs" />
+    <Compile Include="TechnoPro\Common\Core\RequiredSessionForm\RequiredSessionFormManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Room\RoomManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderApplicationStatusLookupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalApplicationAvailabilityManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalApplicationCourseManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalApplicationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalMatchingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalNotesManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalProviderManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalRequestDetailManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvidersOriginal\ServiceProviderOriginalRequestManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvider\ServiceProviderApplicationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvider\ServiceProviderCourseRegistrationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvider\ServiceProviderManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvider\ServiceProviderMatchingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvider\ServiceProviderTypeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\ServiceProvider\ServiceRequestManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Settings\LookupSettingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Settings\MiscTableSettingsManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Settings\ReferenceTableSettingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Settings\SettingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Settings\SpecialControlManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Settings\WebSettingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Startup\ClientStartupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Startup\ClockWorkClientStartupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Startup\StartupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\StudentAccommodationRequests\SelfRegAccommodationLetterDeliveryManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\StudentAccommodationRequests\SelfRegManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\StudentAccommodationRequests\SelfRegTrackingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\StudentAccommodationRequests\StudentAccommodationRequestManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\StudentFiles\StudentFilesCategoryManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\StudentFiles\StudentFilesQueueManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Surveys\SurveyManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Surveys\SurveyQueueManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Tasks\TaskGroupManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Tasks\TaskManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\TempFiles\TempFileManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Templates\TemplateManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Timers\TimerManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Tutoring\StudentTuteeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Tutoring\TutorManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Updates\UpdateClientVersion.cs" />
+    <Compile Include="TechnoPro\Common\Core\Updates\UpdateManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\UserAccount\UserLoginTrackingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\UserDatabaseCacheStorageManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\UserSettingsPermissions\MiscCodeManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\UserSettingsPermissions\OldUserSettingManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\UserSettingsPermissions\PermissionManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\UserSettingsPermissions\UserAccountManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Veteran\VeteranManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Vets\VetsBenefitApplicationManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Vets\VetsChangeInBenefitManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Vets\VetsChapterManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Workflows\WorkflowManager.cs" />
+    <Compile Include="TechnoPro\Common\Core\Workflows\WorkflowProgressStepManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Barcode\Common.Barcode.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2600}</Project>
+      <Name>Common.Barcode</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Converter\Common.Converter.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2607}</Project>
+      <Name>Common.Converter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.ApplicationSyncFactories\Common.Core.ApplicationSyncFactories.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2608}</Project>
+      <Name>Common.Core.ApplicationSyncFactories</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.GoogleBooks\Common.Core.GoogleBooks.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2613}</Project>
+      <Name>Common.Core.GoogleBooks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Ldap\Common.Core.Ldap.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2616}</Project>
+      <Name>Common.Core.Ldap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Mappers\Common.Core.Mappers.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2617}</Project>
+      <Name>Common.Core.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.AutoTestBooking\Common.DAO.AutoTestBooking.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE261C}</Project>
+      <Name>Common.DAO.AutoTestBooking</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Entity\Common.DAO.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2620}</Project>
+      <Name>Common.DAO.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.FileSign.Impl\Common.DAO.FileSign.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2622}</Project>
+      <Name>Common.DAO.FileSign.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Impl\Common.DAO.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2625}</Project>
+      <Name>Common.DAO.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.MailBeeEmail\Common.DAO.MailBeeEmail.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2626}</Project>
+      <Name>Common.DAO.MailBeeEmail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Reports.Impl\Common.DAO.Reports.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE262A}</Project>
+      <Name>Common.DAO.Reports.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO\Common.DAO.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE261F}</Project>
+      <Name>Common.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataFileIO.cs\Common.DataFileIO.cs.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE262F}</Project>
+      <Name>Common.DataFileIO.cs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Graphics\Common.Graphics.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2634}</Project>
+      <Name>Common.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Security\Common.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2644}</Project>
+      <Name>Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Web\Common.Web.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE265D}</Project>
+      <Name>Common.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.WinServices\Common.WinServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2661}</Project>
+      <Name>Common.WinServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Xml\Common.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2662}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

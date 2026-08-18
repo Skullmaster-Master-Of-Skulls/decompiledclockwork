@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26B8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.DirectoryServices.Protocols</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DirectoryServices\Protocols\ADAttribute.cs" />
+    <Compile Include="DirectoryServices\Protocols\AddRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\AddResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\ADExtenMatchFilter.cs" />
+    <Compile Include="DirectoryServices\Protocols\ADFilter.cs" />
+    <Compile Include="DirectoryServices\Protocols\ADSubstringFilter.cs" />
+    <Compile Include="DirectoryServices\Protocols\ADValue.cs" />
+    <Compile Include="DirectoryServices\Protocols\AsqRequestControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\AsqResponseControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\AuthType.cs" />
+    <Compile Include="DirectoryServices\Protocols\BerConversionException.cs" />
+    <Compile Include="DirectoryServices\Protocols\BerConverter.cs" />
+    <Compile Include="DirectoryServices\Protocols\BerSafeHandle.cs" />
+    <Compile Include="DirectoryServices\Protocols\berval.cs" />
+    <Compile Include="DirectoryServices\Protocols\BindMethod.cs" />
+    <Compile Include="DirectoryServices\Protocols\CompareRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\CompareResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\ConnectionHandle.cs" />
+    <Compile Include="DirectoryServices\Protocols\CrossDomainMoveControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\CRYPTOAPI_BLOB.cs" />
+    <Compile Include="DirectoryServices\Protocols\DeleteRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\DeleteResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\DereferenceAlias.cs" />
+    <Compile Include="DirectoryServices\Protocols\DereferenceConnectionCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\DEREFERENCECONNECTIONInternal.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryAttribute.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryAttributeCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryAttributeModification.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryAttributeModificationCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryAttributeOperation.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryConnection.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryControlCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryException.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryIdentifier.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryNotificationControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryOperation.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryOperationException.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectoryResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirectorySynchronizationOptions.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirSyncRequestControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\DirSyncResponseControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\DomainScopeControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlAsyncResult.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlAuthRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlAuthResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlConstants.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlDirectoryIdentifier.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlDocument.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlDocumentProcessing.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlErrorProcessing.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlErrorResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\DSMLFilterWriter.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlInvalidDocumentException.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlRequestDocument.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlResponseDocument.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlResponseOrder.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlSoapConnection.cs" />
+    <Compile Include="DirectoryServices\Protocols\DsmlSoapHttpConnection.cs" />
+    <Compile Include="DirectoryServices\Protocols\ErrorChecking.cs" />
+    <Compile Include="DirectoryServices\Protocols\ErrorResponseCategory.cs" />
+    <Compile Include="DirectoryServices\Protocols\ErrorResponseException.cs" />
+    <Compile Include="DirectoryServices\Protocols\ExtendedDNControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\ExtendedDNFlag.cs" />
+    <Compile Include="DirectoryServices\Protocols\ExtendedRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\ExtendedResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\FilterParser.cs" />
+    <Compile Include="DirectoryServices\Protocols\GetLdapResponseCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\HGlobalMemHandle.cs" />
+    <Compile Include="DirectoryServices\Protocols\LazyCommitControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapAsyncResult.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapConnection.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapDirectoryIdentifier.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapError.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapErrorMappings.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapException.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapMod.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapOperation.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapOption.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapPartialAsyncResult.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapPartialResultsProcessor.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapReferralCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapRequestState.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapSessionOptions.cs" />
+    <Compile Include="DirectoryServices\Protocols\LdapVlvInfo.cs" />
+    <Compile Include="DirectoryServices\Protocols\LDAP_TIMEVAL.cs" />
+    <Compile Include="DirectoryServices\Protocols\LocatorFlags.cs" />
+    <Compile Include="DirectoryServices\Protocols\Luid.cs" />
+    <Compile Include="DirectoryServices\Protocols\ModifyDNRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\ModifyDNResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\ModifyRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\ModifyResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\NamespaceUtils.cs" />
+    <Compile Include="DirectoryServices\Protocols\NotifyOfNewConnectionCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\NOTIFYOFNEWCONNECTIONInternal.cs" />
+    <Compile Include="DirectoryServices\Protocols\OperationErrorMappings.cs" />
+    <Compile Include="DirectoryServices\Protocols\PageResultRequestControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\PageResultResponseControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\PartialResultProcessing.cs" />
+    <Compile Include="DirectoryServices\Protocols\PartialResultsCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\PartialResultsRetriever.cs" />
+    <Compile Include="DirectoryServices\Protocols\PermissiveModifyControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\QUERYCLIENTCERT.cs" />
+    <Compile Include="DirectoryServices\Protocols\QueryClientCertificateCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\QueryForConnectionCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\QUERYFORCONNECTIONInternal.cs" />
+    <Compile Include="DirectoryServices\Protocols\QuotaControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\ReferralCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\ReferralChasingOptions.cs" />
+    <Compile Include="DirectoryServices\Protocols\RequestState.cs" />
+    <Compile Include="DirectoryServices\Protocols\Res.cs" />
+    <Compile Include="DirectoryServices\Protocols\ResCategoryAttribute.cs" />
+    <Compile Include="DirectoryServices\Protocols\ResDescriptionAttribute.cs" />
+    <Compile Include="DirectoryServices\Protocols\ResultAll.cs" />
+    <Compile Include="DirectoryServices\Protocols\ResultCode.cs" />
+    <Compile Include="DirectoryServices\Protocols\ResultsStatus.cs" />
+    <Compile Include="DirectoryServices\Protocols\SafeBerval.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchOption.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchOptionsControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchRequest.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchResponse.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchResultAttributeCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchResultEntry.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchResultEntryCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchResultReference.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchResultReferenceCollection.cs" />
+    <Compile Include="DirectoryServices\Protocols\SearchScope.cs" />
+    <Compile Include="DirectoryServices\Protocols\SecPkgContext_IssuerListInfoEx.cs" />
+    <Compile Include="DirectoryServices\Protocols\SecurityDescriptorFlagControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\SecurityHandle.cs" />
+    <Compile Include="DirectoryServices\Protocols\SecurityMasks.cs" />
+    <Compile Include="DirectoryServices\Protocols\SecurityPackageContextConnectionInformation.cs" />
+    <Compile Include="DirectoryServices\Protocols\SecurityProtocol.cs" />
+    <Compile Include="DirectoryServices\Protocols\SEC_WINNT_AUTH_IDENTITY_EX.cs" />
+    <Compile Include="DirectoryServices\Protocols\ShowDeletedControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\SortKey.cs" />
+    <Compile Include="DirectoryServices\Protocols\SortRequestControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\SortResponseControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\TlsOperationException.cs" />
+    <Compile Include="DirectoryServices\Protocols\TreeDeleteControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\Utility.cs" />
+    <Compile Include="DirectoryServices\Protocols\UtilityHandle.cs" />
+    <Compile Include="DirectoryServices\Protocols\VerifyNameControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\VERIFYSERVERCERT.cs" />
+    <Compile Include="DirectoryServices\Protocols\VerifyServerCertificateCallback.cs" />
+    <Compile Include="DirectoryServices\Protocols\VlvRequestControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\VlvResponseControl.cs" />
+    <Compile Include="DirectoryServices\Protocols\Wldap32.cs" />
+    <Compile Include="ExternDll.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DirectoryServices\Protocols\resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.DirectoryServices\System.DirectoryServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B9}</Project>
+      <Name>System.DirectoryServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

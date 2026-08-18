@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE269B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Web.Http.Owin</RootNamespace>
+    <AssemblyName>System.Web.Http.Owin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Owin\WebApiAppBuilderExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Collections\Generic\CollectionExtensions.cs" />
+    <Compile Include="System\Collections\Generic\DictionaryExtensions.cs" />
+    <Compile Include="System\Collections\ObjectModel\ListWrapperCollection.cs" />
+    <Compile Include="System\Net\Http\OwinHttpRequestMessageExtensions.cs" />
+    <Compile Include="System\Threading\Tasks\TaskHelpers.cs" />
+    <Compile Include="System\Threading\Tasks\TaskHelpersExtensions.cs" />
+    <Compile Include="System\Web\Http\Error.cs" />
+    <Compile Include="System\Web\Http\HostAuthenticationAttribute.cs" />
+    <Compile Include="System\Web\Http\HostAuthenticationFilter.cs" />
+    <Compile Include="System\Web\Http\NonOwnedStream.cs" />
+    <Compile Include="System\Web\Http\OwinHttpConfigurationExtensions.cs" />
+    <Compile Include="System\Web\Http\Owin\ExceptionHandling\DefaultExceptionHandler.cs" />
+    <Compile Include="System\Web\Http\Owin\ExceptionHandling\EmptyExceptionLogger.cs" />
+    <Compile Include="System\Web\Http\Owin\HttpMessageHandlerAdapter.cs" />
+    <Compile Include="System\Web\Http\Owin\HttpMessageHandlerOptions.cs" />
+    <Compile Include="System\Web\Http\Owin\OwinBufferPolicySelector.cs" />
+    <Compile Include="System\Web\Http\Owin\OwinConstants.cs" />
+    <Compile Include="System\Web\Http\Owin\OwinExceptionCatchBlocks.cs" />
+    <Compile Include="System\Web\Http\Owin\OwinHttpRequestContext.cs" />
+    <Compile Include="System\Web\Http\Owin\OwinRequestExtensions.cs" />
+    <Compile Include="System\Web\Http\Owin\OwinResponseExtensions.cs" />
+    <Compile Include="System\Web\Http\Owin\PassiveAuthenticationMessageHandler.cs" />
+    <Compile Include="System\Web\Http\Owin\Properties\OwinResources.cs" />
+    <Compile Include="System\Web\Http\Properties\CommonWebApiResources.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="System\Web\Http\Owin\Properties\CommonWebApiResources.resources" />
+    <EmbeddedResource Include="System\Web\Http\Owin\Properties\OwinResources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Owin\Owin.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2682}</Project>
+      <Name>Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Net.Http.Formatting\System.Net.Http.Formatting.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2693}</Project>
+      <Name>System.Net.Http.Formatting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Net.Http\System.Net.Http.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D0}</Project>
+      <Name>System.Net.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http\System.Web.Http.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269A}</Project>
+      <Name>System.Web.Http</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.DirectoryServices</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="Configuration\PrivilegedConfigurationManager.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectoryAccessRule.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectoryAuditRule.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectoryInheritanceTranslator.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectoryRights.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectoryRightsTranslator.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectorySecurity.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectorySecurityInheritance.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryInterSiteTransport.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryObjectExistsException.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryObjectNotFoundException.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryOperationException.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryPartition.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryReplicationMetadata.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryRole.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryRoleCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySchedule.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySchema.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySchemaClass.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySchemaClassCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySchemaProperty.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySchemaPropertyCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryServerDownException.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySite.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySiteCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySiteLink.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySiteLinkBridge.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySiteLinkCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySiteOptions.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySubnet.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySubnetCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectorySyntax.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ActiveDirectoryTransportType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\AdamInstance.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\AdamInstanceCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\AdamRole.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\AdamRoleCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ADSearcher.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ApplicationPartition.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ApplicationPartitionCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ApplicationPartitionType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\AttributeMetadata.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\AttributeMetadataCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Capability.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Component.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ConfigurationSet.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DcEnumFlag.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DirectoryContext.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DirectoryContextType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DirectoryEntryManager.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DirectoryServer.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DirectoryServerCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DistinguishedName.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DnsRecord.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DnsSrvData.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Domain.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DomainCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DomainCollisionOptions.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DomainController.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DomainControllerCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DomainControllerInfo.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DomainMode.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DsDomainControllerInfo2.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DsDomainControllerInfo3.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DsNameResult.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DsNameResultItem.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_DOMAINTRUST_FLAG.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_DOMAIN_TRUSTS.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_NAME_ERROR.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_NAME_RESULT.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_NAME_RESULT_ITEM.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_ATTR_META_DATA.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_ATTR_META_DATA_2.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_CURSOR.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_CURSORS.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_CURSORS_3.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_CURSOR_3.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_INFO_TYPE.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_KCC_DSA_FAILURE.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_KCC_DSA_FAILURES.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_NEIGHBOR.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_NEIGHBORS.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_OBJ_META_DATA.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_OBJ_META_DATA_2.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_OP.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPL_PENDING_OPS.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPSYNCALL_ERRINFO.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPSYNCALL_SYNC.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\DS_REPSYNCALL_UPDATE.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ExceptionHelper.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\FileTime.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Forest.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestMode.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustCollisionException.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustCollisionType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustDomainInfoCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustDomainInformation.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustDomainStatus.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustRelationshipCollision.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustRelationshipCollisionCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ForestTrustRelationshipInformation.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\GlobalCatalog.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\GlobalCatalogCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\HourOfDay.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LARGE_INTEGER.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LoadLibrarySafeHandle.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Locator.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LocatorOptions.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LsaLogonProcessSafeHandle.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_AUTH_INFORMATION.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_BINARY_DATA.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_COLLISION_INFORMATION.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_COLLISION_RECORD.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_DOMAIN_INFO.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_INFORMATION.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_RECORD.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_FOREST_TRUST_RECORD_TYPE.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_OBJECT_ATTRIBUTES.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LSA_UNICODE_STRING.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\LUID.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\MinuteOfHour.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NativeComInterfaces.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NativeMethods.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NCFlags.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NegotiateCallerNameRequest.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NegotiateCallerNameResponse.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NETLOGON_INFO_2.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\NotificationStatus.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\OMObjectClass.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\OSVersionInfoEx.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\PartialDnsRecord.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\PolicySafeHandle.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\POLICY_DNS_DOMAIN_INFO.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\PrivateLocatorFlags.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\PropertyManager.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\PropertyTypes.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlyActiveDirectorySchemaClassCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlyActiveDirectorySchemaPropertyCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlyDirectoryServerCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlySiteCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlySiteLinkBridgeCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlySiteLinkCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReadOnlyStringCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationConnection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationConnectionCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationCursor.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationCursorCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationFailure.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationFailureCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationNeighbor.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationNeighborCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationOperation.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationOperationCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationOperationInformation.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationOperationType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationSecurityLevel.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\ReplicationSpan.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SchemaClassType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SearchFlags.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SupportedCapability.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncFromAllServersErrorCategory.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncFromAllServersErrorInformation.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncFromAllServersEvent.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncFromAllServersOperationException.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncFromAllServersOptions.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncReplicaFromAllServersCallback.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SyncUpdateCallback.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Syntax.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SystemFlag.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\SystemTime.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TopLevelName.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TopLevelNameCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TopLevelNameCollisionOptions.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TopLevelNameStatus.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TrustDirection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TRUSTED_DOMAIN_AUTH_INFORMATION.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TRUSTED_DOMAIN_FULL_INFORMATION.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TRUSTED_DOMAIN_INFORMATION_EX.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TRUSTED_INFORMATION_CLASS.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TRUSTED_POSIX_OFFSET_INFO.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TrustHelper.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TrustObject.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TrustRelationshipInformation.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TrustRelationshipInformationCollection.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TrustType.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\TRUST_ATTRIBUTE.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\UnsafeNativeMethods.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\Utils.cs" />
+    <Compile Include="DirectoryServices\ActiveDirectory\WellKnownDN.cs" />
+    <Compile Include="DirectoryServices\AdsVLV.cs" />
+    <Compile Include="DirectoryServices\AuthenticationTypes.cs" />
+    <Compile Include="DirectoryServices\COMExceptionHelper.cs" />
+    <Compile Include="DirectoryServices\CreateChildAccessRule.cs" />
+    <Compile Include="DirectoryServices\DeleteChildAccessRule.cs" />
+    <Compile Include="DirectoryServices\DeleteTreeAccessRule.cs" />
+    <Compile Include="DirectoryServices\DereferenceAlias.cs" />
+    <Compile Include="DirectoryServices\Design\DirectoryEntryConverter.cs" />
+    <Compile Include="DirectoryServices\DirectoryEntries.cs" />
+    <Compile Include="DirectoryServices\DirectoryEntry.cs" />
+    <Compile Include="DirectoryServices\DirectoryEntryConfiguration.cs" />
+    <Compile Include="DirectoryServices\DirectorySearcher.cs" />
+    <Compile Include="DirectoryServices\DirectoryServicesCOMException.cs" />
+    <Compile Include="DirectoryServices\DirectoryServicesPermission.cs" />
+    <Compile Include="DirectoryServices\DirectoryServicesPermissionAccess.cs" />
+    <Compile Include="DirectoryServices\DirectoryServicesPermissionAttribute.cs" />
+    <Compile Include="DirectoryServices\DirectoryServicesPermissionEntry.cs" />
+    <Compile Include="DirectoryServices\DirectoryServicesPermissionEntryCollection.cs" />
+    <Compile Include="DirectoryServices\DirectorySynchronization.cs" />
+    <Compile Include="DirectoryServices\DirectorySynchronizationOptions.cs" />
+    <Compile Include="DirectoryServices\DirectoryVirtualListView.cs" />
+    <Compile Include="DirectoryServices\DirectoryVirtualListViewContext.cs" />
+    <Compile Include="DirectoryServices\DSDescriptionAttribute.cs" />
+    <Compile Include="DirectoryServices\ExtendedDN.cs" />
+    <Compile Include="DirectoryServices\ExtendedRightAccessRule.cs" />
+    <Compile Include="DirectoryServices\HandlerBase.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsAuthentication.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsOptions.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsPropertyOperation.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsSearchColumn.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsSearchPreferenceInfo.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsSearchPreferences.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsSortKey.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsStatusEnum.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsType.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsValue.cs" />
+    <Compile Include="DirectoryServices\Interop\AdsValueHelper.cs" />
+    <Compile Include="DirectoryServices\Interop\Ads_Generic.cs" />
+    <Compile Include="DirectoryServices\Interop\Ads_OctetString.cs" />
+    <Compile Include="DirectoryServices\Interop\Ads_Pointer.cs" />
+    <Compile Include="DirectoryServices\Interop\DnWithBinary.cs" />
+    <Compile Include="DirectoryServices\Interop\DnWithString.cs" />
+    <Compile Include="DirectoryServices\Interop\NativeMethods.cs" />
+    <Compile Include="DirectoryServices\Interop\SafeNativeMethods.cs" />
+    <Compile Include="DirectoryServices\Interop\SystemTime.cs" />
+    <Compile Include="DirectoryServices\Interop\UnsafeNativeMethods.cs" />
+    <Compile Include="DirectoryServices\Interop\Variant.cs" />
+    <Compile Include="DirectoryServices\ListChildrenAccessRule.cs" />
+    <Compile Include="DirectoryServices\PasswordEncodingMethod.cs" />
+    <Compile Include="DirectoryServices\PropertyAccess.cs" />
+    <Compile Include="DirectoryServices\PropertyAccessRule.cs" />
+    <Compile Include="DirectoryServices\PropertyAccessTranslator.cs" />
+    <Compile Include="DirectoryServices\PropertyCollection.cs" />
+    <Compile Include="DirectoryServices\PropertySetAccessRule.cs" />
+    <Compile Include="DirectoryServices\PropertyValueCollection.cs" />
+    <Compile Include="DirectoryServices\ReferralChasingOption.cs" />
+    <Compile Include="DirectoryServices\Res.cs" />
+    <Compile Include="DirectoryServices\ResCategoryAttribute.cs" />
+    <Compile Include="DirectoryServices\ResDescriptionAttribute.cs" />
+    <Compile Include="DirectoryServices\ResultPropertyCollection.cs" />
+    <Compile Include="DirectoryServices\ResultPropertyValueCollection.cs" />
+    <Compile Include="DirectoryServices\SchemaNameCollection.cs" />
+    <Compile Include="DirectoryServices\SearchResult.cs" />
+    <Compile Include="DirectoryServices\SearchResultCollection.cs" />
+    <Compile Include="DirectoryServices\SearchScope.cs" />
+    <Compile Include="DirectoryServices\SearchWaitHandler.cs" />
+    <Compile Include="DirectoryServices\SecurityMasks.cs" />
+    <Compile Include="DirectoryServices\SortDirection.cs" />
+    <Compile Include="DirectoryServices\SortOption.cs" />
+    <Compile Include="ExternDll.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThisAssembly.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DirectoryServices\DirectoryEntry.bmp" />
+    <EmbeddedResource Include="DirectoryServices\DirectorySearcher.bmp" />
+    <EmbeddedResource Include="DirectoryServices\resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration\System.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B4}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

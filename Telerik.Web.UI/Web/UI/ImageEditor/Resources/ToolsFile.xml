@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<tools name="MainToolbar">
+		<tool name="Print" togglebutton="true" />
+		<tool name="Save" togglebutton="true"  />
+		<tool name="Export" togglebutton="true"  />
+		<tool separator="true"/>
+		<tool name="Undo" toolstrip="true" />
+		<tool name="Redo" toolstrip="true" />
+		<tool name="Reset" />
+		<tool separator="true"/>
+		<tool name="Crop" togglebutton="true" />
+		<tool name="Resize" togglebutton="true" />
+		<tool name="Zoom" togglebutton="true" />
+		<tool name="ZoomIn" />
+		<tool name="ZoomOut" />
+		<tool name="Opacity" togglebutton="true" />
+		<tool name="Rotate" togglebutton="true" />
+		<tool name="RotateRight" />
+		<tool name="RotateLeft" />
+		<tool name="Flip" togglebutton="true" />
+		<tool name="FlipVertical" />
+		<tool name="FlipHorizontal" />
+		<tool name="AddText" togglebutton="true" />
+		<tool name="InsertImage" togglebutton="true" />
+	</tools>
+</root>

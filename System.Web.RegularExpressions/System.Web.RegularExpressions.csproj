@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.Web</RootNamespace>
+    <AssemblyName>System.Web.RegularExpressions</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegularExpressions\AspCodeRegex.cs" />
+    <Compile Include="RegularExpressions\AspCodeRegexFactory4.cs" />
+    <Compile Include="RegularExpressions\AspCodeRegexRunner4.cs" />
+    <Compile Include="RegularExpressions\AspExprRegex.cs" />
+    <Compile Include="RegularExpressions\AspExprRegexFactory5.cs" />
+    <Compile Include="RegularExpressions\AspExprRegexRunner5.cs" />
+    <Compile Include="RegularExpressions\BindExpressionRegex.cs" />
+    <Compile Include="RegularExpressions\BindExpressionRegexFactory17.cs" />
+    <Compile Include="RegularExpressions\BindExpressionRegexRunner17.cs" />
+    <Compile Include="RegularExpressions\BindParametersRegex.cs" />
+    <Compile Include="RegularExpressions\BindParametersRegexFactory18.cs" />
+    <Compile Include="RegularExpressions\BindParametersRegexRunner18.cs" />
+    <Compile Include="RegularExpressions\BrowserCapsRefRegex.cs" />
+    <Compile Include="RegularExpressions\BrowserCapsRefRegexFactory23.cs" />
+    <Compile Include="RegularExpressions\BrowserCapsRefRegexRunner23.cs" />
+    <Compile Include="RegularExpressions\CommentRegex.cs" />
+    <Compile Include="RegularExpressions\CommentRegexFactory7.cs" />
+    <Compile Include="RegularExpressions\CommentRegexRunner7.cs" />
+    <Compile Include="RegularExpressions\DatabindExprRegex.cs" />
+    <Compile Include="RegularExpressions\DatabindExprRegexFactory6.cs" />
+    <Compile Include="RegularExpressions\DatabindExprRegexRunner6.cs" />
+    <Compile Include="RegularExpressions\DataBindRegex.cs" />
+    <Compile Include="RegularExpressions\DataBindRegexFactory15.cs" />
+    <Compile Include="RegularExpressions\DataBindRegexRunner15.cs" />
+    <Compile Include="RegularExpressions\DirectiveRegex.cs" />
+    <Compile Include="RegularExpressions\DirectiveRegex40.cs" />
+    <Compile Include="RegularExpressions\DirectiveRegex40Factory25.cs" />
+    <Compile Include="RegularExpressions\DirectiveRegex40Runner25.cs" />
+    <Compile Include="RegularExpressions\DirectiveRegexFactory2.cs" />
+    <Compile Include="RegularExpressions\DirectiveRegexRunner2.cs" />
+    <Compile Include="RegularExpressions\EndTagRegex.cs" />
+    <Compile Include="RegularExpressions\EndTagRegexFactory3.cs" />
+    <Compile Include="RegularExpressions\EndTagRegexRunner3.cs" />
+    <Compile Include="RegularExpressions\EvalExpressionRegex.cs" />
+    <Compile Include="RegularExpressions\EvalExpressionRegexFactory22.cs" />
+    <Compile Include="RegularExpressions\EvalExpressionRegexRunner22.cs" />
+    <Compile Include="RegularExpressions\ExpressionBuilderRegex.cs" />
+    <Compile Include="RegularExpressions\ExpressionBuilderRegexFactory16.cs" />
+    <Compile Include="RegularExpressions\ExpressionBuilderRegexRunner16.cs" />
+    <Compile Include="RegularExpressions\FormatStringRegex.cs" />
+    <Compile Include="RegularExpressions\FormatStringRegexFactory19.cs" />
+    <Compile Include="RegularExpressions\FormatStringRegexRunner19.cs" />
+    <Compile Include="RegularExpressions\GTRegex.cs" />
+    <Compile Include="RegularExpressions\GTRegexFactory10.cs" />
+    <Compile Include="RegularExpressions\GTRegexRunner10.cs" />
+    <Compile Include="RegularExpressions\IncludeRegex.cs" />
+    <Compile Include="RegularExpressions\IncludeRegexFactory8.cs" />
+    <Compile Include="RegularExpressions\IncludeRegexRunner8.cs" />
+    <Compile Include="RegularExpressions\LTRegex.cs" />
+    <Compile Include="RegularExpressions\LTRegexFactory11.cs" />
+    <Compile Include="RegularExpressions\LTRegexRunner11.cs" />
+    <Compile Include="RegularExpressions\NonWordRegex.cs" />
+    <Compile Include="RegularExpressions\NonWordRegexFactory21.cs" />
+    <Compile Include="RegularExpressions\NonWordRegexRunner21.cs" />
+    <Compile Include="RegularExpressions\RunatServerRegex.cs" />
+    <Compile Include="RegularExpressions\RunatServerRegexFactory13.cs" />
+    <Compile Include="RegularExpressions\RunatServerRegexRunner13.cs" />
+    <Compile Include="RegularExpressions\ServerTagsRegex.cs" />
+    <Compile Include="RegularExpressions\ServerTagsRegexFactory12.cs" />
+    <Compile Include="RegularExpressions\ServerTagsRegexRunner12.cs" />
+    <Compile Include="RegularExpressions\SimpleDirectiveRegex.cs" />
+    <Compile Include="RegularExpressions\SimpleDirectiveRegex40.cs" />
+    <Compile Include="RegularExpressions\SimpleDirectiveRegex40Factory26.cs" />
+    <Compile Include="RegularExpressions\SimpleDirectiveRegex40Runner26.cs" />
+    <Compile Include="RegularExpressions\SimpleDirectiveRegexFactory14.cs" />
+    <Compile Include="RegularExpressions\SimpleDirectiveRegexRunner14.cs" />
+    <Compile Include="RegularExpressions\TagRegex.cs" />
+    <Compile Include="RegularExpressions\TagRegex40.cs" />
+    <Compile Include="RegularExpressions\TagRegex40Factory24.cs" />
+    <Compile Include="RegularExpressions\TagRegex40Runner24.cs" />
+    <Compile Include="RegularExpressions\TagRegexFactory1.cs" />
+    <Compile Include="RegularExpressions\TagRegexRunner1.cs" />
+    <Compile Include="RegularExpressions\TextRegex.cs" />
+    <Compile Include="RegularExpressions\TextRegexFactory9.cs" />
+    <Compile Include="RegularExpressions\TextRegexRunner9.cs" />
+    <Compile Include="RegularExpressions\WebResourceRegex.cs" />
+    <Compile Include="RegularExpressions\WebResourceRegexFactory20.cs" />
+    <Compile Include="RegularExpressions\WebResourceRegexRunner20.cs" />
+    <Compile Include="Util\CalliHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

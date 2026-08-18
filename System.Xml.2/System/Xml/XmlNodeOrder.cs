@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace System.Xml
+{
+	// Token: 0x02000092 RID: 146
+	public enum XmlNodeOrder
+	{
+		// Token: 0x0400020F RID: 527
+		Before,
+		// Token: 0x04000210 RID: 528
+		After,
+		// Token: 0x04000211 RID: 529
+		Same,
+		// Token: 0x04000212 RID: 530
+		Unknown
+	}
+}

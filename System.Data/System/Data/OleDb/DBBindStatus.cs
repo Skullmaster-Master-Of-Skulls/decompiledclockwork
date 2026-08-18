@@ -1,0 +1,23 @@
+﻿using System;
+
+namespace System.Data.OleDb
+{
+	// Token: 0x0200023F RID: 575
+	internal enum DBBindStatus
+	{
+		// Token: 0x040014A8 RID: 5288
+		OK,
+		// Token: 0x040014A9 RID: 5289
+		BADORDINAL,
+		// Token: 0x040014AA RID: 5290
+		UNSUPPORTEDCONVERSION,
+		// Token: 0x040014AB RID: 5291
+		BADBINDINFO,
+		// Token: 0x040014AC RID: 5292
+		BADSTORAGEFLAGS,
+		// Token: 0x040014AD RID: 5293
+		NOINTERFACE,
+		// Token: 0x040014AE RID: 5294
+		MULTIPLESTORAGE
+	}
+}

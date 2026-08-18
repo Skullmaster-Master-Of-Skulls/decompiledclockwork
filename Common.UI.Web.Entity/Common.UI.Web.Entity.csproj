@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2653}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.UI.Web.Entity</RootNamespace>
+    <AssemblyName>Common.UI.Web.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accessible\eClockWorkWebAccessibleView.cs" />
+    <Compile Include="Adapters\CourseAdapter.cs" />
+    <Compile Include="Adapters\HtmlRendererAdapter.cs" />
+    <Compile Include="Adapters\LdapAdapters.cs" />
+    <Compile Include="Adapters\LoginPageUrlRuleAdapter.cs" />
+    <Compile Include="Adapters\MyStyleAttribute.cs" />
+    <Compile Include="Adapters\PersonBaseAdapter.cs" />
+    <Compile Include="Adapters\WebContextAdapter.cs" />
+    <Compile Include="Adapters\XmlAdapter.cs" />
+    <Compile Include="AlternateFormat\Adapters\MediaContentAdapter.cs" />
+    <Compile Include="AlternateFormat\MediaContentFileWithoutDataWebView.cs" />
+    <Compile Include="AlternateFormat\MediaContentRequestedToolStripViewModel.cs" />
+    <Compile Include="AlternateFormat\MediaContentWebView.cs" />
+    <Compile Include="AlternateFormat\StudentRequestWebView.cs" />
+    <Compile Include="ApplicationContext\WebApplicationContext.cs" />
+    <Compile Include="AppointmentBooking\AppointmentOrAvailabilityWrapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBooking\eMinMaxDateRangeInvalidReason.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBooking\eMinMaxDateRangeRuleType.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBooking\MinMaxDateRangeRuleValue.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBooking\MinMaxDateRangeValue.cs" />
+    <Compile Include="AppointmentsTestBooking\FinalExamRequest\StudentWrapper.cs" />
+    <Compile Include="appt\AppointmentBookingCalendarContext.cs" />
+    <Compile Include="appt\AppointmentView.cs" />
+    <Compile Include="appt\AttendeeView.cs" />
+    <Compile Include="appt\AvailabilityScheduleItemDTO.cs" />
+    <Compile Include="appt\AvailabilitySelectedArgs.cs" />
+    <Compile Include="AuthenticationAuthorization\ClockWorkIdentity.cs" />
+    <Compile Include="ClockWorkWebPageAttribute.cs" />
+    <Compile Include="ClockWorkWebPageModuleAttribute.cs" />
+    <Compile Include="Common\EventArgs\NumberEventArgs.cs" />
+    <Compile Include="Common\FileUpload\eFileUploadStatus.cs" />
+    <Compile Include="Common\FileUpload\FileForUpload.cs" />
+    <Compile Include="Common\FileUpload\FileForUploadSet.cs" />
+    <Compile Include="CourseRegistrations\CourseRegistrationView.cs" />
+    <Compile Include="CourseRegistrations\CourseRequestBaseView.cs" />
+    <Compile Include="DynamicForms\Accommodations\AccommodationsExpiryDate.cs" />
+    <Compile Include="DynamicForms\Accommodations\eAccommodationsExpiryDateStatus.cs" />
+    <Compile Include="eClockWorkWebMenu.cs" />
+    <Compile Include="eClockWorkWebMenuActions.cs" />
+    <Compile Include="eClockWorkWebPage.cs" />
+    <Compile Include="eClockWorkWebPageModule.cs" />
+    <Compile Include="IClockWorkMasterPage.cs" />
+    <Compile Include="IClockWorkMasterPageAuth.cs" />
+    <Compile Include="Instructor\FinalExamRequest\CourseExamSelection.cs" />
+    <Compile Include="Instructor\FinalExamRequest\FinalExamDay.cs" />
+    <Compile Include="IsExemptFromAuthenticationEventArgs.cs" />
+    <Compile Include="IsExemptFromRequiredSessionFormCheckEventArgs.cs" />
+    <Compile Include="LdapLogin\eLdapAuthenticationMethod.cs" />
+    <Compile Include="LookupCourses\AcademicTermView.cs" />
+    <Compile Include="LookupCourses\eCantEditTestExamInfoReason.cs" />
+    <Compile Include="LookupCourses\EventArgs\SessionViewArgs.cs" />
+    <Compile Include="LookupCourses\InstructorCourseListCourseWrapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseView.cs" />
+    <Compile Include="LookupCourses\SessionView.cs" />
+    <Compile Include="LookupCourses\TermChooserAvailableSessionMode.cs" />
+    <Compile Include="LookupCourses\UserInfoForCourses.cs" />
+    <Compile Include="Modules\eWebModule.cs" />
+    <Compile Include="Notetaking\eGetNotetakerInfoAndCoursesSource.cs" />
+    <Compile Include="Notetaking\GetNotetakerInfoAndCoursesInfo.cs" />
+    <Compile Include="OnlineForms\eOnlineFormNotAvailableReason.cs" />
+    <Compile Include="People\PersonBaseView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequiredSessionForm\eRequiredSessionFormNotAvailableReason.cs" />
+    <Compile Include="Survey\eSurveyNotAvailableReason.cs" />
+    <Compile Include="Tutoring\Tutees\BookTutoringAppointmentWizardPageAttribute.cs" />
+    <Compile Include="Tutoring\Tutees\eBookTutoringAppointmentWizardPage.cs" />
+    <Compile Include="Veteran\VeteranDynamicFormIds.cs" />
+    <Compile Include="Veteran\VeteranImportantAnswers.cs" />
+    <Compile Include="WebLogin\eWebPageTargetAudience.cs" />
+    <Compile Include="WebLogin\eWebUserGroupMembershipView.cs" />
+    <Compile Include="WebLogin\LoginPageUrlRule.cs" />
+    <Compile Include="WebLogin\WebPageTargetAudienceAttribute.cs" />
+    <Compile Include="WebLogin\WebUserInfoView.cs" />
+    <Compile Include="Web\AdminTestMessageView.cs" />
+    <Compile Include="Web\Captcha.cs" />
+    <Compile Include="Web\CaptchaQuestionAndAnswer.cs" />
+    <Compile Include="Web\CaptchaQuestionAttribute.cs" />
+    <Compile Include="Web\eCaptchaQuestion.cs" />
+    <Compile Include="Web\eNotAllowedCode.cs" />
+    <Compile Include="Web\EventArgs\AddMenuItemEventArgs.cs" />
+    <Compile Include="Web\EventArgs\DateArgs.cs" />
+    <Compile Include="Web\EventArgs\PrimaryAndSecondaryIdsRequiredArgs.cs" />
+    <Compile Include="Web\EventArgs\PrimaryIdRequiredArgs.cs" />
+    <Compile Include="Web\EventArgs\SelectedIdEventArgs.cs" />
+    <Compile Include="Web\EventArgs\StringRequiredArgs.cs" />
+    <Compile Include="Web\EventArgs\TutoringTuteeStudentSchedulingWizardPageArgs.cs" />
+    <Compile Include="Web\EventArgs\UserEventArgs.cs" />
+    <Compile Include="Web\ShoppingCart.cs" />
+    <Compile Include="Web\UserErrorCode.cs" />
+    <Compile Include="Web\UserErrorCodeAttribute.cs" />
+    <Compile Include="WrapperBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,13 @@
+﻿using System;
+
+namespace System.Data.OracleClient
+{
+	// Token: 0x0200001E RID: 30
+	internal sealed class NativeBuffer_Exception : NativeBuffer
+	{
+		// Token: 0x060001B5 RID: 437 RVA: 0x0005B174 File Offset: 0x0005A574
+		internal NativeBuffer_Exception(int initialSize) : base(initialSize)
+		{
+		}
+	}
+}

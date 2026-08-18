@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2680}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Oracle.DataAccess</RootNamespace>
+    <AssemblyName>Oracle.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Transactions" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client\BatchUpdateHelper.cs" />
+    <Compile Include="Client\CallbackHashCtx.cs" />
+    <Compile Include="Client\CmdTimeoutCtx.cs" />
+    <Compile Include="Client\ColMetaRef.cs" />
+    <Compile Include="Client\ColMetaVal.cs" />
+    <Compile Include="Client\CommandTreeUtils.cs" />
+    <Compile Include="Client\ConAttrib.cs" />
+    <Compile Include="Client\ConCache.cs" />
+    <Compile Include="Client\ConfigInfo.cs" />
+    <Compile Include="Client\ConnDataPool.cs" />
+    <Compile Include="Client\ConnectionDispenser.cs" />
+    <Compile Include="Client\ConnectionPool.cs" />
+    <Compile Include="Client\ConPooler.cs" />
+    <Compile Include="Client\Counter.cs" />
+    <Compile Include="Client\CPCtx.cs" />
+    <Compile Include="Client\CThreadPool.cs" />
+    <Compile Include="Client\CustomTypeCode.cs" />
+    <Compile Include="Client\DacDef.cs" />
+    <Compile Include="Client\DataProviderInfo.cs" />
+    <Compile Include="Client\DBAPrivType.cs" />
+    <Compile Include="Client\DeqOptsInfo.cs" />
+    <Compile Include="Client\DeriveParamInfo.cs" />
+    <Compile Include="Client\DotNetNumericAccessor.cs" />
+    <Compile Include="Client\EFOracleProviderManifest.cs" />
+    <Compile Include="Client\EFOracleProviderServices.cs" />
+    <Compile Include="Client\EFOracleVersion.cs" />
+    <Compile Include="Client\EFOracleVersionUtils.cs" />
+    <Compile Include="Client\EncryptedPassword.cs" />
+    <Compile Include="Client\EnqOptsInfo.cs" />
+    <Compile Include="Client\EntityUtils.cs" />
+    <Compile Include="Client\ErrRes.cs" />
+    <Compile Include="Client\FailoverEvent.cs" />
+    <Compile Include="Client\FailoverReturnCode.cs" />
+    <Compile Include="Client\FailoverType.cs" />
+    <Compile Include="Client\FetchArrayGetCallbackFuncPtr.cs" />
+    <Compile Include="Client\FetchArrayPooler.cs" />
+    <Compile Include="Client\FetchArrayPutCallbackFuncPtr.cs" />
+    <Compile Include="Client\HAEventType.cs" />
+    <Compile Include="Client\LobProperties.cs" />
+    <Compile Include="Client\MetaData.cs" />
+    <Compile Include="Client\MiniDumpInfo.cs" />
+    <Compile Include="Client\NotificationDefaults.cs" />
+    <Compile Include="Client\NotiRowRef.cs" />
+    <Compile Include="Client\NotiRowVal.cs" />
+    <Compile Include="Client\NotiTblRef.cs" />
+    <Compile Include="Client\NotiTblVal.cs" />
+    <Compile Include="Client\NotiVal.cs" />
+    <Compile Include="Client\OciTypeCode.cs" />
+    <Compile Include="Client\ODPType.cs" />
+    <Compile Include="Client\ODTConfigFileInfoForRefCursors.cs" />
+    <Compile Include="Client\OnAQNTFNCallback.cs" />
+    <Compile Include="Client\OnChangeCallback.cs" />
+    <Compile Include="Client\OnChangeEventHandler.cs" />
+    <Compile Include="Client\OpoAQAgentRefCtx.cs" />
+    <Compile Include="Client\OpoAQConst.cs" />
+    <Compile Include="Client\OpoAQDeqOptionsRefCtx.cs" />
+    <Compile Include="Client\OpoAQDeqOptionsValCtx.cs" />
+    <Compile Include="Client\OpoAQDequeueArrayPtrs.cs" />
+    <Compile Include="Client\OpoAQEnqOptionsValCtx.cs" />
+    <Compile Include="Client\OpoAQMsgIdValCtx.cs" />
+    <Compile Include="Client\OpoAQMsgPropsRefCtx.cs" />
+    <Compile Include="Client\OpoAQMsgPropsValCtx.cs" />
+    <Compile Include="Client\OpoAQMsgValCtx.cs" />
+    <Compile Include="Client\OpoAQNtfnDataRefCtx.cs" />
+    <Compile Include="Client\OPOBufferNode.cs" />
+    <Compile Include="Client\OPOBulkCopyColCtx.cs" />
+    <Compile Include="Client\OPOBulkCopyColRefCtx.cs" />
+    <Compile Include="Client\OPOBulkCopyObjCtx.cs" />
+    <Compile Include="Client\OPOBulkCopyRefCtx.cs" />
+    <Compile Include="Client\OPOBulkCopyValCtx.cs" />
+    <Compile Include="Client\OpoConCtx.cs" />
+    <Compile Include="Client\OpoConRefCtx.cs" />
+    <Compile Include="Client\OpoConValCtx.cs" />
+    <Compile Include="Client\OpoDacValCtx.cs" />
+    <Compile Include="Client\OpoErrCtx.cs" />
+    <Compile Include="Client\OpoErrResManager.cs" />
+    <Compile Include="Client\OpoExecutionMode.cs" />
+    <Compile Include="Client\OpoHACtx.cs" />
+    <Compile Include="Client\OpoLobValCtx.cs" />
+    <Compile Include="Client\OpoMetRefCtx.cs" />
+    <Compile Include="Client\OpoMetValCtx.cs" />
+    <Compile Include="Client\OpoObjRefCtx.cs" />
+    <Compile Include="Client\OpoObjValCtx.cs" />
+    <Compile Include="Client\OpoPrmCtx.cs" />
+    <Compile Include="Client\OpoPrmValCtx.cs" />
+    <Compile Include="Client\OpoRLBCtx.cs" />
+    <Compile Include="Client\OpoSqlValCtx.cs" />
+    <Compile Include="Client\OpoStmtType.cs" />
+    <Compile Include="Client\OpoSubscrCtx.cs" />
+    <Compile Include="Client\OpoTxnValCtx.cs" />
+    <Compile Include="Client\OpsAQ.cs" />
+    <Compile Include="Client\OpsBC.cs" />
+    <Compile Include="Client\OpsBool.cs" />
+    <Compile Include="Client\OpsChgNTFN.cs" />
+    <Compile Include="Client\OpsCom.cs" />
+    <Compile Include="Client\OpsCon.cs" />
+    <Compile Include="Client\OpsDac.cs" />
+    <Compile Include="Client\OpsErr.cs" />
+    <Compile Include="Client\OpsInd.cs" />
+    <Compile Include="Client\OpsInit.cs" />
+    <Compile Include="Client\OpsLob.cs" />
+    <Compile Include="Client\OpsMet.cs" />
+    <Compile Include="Client\OpsObj.cs" />
+    <Compile Include="Client\OpsPrm.cs" />
+    <Compile Include="Client\OpsRef.cs" />
+    <Compile Include="Client\OpsRes.cs" />
+    <Compile Include="Client\OpsRow.cs" />
+    <Compile Include="Client\OpsSql.cs" />
+    <Compile Include="Client\OpsSubscr.cs" />
+    <Compile Include="Client\OpsTrace.cs" />
+    <Compile Include="Client\OpsTxn.cs" />
+    <Compile Include="Client\OracleAQAgent.cs" />
+    <Compile Include="Client\OracleAQDequeueMode.cs" />
+    <Compile Include="Client\OracleAQDequeueOptions.cs" />
+    <Compile Include="Client\OracleAQEnqueueOptions.cs" />
+    <Compile Include="Client\OracleAQMessage.cs" />
+    <Compile Include="Client\OracleAQMessageAvailableEventArgs.cs" />
+    <Compile Include="Client\OracleAQMessageAvailableEventHandler.cs" />
+    <Compile Include="Client\OracleAQMessageDeliveryMode.cs" />
+    <Compile Include="Client\OracleAQMessageState.cs" />
+    <Compile Include="Client\OracleAQMessageType.cs" />
+    <Compile Include="Client\OracleAQNavigationMode.cs" />
+    <Compile Include="Client\OracleAQNotificationGroupingType.cs" />
+    <Compile Include="Client\OracleAQNotificationType.cs" />
+    <Compile Include="Client\OracleAQQueue.cs" />
+    <Compile Include="Client\OracleAQVisibilityMode.cs" />
+    <Compile Include="Client\OracleBulkCopy.cs" />
+    <Compile Include="Client\OracleBulkCopyColumnMapping.cs" />
+    <Compile Include="Client\OracleBulkCopyColumnMappingCollection.cs" />
+    <Compile Include="Client\OracleBulkCopyOptions.cs" />
+    <Compile Include="Client\OracleClientFactory.cs" />
+    <Compile Include="Client\OracleCollectionType.cs" />
+    <Compile Include="Client\OracleCommand.cs" />
+    <Compile Include="Client\OracleCommandBuilder.cs" />
+    <Compile Include="Client\OracleConnection.cs" />
+    <Compile Include="Client\OracleConnectionStringBuilder.cs" />
+    <Compile Include="Client\OracleConnectionType.cs" />
+    <Compile Include="Client\OracleDataAdapter.cs" />
+    <Compile Include="Client\OracleDatabase.cs" />
+    <Compile Include="Client\OracleDataReader.cs" />
+    <Compile Include="Client\OracleDataSourceEnumerator.cs" />
+    <Compile Include="Client\OracleDBShutdownMode.cs" />
+    <Compile Include="Client\OracleDBStartupMode.cs" />
+    <Compile Include="Client\OracleDbType.cs" />
+    <Compile Include="Client\OracleDependency.cs" />
+    <Compile Include="Client\OracleError.cs" />
+    <Compile Include="Client\OracleErrorCollection.cs" />
+    <Compile Include="Client\OracleException.cs" />
+    <Compile Include="Client\OracleFailoverEventArgs.cs" />
+    <Compile Include="Client\OracleFailoverEventHandler.cs" />
+    <Compile Include="Client\OracleGlobalConstants.cs" />
+    <Compile Include="Client\OracleGlobalization.cs" />
+    <Compile Include="Client\OracleHAEventArgs.cs" />
+    <Compile Include="Client\OracleHAEventHandler.cs" />
+    <Compile Include="Client\OracleHAEventSource.cs" />
+    <Compile Include="Client\OracleHAEventStatus.cs" />
+    <Compile Include="Client\OracleInfoMessageEventArgs.cs" />
+    <Compile Include="Client\OracleInfoMessageEventHandler.cs" />
+    <Compile Include="Client\OracleInit.cs" />
+    <Compile Include="Client\OracleNotificationEventArgs.cs" />
+    <Compile Include="Client\OracleNotificationInfo.cs" />
+    <Compile Include="Client\OracleNotificationRequest.cs" />
+    <Compile Include="Client\OracleNotificationSource.cs" />
+    <Compile Include="Client\OracleNotificationType.cs" />
+    <Compile Include="Client\OracleParameter.cs" />
+    <Compile Include="Client\OracleParameterCollection.cs" />
+    <Compile Include="Client\OracleParameterStatus.cs" />
+    <Compile Include="Client\OraclePerfCounter.cs" />
+    <Compile Include="Client\OraclePerfCounterCollection.cs" />
+    <Compile Include="Client\OraclePermission.cs" />
+    <Compile Include="Client\OraclePermissionAttribute.cs" />
+    <Compile Include="Client\OraclePublicKey.cs" />
+    <Compile Include="Client\OracleResourceHolder.cs" />
+    <Compile Include="Client\OracleResourcePool.cs" />
+    <Compile Include="Client\OracleRowidInfo.cs" />
+    <Compile Include="Client\OracleRowsCopiedEventArgs.cs" />
+    <Compile Include="Client\OracleRowsCopiedEventHandler.cs" />
+    <Compile Include="Client\OracleRowUpdatedEventArgs.cs" />
+    <Compile Include="Client\OracleRowUpdatedEventHandler.cs" />
+    <Compile Include="Client\OracleRowUpdatingEventArgs.cs" />
+    <Compile Include="Client\OracleRowUpdatingEventHandler.cs" />
+    <Compile Include="Client\OracleTransaction.cs" />
+    <Compile Include="Client\OracleTuningAgent.cs" />
+    <Compile Include="Client\OracleTypeMapper.cs" />
+    <Compile Include="Client\OracleXmlCommandType.cs" />
+    <Compile Include="Client\OracleXmlQueryProperties.cs" />
+    <Compile Include="Client\OracleXmlSaveProperties.cs" />
+    <Compile Include="Client\OraDb_DbTypeTable.cs" />
+    <Compile Include="Client\OraFailoverCallback_FPtr.cs" />
+    <Compile Include="Client\OraGlobInfo.cs" />
+    <Compile Include="Client\OraGlobStruct.cs" />
+    <Compile Include="Client\OraGlobType.cs" />
+    <Compile Include="Client\OraHACallbackFuncPtr.cs" />
+    <Compile Include="Client\OraLobType.cs" />
+    <Compile Include="Client\OraRefCursorState.cs" />
+    <Compile Include="Client\OraRLBCallbackFuncPtr.cs" />
+    <Compile Include="Client\OraSqlCS.cs" />
+    <Compile Include="Client\OraTrace.cs" />
+    <Compile Include="Client\OraType.cs" />
+    <Compile Include="Client\OSAuthent.cs" />
+    <Compile Include="Client\PerfCounterLevel.cs" />
+    <Compile Include="Client\PooledConCtx.cs" />
+    <Compile Include="Client\Pooler.cs" />
+    <Compile Include="Client\PoolMember.cs" />
+    <Compile Include="Client\PrmEnumType.cs" />
+    <Compile Include="Client\PromotableTxnMgr.cs" />
+    <Compile Include="Client\RefCursorInfo.cs" />
+    <Compile Include="Client\RefErr.cs" />
+    <Compile Include="Client\RegAndConfigRdr.cs" />
+    <Compile Include="Client\RLBCtx.cs" />
+    <Compile Include="Client\RLBMetrics.cs" />
+    <Compile Include="Client\RLBMetricsComparer.cs" />
+    <Compile Include="Client\RLBMetricsFlag.cs" />
+    <Compile Include="Client\RLBMsgStatus.cs" />
+    <Compile Include="Client\SqlGen\BasicExpressionVisitor.cs" />
+    <Compile Include="Client\SqlGen\DmlSqlGenerator.cs" />
+    <Compile Include="Client\SqlGen\ISqlFragment.cs" />
+    <Compile Include="Client\SqlGen\JoinSymbol.cs" />
+    <Compile Include="Client\SqlGen\SqlBuilder.cs" />
+    <Compile Include="Client\SqlGen\SqlGenerator.cs" />
+    <Compile Include="Client\SqlGen\SqlSelectStatement.cs" />
+    <Compile Include="Client\SqlGen\SqlWriter.cs" />
+    <Compile Include="Client\SqlGen\Symbol.cs" />
+    <Compile Include="Client\SqlGen\SymbolPair.cs" />
+    <Compile Include="Client\SqlGen\SymbolTable.cs" />
+    <Compile Include="Client\SqlGen\TopClause.cs" />
+    <Compile Include="Client\SQLT.cs" />
+    <Compile Include="Client\StatementDetails.cs" />
+    <Compile Include="Client\StoredProcedureInfo.cs" />
+    <Compile Include="Client\SubscrListenerInfo.cs" />
+    <Compile Include="Client\TxnType.cs" />
+    <Compile Include="Client\UTF8CommandText.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resfinder.cs" />
+    <Compile Include="System\Data\Common\Utils\MetadataHelpers.cs" />
+    <Compile Include="Types\AttrMetaRef.cs" />
+    <Compile Include="Types\AttrMetaVal.cs" />
+    <Compile Include="Types\CompareNullEnum.cs" />
+    <Compile Include="Types\DateTimeConv.cs" />
+    <Compile Include="Types\DateTimeErr.cs" />
+    <Compile Include="Types\DecimalConv.cs" />
+    <Compile Include="Types\DecimalInfo.cs" />
+    <Compile Include="Types\IDSCtx.cs" />
+    <Compile Include="Types\InternalTypes.cs" />
+    <Compile Include="Types\Interval.cs" />
+    <Compile Include="Types\INullable.cs" />
+    <Compile Include="Types\IOracleArrayTypeFactory.cs" />
+    <Compile Include="Types\IOracleCustomType.cs" />
+    <Compile Include="Types\IOracleCustomTypeFactory.cs" />
+    <Compile Include="Types\ITLMethods.cs" />
+    <Compile Include="Types\IYMCtx.cs" />
+    <Compile Include="Types\LongConv.cs" />
+    <Compile Include="Types\Number.cs" />
+    <Compile Include="Types\NumberErr.cs" />
+    <Compile Include="Types\NumberType.cs" />
+    <Compile Include="Types\OpoDatCtx.cs" />
+    <Compile Include="Types\OpoDatValCtx.cs" />
+    <Compile Include="Types\OpoDecCtx.cs" />
+    <Compile Include="Types\OpoDscRefCtx.cs" />
+    <Compile Include="Types\OpoDscValCtx.cs" />
+    <Compile Include="Types\OpoIDSCtx.cs" />
+    <Compile Include="Types\OpoITLValCtx.cs" />
+    <Compile Include="Types\OpoIYMCtx.cs" />
+    <Compile Include="Types\OpoTSCtx.cs" />
+    <Compile Include="Types\OpoTSValCtx.cs" />
+    <Compile Include="Types\OpoUdtAttrValCtx.cs" />
+    <Compile Include="Types\OpoUdtCtx.cs" />
+    <Compile Include="Types\OpoUdtValCtx.cs" />
+    <Compile Include="Types\OpoXmlStreamReadParamList.cs" />
+    <Compile Include="Types\OpoXmlTypeRefCtx.cs" />
+    <Compile Include="Types\OpoXmlTypeValCtx.cs" />
+    <Compile Include="Types\OpsBin.cs" />
+    <Compile Include="Types\OpsDat.cs" />
+    <Compile Include="Types\OpsDec.cs" />
+    <Compile Include="Types\OpsDsc.cs" />
+    <Compile Include="Types\OpsIDS.cs" />
+    <Compile Include="Types\OpsITL.cs" />
+    <Compile Include="Types\OpsIYM.cs" />
+    <Compile Include="Types\OpsStr.cs" />
+    <Compile Include="Types\OpsTS.cs" />
+    <Compile Include="Types\OpsTSA.cs" />
+    <Compile Include="Types\OpsTSL.cs" />
+    <Compile Include="Types\OpsTSZ.cs" />
+    <Compile Include="Types\OpsUdt.cs" />
+    <Compile Include="Types\OpsXmlStream.cs" />
+    <Compile Include="Types\OpsXmlType.cs" />
+    <Compile Include="Types\OracleArrayMappingAttribute.cs" />
+    <Compile Include="Types\OracleBFile.cs" />
+    <Compile Include="Types\OracleBinary.cs" />
+    <Compile Include="Types\OracleBlob.cs" />
+    <Compile Include="Types\OracleClob.cs" />
+    <Compile Include="Types\OracleCustomTypeMappingAttribute.cs" />
+    <Compile Include="Types\OracleDate.cs" />
+    <Compile Include="Types\OracleDecimal.cs" />
+    <Compile Include="Types\OracleIntervalDS.cs" />
+    <Compile Include="Types\OracleIntervalYM.cs" />
+    <Compile Include="Types\OracleNullValueException.cs" />
+    <Compile Include="Types\OracleObjectMappingAttribute.cs" />
+    <Compile Include="Types\OracleRef.cs" />
+    <Compile Include="Types\OracleRefCursor.cs" />
+    <Compile Include="Types\OracleString.cs" />
+    <Compile Include="Types\OracleTimeStamp.cs" />
+    <Compile Include="Types\OracleTimeStampLTZ.cs" />
+    <Compile Include="Types\OracleTimeStampTZ.cs" />
+    <Compile Include="Types\OracleTruncateException.cs" />
+    <Compile Include="Types\OracleTypeException.cs" />
+    <Compile Include="Types\OracleUdt.cs" />
+    <Compile Include="Types\OracleUdtDescriptor.cs" />
+    <Compile Include="Types\OracleUdtFetchOption.cs" />
+    <Compile Include="Types\OracleUdtStatus.cs" />
+    <Compile Include="Types\OracleUdtWrapper.cs" />
+    <Compile Include="Types\OracleXmlStream.cs" />
+    <Compile Include="Types\OracleXmlType.cs" />
+    <Compile Include="Types\TimeSpanConv.cs" />
+    <Compile Include="Types\TimeStamp.cs" />
+    <Compile Include="Types\TimeStampConv.cs" />
+    <Compile Include="Types\TimeStampType.cs" />
+    <Compile Include="Types\TZInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Icons.OracleCommandBuilderToolB.bmp" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Icons.OracleCommandToolBox_hc.bmp" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Icons.OracleConnectionToolBox_h.bmp" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Icons.OracleDataAdapterToolBox_.bmp" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Resources.Exception.resources" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Resources.OracleMetaData.xml" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.Client.Resources.TimesTenMetaData.xml" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.EntityFramework.Resources.EFOracleProv.xml" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.EntityFramework.Resources.EFOracleStor.msl" />
+    <EmbeddedResource Include="Oracle.DataAccess.src.EntityFramework.Resources.EFOracleStor.ssdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.Entity\System.Data.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CB}</Project>
+      <Name>System.Data.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,29 @@
+﻿using System;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
+using System.Security.Permissions;
+
+namespace System.Runtime.Remoting.Channels
+{
+	// Token: 0x020006D7 RID: 1751
+	[ComVisible(true)]
+	public interface IServerChannelSink : IChannelSinkBase
+	{
+		// Token: 0x06003F0C RID: 16140
+		[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.Infrastructure)]
+		ServerProcessing ProcessMessage(IServerChannelSinkStack sinkStack, IMessage requestMsg, ITransportHeaders requestHeaders, Stream requestStream, out IMessage responseMsg, out ITransportHeaders responseHeaders, out Stream responseStream);
+
+		// Token: 0x06003F0D RID: 16141
+		[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.Infrastructure)]
+		void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, object state, IMessage msg, ITransportHeaders headers, Stream stream);
+
+		// Token: 0x06003F0E RID: 16142
+		[SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.Infrastructure)]
+		Stream GetResponseStream(IServerResponseChannelSinkStack sinkStack, object state, IMessage msg, ITransportHeaders headers);
+
+		// Token: 0x17000A86 RID: 2694
+		// (get) Token: 0x06003F0F RID: 16143
+		IServerChannelSink NextChannelSink { [SecurityPermission(SecurityAction.LinkDemand, Flags = SecurityPermissionFlag.Infrastructure)] get; }
+	}
+}

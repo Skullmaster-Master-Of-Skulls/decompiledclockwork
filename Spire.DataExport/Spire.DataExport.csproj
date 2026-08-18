@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2687}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spire</RootNamespace>
+    <AssemblyName>Spire.DataExport</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataExport\Access\AccessExport.cs" />
+    <Compile Include="DataExport\Access\DatabaseExport.cs" />
+    <Compile Include="DataExport\Access\ParameterData.cs" />
+    <Compile Include="DataExport\Access\TableColumn.cs" />
+    <Compile Include="DataExport\Access\TableColumnCreatingEventArgs.cs" />
+    <Compile Include="DataExport\Access\TableColumnCreatingEventHandler.cs" />
+    <Compile Include="DataExport\Access\TableCreatedEventArgs.cs" />
+    <Compile Include="DataExport\Access\TableCreatedEventHandler.cs" />
+    <Compile Include="DataExport\Base\Options.cs" />
+    <Compile Include="DataExport\Clipboard\ClipboardExport.cs" />
+    <Compile Include="DataExport\Clipboard\ClipboardExportType.cs" />
+    <Compile Include="DataExport\CollectionEditors\CellItemStylesCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\CellsCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\ChartsCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\ChartSeriesListCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\ColumnFormatsCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\HyperlinksCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\ImagesCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\PicturesCollectionEditor.cs" />
+    <Compile Include="DataExport\CollectionEditors\SheetsCollectionEditor.cs" />
+    <Compile Include="DataExport\Collections\Collection.cs" />
+    <Compile Include="DataExport\Collections\CollectionItem.cs" />
+    <Compile Include="DataExport\Collections\Duplicates.cs" />
+    <Compile Include="DataExport\Collections\StringListCollection.cs" />
+    <Compile Include="DataExport\Common\ActionType.cs" />
+    <Compile Include="DataExport\Common\AdvancedTextExport.cs" />
+    <Compile Include="DataExport\Common\ColExport.cs" />
+    <Compile Include="DataExport\Common\ColExportType.cs" />
+    <Compile Include="DataExport\Common\ColumAlign.cs" />
+    <Compile Include="DataExport\Common\ColumnExport.cs" />
+    <Compile Include="DataExport\Common\ColumnsExport.cs" />
+    <Compile Include="DataExport\Common\DisposabledObject.cs" />
+    <Compile Include="DataExport\Common\EncodingType.cs" />
+    <Compile Include="DataExport\Common\ExportBase.cs" />
+    <Compile Include="DataExport\Common\ExportSource.cs" />
+    <Compile Include="DataExport\Common\FormatsExport.cs" />
+    <Compile Include="DataExport\Common\FormatTextExport.cs" />
+    <Compile Include="DataExport\Common\FormatTextSqlExport.cs" />
+    <Compile Include="DataExport\Common\MemoryExport.cs" />
+    <Compile Include="DataExport\Common\PageOrientation.cs" />
+    <Compile Include="DataExport\Common\RowExport.cs" />
+    <Compile Include="DataExport\Common\SaveType.cs" />
+    <Compile Include="DataExport\Common\TextExport.cs" />
+    <Compile Include="DataExport\DBF\DbfEncodingType.cs" />
+    <Compile Include="DataExport\DBF\DBFExport.cs" />
+    <Compile Include="DataExport\Delegates\AggregateParamsEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\CellParamsEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\CustomItemProc.cs" />
+    <Compile Include="DataExport\Delegates\DataParamsEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\DataRowEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\ExportRowEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\GetExportFieldData.cs" />
+    <Compile Include="DataExport\Delegates\HeaderFooterParamsEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\ListItemProc.cs" />
+    <Compile Include="DataExport\Delegates\NormalFunc.cs" />
+    <Compile Include="DataExport\Delegates\RTFDataStyleEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\RTFStyleEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\RTFTitleStyleEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\StopExportEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\TextEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\TitleParamsEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\XLSDataRowEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\XLSExportRowEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\XLSSheetDataEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\XLSSheetEventHandler.cs" />
+    <Compile Include="DataExport\Delegates\XLSTextEventHandler.cs" />
+    <Compile Include="DataExport\Designers\ExportDesigner.cs" />
+    <Compile Include="DataExport\EventArgs\AggregateParamsEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\CellParamsEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\DataParamsEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\ExportRowEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\HeaderFooterParamsEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\RTFDataStyleEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\RTFTitleStyleEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\StopExportEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\TextEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\TitleParamsEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\XLSDataRowEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\XLSExportRowEventArgs.cs" />
+    <Compile Include="DataExport\EventArgs\XLSTextEventArgs.cs" />
+    <Compile Include="DataExport\Forms\AboutDataExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataExport\Forms\AboutDataExport.Designer.cs">
+      <DependentUpon>AboutDataExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExport\Forms\DataExportColumnsEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataExport\Forms\DataExportColumnsEditor.Designer.cs">
+      <DependentUpon>DataExportColumnsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExport\Forms\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataExport\Forms\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataExport\HTML\DefaultOptions.cs" />
+    <Compile Include="DataExport\HTML\HTMLExport.cs" />
+    <Compile Include="DataExport\HTML\HtmlExportIndexOption.cs" />
+    <Compile Include="DataExport\HTML\HtmlExportStyles.cs" />
+    <Compile Include="DataExport\HTML\HtmlStyle.cs" />
+    <Compile Include="DataExport\HTML\HtmlTableOptions.cs" />
+    <Compile Include="DataExport\HTML\HtmlTextOptions.cs" />
+    <Compile Include="DataExport\HTML\NavigationAlign.cs" />
+    <Compile Include="DataExport\HTML\UsingCSS.cs" />
+    <Compile Include="DataExport\License\DataExportLicenseProvider.cs" />
+    <Compile Include="DataExport\PDF\PageFormat.cs" />
+    <Compile Include="DataExport\PDF\PageUnits.cs" />
+    <Compile Include="DataExport\PDF\PDFEncodingType.cs" />
+    <Compile Include="DataExport\PDF\PDFExport.cs" />
+    <Compile Include="DataExport\PDF\PdfExportPageOptions.cs" />
+    <Compile Include="DataExport\PDF\PdfFont.cs" />
+    <Compile Include="DataExport\PDF\PdfFontEncoding.cs" />
+    <Compile Include="DataExport\PDF\PdfFontName.cs" />
+    <Compile Include="DataExport\PDF\PDFOptions.cs" />
+    <Compile Include="DataExport\PropEditors\AccessDatabaseNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\CellColorEditor.cs" />
+    <Compile Include="DataExport\PropEditors\CellDateTimeFormatEditor.cs" />
+    <Compile Include="DataExport\PropEditors\CellFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\ClipViewerEditor.cs" />
+    <Compile Include="DataExport\PropEditors\ColumnNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\CultureEditor.cs" />
+    <Compile Include="DataExport\PropEditors\CurrencyFormatEditor.cs" />
+    <Compile Include="DataExport\PropEditors\DateTimeFormatEditor.cs" />
+    <Compile Include="DataExport\PropEditors\DBFFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\ExportColumnsEditor.cs" />
+    <Compile Include="DataExport\PropEditors\HtmlFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\ImageFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\IntegerFormatEditor.cs" />
+    <Compile Include="DataExport\PropEditors\ListComponentEditor.cs" />
+    <Compile Include="DataExport\PropEditors\PDFFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\PictureNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\RTFFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\SQLFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\TimeFormatEditor.cs" />
+    <Compile Include="DataExport\PropEditors\TXTFileNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\WorkSheetNameEditor.cs" />
+    <Compile Include="DataExport\PropEditors\XmlFileNameEditor.cs" />
+    <Compile Include="DataExport\RTF\RtfColorType.cs" />
+    <Compile Include="DataExport\RTF\RTFEncodingType.cs" />
+    <Compile Include="DataExport\RTF\RTFExport.cs" />
+    <Compile Include="DataExport\RTF\RtfItemStyle.cs" />
+    <Compile Include="DataExport\RTF\RtfItemType.cs" />
+    <Compile Include="DataExport\RTF\RTFOptions.cs" />
+    <Compile Include="DataExport\RTF\RTFStyle.cs" />
+    <Compile Include="DataExport\RTF\RTFStyles.cs" />
+    <Compile Include="DataExport\RTF\RtfTextAlignment.cs" />
+    <Compile Include="DataExport\SQL\SQLExport.cs" />
+    <Compile Include="DataExport\TXT\CSVOption.cs" />
+    <Compile Include="DataExport\TXT\ExportState.cs" />
+    <Compile Include="DataExport\TXT\TextExportType.cs" />
+    <Compile Include="DataExport\TXT\TXTExport.cs" />
+    <Compile Include="DataExport\TypeConverters\CellValueTypeConverter.cs" />
+    <Compile Include="DataExport\TypeConverters\CollectionTypeConverter.cs" />
+    <Compile Include="DataExport\Utils\AppSettingsUtils.cs" />
+    <Compile Include="DataExport\Utils\emunType.cs" />
+    <Compile Include="DataExport\Utils\IniSection.cs" />
+    <Compile Include="DataExport\Utils\IniSections.cs" />
+    <Compile Include="DataExport\Utils\IniSetting.cs" />
+    <Compile Include="DataExport\Utils\IniSettings.cs" />
+    <Compile Include="DataExport\Utils\NullCollectionEditor.cs" />
+    <Compile Include="DataExport\Utils\XMLFile.cs" />
+    <Compile Include="DataExport\Utils\XMLFile1.cs" />
+    <Compile Include="DataExport\Utils\XMLSetting.cs" />
+    <Compile Include="DataExport\XLS\Aggregate.cs" />
+    <Compile Include="DataExport\XLS\Borders.cs" />
+    <Compile Include="DataExport\XLS\Cell.cs" />
+    <Compile Include="DataExport\XLS\CellBorder.cs" />
+    <Compile Include="DataExport\XLS\CellBorderStyle.cs" />
+    <Compile Include="DataExport\XLS\CellColor.cs" />
+    <Compile Include="DataExport\XLS\CellExport.cs" />
+    <Compile Include="DataExport\XLS\CellFont.cs" />
+    <Compile Include="DataExport\XLS\CellFormat.cs" />
+    <Compile Include="DataExport\XLS\CellGraphic.cs" />
+    <Compile Include="DataExport\XLS\CellHyperlink.cs" />
+    <Compile Include="DataExport\XLS\CellHyperlinks.cs" />
+    <Compile Include="DataExport\XLS\CellImage.cs" />
+    <Compile Include="DataExport\XLS\CellImages.cs" />
+    <Compile Include="DataExport\XLS\CellItemType.cs" />
+    <Compile Include="DataExport\XLS\CellNote.cs" />
+    <Compile Include="DataExport\XLS\CellNoteFillType.cs" />
+    <Compile Include="DataExport\XLS\CellNoteFormat.cs" />
+    <Compile Include="DataExport\XLS\CellNoteGradient.cs" />
+    <Compile Include="DataExport\XLS\CellNotes.cs" />
+    <Compile Include="DataExport\XLS\CellOrientation.cs" />
+    <Compile Include="DataExport\XLS\CellPicture.cs" />
+    <Compile Include="DataExport\XLS\CellPictures.cs" />
+    <Compile Include="DataExport\XLS\CellPictureType.cs" />
+    <Compile Include="DataExport\XLS\Cells.cs" />
+    <Compile Include="DataExport\XLS\CellType.cs" />
+    <Compile Include="DataExport\XLS\Chart.cs" />
+    <Compile Include="DataExport\XLS\ChartAutoPosition.cs" />
+    <Compile Include="DataExport\XLS\ChartCustomPosition.cs" />
+    <Compile Include="DataExport\XLS\ChartLegendPlacement.cs" />
+    <Compile Include="DataExport\XLS\ChartPlacement.cs" />
+    <Compile Include="DataExport\XLS\ChartPosition.cs" />
+    <Compile Include="DataExport\XLS\ChartPositionType.cs" />
+    <Compile Include="DataExport\XLS\Charts.cs" />
+    <Compile Include="DataExport\XLS\ChartSeries.cs" />
+    <Compile Include="DataExport\XLS\ChartSeriesList.cs" />
+    <Compile Include="DataExport\XLS\ChartStyle.cs" />
+    <Compile Include="DataExport\XLS\ColumnFormat.cs" />
+    <Compile Include="DataExport\XLS\ColumnFormats.cs" />
+    <Compile Include="DataExport\XLS\CustomItem.cs" />
+    <Compile Include="DataExport\XLS\DataRange.cs" />
+    <Compile Include="DataExport\XLS\DisposabledObject.cs" />
+    <Compile Include="DataExport\XLS\FillType.cs" />
+    <Compile Include="DataExport\XLS\FontList.cs" />
+    <Compile Include="DataExport\XLS\Formula\FormulaOptions.cs" />
+    <Compile Include="DataExport\XLS\Formula\FormulaTokenClass.cs" />
+    <Compile Include="DataExport\XLS\Formula\FormulaTokenCode.cs" />
+    <Compile Include="DataExport\XLS\Formula\FormulaTokenType.cs" />
+    <Compile Include="DataExport\XLS\HorizontalAlignment.cs" />
+    <Compile Include="DataExport\XLS\ItemStyles.cs" />
+    <Compile Include="DataExport\XLS\ItemType.cs" />
+    <Compile Include="DataExport\XLS\MergedCellList.cs" />
+    <Compile Include="DataExport\XLS\MergedCells.cs" />
+    <Compile Include="DataExport\XLS\Pattern.cs" />
+    <Compile Include="DataExport\XLS\RangeType.cs" />
+    <Compile Include="DataExport\XLS\SheetOptions.cs" />
+    <Compile Include="DataExport\XLS\StripStyle.cs" />
+    <Compile Include="DataExport\XLS\STYLE_DEFAULT.cs" />
+    <Compile Include="DataExport\XLS\TextAlignment.cs" />
+    <Compile Include="DataExport\XLS\VerticalAlignment.cs" />
+    <Compile Include="DataExport\XLS\WorkSheet.cs" />
+    <Compile Include="DataExport\XLS\WorkSheets.cs" />
+    <Compile Include="DataExport\XLS\XlsExportStage.cs" />
+    <Compile Include="DataExport\XLS\XlsFontScript.cs" />
+    <Compile Include="DataExport\XLS\XlsFontUnderline.cs" />
+    <Compile Include="DataExport\XLS\XlsGraphicType.cs" />
+    <Compile Include="DataExport\XLS\XlsHyperlinkStyle.cs" />
+    <Compile Include="DataExport\XML\XMLExport.cs" />
+    <Compile Include="DataExport\XML\XmlOptions.cs" />
+    <Compile Include="jp3E9FF5BED7F5.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spr.2.cs" />
+    <Compile Include="spr.cs" />
+    <Compile Include="sprι.cs" />
+    <Compile Include="sprᲂ.cs" />
+    <Compile Include="sprᜀ.cs" />
+    <Compile Include="sprᜯ.cs" />
+    <Compile Include="sprᝎ.cs" />
+    <Compile Include="spr᝚.cs" />
+    <Compile Include="spr᝾.cs" />
+    <Compile Include="sprក.cs" />
+    <Compile Include="sprញ.cs" />
+    <Compile Include="sprា.cs" />
+    <Compile Include="sprី.cs" />
+    <Compile Include="sprឿ.cs" />
+    <Compile Include="spr៎.cs" />
+    <Compile Include="spr៓.cs" />
+    <Compile Include="sprៗ.cs" />
+    <Compile Include="spr៦.cs" />
+    <Compile Include="spr៭.cs" />
+    <Compile Include="spr៯.cs" />
+    <Compile Include="spr᠉.cs" />
+    <Compile Include="spr᠓.cs" />
+    <Compile Include="spr᠗.cs" />
+    <Compile Include="spr᠜.cs" />
+    <Compile Include="sprᠪ.cs" />
+    <Compile Include="sprᠲ.cs" />
+    <Compile Include="sprᠸ.cs" />
+    <Compile Include="sprᠹ.cs" />
+    <Compile Include="sprᠺ.cs" />
+    <Compile Include="sprᡊ.cs" />
+    <Compile Include="sprᡙ.cs" />
+    <Compile Include="sprᡫ.cs" />
+    <Compile Include="sprᡱ.cs" />
+    <Compile Include="sprᡳ.cs" />
+    <Compile Include="sprᡷ.cs" />
+    <Compile Include="sprᢁ.cs" />
+    <Compile Include="sprᢅ.cs" />
+    <Compile Include="sprᢑ.cs" />
+    <Compile Include="sprᢗ.cs" />
+    <Compile Include="sprᣏ.cs" />
+    <Compile Include="sprᣓ.cs" />
+    <Compile Include="sprᣟ.cs" />
+    <Compile Include="sprᣦ.cs" />
+    <Compile Include="sprᣭ.cs" />
+    <Compile Include="sprᣮ.cs" />
+    <Compile Include="sprᣴ.cs" />
+    <Compile Include="sprᤊ.cs" />
+    <Compile Include="sprᤌ.cs" />
+    <Compile Include="sprᤑ.cs" />
+    <Compile Include="sprᤓ.cs" />
+    <Compile Include="spr᤼.cs" />
+    <Compile Include="spr᥋.cs" />
+    <Compile Include="sprᥔ.cs" />
+    <Compile Include="sprᥞ.cs" />
+    <Compile Include="sprᥫ.cs" />
+    <Compile Include="sprᦑ.cs" />
+    <Compile Include="sprᦛ.cs" />
+    <Compile Include="sprᦠ.cs" />
+    <Compile Include="sprᦤ.cs" />
+    <Compile Include="sprᦦ.cs" />
+    <Compile Include="sprᦩ.cs" />
+    <Compile Include="spr᧙.cs" />
+    <Compile Include="spr᧱.cs" />
+    <Compile Include="spr᧲.cs" />
+    <Compile Include="spr᧳.cs" />
+    <Compile Include="sprᨇ.cs" />
+    <Compile Include="spr᨝.cs" />
+    <Compile Include="sprᨫ.cs" />
+    <Compile Include="sprᩀ.cs" />
+    <Compile Include="sprᩇ.cs" />
+    <Compile Include="sprᩦ.cs" />
+    <Compile Include="spr᪡.cs" />
+    <Compile Include="spr᫈.cs" />
+    <Compile Include="spr᫘.cs" />
+    <Compile Include="spr᫡.cs" />
+    <Compile Include="spr᫢.cs" />
+    <Compile Include="spr᫶.cs" />
+    <Compile Include="sprᬀ.cs" />
+    <Compile Include="sprᬇ.cs" />
+    <Compile Include="sprᬑ.cs" />
+    <Compile Include="sprᬙ.cs" />
+    <Compile Include="sprᬚ.cs" />
+    <Compile Include="sprᬰ.cs" />
+    <Compile Include="sprᬱ.cs" />
+    <Compile Include="sprᬾ.cs" />
+    <Compile Include="spr᭒.cs" />
+    <Compile Include="spr᭓.cs" />
+    <Compile Include="spr᭤.cs" />
+    <Compile Include="sprᮌ.cs" />
+    <Compile Include="sprᮕ.cs" />
+    <Compile Include="sprᮘ.cs" />
+    <Compile Include="sprᮝ.cs" />
+    <Compile Include="sprᮺ.cs" />
+    <Compile Include="sprᮻ.cs" />
+    <Compile Include="sprᯅ.cs" />
+    <Compile Include="sprᯌ.cs" />
+    <Compile Include="sprᯑ.cs" />
+    <Compile Include="sprᯠ.cs" />
+    <Compile Include="sprᯨ.cs" />
+    <Compile Include="sprᯭ.cs" />
+    <Compile Include="spr᯼.cs" />
+    <Compile Include="spr᯾.cs" />
+    <Compile Include="sprᰉ.cs" />
+    <Compile Include="sprᰍ.cs" />
+    <Compile Include="sprᰐ.cs" />
+    <Compile Include="sprᰕ.cs" />
+    <Compile Include="sprᰫ.cs" />
+    <Compile Include="sprᰲ.cs" />
+    <Compile Include="sprᰳ.cs" />
+    <Compile Include="spr᰷.cs" />
+    <Compile Include="spr᱁.cs" />
+    <Compile Include="sprᱨ.cs" />
+    <Compile Include="sprᱰ.cs" />
+    <Compile Include="sprᱲ.cs" />
+    <Compile Include="sprᱶ.cs" />
+    <Compile Include="sprᲢ.cs" />
+    <Compile Include="sprᲤ.cs" />
+    <Compile Include="sprᲦ.cs" />
+    <Compile Include="sprᲩ.cs" />
+    <Compile Include="sprᲷ.cs" />
+    <Compile Include="sprᲺ.cs" />
+    <Compile Include="spr᳅.cs" />
+    <Compile Include="spr᳑.cs" />
+    <Compile Include="spr᳣.cs" />
+    <Compile Include="spr᳤.cs" />
+    <Compile Include="spr᳾.cs" />
+    <Compile Include="sprᴗ.cs" />
+    <Compile Include="sprᵀ.cs" />
+    <Compile Include="sprᵊ.cs" />
+    <Compile Include="sprᵥ.cs" />
+    <Compile Include="sprᵸ.cs" />
+    <Compile Include="sprᵾ.cs" />
+    <Compile Include="sprᶀ.cs" />
+    <Compile Include="sprᶆ.cs" />
+    <Compile Include="sprᶕ.cs" />
+    <Compile Include="spr᷂.cs" />
+    <Compile Include="spr᷊.cs" />
+    <Compile Include="spr᷏.cs" />
+    <Compile Include="sprᷥ.cs" />
+    <Compile Include="sprᷦ.cs" />
+    <Compile Include="sprᷮ.cs" />
+    <Compile Include="sprᷳ.cs" />
+    <Compile Include="spr᷶.cs" />
+    <Compile Include="sprḉ.cs" />
+    <Compile Include="sprḐ.cs" />
+    <Compile Include="sprḓ.cs" />
+    <Compile Include="sprḗ.cs" />
+    <Compile Include="sprḚ.cs" />
+    <Compile Include="sprḣ.cs" />
+    <Compile Include="sprḫ.cs" />
+    <Compile Include="sprḲ.cs" />
+    <Compile Include="sprḷ.cs" />
+    <Compile Include="sprḺ.cs" />
+    <Compile Include="sprṀ.cs" />
+    <Compile Include="sprṄ.cs" />
+    <Compile Include="sprṌ.cs" />
+    <Compile Include="sprṖ.cs" />
+    <Compile Include="sprṗ.cs" />
+    <Compile Include="sprṞ.cs" />
+    <Compile Include="sprṱ.cs" />
+    <Compile Include="sprẇ.cs" />
+    <Compile Include="sprẐ.cs" />
+    <Compile Include="sprạ.cs" />
+    <Compile Include="sprấ.cs" />
+    <Compile Include="sprẮ.cs" />
+    <Compile Include="sprẴ.cs" />
+    <Compile Include="sprặ.cs" />
+    <Compile Include="sprỎ.cs" />
+    <Compile Include="sprỚ.cs" />
+    <Compile Include="sprỠ.cs" />
+    <Compile Include="sprợ.cs" />
+    <Compile Include="spr἞.cs" />
+    <Compile Include="sprἢ.cs" />
+    <Compile Include="sprἭ.cs" />
+    <Compile Include="sprἻ.cs" />
+    <Compile Include="sprἶ.cs" />
+    <Compile Include="spr὆.cs" />
+    <Compile Include="spr὜.cs" />
+    <Compile Include="sprᾀ.cs" />
+    <Compile Include="sprᾐ.cs" />
+    <Compile Include="sprᾫ.cs" />
+    <Compile Include="spr᾿.cs" />
+    <Compile Include="spr῀.cs" />
+    <Compile Include="sprὴ.cs" />
+    <Compile Include="sprῃ.cs" />
+    <Compile Include="sprὶ.cs" />
+    <Compile Include="sprὸ.cs" />
+    <Compile Include="sprῼ.cs" />
+    <Compile Include="spr†.cs" />
+    <Compile Include="spr‣.cs" />
+    <Compile Include="spr›.cs" />
+    <Compile Include="spr⁉.cs" />
+    <Compile Include="spr⁏.cs" />
+    <Compile Include="spr⁙.cs" />
+    <Compile Include="spr⁛.cs" />
+    <Compile Include="spr⁩.cs" />
+    <Compile Include="spr⁫.cs" />
+    <Compile Include="sprⁱ.cs" />
+    <Compile Include="spr⁴.cs" />
+    <Compile Include="spr₉.cs" />
+    <Compile Include="sprₐ.cs" />
+    <Compile Include="sprₓ.cs" />
+    <Compile Include="spr₧.cs" />
+    <Compile Include="spr₯.cs" />
+    <Compile Include="spr⃌.cs" />
+    <Compile Include="spr⃍.cs" />
+    <Compile Include="spr⃧.cs" />
+    <Compile Include="spr⃫.cs" />
+    <Compile Include="spr⃲.cs" />
+    <Compile Include="spr⃷.cs" />
+    <Compile Include="spr℃.cs" />
+    <Compile Include="spr№.cs" />
+    <Compile Include="sprℝ.cs" />
+    <Compile Include="sprℸ.cs" />
+    <Compile Include="spr⅕.cs" />
+    <Compile Include="spr⅟.cs" />
+    <Compile Include="sprⅷ.cs" />
+    <Compile Include="sprⅨ.cs" />
+    <Compile Include="sprⅿ.cs" />
+    <Compile Include="spr↞.cs" />
+    <Compile Include="spr↲.cs" />
+    <Compile Include="spr↳.cs" />
+    <Compile Include="spr↹.cs" />
+    <Compile Include="spr↼.cs" />
+    <Compile Include="spr⇥.cs" />
+    <Compile Include="spr⇨.cs" />
+    <Compile Include="spr∇.cs" />
+    <Compile Include="spr∓.cs" />
+    <Compile Include="spr√.cs" />
+    <Compile Include="spr∪.cs" />
+    <Compile Include="spr≄.cs" />
+    <Compile Include="spr≅.cs" />
+    <Compile Include="spr≔.cs" />
+    <Compile Include="spr≙.cs" />
+    <Compile Include="spr≦.cs" />
+    <Compile Include="spr≳.cs" />
+    <Compile Include="spr⊎.cs" />
+    <Compile Include="spr⊚.cs" />
+    <Compile Include="spr⊲.cs" />
+    <Compile Include="spr⋁.cs" />
+    <Compile Include="spr⋉.cs" />
+    <Compile Include="spr⋎.cs" />
+    <Compile Include="spr⋓.cs" />
+    <Compile Include="spr⋛.cs" />
+    <Compile Include="spr⋣.cs" />
+    <Compile Include="spr⋯.cs" />
+    <Compile Include="spr⌀.cs" />
+    <Compile Include="spr⌠.cs" />
+    <Compile Include="spr⌨.cs" />
+    <Compile Include="spr〈.cs" />
+    <Compile Include="spr⍁.cs" />
+    <Compile Include="spr⍍.cs" />
+    <Compile Include="spr⍣.cs" />
+    <Compile Include="spr⍮.cs" />
+    <Compile Include="spr⍳.cs" />
+    <Compile Include="spr⍶.cs" />
+    <Compile Include="spr⎅.cs" />
+    <Compile Include="spr⎔.cs" />
+    <Compile Include="spr⎘.cs" />
+    <Compile Include="spr⎳.cs" />
+    <Compile Include="spr⏅.cs" />
+    <Compile Include="spr⏩.cs" />
+    <Compile Include="spr⏪.cs" />
+    <Compile Include="spr⏳.cs" />
+    <Compile Include="spr␁.cs" />
+    <Compile Include="spr␅.cs" />
+    <Compile Include="spr␇.cs" />
+    <Compile Include="spr␖.cs" />
+    <Compile Include="spr␚.cs" />
+    <Compile Include="spr␢.cs" />
+    <Compile Include="spr␬.cs" />
+    <Compile Include="spr␭.cs" />
+    <Compile Include="spr␮.cs" />
+    <Compile Include="spr⑇.cs" />
+    <Compile Include="spr⑌.cs" />
+    <Compile Include="spr⒇.cs" />
+    <Compile Include="spr⒕.cs" />
+    <Compile Include="spr⒠.cs" />
+    <Compile Include="sprⓗ.cs" />
+    <Compile Include="sprⓟ.cs" />
+    <Compile Include="sprⓋ.cs" />
+    <Compile Include="spr┄.cs" />
+    <Compile Include="spr┆.cs" />
+    <Compile Include="spr┈.cs" />
+    <Compile Include="spr┐.cs" />
+    <Compile Include="spr┚.cs" />
+    <Compile Include="spr┬.cs" />
+    <Compile Include="spr┷.cs" />
+    <Compile Include="spr╕.cs" />
+    <Compile Include="spr╝.cs" />
+    <Compile Include="spr╡.cs" />
+    <Compile Include="spr╴.cs" />
+    <Compile Include="spr▌.cs" />
+    <Compile Include="spr▮.cs" />
+    <Compile Include="spr▹.cs" />
+    <Compile Include="spr◈.cs" />
+    <Compile Include="spr◔.cs" />
+    <Compile Include="spr◗.cs" />
+    <Compile Include="spr◛.cs" />
+    <Compile Include="spr◞.cs" />
+    <Compile Include="spr◡.cs" />
+    <Compile Include="spr◩.cs" />
+    <Compile Include="spr◫.cs" />
+    <Compile Include="spr◶.cs" />
+    <Compile Include="spr☃.cs" />
+    <Compile Include="XLS\File\BiffCellType.cs" />
+    <Compile Include="XLS\IO\OLE_MODE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataExport\Access\AccessExport.bmp" />
+    <EmbeddedResource Include="DataExport\Access\MDB_FILE" />
+    <EmbeddedResource Include="DataExport\Clipboard\ClipboardExport.bmp" />
+    <EmbeddedResource Include="DataExport\Common\AdvancedTextExport.resources" />
+    <EmbeddedResource Include="DataExport\Common\ExportBase.resources" />
+    <EmbeddedResource Include="DataExport\Common\FormatTextExport.resources" />
+    <EmbeddedResource Include="DataExport\DBF\DBFExport.bmp" />
+    <EmbeddedResource Include="DataExport\Forms\AboutDataExport.resources" />
+    <EmbeddedResource Include="DataExport\Forms\DataExportColumnsEditor.resources" />
+    <EmbeddedResource Include="DataExport\Forms\frmRegister.resources" />
+    <EmbeddedResource Include="DataExport\HTML\HTMLExport.bmp" />
+    <EmbeddedResource Include="DataExport\PDF\PDFExport.bmp" />
+    <EmbeddedResource Include="DataExport\RTF\RTFExport.bmp" />
+    <EmbeddedResource Include="DataExport\SQL\SQLExport.bmp" />
+    <EmbeddedResource Include="DataExport\TXT\TXTExport.bmp" />
+    <EmbeddedResource Include="DataExport\TXT\TXTExport.resources" />
+    <EmbeddedResource Include="DataExport\XLS\CellExport.bmp" />
+    <EmbeddedResource Include="DataExport\XML\XMLExport.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.DataExport.ResourceMgr\Spire.DataExport.ResourceMgr.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2688}</Project>
+      <Name>Spire.DataExport.ResourceMgr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.License\Spire.License.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE268A}</Project>
+      <Name>Spire.License</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Design\System.Design.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B7}</Project>
+      <Name>System.Design</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web\System.Web.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B0}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
