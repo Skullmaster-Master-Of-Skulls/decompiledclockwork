@@ -1,0 +1,5107 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Drawing.Design;
+using System.Globalization;
+using System.IO;
+using System.Text;
+using System.Web.Security.Cryptography;
+using System.Web.Util;
+
+namespace System.Web.UI.WebControls
+{
+	// Token: 0x02000415 RID: 1045
+	[Designer("System.Web.UI.Design.WebControls.GridViewDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+	[ControlValueProperty("SelectedValue")]
+	[DefaultEvent("SelectedIndexChanged")]
+	[SupportsEventValidation]
+	[DataKeyProperty("SelectedPersistedDataKey")]
+	public class GridView : CompositeDataBoundControl, IPostBackContainer, IPostBackEventHandler, ICallbackContainer, ICallbackEventHandler, IPersistedSelector, IDataKeysControl, IDataBoundListControl, IDataBoundControl, IFieldControl
+	{
+		// Token: 0x0600325A RID: 12890 RVA: 0x000A3B18 File Offset: 0x000A1D18
+		public GridView()
+		{
+		}
+
+		// Token: 0x0600325B RID: 12891 RVA: 0x000A3B4B File Offset: 0x000A1D4B
+		internal GridView(IStateFormatter2 stateFormatter)
+		{
+			this._stateFormatter = stateFormatter;
+		}
+
+		// Token: 0x17000E8A RID: 3722
+		// (get) Token: 0x0600325C RID: 12892 RVA: 0x0009A3DF File Offset: 0x000985DF
+		// (set) Token: 0x0600325D RID: 12893 RVA: 0x0009A3E7 File Offset: 0x000985E7
+		[DefaultValue("")]
+		[Themeable(false)]
+		[WebCategory("Data")]
+		[WebSysDescription("DataBoundControl_UpdateMethod")]
+		public new virtual string UpdateMethod
+		{
+			get
+			{
+				return base.UpdateMethod;
+			}
+			set
+			{
+				base.UpdateMethod = value;
+			}
+		}
+
+		// Token: 0x17000E8B RID: 3723
+		// (get) Token: 0x0600325E RID: 12894 RVA: 0x0009A3F0 File Offset: 0x000985F0
+		// (set) Token: 0x0600325F RID: 12895 RVA: 0x0009A3F8 File Offset: 0x000985F8
+		[DefaultValue("")]
+		[Themeable(false)]
+		[WebCategory("Data")]
+		[WebSysDescription("DataBoundControl_DeleteMethod")]
+		public new virtual string DeleteMethod
+		{
+			get
+			{
+				return base.DeleteMethod;
+			}
+			set
+			{
+				base.DeleteMethod = value;
+			}
+		}
+
+		// Token: 0x17000E8C RID: 3724
+		// (get) Token: 0x06003260 RID: 12896 RVA: 0x000A3B88 File Offset: 0x000A1D88
+		// (set) Token: 0x06003261 RID: 12897 RVA: 0x000A3BB1 File Offset: 0x000A1DB1
+		[WebCategory("Paging")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_AllowCustomPaging")]
+		public virtual bool AllowCustomPaging
+		{
+			get
+			{
+				object obj = this.ViewState["AllowCustomPaging"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				this.ViewState["AllowCustomPaging"] = value;
+			}
+		}
+
+		// Token: 0x17000E8D RID: 3725
+		// (get) Token: 0x06003262 RID: 12898 RVA: 0x000A3BCC File Offset: 0x000A1DCC
+		// (set) Token: 0x06003263 RID: 12899 RVA: 0x000A3BF8 File Offset: 0x000A1DF8
+		[WebCategory("Paging")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_AllowPaging")]
+		public virtual bool AllowPaging
+		{
+			get
+			{
+				object obj = this.ViewState["AllowPaging"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool allowPaging = this.AllowPaging;
+				if (value != allowPaging)
+				{
+					this.ViewState["AllowPaging"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000E8E RID: 3726
+		// (get) Token: 0x06003264 RID: 12900 RVA: 0x000A3C38 File Offset: 0x000A1E38
+		// (set) Token: 0x06003265 RID: 12901 RVA: 0x000A3C64 File Offset: 0x000A1E64
+		[WebCategory("Behavior")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_AllowSorting")]
+		public virtual bool AllowSorting
+		{
+			get
+			{
+				object obj = this.ViewState["AllowSorting"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool allowSorting = this.AllowSorting;
+				if (value != allowSorting)
+				{
+					this.ViewState["AllowSorting"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000E8F RID: 3727
+		// (get) Token: 0x06003266 RID: 12902 RVA: 0x000A3CA1 File Offset: 0x000A1EA1
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_AlternatingRowStyle")]
+		public TableItemStyle AlternatingRowStyle
+		{
+			get
+			{
+				if (this._alternatingRowStyle == null)
+				{
+					this._alternatingRowStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._alternatingRowStyle).TrackViewState();
+					}
+				}
+				return this._alternatingRowStyle;
+			}
+		}
+
+		// Token: 0x17000E90 RID: 3728
+		// (get) Token: 0x06003267 RID: 12903 RVA: 0x000A3CD0 File Offset: 0x000A1ED0
+		// (set) Token: 0x06003268 RID: 12904 RVA: 0x000A3CFC File Offset: 0x000A1EFC
+		[WebCategory("Behavior")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_AutoGenerateDeleteButton")]
+		public virtual bool AutoGenerateDeleteButton
+		{
+			get
+			{
+				object obj = this.ViewState["AutoGenerateDeleteButton"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool autoGenerateDeleteButton = this.AutoGenerateDeleteButton;
+				if (value != autoGenerateDeleteButton)
+				{
+					this.ViewState["AutoGenerateDeleteButton"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000E91 RID: 3729
+		// (get) Token: 0x06003269 RID: 12905 RVA: 0x000A3D3C File Offset: 0x000A1F3C
+		// (set) Token: 0x0600326A RID: 12906 RVA: 0x000A3D68 File Offset: 0x000A1F68
+		[WebCategory("Behavior")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_AutoGenerateEditButton")]
+		public virtual bool AutoGenerateEditButton
+		{
+			get
+			{
+				object obj = this.ViewState["AutoGenerateEditButton"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool autoGenerateEditButton = this.AutoGenerateEditButton;
+				if (value != autoGenerateEditButton)
+				{
+					this.ViewState["AutoGenerateEditButton"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000E92 RID: 3730
+		// (get) Token: 0x0600326B RID: 12907 RVA: 0x000A3DA8 File Offset: 0x000A1FA8
+		// (set) Token: 0x0600326C RID: 12908 RVA: 0x000A3DD4 File Offset: 0x000A1FD4
+		[WebCategory("Behavior")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_AutoGenerateSelectButton")]
+		public virtual bool AutoGenerateSelectButton
+		{
+			get
+			{
+				object obj = this.ViewState["AutoGenerateSelectButton"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool autoGenerateSelectButton = this.AutoGenerateSelectButton;
+				if (value != autoGenerateSelectButton)
+				{
+					this.ViewState["AutoGenerateSelectButton"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000E93 RID: 3731
+		// (get) Token: 0x0600326D RID: 12909 RVA: 0x000A3E14 File Offset: 0x000A2014
+		// (set) Token: 0x0600326E RID: 12910 RVA: 0x000A3E40 File Offset: 0x000A2040
+		[WebCategory("Behavior")]
+		[DefaultValue(true)]
+		[WebSysDescription("DataControls_AutoGenerateColumns")]
+		public virtual bool AutoGenerateColumns
+		{
+			get
+			{
+				object obj = this.ViewState["AutoGenerateColumns"];
+				return obj == null || (bool)obj;
+			}
+			set
+			{
+				bool autoGenerateColumns = this.AutoGenerateColumns;
+				if (value != autoGenerateColumns)
+				{
+					this.ViewState["AutoGenerateColumns"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000E94 RID: 3732
+		// (get) Token: 0x0600326F RID: 12911 RVA: 0x000963E9 File Offset: 0x000945E9
+		// (set) Token: 0x06003270 RID: 12912 RVA: 0x00096409 File Offset: 0x00094609
+		[WebCategory("Appearance")]
+		[DefaultValue("")]
+		[Editor("System.Web.UI.Design.ImageUrlEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
+		[UrlProperty]
+		[WebSysDescription("WebControl_BackImageUrl")]
+		public virtual string BackImageUrl
+		{
+			get
+			{
+				if (!base.ControlStyleCreated)
+				{
+					return string.Empty;
+				}
+				return ((TableStyle)base.ControlStyle).BackImageUrl;
+			}
+			set
+			{
+				((TableStyle)base.ControlStyle).BackImageUrl = value;
+			}
+		}
+
+		// Token: 0x17000E95 RID: 3733
+		// (get) Token: 0x06003271 RID: 12913 RVA: 0x000A3E7D File Offset: 0x000A207D
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public virtual GridViewRow BottomPagerRow
+		{
+			get
+			{
+				if (this._bottomPagerRow == null)
+				{
+					this.EnsureChildControls();
+				}
+				return this._bottomPagerRow;
+			}
+		}
+
+		// Token: 0x17000E96 RID: 3734
+		// (get) Token: 0x06003272 RID: 12914 RVA: 0x000A3E94 File Offset: 0x000A2094
+		private IOrderedDictionary BoundFieldValues
+		{
+			get
+			{
+				if (this._boundFieldValues == null)
+				{
+					int num = this.Columns.Count;
+					if (this.AutoGenerateColumns)
+					{
+						num += 10;
+					}
+					this._boundFieldValues = new OrderedDictionary(num);
+				}
+				return this._boundFieldValues;
+			}
+		}
+
+		// Token: 0x17000E97 RID: 3735
+		// (get) Token: 0x06003273 RID: 12915 RVA: 0x000A3ED4 File Offset: 0x000A20D4
+		// (set) Token: 0x06003274 RID: 12916 RVA: 0x00085605 File Offset: 0x00083805
+		[Localizable(true)]
+		[DefaultValue("")]
+		[WebCategory("Accessibility")]
+		[WebSysDescription("DataControls_Caption")]
+		public virtual string Caption
+		{
+			get
+			{
+				string text = (string)this.ViewState["Caption"];
+				if (text == null)
+				{
+					return string.Empty;
+				}
+				return text;
+			}
+			set
+			{
+				this.ViewState["Caption"] = value;
+			}
+		}
+
+		// Token: 0x17000E98 RID: 3736
+		// (get) Token: 0x06003275 RID: 12917 RVA: 0x000A3F04 File Offset: 0x000A2104
+		// (set) Token: 0x06003276 RID: 12918 RVA: 0x00085641 File Offset: 0x00083841
+		[DefaultValue(TableCaptionAlign.NotSet)]
+		[WebCategory("Accessibility")]
+		[WebSysDescription("WebControl_CaptionAlign")]
+		public virtual TableCaptionAlign CaptionAlign
+		{
+			get
+			{
+				object obj = this.ViewState["CaptionAlign"];
+				if (obj == null)
+				{
+					return TableCaptionAlign.NotSet;
+				}
+				return (TableCaptionAlign)obj;
+			}
+			set
+			{
+				if (value < TableCaptionAlign.NotSet || value > TableCaptionAlign.Right)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				this.ViewState["CaptionAlign"] = value;
+			}
+		}
+
+		// Token: 0x17000E99 RID: 3737
+		// (get) Token: 0x06003277 RID: 12919 RVA: 0x0008566C File Offset: 0x0008386C
+		// (set) Token: 0x06003278 RID: 12920 RVA: 0x00085688 File Offset: 0x00083888
+		[WebCategory("Layout")]
+		[DefaultValue(-1)]
+		[WebSysDescription("GridView_CellPadding")]
+		public virtual int CellPadding
+		{
+			get
+			{
+				if (!base.ControlStyleCreated)
+				{
+					return -1;
+				}
+				return ((TableStyle)base.ControlStyle).CellPadding;
+			}
+			set
+			{
+				((TableStyle)base.ControlStyle).CellPadding = value;
+			}
+		}
+
+		// Token: 0x17000E9A RID: 3738
+		// (get) Token: 0x06003279 RID: 12921 RVA: 0x0008569B File Offset: 0x0008389B
+		// (set) Token: 0x0600327A RID: 12922 RVA: 0x000856B7 File Offset: 0x000838B7
+		[WebCategory("Layout")]
+		[DefaultValue(0)]
+		[WebSysDescription("GridView_CellSpacing")]
+		public virtual int CellSpacing
+		{
+			get
+			{
+				if (!base.ControlStyleCreated)
+				{
+					return 0;
+				}
+				return ((TableStyle)base.ControlStyle).CellSpacing;
+			}
+			set
+			{
+				((TableStyle)base.ControlStyle).CellSpacing = value;
+			}
+		}
+
+		// Token: 0x17000E9B RID: 3739
+		// (get) Token: 0x0600327B RID: 12923 RVA: 0x000A3F30 File Offset: 0x000A2130
+		[DefaultValue(null)]
+		[Editor("System.Web.UI.Design.WebControls.DataControlFieldTypeEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
+		[MergableProperty(false)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebCategory("Default")]
+		[WebSysDescription("DataControls_Columns")]
+		public virtual DataControlFieldCollection Columns
+		{
+			get
+			{
+				if (this._fieldCollection == null)
+				{
+					this._fieldCollection = new DataControlFieldCollection();
+					this._fieldCollection.FieldsChanged += this.OnFieldsChanged;
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._fieldCollection).TrackViewState();
+					}
+				}
+				return this._fieldCollection;
+			}
+		}
+
+		// Token: 0x17000E9C RID: 3740
+		// (get) Token: 0x0600327C RID: 12924 RVA: 0x000A3F80 File Offset: 0x000A2180
+		// (set) Token: 0x0600327D RID: 12925 RVA: 0x000A3F88 File Offset: 0x000A2188
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public IAutoFieldGenerator ColumnsGenerator
+		{
+			get
+			{
+				return this._columnsGenerator;
+			}
+			set
+			{
+				this._columnsGenerator = value;
+			}
+		}
+
+		// Token: 0x17000E9D RID: 3741
+		// (get) Token: 0x0600327E RID: 12926 RVA: 0x000A3F91 File Offset: 0x000A2191
+		private IAutoFieldGenerator ColumnsGeneratorInternal
+		{
+			get
+			{
+				return this.ColumnsGenerator ?? this._defaultColumnsGenerator;
+			}
+		}
+
+		// Token: 0x17000E9E RID: 3742
+		// (get) Token: 0x0600327F RID: 12927 RVA: 0x000A3FA3 File Offset: 0x000A21A3
+		private ArrayList DataKeysArrayList
+		{
+			get
+			{
+				if (this._dataKeysArrayList == null)
+				{
+					this._dataKeysArrayList = new ArrayList();
+				}
+				return this._dataKeysArrayList;
+			}
+		}
+
+		// Token: 0x17000E9F RID: 3743
+		// (get) Token: 0x06003280 RID: 12928 RVA: 0x000A3FBE File Offset: 0x000A21BE
+		private ArrayList ClientIDRowSuffixArrayList
+		{
+			get
+			{
+				if (this._clientIDRowSuffixArrayList == null)
+				{
+					this._clientIDRowSuffixArrayList = new ArrayList();
+				}
+				return this._clientIDRowSuffixArrayList;
+			}
+		}
+
+		// Token: 0x17000EA0 RID: 3744
+		// (get) Token: 0x06003281 RID: 12929 RVA: 0x000A3FD9 File Offset: 0x000A21D9
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[WebSysDescription("GridView_DataKeys")]
+		public virtual DataKeyArray DataKeys
+		{
+			get
+			{
+				if (this._dataKeyArray == null)
+				{
+					this._dataKeyArray = new DataKeyArray(this.DataKeysArrayList);
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._dataKeyArray).TrackViewState();
+					}
+				}
+				return this._dataKeyArray;
+			}
+		}
+
+		// Token: 0x17000EA1 RID: 3745
+		// (get) Token: 0x06003282 RID: 12930 RVA: 0x000A400D File Offset: 0x000A220D
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public DataKeyArray ClientIDRowSuffixDataKeys
+		{
+			get
+			{
+				if (this._clientIDRowSuffixArray == null)
+				{
+					this._clientIDRowSuffixArray = new DataKeyArray(this.ClientIDRowSuffixArrayList);
+				}
+				return this._clientIDRowSuffixArray;
+			}
+		}
+
+		// Token: 0x17000EA2 RID: 3746
+		// (get) Token: 0x06003283 RID: 12931 RVA: 0x000A4030 File Offset: 0x000A2230
+		// (set) Token: 0x06003284 RID: 12932 RVA: 0x000A4060 File Offset: 0x000A2260
+		[DefaultValue(null)]
+		[Editor("System.Web.UI.Design.WebControls.DataFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
+		[TypeConverter(typeof(StringArrayConverter))]
+		[WebCategory("Data")]
+		[WebSysDescription("DataControls_DataKeyNames")]
+		public virtual string[] DataKeyNames
+		{
+			get
+			{
+				object dataKeyNames = this._dataKeyNames;
+				if (dataKeyNames != null)
+				{
+					return (string[])((string[])dataKeyNames).Clone();
+				}
+				return new string[0];
+			}
+			set
+			{
+				if (!DataBoundControlHelper.CompareStringArrays(value, this.DataKeyNamesInternal))
+				{
+					if (value != null)
+					{
+						this._dataKeyNames = (string[])value.Clone();
+					}
+					else
+					{
+						this._dataKeyNames = null;
+					}
+					this.ClearDataKeys();
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EA3 RID: 3747
+		// (get) Token: 0x06003285 RID: 12933 RVA: 0x000A40B0 File Offset: 0x000A22B0
+		private string[] DataKeyNamesInternal
+		{
+			get
+			{
+				object dataKeyNames = this._dataKeyNames;
+				if (dataKeyNames != null)
+				{
+					return (string[])dataKeyNames;
+				}
+				return new string[0];
+			}
+		}
+
+		// Token: 0x17000EA4 RID: 3748
+		// (get) Token: 0x06003286 RID: 12934 RVA: 0x000A40D4 File Offset: 0x000A22D4
+		// (set) Token: 0x06003287 RID: 12935 RVA: 0x000A40DC File Offset: 0x000A22DC
+		[WebCategory("Default")]
+		[DefaultValue(-1)]
+		[WebSysDescription("GridView_EditIndex")]
+		public virtual int EditIndex
+		{
+			get
+			{
+				return this._editIndex;
+			}
+			set
+			{
+				if (value < -1)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				int editIndex = this.EditIndex;
+				if (editIndex != value)
+				{
+					if (value == -1)
+					{
+						this.BoundFieldValues.Clear();
+					}
+					this._editIndex = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EA5 RID: 3749
+		// (get) Token: 0x06003288 RID: 12936 RVA: 0x000A4128 File Offset: 0x000A2328
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_EditRowStyle")]
+		public TableItemStyle EditRowStyle
+		{
+			get
+			{
+				if (this._editRowStyle == null)
+				{
+					this._editRowStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._editRowStyle).TrackViewState();
+					}
+				}
+				return this._editRowStyle;
+			}
+		}
+
+		// Token: 0x17000EA6 RID: 3750
+		// (get) Token: 0x06003289 RID: 12937 RVA: 0x000A4158 File Offset: 0x000A2358
+		// (set) Token: 0x0600328A RID: 12938 RVA: 0x0009A931 File Offset: 0x00098B31
+		[WebCategory("Behavior")]
+		[DefaultValue(true)]
+		[WebSysDescription("DataBoundControl_EnableModelValidation")]
+		public virtual bool EnableModelValidation
+		{
+			get
+			{
+				object obj = this.ViewState["EnableModelValidation"];
+				return obj == null || (bool)obj;
+			}
+			set
+			{
+				this.ViewState["EnableModelValidation"] = value;
+			}
+		}
+
+		// Token: 0x17000EA7 RID: 3751
+		// (get) Token: 0x0600328B RID: 12939 RVA: 0x000A4184 File Offset: 0x000A2384
+		// (set) Token: 0x0600328C RID: 12940 RVA: 0x000A41AD File Offset: 0x000A23AD
+		[WebCategory("Behavior")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_EnablePersistedSelection")]
+		public virtual bool EnablePersistedSelection
+		{
+			get
+			{
+				object obj = this.ViewState["EnablePersistedSelection"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				this.ViewState["EnablePersistedSelection"] = value;
+			}
+		}
+
+		// Token: 0x17000EA8 RID: 3752
+		// (get) Token: 0x0600328D RID: 12941 RVA: 0x000A41C8 File Offset: 0x000A23C8
+		// (set) Token: 0x0600328E RID: 12942 RVA: 0x000A41F1 File Offset: 0x000A23F1
+		[WebCategory("Behavior")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_EnableSortingAndPagingCallbacks")]
+		public virtual bool EnableSortingAndPagingCallbacks
+		{
+			get
+			{
+				object obj = this.ViewState["EnableSortingAndPagingCallbacks"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				this.ViewState["EnableSortingAndPagingCallbacks"] = value;
+			}
+		}
+
+		// Token: 0x17000EA9 RID: 3753
+		// (get) Token: 0x0600328F RID: 12943 RVA: 0x000A420C File Offset: 0x000A240C
+		// (set) Token: 0x06003290 RID: 12944 RVA: 0x000A08FD File Offset: 0x0009EAFD
+		private int FirstDisplayedPageIndex
+		{
+			get
+			{
+				object obj = this.ViewState["FirstDisplayedPageIndex"];
+				if (obj != null)
+				{
+					return (int)obj;
+				}
+				return -1;
+			}
+			set
+			{
+				this.ViewState["FirstDisplayedPageIndex"] = value;
+			}
+		}
+
+		// Token: 0x17000EAA RID: 3754
+		// (get) Token: 0x06003291 RID: 12945 RVA: 0x000A4235 File Offset: 0x000A2435
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_EmptyDataRowStyle")]
+		public TableItemStyle EmptyDataRowStyle
+		{
+			get
+			{
+				if (this._emptyDataRowStyle == null)
+				{
+					this._emptyDataRowStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._emptyDataRowStyle).TrackViewState();
+					}
+				}
+				return this._emptyDataRowStyle;
+			}
+		}
+
+		// Token: 0x17000EAB RID: 3755
+		// (get) Token: 0x06003292 RID: 12946 RVA: 0x000A4263 File Offset: 0x000A2463
+		// (set) Token: 0x06003293 RID: 12947 RVA: 0x000A426B File Offset: 0x000A246B
+		[Browsable(false)]
+		[DefaultValue(null)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[TemplateContainer(typeof(GridViewRow))]
+		[WebSysDescription("View_EmptyDataTemplate")]
+		public virtual ITemplate EmptyDataTemplate
+		{
+			get
+			{
+				return this._emptyDataTemplate;
+			}
+			set
+			{
+				this._emptyDataTemplate = value;
+			}
+		}
+
+		// Token: 0x17000EAC RID: 3756
+		// (get) Token: 0x06003294 RID: 12948 RVA: 0x000A4274 File Offset: 0x000A2474
+		// (set) Token: 0x06003295 RID: 12949 RVA: 0x0009A8F5 File Offset: 0x00098AF5
+		[Localizable(true)]
+		[WebCategory("Appearance")]
+		[DefaultValue("")]
+		[WebSysDescription("View_EmptyDataText")]
+		public virtual string EmptyDataText
+		{
+			get
+			{
+				object obj = this.ViewState["EmptyDataText"];
+				if (obj != null)
+				{
+					return (string)obj;
+				}
+				return string.Empty;
+			}
+			set
+			{
+				this.ViewState["EmptyDataText"] = value;
+			}
+		}
+
+		// Token: 0x17000EAD RID: 3757
+		// (get) Token: 0x06003296 RID: 12950 RVA: 0x000A42A1 File Offset: 0x000A24A1
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public virtual GridViewRow FooterRow
+		{
+			get
+			{
+				if (this._footerRow == null)
+				{
+					this.EnsureChildControls();
+				}
+				return this._footerRow;
+			}
+		}
+
+		// Token: 0x17000EAE RID: 3758
+		// (get) Token: 0x06003297 RID: 12951 RVA: 0x000A42B7 File Offset: 0x000A24B7
+		[WebCategory("Styles")]
+		[DefaultValue(null)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("DataControls_FooterStyle")]
+		public TableItemStyle FooterStyle
+		{
+			get
+			{
+				if (this._footerStyle == null)
+				{
+					this._footerStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._footerStyle).TrackViewState();
+					}
+				}
+				return this._footerStyle;
+			}
+		}
+
+		// Token: 0x17000EAF RID: 3759
+		// (get) Token: 0x06003298 RID: 12952 RVA: 0x0008585E File Offset: 0x00083A5E
+		// (set) Token: 0x06003299 RID: 12953 RVA: 0x0008587A File Offset: 0x00083A7A
+		[WebCategory("Appearance")]
+		[DefaultValue(GridLines.Both)]
+		[WebSysDescription("DataControls_GridLines")]
+		public virtual GridLines GridLines
+		{
+			get
+			{
+				if (!base.ControlStyleCreated)
+				{
+					return GridLines.Both;
+				}
+				return ((TableStyle)base.ControlStyle).GridLines;
+			}
+			set
+			{
+				((TableStyle)base.ControlStyle).GridLines = value;
+			}
+		}
+
+		// Token: 0x17000EB0 RID: 3760
+		// (get) Token: 0x0600329A RID: 12954 RVA: 0x000A42E5 File Offset: 0x000A24E5
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public virtual GridViewRow HeaderRow
+		{
+			get
+			{
+				if (this._headerRow == null)
+				{
+					this.EnsureChildControls();
+				}
+				return this._headerRow;
+			}
+		}
+
+		// Token: 0x17000EB1 RID: 3761
+		// (get) Token: 0x0600329B RID: 12955 RVA: 0x000A42FB File Offset: 0x000A24FB
+		[WebCategory("Styles")]
+		[DefaultValue(null)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("DataControls_HeaderStyle")]
+		public TableItemStyle HeaderStyle
+		{
+			get
+			{
+				if (this._headerStyle == null)
+				{
+					this._headerStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._headerStyle).TrackViewState();
+					}
+				}
+				return this._headerStyle;
+			}
+		}
+
+		// Token: 0x17000EB2 RID: 3762
+		// (get) Token: 0x0600329C RID: 12956 RVA: 0x0008588D File Offset: 0x00083A8D
+		// (set) Token: 0x0600329D RID: 12957 RVA: 0x000858A9 File Offset: 0x00083AA9
+		[Category("Layout")]
+		[DefaultValue(HorizontalAlign.NotSet)]
+		[WebSysDescription("WebControl_HorizontalAlign")]
+		public virtual HorizontalAlign HorizontalAlign
+		{
+			get
+			{
+				if (!base.ControlStyleCreated)
+				{
+					return HorizontalAlign.NotSet;
+				}
+				return ((TableStyle)base.ControlStyle).HorizontalAlign;
+			}
+			set
+			{
+				((TableStyle)base.ControlStyle).HorizontalAlign = value;
+			}
+		}
+
+		// Token: 0x0600329E RID: 12958 RVA: 0x0009CFF3 File Offset: 0x0009B1F3
+		public virtual bool IsBindableType(Type type)
+		{
+			return DataBoundControlHelper.IsBindableType(type, this.RenderingCompatibility >= VersionUtil.Framework45);
+		}
+
+		// Token: 0x17000EB3 RID: 3763
+		// (get) Token: 0x0600329F RID: 12959 RVA: 0x000A4329 File Offset: 0x000A2529
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[WebSysDescription("GridView_PageCount")]
+		public virtual int PageCount
+		{
+			get
+			{
+				if (this._pageCount < 0)
+				{
+					return 0;
+				}
+				return this._pageCount;
+			}
+		}
+
+		// Token: 0x17000EB4 RID: 3764
+		// (get) Token: 0x060032A0 RID: 12960 RVA: 0x000A433C File Offset: 0x000A253C
+		// (set) Token: 0x060032A1 RID: 12961 RVA: 0x000A4344 File Offset: 0x000A2544
+		[Browsable(true)]
+		[DefaultValue(0)]
+		[WebCategory("Paging")]
+		[WebSysDescription("GridView_PageIndex")]
+		public virtual int PageIndex
+		{
+			get
+			{
+				return this._pageIndex;
+			}
+			set
+			{
+				if (value < 0)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				int pageIndex = this.PageIndex;
+				if (pageIndex != value)
+				{
+					this._pageIndex = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EB5 RID: 3765
+		// (get) Token: 0x060032A2 RID: 12962 RVA: 0x000A4384 File Offset: 0x000A2584
+		[WebCategory("Paging")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_PagerSettings")]
+		public virtual PagerSettings PagerSettings
+		{
+			get
+			{
+				if (this._pagerSettings == null)
+				{
+					this._pagerSettings = new PagerSettings();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._pagerSettings).TrackViewState();
+					}
+					this._pagerSettings.PropertyChanged += this.OnPagerPropertyChanged;
+				}
+				return this._pagerSettings;
+			}
+		}
+
+		// Token: 0x17000EB6 RID: 3766
+		// (get) Token: 0x060032A3 RID: 12963 RVA: 0x000A43D4 File Offset: 0x000A25D4
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("WebControl_PagerStyle")]
+		public TableItemStyle PagerStyle
+		{
+			get
+			{
+				if (this._pagerStyle == null)
+				{
+					this._pagerStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._pagerStyle).TrackViewState();
+					}
+				}
+				return this._pagerStyle;
+			}
+		}
+
+		// Token: 0x17000EB7 RID: 3767
+		// (get) Token: 0x060032A4 RID: 12964 RVA: 0x000A4402 File Offset: 0x000A2602
+		// (set) Token: 0x060032A5 RID: 12965 RVA: 0x000A440A File Offset: 0x000A260A
+		[Browsable(false)]
+		[DefaultValue(null)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[TemplateContainer(typeof(GridViewRow))]
+		[WebSysDescription("View_PagerTemplate")]
+		public virtual ITemplate PagerTemplate
+		{
+			get
+			{
+				return this._pagerTemplate;
+			}
+			set
+			{
+				this._pagerTemplate = value;
+			}
+		}
+
+		// Token: 0x17000EB8 RID: 3768
+		// (get) Token: 0x060032A6 RID: 12966 RVA: 0x000A4414 File Offset: 0x000A2614
+		// (set) Token: 0x060032A7 RID: 12967 RVA: 0x000A4440 File Offset: 0x000A2640
+		[WebCategory("Paging")]
+		[DefaultValue(10)]
+		[WebSysDescription("GridView_PageSize")]
+		public virtual int PageSize
+		{
+			get
+			{
+				object obj = this.ViewState["PageSize"];
+				if (obj != null)
+				{
+					return (int)obj;
+				}
+				return 10;
+			}
+			set
+			{
+				if (value < 1)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				int pageSize = this.PageSize;
+				if (pageSize != value)
+				{
+					this.ViewState["PageSize"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EB9 RID: 3769
+		// (get) Token: 0x060032A8 RID: 12968 RVA: 0x000A448C File Offset: 0x000A268C
+		// (set) Token: 0x060032A9 RID: 12969 RVA: 0x000A44BC File Offset: 0x000A26BC
+		[DefaultValue(null)]
+		[TypeConverter(typeof(StringArrayConverter))]
+		[WebCategory("Data")]
+		public virtual string[] ClientIDRowSuffix
+		{
+			get
+			{
+				object clientIDRowSuffix = this._clientIDRowSuffix;
+				if (clientIDRowSuffix != null)
+				{
+					return (string[])((string[])clientIDRowSuffix).Clone();
+				}
+				return new string[0];
+			}
+			set
+			{
+				if (!DataBoundControlHelper.CompareStringArrays(value, this.ClientIDRowSuffixInternal))
+				{
+					if (value != null)
+					{
+						this._clientIDRowSuffix = (string[])value.Clone();
+					}
+					else
+					{
+						this._clientIDRowSuffix = null;
+					}
+					this._clientIDRowSuffixArrayList = null;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EBA RID: 3770
+		// (get) Token: 0x060032AA RID: 12970 RVA: 0x000A450C File Offset: 0x000A270C
+		private string[] ClientIDRowSuffixInternal
+		{
+			get
+			{
+				object clientIDRowSuffix = this._clientIDRowSuffix;
+				if (clientIDRowSuffix != null)
+				{
+					return (string[])clientIDRowSuffix;
+				}
+				return new string[0];
+			}
+		}
+
+		// Token: 0x17000EBB RID: 3771
+		// (get) Token: 0x060032AB RID: 12971 RVA: 0x000A4530 File Offset: 0x000A2730
+		// (set) Token: 0x060032AC RID: 12972 RVA: 0x000A455D File Offset: 0x000A275D
+		[DefaultValue("")]
+		[TypeConverter("System.Web.UI.Design.DataColumnSelectionConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+		[WebCategory("Accessibility")]
+		[WebSysDescription("GridView_RowHeaderColumn")]
+		public virtual string RowHeaderColumn
+		{
+			get
+			{
+				object obj = this.ViewState["RowHeaderColumn"];
+				if (obj != null)
+				{
+					return (string)obj;
+				}
+				return string.Empty;
+			}
+			set
+			{
+				this.ViewState["RowHeaderColumn"] = value;
+			}
+		}
+
+		// Token: 0x17000EBC RID: 3772
+		// (get) Token: 0x060032AD RID: 12973 RVA: 0x000A4570 File Offset: 0x000A2770
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[WebSysDescription("GridView_Rows")]
+		public virtual GridViewRowCollection Rows
+		{
+			get
+			{
+				if (this._rowsCollection == null)
+				{
+					if (this._rowsArray == null)
+					{
+						this.EnsureChildControls();
+					}
+					if (this._rowsArray == null)
+					{
+						this._rowsArray = new ArrayList();
+					}
+					this._rowsCollection = new GridViewRowCollection(this._rowsArray);
+				}
+				return this._rowsCollection;
+			}
+		}
+
+		// Token: 0x17000EBD RID: 3773
+		// (get) Token: 0x060032AE RID: 12974 RVA: 0x000A45BD File Offset: 0x000A27BD
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("View_RowStyle")]
+		public TableItemStyle RowStyle
+		{
+			get
+			{
+				if (this._rowStyle == null)
+				{
+					this._rowStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._rowStyle).TrackViewState();
+					}
+				}
+				return this._rowStyle;
+			}
+		}
+
+		// Token: 0x17000EBE RID: 3774
+		// (get) Token: 0x060032AF RID: 12975 RVA: 0x000A45EC File Offset: 0x000A27EC
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public virtual DataKey SelectedDataKey
+		{
+			get
+			{
+				if (this.DataKeyNamesInternal == null || this.DataKeyNamesInternal.Length == 0)
+				{
+					throw new InvalidOperationException(SR.GetString("GridView_DataKeyNamesMustBeSpecified", new object[]
+					{
+						this.ID
+					}));
+				}
+				DataKeyArray dataKeys = this.DataKeys;
+				int selectedIndex = this.SelectedIndex;
+				if (dataKeys != null && selectedIndex < dataKeys.Count && selectedIndex > -1)
+				{
+					return dataKeys[selectedIndex];
+				}
+				return null;
+			}
+		}
+
+		// Token: 0x17000EBF RID: 3775
+		// (get) Token: 0x060032B0 RID: 12976 RVA: 0x000A4650 File Offset: 0x000A2850
+		// (set) Token: 0x060032B1 RID: 12977 RVA: 0x000A4658 File Offset: 0x000A2858
+		[Bindable(true)]
+		[DefaultValue(-1)]
+		[WebSysDescription("GridView_SelectedIndex")]
+		public virtual int SelectedIndex
+		{
+			get
+			{
+				return this._selectedIndex;
+			}
+			set
+			{
+				if (value < -1)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				int selectedIndex = this._selectedIndex;
+				this._selectedIndex = value;
+				if (this.DataKeyNamesInternal.Length != 0 && this.EnablePersistedSelection)
+				{
+					this.SelectedPersistedDataKey = this.SelectedDataKey;
+				}
+				if (this._rowsArray != null)
+				{
+					if (selectedIndex != -1 && this._rowsArray.Count > selectedIndex)
+					{
+						GridViewRow gridViewRow = (GridViewRow)this._rowsArray[selectedIndex];
+						gridViewRow.RowType = DataControlRowType.DataRow;
+						gridViewRow.RowState &= ~DataControlRowState.Selected;
+					}
+					if (value != -1 && this._rowsArray.Count > value)
+					{
+						GridViewRow gridViewRow = (GridViewRow)this._rowsArray[value];
+						gridViewRow.RowState |= DataControlRowState.Selected;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EC0 RID: 3776
+		// (get) Token: 0x060032B2 RID: 12978 RVA: 0x000A4714 File Offset: 0x000A2914
+		[Browsable(false)]
+		public object SelectedValue
+		{
+			get
+			{
+				DataKey selectedDataKey = this.SelectedDataKey;
+				if (selectedDataKey != null)
+				{
+					return this.SelectedDataKey.Value;
+				}
+				return null;
+			}
+		}
+
+		// Token: 0x17000EC1 RID: 3777
+		// (get) Token: 0x060032B3 RID: 12979 RVA: 0x000A4738 File Offset: 0x000A2938
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[WebSysDescription("GridView_SelectedRow")]
+		public virtual GridViewRow SelectedRow
+		{
+			get
+			{
+				int selectedIndex = this.SelectedIndex;
+				GridViewRow result = null;
+				if (selectedIndex != -1)
+				{
+					result = this.Rows[selectedIndex];
+				}
+				return result;
+			}
+		}
+
+		// Token: 0x17000EC2 RID: 3778
+		// (get) Token: 0x060032B4 RID: 12980 RVA: 0x000A4760 File Offset: 0x000A2960
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_SelectedRowStyle")]
+		public TableItemStyle SelectedRowStyle
+		{
+			get
+			{
+				if (this._selectedRowStyle == null)
+				{
+					this._selectedRowStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._selectedRowStyle).TrackViewState();
+					}
+				}
+				return this._selectedRowStyle;
+			}
+		}
+
+		// Token: 0x17000EC3 RID: 3779
+		// (get) Token: 0x060032B5 RID: 12981 RVA: 0x000A4790 File Offset: 0x000A2990
+		// (set) Token: 0x060032B6 RID: 12982 RVA: 0x000A47BC File Offset: 0x000A29BC
+		[WebCategory("Appearance")]
+		[DefaultValue(false)]
+		[WebSysDescription("DataControls_ShowFooter")]
+		public virtual bool ShowFooter
+		{
+			get
+			{
+				object obj = this.ViewState["ShowFooter"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool showFooter = this.ShowFooter;
+				if (value != showFooter)
+				{
+					this.ViewState["ShowFooter"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EC4 RID: 3780
+		// (get) Token: 0x060032B7 RID: 12983 RVA: 0x000A47FC File Offset: 0x000A29FC
+		// (set) Token: 0x060032B8 RID: 12984 RVA: 0x000A4828 File Offset: 0x000A2A28
+		[WebCategory("Appearance")]
+		[DefaultValue(true)]
+		[WebSysDescription("DataControls_ShowHeader")]
+		public virtual bool ShowHeader
+		{
+			get
+			{
+				object obj = this.ViewState["ShowHeader"];
+				return obj == null || (bool)obj;
+			}
+			set
+			{
+				bool showHeader = this.ShowHeader;
+				if (value != showHeader)
+				{
+					this.ViewState["ShowHeader"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EC5 RID: 3781
+		// (get) Token: 0x060032B9 RID: 12985 RVA: 0x000A4868 File Offset: 0x000A2A68
+		// (set) Token: 0x060032BA RID: 12986 RVA: 0x000A4894 File Offset: 0x000A2A94
+		[WebCategory("Appearance")]
+		[DefaultValue(false)]
+		[WebSysDescription("GridView_ShowHeaderWhenEmpty")]
+		public virtual bool ShowHeaderWhenEmpty
+		{
+			get
+			{
+				object obj = this.ViewState["ShowHeaderWhenEmpty"];
+				return obj != null && (bool)obj;
+			}
+			set
+			{
+				bool showHeaderWhenEmpty = this.ShowHeaderWhenEmpty;
+				if (value != showHeaderWhenEmpty)
+				{
+					this.ViewState["ShowHeaderWhenEmpty"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EC6 RID: 3782
+		// (get) Token: 0x060032BB RID: 12987 RVA: 0x000A48D1 File Offset: 0x000A2AD1
+		[Browsable(false)]
+		[DefaultValue(SortDirection.Ascending)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_SortDirection")]
+		public virtual SortDirection SortDirection
+		{
+			get
+			{
+				return this.SortDirectionInternal;
+			}
+		}
+
+		// Token: 0x17000EC7 RID: 3783
+		// (get) Token: 0x060032BC RID: 12988 RVA: 0x000A48D9 File Offset: 0x000A2AD9
+		// (set) Token: 0x060032BD RID: 12989 RVA: 0x000A48E1 File Offset: 0x000A2AE1
+		private SortDirection SortDirectionInternal
+		{
+			get
+			{
+				return this._sortDirection;
+			}
+			set
+			{
+				if (value < SortDirection.Ascending || value > SortDirection.Descending)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				if (this._sortDirection != value)
+				{
+					this._sortDirection = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000EC8 RID: 3784
+		// (get) Token: 0x060032BE RID: 12990 RVA: 0x000A4915 File Offset: 0x000A2B15
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[WebSysDescription("GridView_SortExpression")]
+		public virtual string SortExpression
+		{
+			get
+			{
+				return this.SortExpressionInternal;
+			}
+		}
+
+		// Token: 0x17000EC9 RID: 3785
+		// (get) Token: 0x060032BF RID: 12991 RVA: 0x000A491D File Offset: 0x000A2B1D
+		// (set) Token: 0x060032C0 RID: 12992 RVA: 0x000A4925 File Offset: 0x000A2B25
+		private string SortExpressionInternal
+		{
+			get
+			{
+				return this._sortExpression;
+			}
+			set
+			{
+				if (this._sortExpression != value)
+				{
+					this._sortExpression = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000ECA RID: 3786
+		// (get) Token: 0x060032C1 RID: 12993 RVA: 0x000A494B File Offset: 0x000A2B4B
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_SortedAscendingCellStyle")]
+		public TableItemStyle SortedAscendingCellStyle
+		{
+			get
+			{
+				if (this._sortedAscendingCellStyle == null)
+				{
+					this._sortedAscendingCellStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._sortedAscendingCellStyle).TrackViewState();
+					}
+				}
+				return this._sortedAscendingCellStyle;
+			}
+		}
+
+		// Token: 0x17000ECB RID: 3787
+		// (get) Token: 0x060032C2 RID: 12994 RVA: 0x000A4979 File Offset: 0x000A2B79
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_SortedAscendingHeaderStyle")]
+		public TableItemStyle SortedAscendingHeaderStyle
+		{
+			get
+			{
+				if (this._sortedAscendingHeaderStyle == null)
+				{
+					this._sortedAscendingHeaderStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._sortedAscendingHeaderStyle).TrackViewState();
+					}
+				}
+				return this._sortedAscendingHeaderStyle;
+			}
+		}
+
+		// Token: 0x17000ECC RID: 3788
+		// (get) Token: 0x060032C3 RID: 12995 RVA: 0x000A49A7 File Offset: 0x000A2BA7
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_SortedDescendingCellStyle")]
+		public TableItemStyle SortedDescendingCellStyle
+		{
+			get
+			{
+				if (this._sortedDescendingCellStyle == null)
+				{
+					this._sortedDescendingCellStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._sortedDescendingCellStyle).TrackViewState();
+					}
+				}
+				return this._sortedDescendingCellStyle;
+			}
+		}
+
+		// Token: 0x17000ECD RID: 3789
+		// (get) Token: 0x060032C4 RID: 12996 RVA: 0x000A49D5 File Offset: 0x000A2BD5
+		[WebCategory("Styles")]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
+		[NotifyParentProperty(true)]
+		[PersistenceMode(PersistenceMode.InnerProperty)]
+		[WebSysDescription("GridView_SortedDescendingHeaderStyle")]
+		public TableItemStyle SortedDescendingHeaderStyle
+		{
+			get
+			{
+				if (this._sortedDescendingHeaderStyle == null)
+				{
+					this._sortedDescendingHeaderStyle = new TableItemStyle();
+					if (base.IsTrackingViewState)
+					{
+						((IStateManager)this._sortedDescendingHeaderStyle).TrackViewState();
+					}
+				}
+				return this._sortedDescendingHeaderStyle;
+			}
+		}
+
+		// Token: 0x17000ECE RID: 3790
+		// (get) Token: 0x060032C5 RID: 12997 RVA: 0x000A4A03 File Offset: 0x000A2C03
+		private IStateFormatter2 StateFormatter
+		{
+			get
+			{
+				if (this._stateFormatter == null)
+				{
+					this._stateFormatter = this.Page.CreateStateFormatter();
+				}
+				return this._stateFormatter;
+			}
+		}
+
+		// Token: 0x17000ECF RID: 3791
+		// (get) Token: 0x060032C6 RID: 12998 RVA: 0x000A4A24 File Offset: 0x000A2C24
+		protected override HtmlTextWriterTag TagKey
+		{
+			get
+			{
+				if (!this.EnableSortingAndPagingCallbacks)
+				{
+					return HtmlTextWriterTag.Table;
+				}
+				return HtmlTextWriterTag.Div;
+			}
+		}
+
+		// Token: 0x17000ED0 RID: 3792
+		// (get) Token: 0x060032C7 RID: 12999 RVA: 0x000A4A33 File Offset: 0x000A2C33
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public virtual GridViewRow TopPagerRow
+		{
+			get
+			{
+				if (this._topPagerRow == null)
+				{
+					this.EnsureChildControls();
+				}
+				return this._topPagerRow;
+			}
+		}
+
+		// Token: 0x17000ED1 RID: 3793
+		// (get) Token: 0x060032C8 RID: 13000 RVA: 0x000A4A4C File Offset: 0x000A2C4C
+		// (set) Token: 0x060032C9 RID: 13001 RVA: 0x000A4A78 File Offset: 0x000A2C78
+		[DefaultValue(true)]
+		[WebCategory("Accessibility")]
+		[WebSysDescription("Table_UseAccessibleHeader")]
+		public virtual bool UseAccessibleHeader
+		{
+			get
+			{
+				object obj = this.ViewState["UseAccessibleHeader"];
+				return obj == null || (bool)obj;
+			}
+			set
+			{
+				bool useAccessibleHeader = this.UseAccessibleHeader;
+				if (useAccessibleHeader != value)
+				{
+					this.ViewState["UseAccessibleHeader"] = value;
+					if (base.Initialized)
+					{
+						base.RequiresDataBinding = true;
+					}
+				}
+			}
+		}
+
+		// Token: 0x17000ED2 RID: 3794
+		// (get) Token: 0x060032CA RID: 13002 RVA: 0x000A4AB8 File Offset: 0x000A2CB8
+		// (set) Token: 0x060032CB RID: 13003 RVA: 0x000968AD File Offset: 0x00094AAD
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		[WebSysDescription("GridView_VirtualItemCount")]
+		public virtual int VirtualItemCount
+		{
+			get
+			{
+				object obj = this.ViewState["VirtualItemCount"];
+				if (obj != null)
+				{
+					return (int)obj;
+				}
+				return 0;
+			}
+			set
+			{
+				if (value < 0)
+				{
+					throw new ArgumentOutOfRangeException("value");
+				}
+				this.ViewState["VirtualItemCount"] = value;
+			}
+		}
+
+		// Token: 0x17000ED3 RID: 3795
+		// (get) Token: 0x060032CC RID: 13004 RVA: 0x000A4AE1 File Offset: 0x000A2CE1
+		// (set) Token: 0x060032CD RID: 13005 RVA: 0x000A4AE9 File Offset: 0x000A2CE9
+		[Browsable(false)]
+		[DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+		public virtual DataKey SelectedPersistedDataKey
+		{
+			get
+			{
+				return this._persistedDataKey;
+			}
+			set
+			{
+				this._persistedDataKey = value;
+				if (base.IsTrackingViewState && this._persistedDataKey != null)
+				{
+					((IStateManager)this._persistedDataKey).TrackViewState();
+				}
+			}
+		}
+
+		// Token: 0x14000096 RID: 150
+		// (add) Token: 0x060032CE RID: 13006 RVA: 0x000A4B0D File Offset: 0x000A2D0D
+		// (remove) Token: 0x060032CF RID: 13007 RVA: 0x000A4B20 File Offset: 0x000A2D20
+		[WebCategory("Action")]
+		[WebSysDescription("DataControls_OnRowDeleted")]
+		public event GridViewDeletedEventHandler RowDeleted
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowDeleted, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowDeleted, value);
+			}
+		}
+
+		// Token: 0x14000097 RID: 151
+		// (add) Token: 0x060032D0 RID: 13008 RVA: 0x000A4B33 File Offset: 0x000A2D33
+		// (remove) Token: 0x060032D1 RID: 13009 RVA: 0x000A4B46 File Offset: 0x000A2D46
+		[WebCategory("Action")]
+		[WebSysDescription("DataControls_OnItemUpdated")]
+		public event GridViewUpdatedEventHandler RowUpdated
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowUpdated, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowUpdated, value);
+			}
+		}
+
+		// Token: 0x14000098 RID: 152
+		// (add) Token: 0x060032D2 RID: 13010 RVA: 0x000A4B59 File Offset: 0x000A2D59
+		// (remove) Token: 0x060032D3 RID: 13011 RVA: 0x000A4B6C File Offset: 0x000A2D6C
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnRowCancelingEdit")]
+		public event GridViewCancelEditEventHandler RowCancelingEdit
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowCancelingEdit, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowCancelingEdit, value);
+			}
+		}
+
+		// Token: 0x14000099 RID: 153
+		// (add) Token: 0x060032D4 RID: 13012 RVA: 0x000A4B7F File Offset: 0x000A2D7F
+		// (remove) Token: 0x060032D5 RID: 13013 RVA: 0x000A4B92 File Offset: 0x000A2D92
+		[WebCategory("Action")]
+		[WebSysDescription("DataControls_OnItemDeleting")]
+		public event GridViewDeleteEventHandler RowDeleting
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowDeleting, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowDeleting, value);
+			}
+		}
+
+		// Token: 0x1400009A RID: 154
+		// (add) Token: 0x060032D6 RID: 13014 RVA: 0x000A4BA5 File Offset: 0x000A2DA5
+		// (remove) Token: 0x060032D7 RID: 13015 RVA: 0x000A4BB8 File Offset: 0x000A2DB8
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnRowEditing")]
+		public event GridViewEditEventHandler RowEditing
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowEditing, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowEditing, value);
+			}
+		}
+
+		// Token: 0x1400009B RID: 155
+		// (add) Token: 0x060032D8 RID: 13016 RVA: 0x000A4BCB File Offset: 0x000A2DCB
+		// (remove) Token: 0x060032D9 RID: 13017 RVA: 0x000A4BDE File Offset: 0x000A2DDE
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnPageIndexChanged")]
+		public event EventHandler PageIndexChanged
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventPageIndexChanged, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventPageIndexChanged, value);
+			}
+		}
+
+		// Token: 0x1400009C RID: 156
+		// (add) Token: 0x060032DA RID: 13018 RVA: 0x000A4BF1 File Offset: 0x000A2DF1
+		// (remove) Token: 0x060032DB RID: 13019 RVA: 0x000A4C04 File Offset: 0x000A2E04
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnPageIndexChanging")]
+		public event GridViewPageEventHandler PageIndexChanging
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventPageIndexChanging, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventPageIndexChanging, value);
+			}
+		}
+
+		// Token: 0x1400009D RID: 157
+		// (add) Token: 0x060032DC RID: 13020 RVA: 0x000A4C17 File Offset: 0x000A2E17
+		// (remove) Token: 0x060032DD RID: 13021 RVA: 0x000A4C2A File Offset: 0x000A2E2A
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnSelectedIndexChanged")]
+		public event EventHandler SelectedIndexChanged
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventSelectedIndexChanged, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventSelectedIndexChanged, value);
+			}
+		}
+
+		// Token: 0x1400009E RID: 158
+		// (add) Token: 0x060032DE RID: 13022 RVA: 0x000A4C3D File Offset: 0x000A2E3D
+		// (remove) Token: 0x060032DF RID: 13023 RVA: 0x000A4C50 File Offset: 0x000A2E50
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnSelectedIndexChanging")]
+		public event GridViewSelectEventHandler SelectedIndexChanging
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventSelectedIndexChanging, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventSelectedIndexChanging, value);
+			}
+		}
+
+		// Token: 0x1400009F RID: 159
+		// (add) Token: 0x060032E0 RID: 13024 RVA: 0x000A4C63 File Offset: 0x000A2E63
+		// (remove) Token: 0x060032E1 RID: 13025 RVA: 0x000A4C76 File Offset: 0x000A2E76
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnSorted")]
+		public event EventHandler Sorted
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventSorted, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventSorted, value);
+			}
+		}
+
+		// Token: 0x140000A0 RID: 160
+		// (add) Token: 0x060032E2 RID: 13026 RVA: 0x000A4C89 File Offset: 0x000A2E89
+		// (remove) Token: 0x060032E3 RID: 13027 RVA: 0x000A4C9C File Offset: 0x000A2E9C
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnSorting")]
+		public event GridViewSortEventHandler Sorting
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventSorting, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventSorting, value);
+			}
+		}
+
+		// Token: 0x140000A1 RID: 161
+		// (add) Token: 0x060032E4 RID: 13028 RVA: 0x000A4CAF File Offset: 0x000A2EAF
+		// (remove) Token: 0x060032E5 RID: 13029 RVA: 0x000A4CC2 File Offset: 0x000A2EC2
+		[WebCategory("Action")]
+		[WebSysDescription("DataControls_OnItemUpdating")]
+		public event GridViewUpdateEventHandler RowUpdating
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowUpdating, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowUpdating, value);
+			}
+		}
+
+		// Token: 0x140000A2 RID: 162
+		// (add) Token: 0x060032E6 RID: 13030 RVA: 0x000A4CD5 File Offset: 0x000A2ED5
+		// (remove) Token: 0x060032E7 RID: 13031 RVA: 0x000A4CE8 File Offset: 0x000A2EE8
+		[WebCategory("Action")]
+		[WebSysDescription("GridView_OnRowCommand")]
+		public event GridViewCommandEventHandler RowCommand
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowCommand, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowCommand, value);
+			}
+		}
+
+		// Token: 0x140000A3 RID: 163
+		// (add) Token: 0x060032E8 RID: 13032 RVA: 0x000A4CFB File Offset: 0x000A2EFB
+		// (remove) Token: 0x060032E9 RID: 13033 RVA: 0x000A4D0E File Offset: 0x000A2F0E
+		[WebCategory("Behavior")]
+		[WebSysDescription("GridView_OnRowCreated")]
+		public event GridViewRowEventHandler RowCreated
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowCreated, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowCreated, value);
+			}
+		}
+
+		// Token: 0x140000A4 RID: 164
+		// (add) Token: 0x060032EA RID: 13034 RVA: 0x000A4D21 File Offset: 0x000A2F21
+		// (remove) Token: 0x060032EB RID: 13035 RVA: 0x000A4D34 File Offset: 0x000A2F34
+		[WebCategory("Data")]
+		[WebSysDescription("GridView_OnRowDataBound")]
+		public event GridViewRowEventHandler RowDataBound
+		{
+			add
+			{
+				base.Events.AddHandler(GridView.EventRowDataBound, value);
+			}
+			remove
+			{
+				base.Events.RemoveHandler(GridView.EventRowDataBound, value);
+			}
+		}
+
+		// Token: 0x060032EC RID: 13036 RVA: 0x000A4D47 File Offset: 0x000A2F47
+		internal void StoreEnumerator(IEnumerator dataSource, object firstDataRow)
+		{
+			this._storedData = dataSource;
+			this._firstDataRow = firstDataRow;
+			this._storedDataValid = true;
+		}
+
+		// Token: 0x060032ED RID: 13037 RVA: 0x000A4D60 File Offset: 0x000A2F60
+		private string BuildCallbackArgument(string sortExpression, SortDirection sortDirection)
+		{
+			string[] array = new string[7];
+			array[0] = "\"";
+			array[1] = this.PageIndex.ToString();
+			array[2] = "|";
+			int num = 3;
+			int num2 = (int)sortDirection;
+			array[num] = num2.ToString();
+			array[4] = "|";
+			array[5] = this.StateFormatter.Serialize(sortExpression, Purpose.WebForms_GridView_SortExpression);
+			array[6] = "|\"";
+			return string.Concat(array);
+		}
+
+		// Token: 0x060032EE RID: 13038 RVA: 0x000A4DCC File Offset: 0x000A2FCC
+		private string BuildCallbackArgument(int pageIndex)
+		{
+			if (string.IsNullOrEmpty(this._sortExpressionSerialized))
+			{
+				this._sortExpressionSerialized = this.StateFormatter.Serialize(this.SortExpression, Purpose.WebForms_GridView_SortExpression);
+			}
+			return string.Concat(new string[]
+			{
+				"\"",
+				pageIndex.ToString(),
+				"|",
+				((int)this.SortDirection).ToString(),
+				"|",
+				this._sortExpressionSerialized,
+				"|\""
+			});
+		}
+
+		// Token: 0x060032EF RID: 13039 RVA: 0x000A4E51 File Offset: 0x000A3051
+		private void ClearDataKeys()
+		{
+			this._dataKeysArrayList = null;
+		}
+
+		// Token: 0x060032F0 RID: 13040 RVA: 0x000A4E5C File Offset: 0x000A305C
+		[Obsolete("This is kept for backward compatibility - this API is no more used")]
+		protected virtual AutoGeneratedField CreateAutoGeneratedColumn(AutoGeneratedFieldProperties fieldProperties)
+		{
+			AutoGeneratedField autoGeneratedField = new AutoGeneratedField(fieldProperties.DataField);
+			string name = fieldProperties.Name;
+			((IStateManager)autoGeneratedField).TrackViewState();
+			autoGeneratedField.HeaderText = name;
+			autoGeneratedField.SortExpression = name;
+			autoGeneratedField.ReadOnly = fieldProperties.IsReadOnly;
+			autoGeneratedField.DataType = fieldProperties.Type;
+			return autoGeneratedField;
+		}
+
+		// Token: 0x060032F1 RID: 13041 RVA: 0x000A4EAC File Offset: 0x000A30AC
+		protected override int CreateChildControls(IEnumerable dataSource, bool dataBinding)
+		{
+			PagedDataSource pagedDataSource;
+			IEnumerator enumerator;
+			int num2;
+			ArrayList dataKeysArrayList;
+			ArrayList clientIDRowSuffixArrayList;
+			ICollection collection2;
+			int num3;
+			int capacity;
+			ICollection collection3;
+			checked
+			{
+				if (dataBinding)
+				{
+					bool allowPaging = this.AllowPaging;
+					DataSourceView data = this.GetData();
+					DataSourceSelectArguments selectArguments = base.SelectArguments;
+					if (data == null)
+					{
+						throw new HttpException(SR.GetString("DataBoundControl_NullView", new object[]
+						{
+							this.ID
+						}));
+					}
+					bool flag = allowPaging && data.CanPage;
+					if (allowPaging && !data.CanPage && dataSource != null && !(dataSource is ICollection))
+					{
+						selectArguments.StartRowIndex = this.PageSize * this.PageIndex;
+						selectArguments.MaximumRows = this.PageSize;
+						data.Select(selectArguments, new DataSourceViewSelectCallback(this.SelectCallback));
+					}
+					if (flag)
+					{
+						if (data.CanRetrieveTotalRowCount)
+						{
+							pagedDataSource = this.CreateServerPagedDataSource(selectArguments.TotalRowCount);
+						}
+						else
+						{
+							ICollection collection = dataSource as ICollection;
+							if (collection == null)
+							{
+								throw new HttpException(SR.GetString("DataBoundControl_NeedICollectionOrTotalRowCount", new object[]
+								{
+									base.GetType().Name
+								}));
+							}
+							int num = this.PageIndex * this.PageSize;
+							pagedDataSource = this.CreateServerPagedDataSource(num + collection.Count);
+						}
+					}
+					else
+					{
+						pagedDataSource = this.CreatePagedDataSource();
+					}
+				}
+				else
+				{
+					pagedDataSource = this.CreatePagedDataSource();
+				}
+				enumerator = null;
+				num2 = 0;
+				dataKeysArrayList = this.DataKeysArrayList;
+				clientIDRowSuffixArrayList = this.ClientIDRowSuffixArrayList;
+				collection2 = null;
+				num3 = -1;
+				capacity = 0;
+				collection3 = (dataSource as ICollection);
+				if (dataBinding)
+				{
+					dataKeysArrayList.Clear();
+					clientIDRowSuffixArrayList.Clear();
+					if (dataSource != null && collection3 == null && pagedDataSource.IsPagingEnabled && !pagedDataSource.IsServerPagingEnabled)
+					{
+						throw new HttpException(SR.GetString("GridView_Missing_VirtualItemCount", new object[]
+						{
+							this.ID
+						}));
+					}
+				}
+				else if (collection3 == null)
+				{
+					throw new HttpException(SR.GetString("DataControls_DataSourceMustBeCollectionWhenNotDataBinding"));
+				}
+				this._pageCount = 0;
+			}
+			if (dataSource != null)
+			{
+				pagedDataSource.DataSource = dataSource;
+				if (pagedDataSource.IsPagingEnabled && dataBinding)
+				{
+					int pageCount = pagedDataSource.PageCount;
+					if (pagedDataSource.CurrentPageIndex >= pageCount)
+					{
+						int pageIndex = pageCount - 1;
+						pagedDataSource.CurrentPageIndex = (this._pageIndex = pageIndex);
+					}
+				}
+				collection2 = this.CreateColumns(dataBinding ? pagedDataSource : null, dataBinding);
+				if (collection3 != null)
+				{
+					num3 = collection3.Count;
+					int num4 = pagedDataSource.IsPagingEnabled ? pagedDataSource.PageSize : collection3.Count;
+					capacity = num4;
+					if (dataBinding)
+					{
+						dataKeysArrayList.Capacity = num4;
+						clientIDRowSuffixArrayList.Capacity = num4;
+					}
+					if (pagedDataSource.DataSourceCount == 0)
+					{
+						this._pageCount = 0;
+					}
+					else
+					{
+						this._pageCount = pagedDataSource.PageCount;
+					}
+				}
+			}
+			this._rowsArray = new ArrayList(capacity);
+			this._rowsCollection = null;
+			this._dataKeyArray = null;
+			this._clientIDRowSuffixArray = null;
+			Table table = this.CreateChildTable();
+			this.Controls.Add(table);
+			TableRowCollection rows = table.Rows;
+			if (dataSource == null)
+			{
+				if (this.EmptyDataTemplate != null || this.EmptyDataText.Length > 0)
+				{
+					this.CreateRow(-1, -1, DataControlRowType.EmptyDataRow, DataControlRowState.Normal, dataBinding, null, new DataControlField[0], rows, null);
+				}
+				else
+				{
+					this.Controls.Clear();
+				}
+				return 0;
+			}
+			int num5 = 0;
+			if (collection2 != null)
+			{
+				num5 = collection2.Count;
+			}
+			DataControlField[] array = new DataControlField[num5];
+			if (num5 > 0)
+			{
+				collection2.CopyTo(array, 0);
+				bool flag2 = false;
+				for (int i = 0; i < array.Length; i++)
+				{
+					if (array[i].Initialize(this.AllowSorting, this))
+					{
+						flag2 = true;
+					}
+					if (this.DetermineRenderClientScript())
+					{
+						array[i].ValidateSupportsCallback();
+					}
+				}
+				if (flag2)
+				{
+					base.RequiresDataBinding = true;
+				}
+			}
+			int num6 = 0;
+			int num7 = 0;
+			string[] dataKeyNamesInternal = this.DataKeyNamesInternal;
+			bool flag3 = dataBinding && dataKeyNamesInternal.Length != 0;
+			bool flag4 = dataBinding && this.ClientIDRowSuffixInternal.Length != 0;
+			bool isPagingEnabled = pagedDataSource.IsPagingEnabled;
+			int editIndex = this.EditIndex;
+			if (num3 == -1)
+			{
+				if (this._storedDataValid)
+				{
+					if (this._firstDataRow != null)
+					{
+						num3 = 1;
+					}
+					else
+					{
+						num3 = 0;
+					}
+				}
+				else
+				{
+					IEnumerator enumerator2 = dataSource.GetEnumerator();
+					if (enumerator2.MoveNext())
+					{
+						object firstDataRow = enumerator2.Current;
+						this.StoreEnumerator(enumerator2, firstDataRow);
+						num3 = 1;
+					}
+					else
+					{
+						num3 = 0;
+					}
+				}
+			}
+			if (num3 == 0)
+			{
+				bool flag5 = false;
+				if (this.ShowHeader && this.ShowHeaderWhenEmpty && array.Length != 0)
+				{
+					this._headerRow = this.CreateRow(-1, -1, DataControlRowType.Header, DataControlRowState.Normal, dataBinding, null, array, rows, null);
+					flag5 = true;
+				}
+				if (this.EmptyDataTemplate != null || this.EmptyDataText.Length > 0)
+				{
+					this.CreateRow(-1, -1, DataControlRowType.EmptyDataRow, DataControlRowState.Normal, dataBinding, null, array, rows, null);
+					flag5 = true;
+				}
+				if (!flag5)
+				{
+					this.Controls.Clear();
+				}
+				this._storedDataValid = false;
+				this._firstDataRow = null;
+				return 0;
+			}
+			if (num5 > 0)
+			{
+				if (pagedDataSource.IsPagingEnabled)
+				{
+					num7 = pagedDataSource.FirstIndexInPage;
+				}
+				if (isPagingEnabled && this.PagerSettings.Visible && this._pagerSettings.IsPagerOnTop)
+				{
+					this._topPagerRow = this.CreateRow(-1, -1, DataControlRowType.Pager, DataControlRowState.Normal, dataBinding, null, array, rows, pagedDataSource);
+				}
+				this._headerRow = this.CreateRow(-1, -1, DataControlRowType.Header, DataControlRowState.Normal, dataBinding, null, array, rows, null);
+				if (!this.ShowHeader)
+				{
+					this._headerRow.Visible = false;
+				}
+				if (flag3)
+				{
+					this.ResetPersistedSelectedIndex();
+				}
+				DataControlRowType rowType;
+				if (this._storedDataValid)
+				{
+					enumerator = this._storedData;
+					if (this._firstDataRow != null)
+					{
+						if (flag3)
+						{
+							OrderedDictionary orderedDictionary = new OrderedDictionary(dataKeyNamesInternal.Length);
+							foreach (string text in dataKeyNamesInternal)
+							{
+								object propertyValue = DataBinder.GetPropertyValue(this._firstDataRow, text);
+								orderedDictionary.Add(text, propertyValue);
+							}
+							if (dataKeysArrayList.Count == num6)
+							{
+								dataKeysArrayList.Add(new DataKey(orderedDictionary, dataKeyNamesInternal));
+							}
+							else
+							{
+								dataKeysArrayList[num6] = new DataKey(orderedDictionary, dataKeyNamesInternal);
+							}
+						}
+						if (flag4)
+						{
+							OrderedDictionary orderedDictionary2 = new OrderedDictionary(this.ClientIDRowSuffixInternal.Length);
+							foreach (string text2 in this.ClientIDRowSuffixInternal)
+							{
+								object propertyValue2 = DataBinder.GetPropertyValue(this._firstDataRow, text2);
+								orderedDictionary2.Add(text2, propertyValue2);
+							}
+							if (clientIDRowSuffixArrayList.Count == num6)
+							{
+								clientIDRowSuffixArrayList.Add(new DataKey(orderedDictionary2, this.ClientIDRowSuffixInternal));
+							}
+							else
+							{
+								clientIDRowSuffixArrayList[num6] = new DataKey(orderedDictionary2, this.ClientIDRowSuffixInternal);
+							}
+						}
+						if (flag3 && this.EnablePersistedSelection && num6 < dataKeysArrayList.Count)
+						{
+							this.SetPersistedDataKey(num6, (DataKey)dataKeysArrayList[num6]);
+						}
+						rowType = DataControlRowType.DataRow;
+						DataControlRowState dataControlRowState = DataControlRowState.Normal;
+						if (num6 == editIndex)
+						{
+							dataControlRowState |= DataControlRowState.Edit;
+						}
+						if (num6 == this._selectedIndex)
+						{
+							dataControlRowState |= DataControlRowState.Selected;
+						}
+						GridViewRow value = this.CreateRow(0, num7, rowType, dataControlRowState, dataBinding, this._firstDataRow, array, rows, null);
+						this._rowsArray.Add(value);
+						num2++;
+						num6++;
+						num7++;
+						this._storedDataValid = false;
+						this._firstDataRow = null;
+					}
+				}
+				else
+				{
+					enumerator = pagedDataSource.GetEnumerator();
+				}
+				rowType = DataControlRowType.DataRow;
+				while (enumerator.MoveNext())
+				{
+					object obj = enumerator.Current;
+					if (flag3)
+					{
+						OrderedDictionary orderedDictionary3 = new OrderedDictionary(dataKeyNamesInternal.Length);
+						foreach (string text3 in dataKeyNamesInternal)
+						{
+							object propertyValue3 = DataBinder.GetPropertyValue(obj, text3);
+							orderedDictionary3.Add(text3, propertyValue3);
+						}
+						if (dataKeysArrayList.Count == num6)
+						{
+							dataKeysArrayList.Add(new DataKey(orderedDictionary3, dataKeyNamesInternal));
+						}
+						else
+						{
+							dataKeysArrayList[num6] = new DataKey(orderedDictionary3, dataKeyNamesInternal);
+						}
+					}
+					if (flag4)
+					{
+						OrderedDictionary orderedDictionary4 = new OrderedDictionary(this.ClientIDRowSuffixInternal.Length);
+						foreach (string text4 in this.ClientIDRowSuffixInternal)
+						{
+							object propertyValue4 = DataBinder.GetPropertyValue(obj, text4);
+							orderedDictionary4.Add(text4, propertyValue4);
+						}
+						if (clientIDRowSuffixArrayList.Count == num6)
+						{
+							clientIDRowSuffixArrayList.Add(new DataKey(orderedDictionary4, this.ClientIDRowSuffixInternal));
+						}
+						else
+						{
+							clientIDRowSuffixArrayList[num6] = new DataKey(orderedDictionary4, this.ClientIDRowSuffixInternal);
+						}
+					}
+					if (flag3 && this.EnablePersistedSelection && num6 < dataKeysArrayList.Count)
+					{
+						this.SetPersistedDataKey(num6, (DataKey)dataKeysArrayList[num6]);
+					}
+					DataControlRowState dataControlRowState = DataControlRowState.Normal;
+					if (num6 == editIndex)
+					{
+						dataControlRowState |= DataControlRowState.Edit;
+					}
+					if (num6 == this._selectedIndex)
+					{
+						dataControlRowState |= DataControlRowState.Selected;
+					}
+					if (num6 % 2 != 0)
+					{
+						dataControlRowState |= DataControlRowState.Alternate;
+					}
+					GridViewRow value = this.CreateRow(num6, num7, rowType, dataControlRowState, dataBinding, obj, array, rows, null);
+					this._rowsArray.Add(value);
+					num2++;
+					num7++;
+					num6++;
+				}
+				if (num6 == 0)
+				{
+					this.CreateRow(-1, -1, DataControlRowType.EmptyDataRow, DataControlRowState.Normal, dataBinding, null, array, rows, null);
+				}
+				this._footerRow = this.CreateRow(-1, -1, DataControlRowType.Footer, DataControlRowState.Normal, dataBinding, null, array, rows, null);
+				if (!this.ShowFooter)
+				{
+					this._footerRow.Visible = false;
+				}
+				if (isPagingEnabled && this.PagerSettings.Visible && this._pagerSettings.IsPagerOnBottom)
+				{
+					this._bottomPagerRow = this.CreateRow(-1, -1, DataControlRowType.Pager, DataControlRowState.Normal, dataBinding, null, array, rows, pagedDataSource);
+				}
+			}
+			int result = -1;
+			if (dataBinding)
+			{
+				if (enumerator != null)
+				{
+					if (pagedDataSource.IsPagingEnabled)
+					{
+						this._pageCount = pagedDataSource.PageCount;
+						if (pagedDataSource.IsCustomPagingEnabled)
+						{
+							result = num2;
+						}
+						else
+						{
+							result = pagedDataSource.DataSourceCount;
+						}
+					}
+					else
+					{
+						this._pageCount = 1;
+						result = num2;
+					}
+				}
+				else
+				{
+					this._pageCount = 0;
+				}
+			}
+			if (this.PageCount == 1)
+			{
+				if (this._topPagerRow != null)
+				{
+					this._topPagerRow.Visible = false;
+				}
+				if (this._bottomPagerRow != null)
+				{
+					this._bottomPagerRow.Visible = false;
+				}
+			}
+			return result;
+		}
+
+		// Token: 0x060032F2 RID: 13042 RVA: 0x0009BFF0 File Offset: 0x0009A1F0
+		protected virtual Table CreateChildTable()
+		{
+			return new ChildTable(string.IsNullOrEmpty(this.ID) ? null : this.ClientID);
+		}
+
+		// Token: 0x060032F3 RID: 13043 RVA: 0x000A57C8 File Offset: 0x000A39C8
+		protected override Style CreateControlStyle()
+		{
+			return new TableStyle
+			{
+				GridLines = GridLines.Both,
+				CellSpacing = 0
+			};
+		}
+
+		// Token: 0x060032F4 RID: 13044 RVA: 0x000A57EC File Offset: 0x000A39EC
+		protected virtual ICollection CreateColumns(PagedDataSource dataSource, bool useDataSource)
+		{
+			ArrayList arrayList = new ArrayList();
+			bool autoGenerateEditButton = this.AutoGenerateEditButton;
+			bool autoGenerateDeleteButton = this.AutoGenerateDeleteButton;
+			bool autoGenerateSelectButton = this.AutoGenerateSelectButton;
+			if (autoGenerateEditButton || autoGenerateDeleteButton || autoGenerateSelectButton)
+			{
+				CommandField commandField = new CommandField();
+				commandField.ButtonType = ButtonType.Link;
+				if (autoGenerateEditButton)
+				{
+					commandField.ShowEditButton = true;
+				}
+				if (autoGenerateDeleteButton)
+				{
+					commandField.ShowDeleteButton = true;
+				}
+				if (autoGenerateSelectButton)
+				{
+					commandField.ShowSelectButton = true;
+				}
+				arrayList.Add(commandField);
+			}
+			foreach (object obj in this.Columns)
+			{
+				DataControlField value = (DataControlField)obj;
+				arrayList.Add(value);
+			}
+			if (this.AutoGenerateColumns)
+			{
+				if (this.ColumnsGeneratorInternal is GridViewColumnsGenerator)
+				{
+					((GridViewColumnsGenerator)this.ColumnsGeneratorInternal).DataItem = dataSource;
+					((GridViewColumnsGenerator)this.ColumnsGeneratorInternal).InDataBinding = useDataSource;
+				}
+				arrayList.AddRange(this.ColumnsGeneratorInternal.GenerateFields(this));
+			}
+			return arrayList;
+		}
+
+		// Token: 0x060032F5 RID: 13045 RVA: 0x000A58F4 File Offset: 0x000A3AF4
+		protected override DataSourceSelectArguments CreateDataSourceSelectArguments()
+		{
+			DataSourceSelectArguments dataSourceSelectArguments = new DataSourceSelectArguments();
+			DataSourceView data = this.GetData();
+			bool flag = this.AllowPaging && data.CanPage;
+			string text = this.SortExpressionInternal;
+			if (this.SortDirectionInternal == SortDirection.Descending && !string.IsNullOrEmpty(text))
+			{
+				text += " DESC";
+			}
+			dataSourceSelectArguments.SortExpression = text;
+			if (flag)
+			{
+				if (data.CanRetrieveTotalRowCount)
+				{
+					dataSourceSelectArguments.RetrieveTotalRowCount = true;
+					dataSourceSelectArguments.MaximumRows = this.PageSize;
+				}
+				else
+				{
+					dataSourceSelectArguments.MaximumRows = -1;
+				}
+				dataSourceSelectArguments.StartRowIndex = checked(this.PageSize * this.PageIndex);
+			}
+			return dataSourceSelectArguments;
+		}
+
+		// Token: 0x060032F6 RID: 13046 RVA: 0x000A5988 File Offset: 0x000A3B88
+		private void CreateNextPrevPager(TableRow row, PagedDataSource pagedDataSource, bool addFirstLastPageButtons)
+		{
+			PagerSettings pagerSettings = this.PagerSettings;
+			string previousPageImageUrl = pagerSettings.PreviousPageImageUrl;
+			string nextPageImageUrl = pagerSettings.NextPageImageUrl;
+			bool isFirstPage = pagedDataSource.IsFirstPage;
+			bool isLastPage = pagedDataSource.IsLastPage;
+			if (addFirstLastPageButtons && !isFirstPage)
+			{
+				TableCell tableCell = new TableCell();
+				row.Cells.Add(tableCell);
+				string firstPageImageUrl = pagerSettings.FirstPageImageUrl;
+				IButtonControl buttonControl;
+				if (firstPageImageUrl.Length > 0)
+				{
+					buttonControl = new DataControlImageButton(this);
+					((DataControlImageButton)buttonControl).ImageUrl = firstPageImageUrl;
+					((DataControlImageButton)buttonControl).AlternateText = HttpUtility.HtmlDecode(pagerSettings.FirstPageText);
+					((DataControlImageButton)buttonControl).EnableCallback(this.BuildCallbackArgument(0));
+				}
+				else
+				{
+					buttonControl = new DataControlPagerLinkButton(this);
+					((DataControlPagerLinkButton)buttonControl).Text = pagerSettings.FirstPageText;
+					((DataControlPagerLinkButton)buttonControl).EnableCallback(this.BuildCallbackArgument(0));
+				}
+				buttonControl.CommandName = "Page";
+				buttonControl.CommandArgument = "First";
+				tableCell.Controls.Add((Control)buttonControl);
+			}
+			if (!isFirstPage)
+			{
+				TableCell tableCell2 = new TableCell();
+				row.Cells.Add(tableCell2);
+				IButtonControl buttonControl2;
+				if (previousPageImageUrl.Length > 0)
+				{
+					buttonControl2 = new DataControlImageButton(this);
+					((DataControlImageButton)buttonControl2).ImageUrl = previousPageImageUrl;
+					((DataControlImageButton)buttonControl2).AlternateText = HttpUtility.HtmlDecode(pagerSettings.PreviousPageText);
+					((DataControlImageButton)buttonControl2).EnableCallback(this.BuildCallbackArgument(this.PageIndex - 1));
+				}
+				else
+				{
+					buttonControl2 = new DataControlPagerLinkButton(this);
+					((DataControlPagerLinkButton)buttonControl2).Text = pagerSettings.PreviousPageText;
+					((DataControlPagerLinkButton)buttonControl2).EnableCallback(this.BuildCallbackArgument(this.PageIndex - 1));
+				}
+				buttonControl2.CommandName = "Page";
+				buttonControl2.CommandArgument = "Prev";
+				tableCell2.Controls.Add((Control)buttonControl2);
+			}
+			if (!isLastPage)
+			{
+				TableCell tableCell3 = new TableCell();
+				row.Cells.Add(tableCell3);
+				IButtonControl buttonControl3;
+				if (nextPageImageUrl.Length > 0)
+				{
+					buttonControl3 = new DataControlImageButton(this);
+					((DataControlImageButton)buttonControl3).ImageUrl = nextPageImageUrl;
+					((DataControlImageButton)buttonControl3).AlternateText = HttpUtility.HtmlDecode(pagerSettings.NextPageText);
+					((DataControlImageButton)buttonControl3).EnableCallback(this.BuildCallbackArgument(this.PageIndex + 1));
+				}
+				else
+				{
+					buttonControl3 = new DataControlPagerLinkButton(this);
+					((DataControlPagerLinkButton)buttonControl3).Text = pagerSettings.NextPageText;
+					((DataControlPagerLinkButton)buttonControl3).EnableCallback(this.BuildCallbackArgument(this.PageIndex + 1));
+				}
+				buttonControl3.CommandName = "Page";
+				buttonControl3.CommandArgument = "Next";
+				tableCell3.Controls.Add((Control)buttonControl3);
+			}
+			if (addFirstLastPageButtons && !isLastPage)
+			{
+				TableCell tableCell4 = new TableCell();
+				row.Cells.Add(tableCell4);
+				string lastPageImageUrl = pagerSettings.LastPageImageUrl;
+				IButtonControl buttonControl4;
+				if (lastPageImageUrl.Length > 0)
+				{
+					buttonControl4 = new DataControlImageButton(this);
+					((DataControlImageButton)buttonControl4).ImageUrl = lastPageImageUrl;
+					((DataControlImageButton)buttonControl4).AlternateText = HttpUtility.HtmlDecode(pagerSettings.LastPageText);
+					((DataControlImageButton)buttonControl4).EnableCallback(this.BuildCallbackArgument(pagedDataSource.PageCount - 1));
+				}
+				else
+				{
+					buttonControl4 = new DataControlPagerLinkButton(this);
+					((DataControlPagerLinkButton)buttonControl4).Text = pagerSettings.LastPageText;
+					((DataControlPagerLinkButton)buttonControl4).EnableCallback(this.BuildCallbackArgument(pagedDataSource.PageCount - 1));
+				}
+				buttonControl4.CommandName = "Page";
+				buttonControl4.CommandArgument = "Last";
+				tableCell4.Controls.Add((Control)buttonControl4);
+			}
+		}
+
+		// Token: 0x060032F7 RID: 13047 RVA: 0x000A5CFC File Offset: 0x000A3EFC
+		private void CreateNumericPager(TableRow row, PagedDataSource pagedDataSource, bool addFirstLastPageButtons)
+		{
+			PagerSettings pagerSettings = this.PagerSettings;
+			int pageCount = pagedDataSource.PageCount;
+			int num = pagedDataSource.CurrentPageIndex + 1;
+			int pageButtonCount = pagerSettings.PageButtonCount;
+			int num2 = pageButtonCount;
+			int num3 = this.FirstDisplayedPageIndex + 1;
+			if (pageCount < num2)
+			{
+				num2 = pageCount;
+			}
+			int num4 = 1;
+			int num5 = num2;
+			if (num > num5)
+			{
+				int num6 = pagedDataSource.CurrentPageIndex / pageButtonCount;
+				bool flag = num - num3 >= 0 && num - num3 < pageButtonCount;
+				if (num3 > 0 && flag)
+				{
+					num4 = num3;
+				}
+				else
+				{
+					num4 = num6 * pageButtonCount + 1;
+				}
+				num5 = num4 + pageButtonCount - 1;
+				if (num5 > pageCount)
+				{
+					num5 = pageCount;
+				}
+				if (num5 - num4 + 1 < pageButtonCount)
+				{
+					num4 = Math.Max(1, num5 - pageButtonCount + 1);
+				}
+				this.FirstDisplayedPageIndex = num4 - 1;
+			}
+			if (addFirstLastPageButtons && num != 1 && num4 != 1)
+			{
+				TableCell tableCell = new TableCell();
+				row.Cells.Add(tableCell);
+				string firstPageImageUrl = pagerSettings.FirstPageImageUrl;
+				IButtonControl buttonControl;
+				if (firstPageImageUrl.Length > 0)
+				{
+					buttonControl = new DataControlImageButton(this);
+					((DataControlImageButton)buttonControl).ImageUrl = firstPageImageUrl;
+					((DataControlImageButton)buttonControl).AlternateText = HttpUtility.HtmlDecode(pagerSettings.FirstPageText);
+					((DataControlImageButton)buttonControl).EnableCallback(this.BuildCallbackArgument(0));
+				}
+				else
+				{
+					buttonControl = new DataControlPagerLinkButton(this);
+					((DataControlPagerLinkButton)buttonControl).Text = pagerSettings.FirstPageText;
+					((DataControlPagerLinkButton)buttonControl).EnableCallback(this.BuildCallbackArgument(0));
+				}
+				buttonControl.CommandName = "Page";
+				buttonControl.CommandArgument = "First";
+				tableCell.Controls.Add((Control)buttonControl);
+			}
+			if (num4 != 1)
+			{
+				TableCell tableCell2 = new TableCell();
+				row.Cells.Add(tableCell2);
+				LinkButton linkButton = new DataControlPagerLinkButton(this);
+				linkButton.Text = "...";
+				linkButton.CommandName = "Page";
+				linkButton.CommandArgument = (num4 - 1).ToString(NumberFormatInfo.InvariantInfo);
+				((DataControlPagerLinkButton)linkButton).EnableCallback(this.BuildCallbackArgument(num4 - 2));
+				tableCell2.Controls.Add(linkButton);
+			}
+			for (int i = num4; i <= num5; i++)
+			{
+				TableCell tableCell3 = new TableCell();
+				row.Cells.Add(tableCell3);
+				string text = i.ToString(NumberFormatInfo.InvariantInfo);
+				if (i == num)
+				{
+					Label label = new Label();
+					label.Text = text;
+					tableCell3.Controls.Add(label);
+				}
+				else
+				{
+					LinkButton linkButton = new DataControlPagerLinkButton(this);
+					linkButton.Text = text;
+					linkButton.CommandName = "Page";
+					linkButton.CommandArgument = text;
+					((DataControlPagerLinkButton)linkButton).EnableCallback(this.BuildCallbackArgument(i - 1));
+					tableCell3.Controls.Add(linkButton);
+				}
+			}
+			if (pageCount > num5)
+			{
+				TableCell tableCell4 = new TableCell();
+				row.Cells.Add(tableCell4);
+				LinkButton linkButton = new DataControlPagerLinkButton(this);
+				linkButton.Text = "...";
+				linkButton.CommandName = "Page";
+				linkButton.CommandArgument = (num5 + 1).ToString(NumberFormatInfo.InvariantInfo);
+				((DataControlPagerLinkButton)linkButton).EnableCallback(this.BuildCallbackArgument(num5));
+				tableCell4.Controls.Add(linkButton);
+			}
+			bool flag2 = num5 == pageCount;
+			if (addFirstLastPageButtons && num != pageCount && !flag2)
+			{
+				TableCell tableCell5 = new TableCell();
+				row.Cells.Add(tableCell5);
+				string lastPageImageUrl = pagerSettings.LastPageImageUrl;
+				IButtonControl buttonControl2;
+				if (lastPageImageUrl.Length > 0)
+				{
+					buttonControl2 = new DataControlImageButton(this);
+					((DataControlImageButton)buttonControl2).ImageUrl = lastPageImageUrl;
+					((DataControlImageButton)buttonControl2).AlternateText = HttpUtility.HtmlDecode(pagerSettings.LastPageText);
+					((DataControlImageButton)buttonControl2).EnableCallback(this.BuildCallbackArgument(pagedDataSource.PageCount - 1));
+				}
+				else
+				{
+					buttonControl2 = new DataControlPagerLinkButton(this);
+					((DataControlPagerLinkButton)buttonControl2).Text = pagerSettings.LastPageText;
+					((DataControlPagerLinkButton)buttonControl2).EnableCallback(this.BuildCallbackArgument(pagedDataSource.PageCount - 1));
+				}
+				buttonControl2.CommandName = "Page";
+				buttonControl2.CommandArgument = "Last";
+				tableCell5.Controls.Add((Control)buttonControl2);
+			}
+		}
+
+		// Token: 0x060032F8 RID: 13048 RVA: 0x000A6108 File Offset: 0x000A4308
+		private GridViewRow CreateRow(int rowIndex, int dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, bool dataBind, object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+		{
+			GridViewRow gridViewRow = this.CreateRow(rowIndex, dataSourceIndex, rowType, rowState);
+			GridViewRowEventArgs e = new GridViewRowEventArgs(gridViewRow);
+			if (rowType != DataControlRowType.Pager)
+			{
+				this.InitializeRow(gridViewRow, fields);
+			}
+			else
+			{
+				this.InitializePager(gridViewRow, fields.Length, pagedDataSource);
+			}
+			if (dataBind)
+			{
+				gridViewRow.DataItem = dataItem;
+			}
+			this.OnRowCreated(e);
+			rows.Add(gridViewRow);
+			if (dataBind)
+			{
+				gridViewRow.DataBind();
+				this.OnRowDataBound(e);
+				gridViewRow.DataItem = null;
+			}
+			return gridViewRow;
+		}
+
+		// Token: 0x060032F9 RID: 13049 RVA: 0x000A6179 File Offset: 0x000A4379
+		protected virtual GridViewRow CreateRow(int rowIndex, int dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState)
+		{
+			return new GridViewRow(rowIndex, dataSourceIndex, rowType, rowState);
+		}
+
+		// Token: 0x060032FA RID: 13050 RVA: 0x000A6188 File Offset: 0x000A4388
+		private PagedDataSource CreatePagedDataSource()
+		{
+			return new PagedDataSource
+			{
+				CurrentPageIndex = this.PageIndex,
+				PageSize = this.PageSize,
+				AllowPaging = this.AllowPaging,
+				AllowCustomPaging = this.AllowCustomPaging,
+				AllowServerPaging = false,
+				VirtualCount = this.VirtualItemCount
+			};
+		}
+
+		// Token: 0x060032FB RID: 13051 RVA: 0x000A61E0 File Offset: 0x000A43E0
+		private PagedDataSource CreateServerPagedDataSource(int totalRowCount)
+		{
+			return new PagedDataSource
+			{
+				CurrentPageIndex = this.PageIndex,
+				PageSize = this.PageSize,
+				AllowPaging = this.AllowPaging,
+				AllowCustomPaging = false,
+				AllowServerPaging = true,
+				VirtualCount = totalRowCount
+			};
+		}
+
+		// Token: 0x060032FC RID: 13052 RVA: 0x0009C00D File Offset: 0x0009A20D
+		public sealed override void DataBind()
+		{
+			base.DataBind();
+		}
+
+		// Token: 0x060032FD RID: 13053 RVA: 0x000A622D File Offset: 0x000A442D
+		public virtual void DeleteRow(int rowIndex)
+		{
+			this.ResetModelValidationGroup(this.EnableModelValidation, string.Empty);
+			this.HandleDelete(null, rowIndex);
+		}
+
+		// Token: 0x060032FE RID: 13054 RVA: 0x000A6248 File Offset: 0x000A4448
+		private bool DetermineRenderClientScript()
+		{
+			if (!this._renderClientScriptValid)
+			{
+				this._renderClientScript = false;
+				if (this.EnableSortingAndPagingCallbacks && this.Context != null && this.Page != null && this.Page.RequestInternal != null && this.Page.Request.Browser.SupportsCallback && !base.IsParentedToUpdatePanel)
+				{
+					HttpBrowserCapabilities browser = this.Page.Request.Browser;
+					bool flag = browser.EcmaScriptVersion.Major > 0;
+					bool flag2 = browser.W3CDomVersion.Major > 0;
+					bool flag3 = !StringUtil.EqualsIgnoreCase(browser["tagwriter"], typeof(Html32TextWriter).FullName);
+					this._renderClientScript = (flag && flag2 && flag3);
+				}
+				this._renderClientScriptValid = true;
+			}
+			return this._renderClientScript;
+		}
+
+		// Token: 0x060032FF RID: 13055 RVA: 0x000A6320 File Offset: 0x000A4520
+		protected virtual void ExtractRowValues(IOrderedDictionary fieldValues, GridViewRow row, bool includeReadOnlyFields, bool includePrimaryKey)
+		{
+			if (fieldValues == null)
+			{
+				return;
+			}
+			ICollection collection = this.CreateColumns(null, false);
+			int count = collection.Count;
+			object[] array = new object[count];
+			string[] dataKeyNamesInternal = this.DataKeyNamesInternal;
+			collection.CopyTo(array, 0);
+			int num = 0;
+			while (num < count && num < row.Cells.Count)
+			{
+				if (((DataControlField)array[num]).Visible)
+				{
+					OrderedDictionary orderedDictionary = new OrderedDictionary();
+					((DataControlField)array[num]).ExtractValuesFromCell(orderedDictionary, row.Cells[num] as DataControlFieldCell, row.RowState, includeReadOnlyFields);
+					foreach (object obj in orderedDictionary)
+					{
+						DictionaryEntry dictionaryEntry = (DictionaryEntry)obj;
+						if (!includePrimaryKey)
+						{
+							object[] array2 = dataKeyNamesInternal;
+							if (Array.IndexOf<object>(array2, dictionaryEntry.Key) != -1)
+							{
+								continue;
+							}
+						}
+						fieldValues[dictionaryEntry.Key] = dictionaryEntry.Value;
+					}
+				}
+				num++;
+			}
+		}
+
+		// Token: 0x06003300 RID: 13056 RVA: 0x000A6434 File Offset: 0x000A4634
+		protected virtual string GetCallbackResult()
+		{
+			StringWriter stringWriter = new StringWriter(CultureInfo.InvariantCulture);
+			HtmlTextWriter htmlTextWriter = new HtmlTextWriter(stringWriter);
+			IStateFormatter2 stateFormatter = this.StateFormatter;
+			this.RenderTableContents(htmlTextWriter);
+			htmlTextWriter.Flush();
+			htmlTextWriter.Close();
+			string text = stateFormatter.Serialize(this.SaveDataKeysState(), Purpose.WebForms_GridView_DataKeys);
+			string text2 = stateFormatter.Serialize(this.SortExpression, Purpose.WebForms_GridView_SortExpression);
+			return string.Concat(new string[]
+			{
+				Convert.ToString(this.PageIndex, CultureInfo.InvariantCulture),
+				"|",
+				Convert.ToString((int)this.SortDirection, CultureInfo.InvariantCulture),
+				"|",
+				text2,
+				"|",
+				text,
+				"|",
+				stringWriter.ToString()
+			});
+		}
+
+		// Token: 0x06003301 RID: 13057 RVA: 0x000A64F8 File Offset: 0x000A46F8
+		protected virtual string GetCallbackScript(IButtonControl buttonControl, string argument)
+		{
+			if (this.DetermineRenderClientScript())
+			{
+				if (string.IsNullOrEmpty(argument) && buttonControl.CommandName == "Sort")
+				{
+					argument = this.BuildCallbackArgument(buttonControl.CommandArgument, this.SortDirection);
+				}
+				if (this.Page != null)
+				{
+					this.Page.ClientScript.RegisterForEventValidation(this.UniqueID, argument);
+				}
+				string str = "javascript:__gv" + this.ClientID + ".callback";
+				return str + "(" + argument + "); return false;";
+			}
+			return null;
+		}
+
+		// Token: 0x06003302 RID: 13058 RVA: 0x000A6583 File Offset: 0x000A4783
+		private int GetRowIndex(GridViewRow row, string commandArgument)
+		{
+			if (row != null)
+			{
+				return row.RowIndex;
+			}
+			return Convert.ToInt32(commandArgument, CultureInfo.InvariantCulture);
+		}
+
+		// Token: 0x06003303 RID: 13059 RVA: 0x000A659A File Offset: 0x000A479A
+		private bool TryGetRowIndex(GridViewRow row, string commandArgument, out int rowIndex)
+		{
+			if (row != null)
+			{
+				rowIndex = row.RowIndex;
+				return true;
+			}
+			return int.TryParse(commandArgument, NumberStyles.Integer, CultureInfo.InvariantCulture, out rowIndex);
+		}
+
+		// Token: 0x06003304 RID: 13060 RVA: 0x000A65B8 File Offset: 0x000A47B8
+		private void HandleCancel(int rowIndex)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewCancelEditEventArgs gridViewCancelEditEventArgs = new GridViewCancelEditEventArgs(rowIndex);
+			this.OnRowCancelingEdit(gridViewCancelEditEventArgs);
+			if (gridViewCancelEditEventArgs.Cancel)
+			{
+				return;
+			}
+			if (isDataBindingAutomatic)
+			{
+				this.EditIndex = -1;
+			}
+			base.RequiresDataBinding = true;
+		}
+
+		// Token: 0x06003305 RID: 13061 RVA: 0x000A65F4 File Offset: 0x000A47F4
+		private void HandleDelete(GridViewRow row, int rowIndex)
+		{
+			DataSourceView dataSourceView = null;
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			if (isDataBindingAutomatic)
+			{
+				dataSourceView = this.GetData();
+				if (dataSourceView == null)
+				{
+					throw new HttpException(SR.GetString("GridView_DataSourceReturnedNullView", new object[]
+					{
+						this.ID
+					}));
+				}
+			}
+			if (row == null && rowIndex < this.Rows.Count)
+			{
+				row = this.Rows[rowIndex];
+			}
+			GridViewDeleteEventArgs gridViewDeleteEventArgs = new GridViewDeleteEventArgs(rowIndex);
+			if (row != null)
+			{
+				this.ExtractRowValues(gridViewDeleteEventArgs.Values, row, true, false);
+			}
+			if (this.DataKeys.Count > rowIndex)
+			{
+				foreach (object obj in this.DataKeys[rowIndex].Values)
+				{
+					DictionaryEntry dictionaryEntry = (DictionaryEntry)obj;
+					gridViewDeleteEventArgs.Keys.Add(dictionaryEntry.Key, dictionaryEntry.Value);
+					if (gridViewDeleteEventArgs.Values.Contains(dictionaryEntry.Key))
+					{
+						gridViewDeleteEventArgs.Values.Remove(dictionaryEntry.Key);
+					}
+				}
+			}
+			this.OnRowDeleting(gridViewDeleteEventArgs);
+			if (gridViewDeleteEventArgs.Cancel)
+			{
+				return;
+			}
+			this._deletedRowIndex = rowIndex;
+			if (isDataBindingAutomatic)
+			{
+				this._deleteKeys = gridViewDeleteEventArgs.Keys;
+				this._deleteValues = gridViewDeleteEventArgs.Values;
+				dataSourceView.Delete(gridViewDeleteEventArgs.Keys, gridViewDeleteEventArgs.Values, new DataSourceViewOperationCallback(this.HandleDeleteCallback));
+			}
+		}
+
+		// Token: 0x06003306 RID: 13062 RVA: 0x000A6764 File Offset: 0x000A4964
+		private bool HandleDeleteCallback(int affectedRows, Exception ex)
+		{
+			GridViewDeletedEventArgs gridViewDeletedEventArgs = new GridViewDeletedEventArgs(affectedRows, ex);
+			gridViewDeletedEventArgs.SetKeys(this._deleteKeys);
+			gridViewDeletedEventArgs.SetValues(this._deleteValues);
+			this.OnRowDeleted(gridViewDeletedEventArgs);
+			this._deleteKeys = null;
+			this._deleteValues = null;
+			if (ex != null && !gridViewDeletedEventArgs.ExceptionHandled && this.PageIsValidAfterModelException())
+			{
+				return false;
+			}
+			this.EditIndex = -1;
+			if (affectedRows > 0)
+			{
+				int num;
+				if (this.AllowPaging && this.AllowCustomPaging)
+				{
+					num = this.VirtualItemCount;
+				}
+				else
+				{
+					num = (int)this.ViewState["_!ItemCount"];
+				}
+				int num2 = Math.Max(0, num - affectedRows);
+				if (this.AllowPaging)
+				{
+					int num3 = Math.Max(1, checked(num2 + this.PageSize - 1) / this.PageSize);
+					this._pageIndex = Math.Min(this._pageIndex, num3 - 1);
+				}
+				if (this.SelectedIndex >= 0)
+				{
+					if (num2 == 0)
+					{
+						this.SelectedIndex = -1;
+					}
+					else
+					{
+						int num4 = this.AllowPaging ? (this.PageIndex * this.PageSize + this.SelectedIndex) : this.SelectedIndex;
+						if (num4 > num2)
+						{
+							int selectedIndex = this.AllowPaging ? (num2 % this.PageSize) : num2;
+							this.SelectedIndex = selectedIndex;
+						}
+					}
+				}
+			}
+			this._deletedRowIndex = -1;
+			base.RequiresDataBinding = true;
+			return true;
+		}
+
+		// Token: 0x06003307 RID: 13063 RVA: 0x000A68A4 File Offset: 0x000A4AA4
+		private void HandleEdit(int rowIndex)
+		{
+			GridViewEditEventArgs gridViewEditEventArgs = new GridViewEditEventArgs(rowIndex);
+			this.OnRowEditing(gridViewEditEventArgs);
+			if (gridViewEditEventArgs.Cancel)
+			{
+				return;
+			}
+			this.EditIndex = gridViewEditEventArgs.NewEditIndex;
+			base.RequiresDataBinding = true;
+		}
+
+		// Token: 0x06003308 RID: 13064 RVA: 0x000A68DC File Offset: 0x000A4ADC
+		private bool HandleEvent(EventArgs e, bool causesValidation, string validationGroup)
+		{
+			bool result = false;
+			this.ResetModelValidationGroup(causesValidation, validationGroup);
+			GridViewCommandEventArgs gridViewCommandEventArgs = e as GridViewCommandEventArgs;
+			if (gridViewCommandEventArgs != null)
+			{
+				this.OnRowCommand(gridViewCommandEventArgs);
+				if (gridViewCommandEventArgs.Handled)
+				{
+					return true;
+				}
+				result = true;
+				string commandName = gridViewCommandEventArgs.CommandName;
+				int rowIndex;
+				if (StringUtil.EqualsIgnoreCase(commandName, "Select"))
+				{
+					this.HandleSelect(this.GetRowIndex(gridViewCommandEventArgs.Row, (string)gridViewCommandEventArgs.CommandArgument));
+				}
+				else if (StringUtil.EqualsIgnoreCase(commandName, "Page"))
+				{
+					string text = (string)gridViewCommandEventArgs.CommandArgument;
+					int num = this.PageIndex;
+					if (StringUtil.EqualsIgnoreCase(text, "Next"))
+					{
+						num++;
+					}
+					else if (StringUtil.EqualsIgnoreCase(text, "Prev"))
+					{
+						num--;
+					}
+					else if (StringUtil.EqualsIgnoreCase(text, "First"))
+					{
+						num = 0;
+					}
+					else if (StringUtil.EqualsIgnoreCase(text, "Last"))
+					{
+						num = this.PageCount - 1;
+					}
+					else
+					{
+						num = Convert.ToInt32(text, CultureInfo.InvariantCulture) - 1;
+					}
+					this.HandlePage(num);
+				}
+				else if (StringUtil.EqualsIgnoreCase(commandName, "Sort"))
+				{
+					this.HandleSort((string)gridViewCommandEventArgs.CommandArgument);
+				}
+				else if (StringUtil.EqualsIgnoreCase(commandName, "Edit"))
+				{
+					this.HandleEdit(this.GetRowIndex(gridViewCommandEventArgs.Row, (string)gridViewCommandEventArgs.CommandArgument));
+				}
+				else if (StringUtil.EqualsIgnoreCase(commandName, "Update"))
+				{
+					this.HandleUpdate(gridViewCommandEventArgs.Row, this.GetRowIndex(gridViewCommandEventArgs.Row, (string)gridViewCommandEventArgs.CommandArgument), causesValidation);
+				}
+				else if (StringUtil.EqualsIgnoreCase(commandName, "Cancel"))
+				{
+					this.HandleCancel(this.GetRowIndex(gridViewCommandEventArgs.Row, (string)gridViewCommandEventArgs.CommandArgument));
+				}
+				else if (StringUtil.EqualsIgnoreCase(commandName, "Delete"))
+				{
+					this.HandleDelete(gridViewCommandEventArgs.Row, this.GetRowIndex(gridViewCommandEventArgs.Row, (string)gridViewCommandEventArgs.CommandArgument));
+				}
+				else if (this.TryGetRowIndex(gridViewCommandEventArgs.Row, (string)gridViewCommandEventArgs.CommandArgument, out rowIndex))
+				{
+					result = this.HandleCommand(gridViewCommandEventArgs.Row, rowIndex, commandName);
+				}
+			}
+			return result;
+		}
+
+		// Token: 0x06003309 RID: 13065 RVA: 0x000A6AF0 File Offset: 0x000A4CF0
+		private bool HandleCommand(GridViewRow row, int rowIndex, string commandName)
+		{
+			DataSourceView dataSourceView = null;
+			if (!base.IsDataBindingAutomatic)
+			{
+				return false;
+			}
+			dataSourceView = this.GetData();
+			if (dataSourceView == null)
+			{
+				throw new HttpException(SR.GetString("GridView_DataSourceReturnedNullView", new object[]
+				{
+					this.ID
+				}));
+			}
+			if (row == null && rowIndex < this.Rows.Count)
+			{
+				row = this.Rows[rowIndex];
+			}
+			if (!dataSourceView.CanExecute(commandName))
+			{
+				return false;
+			}
+			OrderedDictionary orderedDictionary = new OrderedDictionary();
+			OrderedDictionary orderedDictionary2 = new OrderedDictionary();
+			if (row != null)
+			{
+				this.ExtractRowValues(orderedDictionary, row, true, false);
+			}
+			if (this.DataKeys.Count > rowIndex)
+			{
+				foreach (object obj in this.DataKeys[rowIndex].Values)
+				{
+					DictionaryEntry dictionaryEntry = (DictionaryEntry)obj;
+					orderedDictionary2.Add(dictionaryEntry.Key, dictionaryEntry.Value);
+					if (orderedDictionary.Contains(dictionaryEntry.Key))
+					{
+						orderedDictionary.Remove(dictionaryEntry.Key);
+					}
+				}
+			}
+			dataSourceView.ExecuteCommand(commandName, orderedDictionary2, orderedDictionary, new DataSourceViewOperationCallback(this.HandleCommandCallback));
+			return true;
+		}
+
+		// Token: 0x0600330A RID: 13066 RVA: 0x000A6C20 File Offset: 0x000A4E20
+		private bool HandleCommandCallback(int affectedRows, Exception ex)
+		{
+			if (ex != null && this.PageIsValidAfterModelException())
+			{
+				return false;
+			}
+			this.EditIndex = -1;
+			base.RequiresDataBinding = true;
+			return true;
+		}
+
+		// Token: 0x0600330B RID: 13067 RVA: 0x000A6C40 File Offset: 0x000A4E40
+		private void HandlePage(int newPage)
+		{
+			if (!this.AllowPaging)
+			{
+				return;
+			}
+			GridViewPageEventArgs gridViewPageEventArgs = new GridViewPageEventArgs(newPage);
+			this.OnPageIndexChanging(gridViewPageEventArgs);
+			if (gridViewPageEventArgs.Cancel)
+			{
+				return;
+			}
+			if (base.IsDataBindingAutomatic)
+			{
+				if (gridViewPageEventArgs.NewPageIndex <= -1)
+				{
+					return;
+				}
+				if (gridViewPageEventArgs.NewPageIndex >= this.PageCount && this._pageIndex == this.PageCount - 1)
+				{
+					return;
+				}
+				this.ClearDataKeys();
+				this.EditIndex = -1;
+				this._pageIndex = gridViewPageEventArgs.NewPageIndex;
+			}
+			this.OnPageIndexChanged(EventArgs.Empty);
+			base.RequiresDataBinding = true;
+		}
+
+		// Token: 0x0600330C RID: 13068 RVA: 0x000A6CCC File Offset: 0x000A4ECC
+		private void HandleSelect(int rowIndex)
+		{
+			GridViewSelectEventArgs gridViewSelectEventArgs = new GridViewSelectEventArgs(rowIndex);
+			this.OnSelectedIndexChanging(gridViewSelectEventArgs);
+			if (gridViewSelectEventArgs.Cancel)
+			{
+				return;
+			}
+			this.SelectedIndex = gridViewSelectEventArgs.NewSelectedIndex;
+			this.OnSelectedIndexChanged(EventArgs.Empty);
+		}
+
+		// Token: 0x0600330D RID: 13069 RVA: 0x000A6D08 File Offset: 0x000A4F08
+		private void HandleSort(string sortExpression)
+		{
+			if (!this.AllowSorting)
+			{
+				return;
+			}
+			SortDirection sortDirection = SortDirection.Ascending;
+			if (this.SortExpressionInternal == sortExpression && this.SortDirectionInternal == SortDirection.Ascending)
+			{
+				sortDirection = SortDirection.Descending;
+			}
+			this.HandleSort(sortExpression, sortDirection);
+		}
+
+		// Token: 0x0600330E RID: 13070 RVA: 0x000A6D40 File Offset: 0x000A4F40
+		private void HandleSort(string sortExpression, SortDirection sortDirection)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewSortEventArgs gridViewSortEventArgs = new GridViewSortEventArgs(sortExpression, sortDirection);
+			this.OnSorting(gridViewSortEventArgs);
+			if (gridViewSortEventArgs.Cancel)
+			{
+				return;
+			}
+			if (isDataBindingAutomatic)
+			{
+				this.ClearDataKeys();
+				if (this.GetData() == null)
+				{
+					throw new HttpException(SR.GetString("GridView_DataSourceReturnedNullView", new object[]
+					{
+						this.ID
+					}));
+				}
+				this.EditIndex = -1;
+				this.SortExpressionInternal = gridViewSortEventArgs.SortExpression;
+				this.SortDirectionInternal = gridViewSortEventArgs.SortDirection;
+				this._pageIndex = 0;
+			}
+			this.OnSorted(EventArgs.Empty);
+			base.RequiresDataBinding = true;
+		}
+
+		// Token: 0x0600330F RID: 13071 RVA: 0x000A6DD8 File Offset: 0x000A4FD8
+		private void HandleUpdate(GridViewRow row, int rowIndex, bool causesValidation)
+		{
+			if (causesValidation && this.Page != null && !this.Page.IsValid)
+			{
+				return;
+			}
+			DataSourceView dataSourceView = null;
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			if (isDataBindingAutomatic)
+			{
+				dataSourceView = this.GetData();
+				if (dataSourceView == null)
+				{
+					throw new HttpException(SR.GetString("GridView_DataSourceReturnedNullView", new object[]
+					{
+						this.ID
+					}));
+				}
+			}
+			GridViewUpdateEventArgs gridViewUpdateEventArgs = new GridViewUpdateEventArgs(rowIndex);
+			foreach (object obj in this.BoundFieldValues)
+			{
+				DictionaryEntry dictionaryEntry = (DictionaryEntry)obj;
+				gridViewUpdateEventArgs.OldValues.Add(dictionaryEntry.Key, dictionaryEntry.Value);
+			}
+			if (this.DataKeys.Count > rowIndex)
+			{
+				foreach (object obj2 in this.DataKeys[rowIndex].Values)
+				{
+					DictionaryEntry dictionaryEntry2 = (DictionaryEntry)obj2;
+					gridViewUpdateEventArgs.Keys.Add(dictionaryEntry2.Key, dictionaryEntry2.Value);
+				}
+			}
+			if (row == null && this.Rows.Count > rowIndex)
+			{
+				row = this.Rows[rowIndex];
+			}
+			if (row != null)
+			{
+				this.ExtractRowValues(gridViewUpdateEventArgs.NewValues, row, false, true);
+			}
+			this.OnRowUpdating(gridViewUpdateEventArgs);
+			if (gridViewUpdateEventArgs.Cancel)
+			{
+				return;
+			}
+			if (isDataBindingAutomatic)
+			{
+				this._updateKeys = gridViewUpdateEventArgs.Keys;
+				this._updateOldValues = gridViewUpdateEventArgs.OldValues;
+				this._updateNewValues = gridViewUpdateEventArgs.NewValues;
+				dataSourceView.Update(gridViewUpdateEventArgs.Keys, gridViewUpdateEventArgs.NewValues, gridViewUpdateEventArgs.OldValues, new DataSourceViewOperationCallback(this.HandleUpdateCallback));
+			}
+		}
+
+		// Token: 0x06003310 RID: 13072 RVA: 0x000A6FA4 File Offset: 0x000A51A4
+		private bool HandleUpdateCallback(int affectedRows, Exception ex)
+		{
+			GridViewUpdatedEventArgs gridViewUpdatedEventArgs = new GridViewUpdatedEventArgs(affectedRows, ex);
+			gridViewUpdatedEventArgs.SetKeys(this._updateKeys);
+			gridViewUpdatedEventArgs.SetOldValues(this._updateOldValues);
+			gridViewUpdatedEventArgs.SetNewValues(this._updateNewValues);
+			this.OnRowUpdated(gridViewUpdatedEventArgs);
+			this._updateKeys = null;
+			this._updateOldValues = null;
+			this._updateNewValues = null;
+			if (ex != null && !gridViewUpdatedEventArgs.ExceptionHandled)
+			{
+				if (this.PageIsValidAfterModelException())
+				{
+					return false;
+				}
+				gridViewUpdatedEventArgs.KeepInEditMode = true;
+			}
+			if (this.IsUsingModelBinders && !this.Page.ModelState.IsValid)
+			{
+				gridViewUpdatedEventArgs.KeepInEditMode = true;
+			}
+			if (!gridViewUpdatedEventArgs.KeepInEditMode)
+			{
+				this.EditIndex = -1;
+				base.RequiresDataBinding = true;
+			}
+			return true;
+		}
+
+		// Token: 0x06003311 RID: 13073 RVA: 0x000A7050 File Offset: 0x000A5250
+		protected virtual void InitializePager(GridViewRow row, int columnSpan, PagedDataSource pagedDataSource)
+		{
+			TableCell tableCell = new TableCell();
+			if (columnSpan > 1)
+			{
+				tableCell.ColumnSpan = columnSpan;
+			}
+			PagerSettings pagerSettings = this.PagerSettings;
+			if (this._pagerTemplate != null)
+			{
+				this.InitializeTemplateRow(row, columnSpan);
+				return;
+			}
+			PagerTable pagerTable = new PagerTable();
+			TableRow row2 = new TableRow();
+			switch (pagerSettings.Mode)
+			{
+			case PagerButtons.NextPrevious:
+				this.CreateNextPrevPager(row2, pagedDataSource, false);
+				break;
+			case PagerButtons.Numeric:
+				this.CreateNumericPager(row2, pagedDataSource, false);
+				break;
+			case PagerButtons.NextPreviousFirstLast:
+				this.CreateNextPrevPager(row2, pagedDataSource, true);
+				break;
+			case PagerButtons.NumericFirstLast:
+				this.CreateNumericPager(row2, pagedDataSource, true);
+				break;
+			}
+			tableCell.Controls.Add(pagerTable);
+			pagerTable.Rows.Add(row2);
+			row.Cells.Add(tableCell);
+		}
+
+		// Token: 0x06003312 RID: 13074 RVA: 0x000A7104 File Offset: 0x000A5304
+		protected virtual void InitializeRow(GridViewRow row, DataControlField[] fields)
+		{
+			DataControlRowType rowType = row.RowType;
+			DataControlRowState rowState = row.RowState;
+			int rowIndex = row.RowIndex;
+			bool flag = false;
+			if (rowType == DataControlRowType.EmptyDataRow)
+			{
+				this.InitializeTemplateRow(row, fields.Length);
+				return;
+			}
+			TableCellCollection cells = row.Cells;
+			string rowHeaderColumn = this.RowHeaderColumn;
+			if (rowType == DataControlRowType.Header)
+			{
+				flag = this.UseAccessibleHeader;
+			}
+			for (int i = 0; i < fields.Length; i++)
+			{
+				DataControlFieldCell dataControlFieldCell;
+				if (rowType == DataControlRowType.Header && flag)
+				{
+					dataControlFieldCell = new DataControlFieldHeaderCell(fields[i]);
+					((DataControlFieldHeaderCell)dataControlFieldCell).Scope = TableHeaderScope.Column;
+					((DataControlFieldHeaderCell)dataControlFieldCell).AbbreviatedText = fields[i].AccessibleHeaderText;
+				}
+				else
+				{
+					BoundField boundField = fields[i] as BoundField;
+					if (rowHeaderColumn.Length > 0 && boundField != null && boundField.DataField == rowHeaderColumn)
+					{
+						dataControlFieldCell = new DataControlFieldHeaderCell(fields[i]);
+						((DataControlFieldHeaderCell)dataControlFieldCell).Scope = TableHeaderScope.Row;
+					}
+					else
+					{
+						dataControlFieldCell = new DataControlFieldCell(fields[i]);
+					}
+				}
+				DataControlCellType cellType;
+				if (rowType != DataControlRowType.Header)
+				{
+					if (rowType != DataControlRowType.Footer)
+					{
+						cellType = DataControlCellType.DataCell;
+					}
+					else
+					{
+						cellType = DataControlCellType.Footer;
+					}
+				}
+				else
+				{
+					cellType = DataControlCellType.Header;
+				}
+				fields[i].InitializeCell(dataControlFieldCell, cellType, rowState, rowIndex);
+				cells.Add(dataControlFieldCell);
+			}
+		}
+
+		// Token: 0x06003313 RID: 13075 RVA: 0x000A7220 File Offset: 0x000A5420
+		private void InitializeTemplateRow(GridViewRow row, int columnSpan)
+		{
+			TableCell tableCell = null;
+			ITemplate template = null;
+			DataControlRowType rowType = row.RowType;
+			if (rowType != DataControlRowType.Pager)
+			{
+				if (rowType == DataControlRowType.EmptyDataRow)
+				{
+					if (this._emptyDataTemplate != null)
+					{
+						tableCell = new TableCell();
+						template = this._emptyDataTemplate;
+					}
+					else
+					{
+						tableCell = new TableCell();
+						string emptyDataText = this.EmptyDataText;
+						if (emptyDataText.Length > 0)
+						{
+							tableCell.Text = emptyDataText;
+						}
+					}
+				}
+			}
+			else if (this._pagerTemplate != null)
+			{
+				tableCell = new TableCell();
+				template = this._pagerTemplate;
+			}
+			if (tableCell != null)
+			{
+				if (columnSpan > 1)
+				{
+					tableCell.ColumnSpan = columnSpan;
+				}
+				if (template != null)
+				{
+					template.InstantiateIn(tableCell);
+				}
+				row.Cells.Add(tableCell);
+			}
+		}
+
+		// Token: 0x06003314 RID: 13076 RVA: 0x000A72B0 File Offset: 0x000A54B0
+		protected internal override void LoadControlState(object savedState)
+		{
+			this._editIndex = -1;
+			this._pageIndex = 0;
+			this._selectedIndex = -1;
+			this._sortExpression = string.Empty;
+			this._sortDirection = SortDirection.Ascending;
+			this._dataKeyNames = new string[0];
+			this._pageCount = -1;
+			object[] array = savedState as object[];
+			if (array != null)
+			{
+				base.LoadControlState(array[0]);
+				if (array[1] != null)
+				{
+					this._editIndex = (int)array[1];
+				}
+				if (array[2] != null)
+				{
+					this._pageIndex = (int)array[2];
+				}
+				if (array[3] != null)
+				{
+					this._selectedIndex = (int)array[3];
+				}
+				if (array[4] != null)
+				{
+					this._sortExpression = (string)array[4];
+				}
+				if (array[5] != null)
+				{
+					this._sortDirection = (SortDirection)array[5];
+				}
+				if (array[6] != null)
+				{
+					this._dataKeyNames = (string[])array[6];
+				}
+				if (array[7] != null)
+				{
+					this.LoadDataKeysState(array[7]);
+				}
+				if (array[8] != null)
+				{
+					this._pageCount = (int)array[8];
+				}
+				if (array[9] != null && this._dataKeyNames != null && this._dataKeyNames.Length != 0)
+				{
+					this._persistedDataKey = new DataKey(new OrderedDictionary(this._dataKeyNames.Length), this._dataKeyNames);
+					((IStateManager)this._persistedDataKey).LoadViewState(array[9]);
+				}
+				if (array[10] != null)
+				{
+					this._clientIDRowSuffix = (string[])array[10];
+				}
+				if (array[11] != null)
+				{
+					this.LoadClientIDRowSuffixDataKeysState(array[11]);
+					return;
+				}
+			}
+			else
+			{
+				base.LoadControlState(null);
+			}
+		}
+
+		// Token: 0x06003315 RID: 13077 RVA: 0x000A7414 File Offset: 0x000A5614
+		private void LoadDataKeysState(object state)
+		{
+			if (state != null)
+			{
+				object[] array = (object[])state;
+				string[] dataKeyNamesInternal = this.DataKeyNamesInternal;
+				int capacity = dataKeyNamesInternal.Length;
+				this.ClearDataKeys();
+				for (int i = 0; i < array.Length; i++)
+				{
+					this.DataKeysArrayList.Add(new DataKey(new OrderedDictionary(capacity), dataKeyNamesInternal));
+					((IStateManager)this.DataKeysArrayList[i]).LoadViewState(array[i]);
+				}
+			}
+		}
+
+		// Token: 0x06003316 RID: 13078 RVA: 0x000A747C File Offset: 0x000A567C
+		private void LoadClientIDRowSuffixDataKeysState(object state)
+		{
+			if (state != null)
+			{
+				object[] array = (object[])state;
+				string[] clientIDRowSuffixInternal = this.ClientIDRowSuffixInternal;
+				int capacity = clientIDRowSuffixInternal.Length;
+				this._clientIDRowSuffixArrayList = null;
+				for (int i = 0; i < array.Length; i++)
+				{
+					this.ClientIDRowSuffixArrayList.Add(new DataKey(new OrderedDictionary(capacity), clientIDRowSuffixInternal));
+					((IStateManager)this.ClientIDRowSuffixArrayList[i]).LoadViewState(array[i]);
+				}
+			}
+		}
+
+		// Token: 0x06003317 RID: 13079 RVA: 0x000A74E4 File Offset: 0x000A56E4
+		private bool LoadHiddenFieldState(string pageIndex, string sortDirection, string sortExpressionSerialized, string dataKeysSerialized)
+		{
+			bool result = false;
+			int num = int.Parse(pageIndex, CultureInfo.InvariantCulture);
+			SortDirection sortDirection2 = (SortDirection)int.Parse(sortDirection, CultureInfo.InvariantCulture);
+			string text = string.Empty;
+			object obj = null;
+			if (!string.IsNullOrEmpty(sortExpressionSerialized) || !string.IsNullOrEmpty(dataKeysSerialized))
+			{
+				if (this.Page == null)
+				{
+					throw new InvalidOperationException();
+				}
+				if (!string.IsNullOrEmpty(sortExpressionSerialized))
+				{
+					text = (string)this.StateFormatter.Deserialize(sortExpressionSerialized, Purpose.WebForms_GridView_SortExpression);
+				}
+				if (!string.IsNullOrEmpty(dataKeysSerialized))
+				{
+					obj = this.StateFormatter.Deserialize(dataKeysSerialized, Purpose.WebForms_GridView_DataKeys);
+				}
+			}
+			if (this._pageIndex != num || this._sortDirection != sortDirection2 || this._sortExpression != text)
+			{
+				result = true;
+				this._pageIndex = num;
+				this._sortExpression = text;
+				this._sortDirection = sortDirection2;
+				if (obj != null)
+				{
+					if (this._dataKeysArrayList != null)
+					{
+						this._dataKeysArrayList.Clear();
+					}
+					this.LoadDataKeysState(obj);
+				}
+			}
+			return result;
+		}
+
+		// Token: 0x06003318 RID: 13080 RVA: 0x000A75C8 File Offset: 0x000A57C8
+		protected override void LoadViewState(object savedState)
+		{
+			if (savedState != null)
+			{
+				object[] array = (object[])savedState;
+				base.LoadViewState(array[0]);
+				if (array[1] != null)
+				{
+					((IStateManager)this.Columns).LoadViewState(array[1]);
+				}
+				if (array[2] != null)
+				{
+					((IStateManager)this.PagerStyle).LoadViewState(array[2]);
+				}
+				if (array[3] != null)
+				{
+					((IStateManager)this.HeaderStyle).LoadViewState(array[3]);
+				}
+				if (array[4] != null)
+				{
+					((IStateManager)this.FooterStyle).LoadViewState(array[4]);
+				}
+				if (array[5] != null)
+				{
+					((IStateManager)this.RowStyle).LoadViewState(array[5]);
+				}
+				if (array[6] != null)
+				{
+					((IStateManager)this.AlternatingRowStyle).LoadViewState(array[6]);
+				}
+				if (array[7] != null)
+				{
+					((IStateManager)this.SelectedRowStyle).LoadViewState(array[7]);
+				}
+				if (array[8] != null)
+				{
+					((IStateManager)this.EditRowStyle).LoadViewState(array[8]);
+				}
+				if (array[9] != null)
+				{
+					((IStateManager)this.PagerSettings).LoadViewState(array[9]);
+				}
+				if (array[10] != null)
+				{
+					OrderedDictionaryStateHelper.LoadViewState((OrderedDictionary)this.BoundFieldValues, (ArrayList)array[10]);
+				}
+				if (array[11] != null)
+				{
+					((IStateManager)base.ControlStyle).LoadViewState(array[11]);
+				}
+				if (array[12] != null)
+				{
+					((IStateManager)this.ColumnsGeneratorInternal).LoadViewState(array[12]);
+				}
+				if (array[13] != null)
+				{
+					((IStateManager)this.SortedAscendingCellStyle).LoadViewState(array[13]);
+				}
+				if (array[14] != null)
+				{
+					((IStateManager)this.SortedDescendingCellStyle).LoadViewState(array[14]);
+				}
+				if (array[15] != null)
+				{
+					((IStateManager)this.SortedAscendingHeaderStyle).LoadViewState(array[15]);
+				}
+				if (array[16] != null)
+				{
+					((IStateManager)this.SortedDescendingHeaderStyle).LoadViewState(array[16]);
+					return;
+				}
+			}
+			else
+			{
+				base.LoadViewState(null);
+			}
+		}
+
+		// Token: 0x06003319 RID: 13081 RVA: 0x000A7744 File Offset: 0x000A5944
+		protected override bool OnBubbleEvent(object source, EventArgs e)
+		{
+			bool causesValidation = false;
+			string validationGroup = string.Empty;
+			GridViewCommandEventArgs gridViewCommandEventArgs = e as GridViewCommandEventArgs;
+			if (gridViewCommandEventArgs != null)
+			{
+				IButtonControl buttonControl = gridViewCommandEventArgs.CommandSource as IButtonControl;
+				if (buttonControl != null)
+				{
+					causesValidation = buttonControl.CausesValidation;
+					validationGroup = buttonControl.ValidationGroup;
+				}
+			}
+			return this.HandleEvent(e, causesValidation, validationGroup);
+		}
+
+		// Token: 0x0600331A RID: 13082 RVA: 0x000A7789 File Offset: 0x000A5989
+		protected override void OnDataPropertyChanged()
+		{
+			this._storedDataValid = false;
+			base.OnDataPropertyChanged();
+		}
+
+		// Token: 0x0600331B RID: 13083 RVA: 0x000A7798 File Offset: 0x000A5998
+		protected override void OnDataSourceViewChanged(object sender, EventArgs e)
+		{
+			this.ClearDataKeys();
+			base.OnDataSourceViewChanged(sender, e);
+		}
+
+		// Token: 0x0600331C RID: 13084 RVA: 0x0009D2FA File Offset: 0x0009B4FA
+		private void OnFieldsChanged(object sender, EventArgs e)
+		{
+			if (base.Initialized)
+			{
+				base.RequiresDataBinding = true;
+			}
+		}
+
+		// Token: 0x0600331D RID: 13085 RVA: 0x000A77A8 File Offset: 0x000A59A8
+		protected internal override void OnInit(EventArgs e)
+		{
+			base.OnInit(e);
+			if (this.Page != null)
+			{
+				if (this.DataKeyNames.Length != 0 && !this.AutoGenerateColumns)
+				{
+					this.Page.RegisterRequiresViewStateEncryption();
+				}
+				this.Page.RegisterRequiresControlState(this);
+			}
+			if (!base.DesignMode && !string.IsNullOrEmpty(this.ItemType))
+			{
+				DataBoundControlHelper.EnableDynamicData(this, this.ItemType);
+			}
+		}
+
+		// Token: 0x0600331E RID: 13086 RVA: 0x000A7810 File Offset: 0x000A5A10
+		protected virtual void OnPageIndexChanged(EventArgs e)
+		{
+			EventHandler eventHandler = (EventHandler)base.Events[GridView.EventPageIndexChanged];
+			if (eventHandler != null)
+			{
+				eventHandler(this, e);
+			}
+		}
+
+		// Token: 0x0600331F RID: 13087 RVA: 0x000A7840 File Offset: 0x000A5A40
+		protected override void OnPagePreLoad(object sender, EventArgs e)
+		{
+			if (this.Page != null && !this.Page.IsCallback && this.Page.RequestValueCollection != null)
+			{
+				string name = "__gv" + this.ClientID + "__hidden";
+				string text = this.Page.RequestValueCollection[name];
+				if (!string.IsNullOrEmpty(text) && this.ParseHiddenFieldState(text))
+				{
+					this._editIndex = -1;
+					base.RequiresDataBinding = true;
+				}
+			}
+			base.OnPagePreLoad(sender, e);
+		}
+
+		// Token: 0x06003320 RID: 13088 RVA: 0x0009D2FA File Offset: 0x0009B4FA
+		private void OnPagerPropertyChanged(object sender, EventArgs e)
+		{
+			if (base.Initialized)
+			{
+				base.RequiresDataBinding = true;
+			}
+		}
+
+		// Token: 0x06003321 RID: 13089 RVA: 0x000A78C0 File Offset: 0x000A5AC0
+		protected virtual void OnPageIndexChanging(GridViewPageEventArgs e)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewPageEventHandler gridViewPageEventHandler = (GridViewPageEventHandler)base.Events[GridView.EventPageIndexChanging];
+			if (gridViewPageEventHandler != null)
+			{
+				gridViewPageEventHandler(this, e);
+				return;
+			}
+			if (!isDataBindingAutomatic && !e.Cancel)
+			{
+				throw new HttpException(SR.GetString("GridView_UnhandledEvent", new object[]
+				{
+					this.ID,
+					"PageIndexChanging"
+				}));
+			}
+		}
+
+		// Token: 0x06003322 RID: 13090 RVA: 0x000A7928 File Offset: 0x000A5B28
+		protected internal override void OnPreRender(EventArgs e)
+		{
+			base.OnPreRender(e);
+			if (this.DetermineRenderClientScript() && this.Page != null)
+			{
+				string text = "__gv" + this.ClientID;
+				ClientScriptManager clientScript = this.Page.ClientScript;
+				clientScript.RegisterClientScriptResource(typeof(GridView), "GridView.js");
+				string callbackEventReference = clientScript.GetCallbackEventReference(this, text + ".getHiddenFieldContents(arg)", "GridView_OnCallback", text);
+				string text2 = text + "__hidden";
+				clientScript.RegisterHiddenField(text2, string.Empty);
+				IStateFormatter2 stateFormatter = this.StateFormatter;
+				string text3 = stateFormatter.Serialize(this.SortExpression, Purpose.WebForms_GridView_SortExpression);
+				string script = string.Format(CultureInfo.InvariantCulture, "\r\nvar {0} = new GridView();\r\n{0}.stateField = document.getElementById('{1}');\r\n{0}.panelElement = document.getElementById('{0}__div');\r\n{0}.pageIndex = {3};\r\n{0}.sortExpression = \"{4}\";\r\n{0}.sortDirection = {5};\r\n{0}.setStateField();\r\n{0}.callback = function(arg) {{\r\n    {2};\r\n}};", new object[]
+				{
+					text,
+					text2,
+					callbackEventReference,
+					this.PageIndex,
+					text3,
+					(int)this.SortDirection
+				});
+				clientScript.RegisterStartupScript(typeof(GridView), text, script, true);
+			}
+		}
+
+		// Token: 0x06003323 RID: 13091 RVA: 0x000A7A2C File Offset: 0x000A5C2C
+		protected virtual void OnRowCancelingEdit(GridViewCancelEditEventArgs e)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewCancelEditEventHandler gridViewCancelEditEventHandler = (GridViewCancelEditEventHandler)base.Events[GridView.EventRowCancelingEdit];
+			if (gridViewCancelEditEventHandler != null)
+			{
+				gridViewCancelEditEventHandler(this, e);
+				return;
+			}
+			if (!isDataBindingAutomatic && !e.Cancel)
+			{
+				throw new HttpException(SR.GetString("GridView_UnhandledEvent", new object[]
+				{
+					this.ID,
+					"RowCancelingEdit"
+				}));
+			}
+		}
+
+		// Token: 0x06003324 RID: 13092 RVA: 0x000A7A94 File Offset: 0x000A5C94
+		protected virtual void OnRowCommand(GridViewCommandEventArgs e)
+		{
+			GridViewCommandEventHandler gridViewCommandEventHandler = (GridViewCommandEventHandler)base.Events[GridView.EventRowCommand];
+			if (gridViewCommandEventHandler != null)
+			{
+				gridViewCommandEventHandler(this, e);
+			}
+		}
+
+		// Token: 0x06003325 RID: 13093 RVA: 0x000A7AC4 File Offset: 0x000A5CC4
+		protected virtual void OnRowCreated(GridViewRowEventArgs e)
+		{
+			GridViewRowEventHandler gridViewRowEventHandler = (GridViewRowEventHandler)base.Events[GridView.EventRowCreated];
+			if (gridViewRowEventHandler != null)
+			{
+				gridViewRowEventHandler(this, e);
+			}
+		}
+
+		// Token: 0x06003326 RID: 13094 RVA: 0x000A7AF4 File Offset: 0x000A5CF4
+		protected virtual void OnRowDataBound(GridViewRowEventArgs e)
+		{
+			GridViewRowEventHandler gridViewRowEventHandler = (GridViewRowEventHandler)base.Events[GridView.EventRowDataBound];
+			if (gridViewRowEventHandler != null)
+			{
+				gridViewRowEventHandler(this, e);
+			}
+		}
+
+		// Token: 0x06003327 RID: 13095 RVA: 0x000A7B24 File Offset: 0x000A5D24
+		protected virtual void OnRowDeleted(GridViewDeletedEventArgs e)
+		{
+			GridViewDeletedEventHandler gridViewDeletedEventHandler = (GridViewDeletedEventHandler)base.Events[GridView.EventRowDeleted];
+			if (gridViewDeletedEventHandler != null)
+			{
+				gridViewDeletedEventHandler(this, e);
+			}
+		}
+
+		// Token: 0x06003328 RID: 13096 RVA: 0x000A7B54 File Offset: 0x000A5D54
+		protected virtual void OnRowDeleting(GridViewDeleteEventArgs e)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewDeleteEventHandler gridViewDeleteEventHandler = (GridViewDeleteEventHandler)base.Events[GridView.EventRowDeleting];
+			if (gridViewDeleteEventHandler != null)
+			{
+				gridViewDeleteEventHandler(this, e);
+				return;
+			}
+			if (!isDataBindingAutomatic && !e.Cancel)
+			{
+				throw new HttpException(SR.GetString("GridView_UnhandledEvent", new object[]
+				{
+					this.ID,
+					"RowDeleting"
+				}));
+			}
+		}
+
+		// Token: 0x06003329 RID: 13097 RVA: 0x000A7BBC File Offset: 0x000A5DBC
+		protected virtual void OnRowEditing(GridViewEditEventArgs e)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewEditEventHandler gridViewEditEventHandler = (GridViewEditEventHandler)base.Events[GridView.EventRowEditing];
+			if (gridViewEditEventHandler != null)
+			{
+				gridViewEditEventHandler(this, e);
+				return;
+			}
+			if (!isDataBindingAutomatic && !e.Cancel)
+			{
+				throw new HttpException(SR.GetString("GridView_UnhandledEvent", new object[]
+				{
+					this.ID,
+					"RowEditing"
+				}));
+			}
+		}
+
+		// Token: 0x0600332A RID: 13098 RVA: 0x000A7C24 File Offset: 0x000A5E24
+		protected virtual void OnRowUpdated(GridViewUpdatedEventArgs e)
+		{
+			GridViewUpdatedEventHandler gridViewUpdatedEventHandler = (GridViewUpdatedEventHandler)base.Events[GridView.EventRowUpdated];
+			if (gridViewUpdatedEventHandler != null)
+			{
+				gridViewUpdatedEventHandler(this, e);
+			}
+		}
+
+		// Token: 0x0600332B RID: 13099 RVA: 0x000A7C54 File Offset: 0x000A5E54
+		protected virtual void OnRowUpdating(GridViewUpdateEventArgs e)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewUpdateEventHandler gridViewUpdateEventHandler = (GridViewUpdateEventHandler)base.Events[GridView.EventRowUpdating];
+			if (gridViewUpdateEventHandler != null)
+			{
+				gridViewUpdateEventHandler(this, e);
+				return;
+			}
+			if (!isDataBindingAutomatic && !e.Cancel)
+			{
+				throw new HttpException(SR.GetString("GridView_UnhandledEvent", new object[]
+				{
+					this.ID,
+					"RowUpdating"
+				}));
+			}
+		}
+
+		// Token: 0x0600332C RID: 13100 RVA: 0x000A7CBC File Offset: 0x000A5EBC
+		protected virtual void OnSelectedIndexChanged(EventArgs e)
+		{
+			EventHandler eventHandler = (EventHandler)base.Events[GridView.EventSelectedIndexChanged];
+			if (eventHandler != null)
+			{
+				eventHandler(this, e);
+			}
+		}
+
+		// Token: 0x0600332D RID: 13101 RVA: 0x000A7CEC File Offset: 0x000A5EEC
+		protected virtual void OnSelectedIndexChanging(GridViewSelectEventArgs e)
+		{
+			GridViewSelectEventHandler gridViewSelectEventHandler = (GridViewSelectEventHandler)base.Events[GridView.EventSelectedIndexChanging];
+			if (gridViewSelectEventHandler != null)
+			{
+				gridViewSelectEventHandler(this, e);
+			}
+		}
+
+		// Token: 0x0600332E RID: 13102 RVA: 0x000A7D1C File Offset: 0x000A5F1C
+		protected virtual void OnSorted(EventArgs e)
+		{
+			EventHandler eventHandler = (EventHandler)base.Events[GridView.EventSorted];
+			if (eventHandler != null)
+			{
+				eventHandler(this, e);
+			}
+		}
+
+		// Token: 0x0600332F RID: 13103 RVA: 0x000A7D4C File Offset: 0x000A5F4C
+		protected virtual void OnSorting(GridViewSortEventArgs e)
+		{
+			bool isDataBindingAutomatic = base.IsDataBindingAutomatic;
+			GridViewSortEventHandler gridViewSortEventHandler = (GridViewSortEventHandler)base.Events[GridView.EventSorting];
+			if (gridViewSortEventHandler != null)
+			{
+				gridViewSortEventHandler(this, e);
+				return;
+			}
+			if (!isDataBindingAutomatic && !e.Cancel)
+			{
+				throw new HttpException(SR.GetString("GridView_UnhandledEvent", new object[]
+				{
+					this.ID,
+					"Sorting"
+				}));
+			}
+		}
+
+		// Token: 0x06003330 RID: 13104 RVA: 0x000A7DB4 File Offset: 0x000A5FB4
+		private bool PageIsValidAfterModelException()
+		{
+			if (this._modelValidationGroup == null)
+			{
+				return true;
+			}
+			this.Page.Validate(this._modelValidationGroup);
+			return this.Page.IsValid;
+		}
+
+		// Token: 0x06003331 RID: 13105 RVA: 0x000A7DDC File Offset: 0x000A5FDC
+		private bool ParseHiddenFieldState(string state)
+		{
+			string[] array = state.Split(new char[]
+			{
+				'|'
+			});
+			return array.Length == 4 && this.LoadHiddenFieldState(array[0], array[1], array[2], array[3]);
+		}
+
+		// Token: 0x06003332 RID: 13106 RVA: 0x000A7E18 File Offset: 0x000A6018
+		protected internal override void PerformDataBinding(IEnumerable data)
+		{
+			base.PerformDataBinding(data);
+			int editIndex = this.EditIndex;
+			if (base.IsDataBindingAutomatic && editIndex != -1 && editIndex < this.Rows.Count && base.IsViewStateEnabled)
+			{
+				this.BoundFieldValues.Clear();
+				this.ExtractRowValues(this.BoundFieldValues, this.Rows[editIndex], true, false);
+			}
+			if (this.EnablePersistedSelection)
+			{
+				string[] dataKeyNamesInternal = this.DataKeyNamesInternal;
+				if (dataKeyNamesInternal == null || dataKeyNamesInternal.Length == 0)
+				{
+					throw new InvalidOperationException(SR.GetString("GridView_PersistedSelectionRequiresDataKeysNames"));
+				}
+			}
+		}
+
+		// Token: 0x06003333 RID: 13107 RVA: 0x000A7EA0 File Offset: 0x000A60A0
+		private void ApplySortingStyle(TableCell cell, DataControlField field, TableItemStyle ascendingStyle, TableItemStyle descendingStyle)
+		{
+			if (!string.IsNullOrEmpty(this.SortExpression) && string.Equals(field.SortExpression, this.SortExpression, StringComparison.OrdinalIgnoreCase))
+			{
+				if (this.SortDirection == SortDirection.Ascending)
+				{
+					cell.MergeStyle(ascendingStyle);
+					return;
+				}
+				cell.MergeStyle(descendingStyle);
+			}
+		}
+
+		// Token: 0x06003334 RID: 13108 RVA: 0x000A7EDC File Offset: 0x000A60DC
+		protected internal virtual void PrepareControlHierarchy()
+		{
+			if (this.Controls.Count == 0)
+			{
+				return;
+			}
+			bool controlStyleCreated = base.ControlStyleCreated;
+			Table table = (Table)this.Controls[0];
+			table.CopyBaseAttributes(this);
+			if (controlStyleCreated && !base.ControlStyle.IsEmpty)
+			{
+				table.ApplyStyle(base.ControlStyle);
+			}
+			else
+			{
+				table.GridLines = GridLines.Both;
+				table.CellSpacing = 0;
+			}
+			table.Caption = this.Caption;
+			table.CaptionAlign = this.CaptionAlign;
+			TableRowCollection rows = table.Rows;
+			Style style = null;
+			if (this._alternatingRowStyle != null)
+			{
+				style = new TableItemStyle();
+				style.CopyFrom(this._rowStyle);
+				style.CopyFrom(this._alternatingRowStyle);
+			}
+			else
+			{
+				style = this._rowStyle;
+			}
+			int num = 0;
+			bool flag = true;
+			foreach (object obj in rows)
+			{
+				GridViewRow gridViewRow = (GridViewRow)obj;
+				switch (gridViewRow.RowType)
+				{
+				case DataControlRowType.Header:
+					if (this.ShowHeader && this._headerStyle != null)
+					{
+						gridViewRow.MergeStyle(this._headerStyle);
+					}
+					break;
+				case DataControlRowType.Footer:
+					if (this.ShowFooter && this._footerStyle != null)
+					{
+						gridViewRow.MergeStyle(this._footerStyle);
+					}
+					break;
+				case DataControlRowType.DataRow:
+					if ((gridViewRow.RowState & DataControlRowState.Edit) != DataControlRowState.Normal)
+					{
+						Style style2 = new TableItemStyle();
+						if (gridViewRow.RowIndex % 2 != 0)
+						{
+							style2.CopyFrom(style);
+						}
+						else
+						{
+							style2.CopyFrom(this._rowStyle);
+						}
+						if (gridViewRow.RowIndex == this.SelectedIndex)
+						{
+							style2.CopyFrom(this._selectedRowStyle);
+						}
+						style2.CopyFrom(this._editRowStyle);
+						gridViewRow.MergeStyle(style2);
+					}
+					else if ((gridViewRow.RowState & DataControlRowState.Selected) != DataControlRowState.Normal)
+					{
+						Style style3 = new TableItemStyle();
+						if (gridViewRow.RowIndex % 2 != 0)
+						{
+							style3.CopyFrom(style);
+						}
+						else
+						{
+							style3.CopyFrom(this._rowStyle);
+						}
+						style3.CopyFrom(this._selectedRowStyle);
+						gridViewRow.MergeStyle(style3);
+					}
+					else if ((gridViewRow.RowState & DataControlRowState.Alternate) != DataControlRowState.Normal)
+					{
+						gridViewRow.MergeStyle(style);
+					}
+					else
+					{
+						gridViewRow.MergeStyle(this._rowStyle);
+					}
+					break;
+				case DataControlRowType.Pager:
+					if (gridViewRow.Visible && this._pagerStyle != null)
+					{
+						gridViewRow.MergeStyle(this._pagerStyle);
+					}
+					break;
+				case DataControlRowType.EmptyDataRow:
+					gridViewRow.MergeStyle(this._emptyDataRowStyle);
+					break;
+				}
+				bool flag2 = (gridViewRow.RowState & DataControlRowState.Selected) == DataControlRowState.Normal || ((gridViewRow.RowState & DataControlRowState.Selected) != DataControlRowState.Normal && this._selectedRowStyle == null);
+				if (gridViewRow.RowType != DataControlRowType.Pager && gridViewRow.RowType != DataControlRowType.EmptyDataRow)
+				{
+					foreach (object obj2 in gridViewRow.Cells)
+					{
+						TableCell tableCell = (TableCell)obj2;
+						DataControlFieldCell dataControlFieldCell = tableCell as DataControlFieldCell;
+						if (dataControlFieldCell != null)
+						{
+							DataControlField containingField = dataControlFieldCell.ContainingField;
+							if (containingField != null)
+							{
+								if (!containingField.Visible)
+								{
+									tableCell.Visible = false;
+								}
+								else
+								{
+									if (gridViewRow.RowType == DataControlRowType.DataRow && flag)
+									{
+										num++;
+									}
+									Style style4;
+									switch (gridViewRow.RowType)
+									{
+									case DataControlRowType.Header:
+										style4 = containingField.HeaderStyleInternal;
+										this.ApplySortingStyle(tableCell, containingField, this._sortedAscendingHeaderStyle, this._sortedDescendingHeaderStyle);
+										break;
+									case DataControlRowType.Footer:
+										style4 = containingField.FooterStyleInternal;
+										break;
+									case DataControlRowType.DataRow:
+										style4 = containingField.ItemStyleInternal;
+										if (flag2)
+										{
+											this.ApplySortingStyle(tableCell, containingField, this._sortedAscendingCellStyle, this._sortedDescendingCellStyle);
+										}
+										break;
+									default:
+										style4 = containingField.ItemStyleInternal;
+										break;
+									}
+									if (style4 != null)
+									{
+										tableCell.MergeStyle(style4);
+									}
+									if (gridViewRow.RowType == DataControlRowType.DataRow)
+									{
+										foreach (object obj3 in tableCell.Controls)
+										{
+											Control control = (Control)obj3;
+											WebControl webControl = control as WebControl;
+											Style controlStyleInternal = containingField.ControlStyleInternal;
+											if (webControl != null && controlStyleInternal != null && !controlStyleInternal.IsEmpty)
+											{
+												webControl.ControlStyle.CopyFrom(controlStyleInternal);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					if (gridViewRow.RowType == DataControlRowType.DataRow)
+					{
+						flag = false;
+					}
+				}
+			}
+			if (this.Rows.Count > 0 && num != this.Rows[0].Cells.Count)
+			{
+				if (this._topPagerRow != null && this._topPagerRow.Cells.Count > 0)
+				{
+					this._topPagerRow.Cells[0].ColumnSpan = num;
+				}
+				if (this._bottomPagerRow != null && this._bottomPagerRow.Cells.Count > 0)
+				{
+					this._bottomPagerRow.Cells[0].ColumnSpan = num;
+				}
+			}
+		}
+
+		// Token: 0x06003335 RID: 13109 RVA: 0x000A8420 File Offset: 0x000A6620
+		protected virtual void RaiseCallbackEvent(string eventArgument)
+		{
+			string[] array = eventArgument.Split(new char[]
+			{
+				'|'
+			});
+			IStateFormatter2 stateFormatter = this.StateFormatter;
+			base.ValidateEvent(this.UniqueID, string.Concat(new string[]
+			{
+				"\"",
+				array[0],
+				"|",
+				array[1],
+				"|",
+				array[2],
+				"|",
+				array[3],
+				"\""
+			}));
+			this.LoadHiddenFieldState(array[4], array[5], array[6], array[7]);
+			int num = int.Parse(array[0], CultureInfo.InvariantCulture);
+			string serializedState = array[2];
+			int num2 = int.Parse(array[1], CultureInfo.InvariantCulture);
+			if (num == this.PageIndex)
+			{
+				SortDirection sortDirectionInternal = SortDirection.Ascending;
+				string text = (string)stateFormatter.Deserialize(serializedState, Purpose.WebForms_GridView_SortExpression);
+				if (text == this.SortExpressionInternal && this.SortDirectionInternal == SortDirection.Ascending)
+				{
+					sortDirectionInternal = SortDirection.Descending;
+				}
+				this.SortExpressionInternal = text;
+				this.SortDirectionInternal = sortDirectionInternal;
+				this._pageIndex = 0;
+			}
+			else
+			{
+				this.EditIndex = -1;
+				this._pageIndex = num;
+			}
+			this.DataBind();
+		}
+
+		// Token: 0x06003336 RID: 13110 RVA: 0x000A8538 File Offset: 0x000A6738
+		protected virtual void RaisePostBackEvent(string eventArgument)
+		{
+			base.ValidateEvent(this.UniqueID, eventArgument);
+			int num = eventArgument.IndexOf('$');
+			if (num < 0)
+			{
+				return;
+			}
+			CommandEventArgs originalArgs = new CommandEventArgs(eventArgument.Substring(0, num), eventArgument.Substring(num + 1));
+			GridViewCommandEventArgs e = new GridViewCommandEventArgs(null, this, originalArgs);
+			this.HandleEvent(e, false, string.Empty);
+		}
+
+		// Token: 0x06003337 RID: 13111 RVA: 0x000A858E File Offset: 0x000A678E
+		protected internal override void Render(HtmlTextWriter writer)
+		{
+			this.Render(writer, !base.DesignMode);
+		}
+
+		// Token: 0x06003338 RID: 13112 RVA: 0x000A85A0 File Offset: 0x000A67A0
+		private void Render(HtmlTextWriter writer, bool renderPanel)
+		{
+			if (this.Page != null)
+			{
+				this.Page.VerifyRenderingInServerForm(this);
+			}
+			this.PrepareControlHierarchy();
+			if (renderPanel)
+			{
+				string clientID = this.ClientID;
+				if (this.DetermineRenderClientScript())
+				{
+					if (clientID == null)
+					{
+						throw new HttpException(SR.GetString("GridView_MustBeParented"));
+					}
+					StringBuilder stringBuilder = new StringBuilder("__gv", clientID.Length + 9);
+					stringBuilder.Append(clientID);
+					stringBuilder.Append("__div");
+					writer.AddAttribute(HtmlTextWriterAttribute.Id, stringBuilder.ToString(), true);
+				}
+				writer.RenderBeginTag(HtmlTextWriterTag.Div);
+			}
+			this.RenderContents(writer);
+			if (renderPanel)
+			{
+				writer.RenderEndTag();
+			}
+		}
+
+		// Token: 0x06003339 RID: 13113 RVA: 0x000A863B File Offset: 0x000A683B
+		private void RenderTableContents(HtmlTextWriter writer)
+		{
+			this.Render(writer, false);
+		}
+
+		// Token: 0x0600333A RID: 13114 RVA: 0x000A8645 File Offset: 0x000A6845
+		private void ResetModelValidationGroup(bool causesValidation, string validationGroup)
+		{
+			this._modelValidationGroup = null;
+			if (causesValidation)
+			{
+				this.Page.Validate(validationGroup);
+				if (this.EnableModelValidation)
+				{
+					this._modelValidationGroup = validationGroup;
+				}
+			}
+		}
+
+		// Token: 0x0600333B RID: 13115 RVA: 0x000A866C File Offset: 0x000A686C
+		protected internal override object SaveControlState()
+		{
+			object obj = base.SaveControlState();
+			if (obj != null || this._pageIndex != 0 || this._editIndex != -1 || this._selectedIndex != -1 || (this._sortExpression != null && this._sortExpression.Length != 0) || (this._sortDirection != SortDirection.Ascending || (this._dataKeyNames != null && this._dataKeyNames.Length != 0)) || (this._dataKeysArrayList != null && this._dataKeysArrayList.Count > 0) || this._pageCount != -1)
+			{
+				return new object[]
+				{
+					obj,
+					(this._editIndex == -1) ? null : this._editIndex,
+					(this._pageIndex == 0) ? null : this._pageIndex,
+					(this._selectedIndex == -1) ? null : this._selectedIndex,
+					(this._sortExpression == null || this._sortExpression.Length == 0) ? null : this._sortExpression,
+					(this._sortDirection == SortDirection.Ascending) ? null : ((int)this._sortDirection),
+					(this._dataKeyNames == null || this._dataKeyNames.Length == 0) ? null : this._dataKeyNames,
+					this.SaveDataKeysState(),
+					this._pageCount,
+					(this._persistedDataKey == null) ? null : ((IStateManager)this._persistedDataKey).SaveViewState(),
+					(this._clientIDRowSuffix == null || this._clientIDRowSuffix.Length == 0) ? null : this._clientIDRowSuffix,
+					this.SaveClientIDRowSuffixDataKeysState()
+				};
+			}
+			return true;
+		}
+
+		// Token: 0x0600333C RID: 13116 RVA: 0x000A8800 File Offset: 0x000A6A00
+		private object SaveDataKeysState()
+		{
+			object obj = new object();
+			int num = 0;
+			if (this._dataKeysArrayList != null && this._dataKeysArrayList.Count > 0)
+			{
+				num = this._dataKeysArrayList.Count;
+				obj = new object[num];
+				for (int i = 0; i < num; i++)
+				{
+					((object[])obj)[i] = ((IStateManager)this._dataKeysArrayList[i]).SaveViewState();
+				}
+			}
+			if (this._dataKeysArrayList != null && num != 0)
+			{
+				return obj;
+			}
+			return null;
+		}
+
+		// Token: 0x0600333D RID: 13117 RVA: 0x000A8878 File Offset: 0x000A6A78
+		private object SaveClientIDRowSuffixDataKeysState()
+		{
+			object obj = new object();
+			int num = 0;
+			if (this._clientIDRowSuffixArrayList != null && this._clientIDRowSuffixArrayList.Count > 0)
+			{
+				num = this._clientIDRowSuffixArrayList.Count;
+				obj = new object[num];
+				for (int i = 0; i < num; i++)
+				{
+					((object[])obj)[i] = ((IStateManager)this._clientIDRowSuffixArrayList[i]).SaveViewState();
+				}
+			}
+			if (this._clientIDRowSuffixArrayList != null && num != 0)
+			{
+				return obj;
+			}
+			return null;
+		}
+
+		// Token: 0x0600333E RID: 13118 RVA: 0x000A88F0 File Offset: 0x000A6AF0
+		protected override object SaveViewState()
+		{
+			object obj = base.SaveViewState();
+			object obj2 = (this._fieldCollection != null) ? ((IStateManager)this._fieldCollection).SaveViewState() : null;
+			object obj3 = (this._pagerStyle != null) ? ((IStateManager)this._pagerStyle).SaveViewState() : null;
+			object obj4 = (this._headerStyle != null) ? ((IStateManager)this._headerStyle).SaveViewState() : null;
+			object obj5 = (this._footerStyle != null) ? ((IStateManager)this._footerStyle).SaveViewState() : null;
+			object obj6 = (this._rowStyle != null) ? ((IStateManager)this._rowStyle).SaveViewState() : null;
+			object obj7 = (this._alternatingRowStyle != null) ? ((IStateManager)this._alternatingRowStyle).SaveViewState() : null;
+			object obj8 = (this._selectedRowStyle != null) ? ((IStateManager)this._selectedRowStyle).SaveViewState() : null;
+			object obj9 = (this._editRowStyle != null) ? ((IStateManager)this._editRowStyle).SaveViewState() : null;
+			object obj10 = (this._boundFieldValues != null) ? OrderedDictionaryStateHelper.SaveViewState(this._boundFieldValues) : null;
+			object obj11 = (this._pagerSettings != null) ? ((IStateManager)this._pagerSettings).SaveViewState() : null;
+			object obj12 = base.ControlStyleCreated ? ((IStateManager)base.ControlStyle).SaveViewState() : null;
+			object obj13 = (this._sortedAscendingCellStyle != null) ? ((IStateManager)this._sortedAscendingCellStyle).SaveViewState() : null;
+			object obj14 = (this._sortedDescendingCellStyle != null) ? ((IStateManager)this._sortedDescendingCellStyle).SaveViewState() : null;
+			object obj15 = (this._sortedAscendingHeaderStyle != null) ? ((IStateManager)this._sortedAscendingHeaderStyle).SaveViewState() : null;
+			object obj16 = (this._sortedDescendingHeaderStyle != null) ? ((IStateManager)this._sortedDescendingHeaderStyle).SaveViewState() : null;
+			return new object[]
+			{
+				obj,
+				obj2,
+				obj3,
+				obj4,
+				obj5,
+				obj6,
+				obj7,
+				obj8,
+				obj9,
+				obj11,
+				obj10,
+				obj12,
+				(this.ColumnsGeneratorInternal is IStateManager) ? ((IStateManager)this.ColumnsGeneratorInternal).SaveViewState() : null,
+				obj13,
+				obj14,
+				obj15,
+				obj16
+			};
+		}
+
+		// Token: 0x0600333F RID: 13119 RVA: 0x000A8AFC File Offset: 0x000A6CFC
+		private void ResetPersistedSelectedIndex()
+		{
+			if (this.EnablePersistedSelection && this._persistedDataKey != null)
+			{
+				this._selectedIndex = -1;
+			}
+		}
+
+		// Token: 0x06003340 RID: 13120 RVA: 0x000A8B15 File Offset: 0x000A6D15
+		private void SetPersistedDataKey(int dataItemIndex, DataKey currentKey)
+		{
+			if (this._persistedDataKey == null)
+			{
+				if (this._selectedIndex == dataItemIndex)
+				{
+					this._persistedDataKey = currentKey;
+					return;
+				}
+			}
+			else if (this._persistedDataKey.Equals(currentKey))
+			{
+				this._selectedIndex = dataItemIndex;
+			}
+		}
+
+		// Token: 0x06003341 RID: 13121 RVA: 0x000A8B45 File Offset: 0x000A6D45
+		public void SetPageIndex(int rowIndex)
+		{
+			this.HandlePage(rowIndex);
+		}
+
+		// Token: 0x06003342 RID: 13122 RVA: 0x000A8B4E File Offset: 0x000A6D4E
+		public void SelectRow(int rowIndex)
+		{
+			this.HandleSelect(rowIndex);
+		}
+
+		// Token: 0x06003343 RID: 13123 RVA: 0x000A8B57 File Offset: 0x000A6D57
+		public void SetEditRow(int rowIndex)
+		{
+			this.HandleEdit(rowIndex);
+		}
+
+		// Token: 0x06003344 RID: 13124 RVA: 0x000A8B60 File Offset: 0x000A6D60
+		private void SelectCallback(IEnumerable data)
+		{
+			throw new HttpException(SR.GetString("DataBoundControl_DataSourceDoesntSupportPaging", new object[]
+			{
+				this.DataSourceID
+			}));
+		}
+
+		// Token: 0x06003345 RID: 13125 RVA: 0x000A8B80 File Offset: 0x000A6D80
+		public virtual void Sort(string sortExpression, SortDirection sortDirection)
+		{
+			this.HandleSort(sortExpression, sortDirection);
+		}
+
+		// Token: 0x06003346 RID: 13126 RVA: 0x000A8B8C File Offset: 0x000A6D8C
+		protected override void TrackViewState()
+		{
+			base.TrackViewState();
+			if (this._fieldCollection != null)
+			{
+				((IStateManager)this._fieldCollection).TrackViewState();
+			}
+			if (this._pagerStyle != null)
+			{
+				((IStateManager)this._pagerStyle).TrackViewState();
+			}
+			if (this._headerStyle != null)
+			{
+				((IStateManager)this._headerStyle).TrackViewState();
+			}
+			if (this._footerStyle != null)
+			{
+				((IStateManager)this._footerStyle).TrackViewState();
+			}
+			if (this._rowStyle != null)
+			{
+				((IStateManager)this._rowStyle).TrackViewState();
+			}
+			if (this._sortedAscendingCellStyle != null)
+			{
+				((IStateManager)this._sortedAscendingCellStyle).TrackViewState();
+			}
+			if (this._sortedDescendingCellStyle != null)
+			{
+				((IStateManager)this._sortedDescendingCellStyle).TrackViewState();
+			}
+			if (this._sortedAscendingHeaderStyle != null)
+			{
+				((IStateManager)this._sortedAscendingHeaderStyle).TrackViewState();
+			}
+			if (this._sortedDescendingHeaderStyle != null)
+			{
+				((IStateManager)this._sortedDescendingHeaderStyle).TrackViewState();
+			}
+			if (this._alternatingRowStyle != null)
+			{
+				((IStateManager)this._alternatingRowStyle).TrackViewState();
+			}
+			if (this._selectedRowStyle != null)
+			{
+				((IStateManager)this._selectedRowStyle).TrackViewState();
+			}
+			if (this._editRowStyle != null)
+			{
+				((IStateManager)this._editRowStyle).TrackViewState();
+			}
+			if (this._pagerSettings != null)
+			{
+				((IStateManager)this._pagerSettings).TrackViewState();
+			}
+			if (base.ControlStyleCreated)
+			{
+				((IStateManager)base.ControlStyle).TrackViewState();
+			}
+			if (this._dataKeyArray != null)
+			{
+				((IStateManager)this._dataKeyArray).TrackViewState();
+			}
+		}
+
+		// Token: 0x06003347 RID: 13127 RVA: 0x000A8CBC File Offset: 0x000A6EBC
+		internal override void UpdateModelDataSourceProperties(ModelDataSource modelDataSource)
+		{
+			string dataKeyName = (this.DataKeyNamesInternal.Length != 0) ? this.DataKeyNamesInternal[0] : "";
+			modelDataSource.UpdateProperties(this.ItemType, this.SelectMethod, this.UpdateMethod, base.InsertMethod, this.DeleteMethod, dataKeyName);
+		}
+
+		// Token: 0x06003348 RID: 13128 RVA: 0x000A8D07 File Offset: 0x000A6F07
+		public virtual void UpdateRow(int rowIndex, bool causesValidation)
+		{
+			this.ResetModelValidationGroup(causesValidation, string.Empty);
+			this.HandleUpdate(null, rowIndex, causesValidation);
+		}
+
+		// Token: 0x06003349 RID: 13129 RVA: 0x000A8D1E File Offset: 0x000A6F1E
+		void IPostBackEventHandler.RaisePostBackEvent(string eventArgument)
+		{
+			this.RaisePostBackEvent(eventArgument);
+		}
+
+		// Token: 0x0600334A RID: 13130 RVA: 0x000A8D28 File Offset: 0x000A6F28
+		PostBackOptions IPostBackContainer.GetPostBackOptions(IButtonControl buttonControl)
+		{
+			if (buttonControl == null)
+			{
+				throw new ArgumentNullException("buttonControl");
+			}
+			if (buttonControl.CausesValidation)
+			{
+				throw new InvalidOperationException(SR.GetString("CannotUseParentPostBackWhenValidating", new object[]
+				{
+					base.GetType().Name,
+					this.ID
+				}));
+			}
+			return new PostBackOptions(this, buttonControl.CommandName + "$" + buttonControl.CommandArgument)
+			{
+				RequiresJavaScriptProtocol = true
+			};
+		}
+
+		// Token: 0x0600334B RID: 13131 RVA: 0x000A8D9D File Offset: 0x000A6F9D
+		string ICallbackContainer.GetCallbackScript(IButtonControl buttonControl, string argument)
+		{
+			return this.GetCallbackScript(buttonControl, argument);
+		}
+
+		// Token: 0x0600334C RID: 13132 RVA: 0x000A8DA7 File Offset: 0x000A6FA7
+		void ICallbackEventHandler.RaiseCallbackEvent(string eventArgument)
+		{
+			this.RaiseCallbackEvent(eventArgument);
+		}
+
+		// Token: 0x0600334D RID: 13133 RVA: 0x000A8DB0 File Offset: 0x000A6FB0
+		string ICallbackEventHandler.GetCallbackResult()
+		{
+			return this.GetCallbackResult();
+		}
+
+		// Token: 0x17000ED4 RID: 3796
+		// (get) Token: 0x0600334E RID: 13134 RVA: 0x000A8DB8 File Offset: 0x000A6FB8
+		// (set) Token: 0x0600334F RID: 13135 RVA: 0x000A8DC0 File Offset: 0x000A6FC0
+		DataKey IPersistedSelector.DataKey
+		{
+			get
+			{
+				return this.SelectedPersistedDataKey;
+			}
+			set
+			{
+				this.SelectedPersistedDataKey = value;
+			}
+		}
+
+		// Token: 0x17000ED5 RID: 3797
+		// (get) Token: 0x06003350 RID: 13136 RVA: 0x000A8DC9 File Offset: 0x000A6FC9
+		DataKeyArray IDataKeysControl.ClientIDRowSuffixDataKeys
+		{
+			get
+			{
+				return this.ClientIDRowSuffixDataKeys;
+			}
+		}
+
+		// Token: 0x17000ED6 RID: 3798
+		// (get) Token: 0x06003351 RID: 13137 RVA: 0x000A8DD1 File Offset: 0x000A6FD1
+		DataKeyArray IDataBoundListControl.DataKeys
+		{
+			get
+			{
+				return this.DataKeys;
+			}
+		}
+
+		// Token: 0x17000ED7 RID: 3799
+		// (get) Token: 0x06003352 RID: 13138 RVA: 0x000A8DD9 File Offset: 0x000A6FD9
+		DataKey IDataBoundListControl.SelectedDataKey
+		{
+			get
+			{
+				return this.SelectedDataKey;
+			}
+		}
+
+		// Token: 0x17000ED8 RID: 3800
+		// (get) Token: 0x06003353 RID: 13139 RVA: 0x000A8DE1 File Offset: 0x000A6FE1
+		// (set) Token: 0x06003354 RID: 13140 RVA: 0x000A8DE9 File Offset: 0x000A6FE9
+		int IDataBoundListControl.SelectedIndex
+		{
+			get
+			{
+				return this.SelectedIndex;
+			}
+			set
+			{
+				this.SelectedIndex = value;
+			}
+		}
+
+		// Token: 0x17000ED9 RID: 3801
+		// (get) Token: 0x06003355 RID: 13141 RVA: 0x000A8DF2 File Offset: 0x000A6FF2
+		// (set) Token: 0x06003356 RID: 13142 RVA: 0x000A8DFA File Offset: 0x000A6FFA
+		string[] IDataBoundListControl.ClientIDRowSuffix
+		{
+			get
+			{
+				return this.ClientIDRowSuffix;
+			}
+			set
+			{
+				this.ClientIDRowSuffix = value;
+			}
+		}
+
+		// Token: 0x17000EDA RID: 3802
+		// (get) Token: 0x06003357 RID: 13143 RVA: 0x000A8E03 File Offset: 0x000A7003
+		// (set) Token: 0x06003358 RID: 13144 RVA: 0x000A8E0B File Offset: 0x000A700B
+		bool IDataBoundListControl.EnablePersistedSelection
+		{
+			get
+			{
+				return this.EnablePersistedSelection;
+			}
+			set
+			{
+				this.EnablePersistedSelection = value;
+			}
+		}
+
+		// Token: 0x17000EDB RID: 3803
+		// (get) Token: 0x06003359 RID: 13145 RVA: 0x0009E2DB File Offset: 0x0009C4DB
+		// (set) Token: 0x0600335A RID: 13146 RVA: 0x0009E2E3 File Offset: 0x0009C4E3
+		string IDataBoundControl.DataSourceID
+		{
+			get
+			{
+				return this.DataSourceID;
+			}
+			set
+			{
+				this.DataSourceID = value;
+			}
+		}
+
+		// Token: 0x17000EDC RID: 3804
+		// (get) Token: 0x0600335B RID: 13147 RVA: 0x0009E2EC File Offset: 0x0009C4EC
+		IDataSource IDataBoundControl.DataSourceObject
+		{
+			get
+			{
+				return base.DataSourceObject;
+			}
+		}
+
+		// Token: 0x17000EDD RID: 3805
+		// (get) Token: 0x0600335C RID: 13148 RVA: 0x0009E2F4 File Offset: 0x0009C4F4
+		// (set) Token: 0x0600335D RID: 13149 RVA: 0x0009E2FC File Offset: 0x0009C4FC
+		object IDataBoundControl.DataSource
+		{
+			get
+			{
+				return this.DataSource;
+			}
+			set
+			{
+				this.DataSource = value;
+			}
+		}
+
+		// Token: 0x17000EDE RID: 3806
+		// (get) Token: 0x0600335E RID: 13150 RVA: 0x000A8E14 File Offset: 0x000A7014
+		// (set) Token: 0x0600335F RID: 13151 RVA: 0x000A8E1C File Offset: 0x000A701C
+		string[] IDataBoundControl.DataKeyNames
+		{
+			get
+			{
+				return this.DataKeyNames;
+			}
+			set
+			{
+				this.DataKeyNames = value;
+			}
+		}
+
+		// Token: 0x17000EDF RID: 3807
+		// (get) Token: 0x06003360 RID: 13152 RVA: 0x0009E316 File Offset: 0x0009C516
+		// (set) Token: 0x06003361 RID: 13153 RVA: 0x0009E31E File Offset: 0x0009C51E
+		string IDataBoundControl.DataMember
+		{
+			get
+			{
+				return this.DataMember;
+			}
+			set
+			{
+				this.DataMember = value;
+			}
+		}
+
+		// Token: 0x17000EE0 RID: 3808
+		// (get) Token: 0x06003362 RID: 13154 RVA: 0x000A8E25 File Offset: 0x000A7025
+		// (set) Token: 0x06003363 RID: 13155 RVA: 0x000A8E2D File Offset: 0x000A702D
+		IAutoFieldGenerator IFieldControl.FieldsGenerator
+		{
+			get
+			{
+				return this.ColumnsGenerator;
+			}
+			set
+			{
+				this.ColumnsGenerator = value;
+			}
+		}
+
+		// Token: 0x0400211C RID: 8476
+		private static readonly object EventPageIndexChanging = new object();
+
+		// Token: 0x0400211D RID: 8477
+		private static readonly object EventPageIndexChanged = new object();
+
+		// Token: 0x0400211E RID: 8478
+		private static readonly object EventRowCancelingEdit = new object();
+
+		// Token: 0x0400211F RID: 8479
+		private static readonly object EventRowCommand = new object();
+
+		// Token: 0x04002120 RID: 8480
+		private static readonly object EventRowCreated = new object();
+
+		// Token: 0x04002121 RID: 8481
+		private static readonly object EventRowDataBound = new object();
+
+		// Token: 0x04002122 RID: 8482
+		private static readonly object EventRowDeleted = new object();
+
+		// Token: 0x04002123 RID: 8483
+		private static readonly object EventRowDeleting = new object();
+
+		// Token: 0x04002124 RID: 8484
+		private static readonly object EventRowEditing = new object();
+
+		// Token: 0x04002125 RID: 8485
+		private static readonly object EventRowUpdated = new object();
+
+		// Token: 0x04002126 RID: 8486
+		private static readonly object EventRowUpdating = new object();
+
+		// Token: 0x04002127 RID: 8487
+		private static readonly object EventSelectedIndexChanging = new object();
+
+		// Token: 0x04002128 RID: 8488
+		private static readonly object EventSelectedIndexChanged = new object();
+
+		// Token: 0x04002129 RID: 8489
+		private static readonly object EventSorted = new object();
+
+		// Token: 0x0400212A RID: 8490
+		private static readonly object EventSorting = new object();
+
+		// Token: 0x0400212B RID: 8491
+		private IEnumerator _storedData;
+
+		// Token: 0x0400212C RID: 8492
+		private object _firstDataRow;
+
+		// Token: 0x0400212D RID: 8493
+		private bool _storedDataValid;
+
+		// Token: 0x0400212E RID: 8494
+		private int _pageCount = -1;
+
+		// Token: 0x0400212F RID: 8495
+		private DataControlFieldCollection _fieldCollection;
+
+		// Token: 0x04002130 RID: 8496
+		private TableItemStyle _headerStyle;
+
+		// Token: 0x04002131 RID: 8497
+		private TableItemStyle _footerStyle;
+
+		// Token: 0x04002132 RID: 8498
+		private TableItemStyle _rowStyle;
+
+		// Token: 0x04002133 RID: 8499
+		private TableItemStyle _alternatingRowStyle;
+
+		// Token: 0x04002134 RID: 8500
+		private TableItemStyle _selectedRowStyle;
+
+		// Token: 0x04002135 RID: 8501
+		private TableItemStyle _editRowStyle;
+
+		// Token: 0x04002136 RID: 8502
+		private TableItemStyle _emptyDataRowStyle;
+
+		// Token: 0x04002137 RID: 8503
+		private TableItemStyle _pagerStyle;
+
+		// Token: 0x04002138 RID: 8504
+		private TableItemStyle _sortedAscendingCellStyle;
+
+		// Token: 0x04002139 RID: 8505
+		private TableItemStyle _sortedDescendingCellStyle;
+
+		// Token: 0x0400213A RID: 8506
+		private TableItemStyle _sortedAscendingHeaderStyle;
+
+		// Token: 0x0400213B RID: 8507
+		private TableItemStyle _sortedDescendingHeaderStyle;
+
+		// Token: 0x0400213C RID: 8508
+		private PagerSettings _pagerSettings;
+
+		// Token: 0x0400213D RID: 8509
+		private ITemplate _pagerTemplate;
+
+		// Token: 0x0400213E RID: 8510
+		private ITemplate _emptyDataTemplate;
+
+		// Token: 0x0400213F RID: 8511
+		private GridViewRow _bottomPagerRow;
+
+		// Token: 0x04002140 RID: 8512
+		private GridViewRow _footerRow;
+
+		// Token: 0x04002141 RID: 8513
+		private GridViewRow _headerRow;
+
+		// Token: 0x04002142 RID: 8514
+		private GridViewRow _topPagerRow;
+
+		// Token: 0x04002143 RID: 8515
+		private ArrayList _rowsArray;
+
+		// Token: 0x04002144 RID: 8516
+		private GridViewRowCollection _rowsCollection;
+
+		// Token: 0x04002145 RID: 8517
+		private DataKeyArray _dataKeyArray;
+
+		// Token: 0x04002146 RID: 8518
+		private ArrayList _dataKeysArrayList;
+
+		// Token: 0x04002147 RID: 8519
+		private DataKeyArray _clientIDRowSuffixArray;
+
+		// Token: 0x04002148 RID: 8520
+		private ArrayList _clientIDRowSuffixArrayList;
+
+		// Token: 0x04002149 RID: 8521
+		private OrderedDictionary _boundFieldValues;
+
+		// Token: 0x0400214A RID: 8522
+		private string[] _dataKeyNames;
+
+		// Token: 0x0400214B RID: 8523
+		private string[] _clientIDRowSuffix;
+
+		// Token: 0x0400214C RID: 8524
+		private DataKey _persistedDataKey;
+
+		// Token: 0x0400214D RID: 8525
+		private int _editIndex = -1;
+
+		// Token: 0x0400214E RID: 8526
+		private int _selectedIndex = -1;
+
+		// Token: 0x0400214F RID: 8527
+		private int _pageIndex;
+
+		// Token: 0x04002150 RID: 8528
+		private string _sortExpression = string.Empty;
+
+		// Token: 0x04002151 RID: 8529
+		private SortDirection _sortDirection;
+
+		// Token: 0x04002152 RID: 8530
+		private string _sortExpressionSerialized;
+
+		// Token: 0x04002153 RID: 8531
+		private string _modelValidationGroup;
+
+		// Token: 0x04002154 RID: 8532
+		private IAutoFieldGenerator _columnsGenerator;
+
+		// Token: 0x04002155 RID: 8533
+		private GridViewColumnsGenerator _defaultColumnsGenerator = new GridViewColumnsGenerator();
+
+		// Token: 0x04002156 RID: 8534
+		private IOrderedDictionary _updateKeys;
+
+		// Token: 0x04002157 RID: 8535
+		private IOrderedDictionary _updateOldValues;
+
+		// Token: 0x04002158 RID: 8536
+		private IOrderedDictionary _updateNewValues;
+
+		// Token: 0x04002159 RID: 8537
+		private IOrderedDictionary _deleteKeys;
+
+		// Token: 0x0400215A RID: 8538
+		private IOrderedDictionary _deleteValues;
+
+		// Token: 0x0400215B RID: 8539
+		private int _deletedRowIndex;
+
+		// Token: 0x0400215C RID: 8540
+		private bool _renderClientScript;
+
+		// Token: 0x0400215D RID: 8541
+		private bool _renderClientScriptValid;
+
+		// Token: 0x0400215E RID: 8542
+		private IStateFormatter2 _stateFormatter;
+
+		// Token: 0x0400215F RID: 8543
+		private const string startupScriptFormat = "\r\nvar {0} = new GridView();\r\n{0}.stateField = document.getElementById('{1}');\r\n{0}.panelElement = document.getElementById('{0}__div');\r\n{0}.pageIndex = {3};\r\n{0}.sortExpression = \"{4}\";\r\n{0}.sortDirection = {5};\r\n{0}.setStateField();\r\n{0}.callback = function(arg) {{\r\n    {2};\r\n}};";
+	}
+}

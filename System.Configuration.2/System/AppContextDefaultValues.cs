@@ -1,0 +1,101 @@
+﻿using System;
+
+namespace System
+{
+	// Token: 0x0200000D RID: 13
+	internal static class AppContextDefaultValues
+	{
+		// Token: 0x0600001D RID: 29 RVA: 0x000022CC File Offset: 0x000004CC
+		public static void PopulateDefaultValues()
+		{
+			string text;
+			string text2;
+			int num;
+			AppContextDefaultValues.ParseTargetFrameworkName(out text, out text2, out num);
+		}
+
+		// Token: 0x0600001E RID: 30 RVA: 0x000022E4 File Offset: 0x000004E4
+		private static void ParseTargetFrameworkName(out string identifier, out string profile, out int version)
+		{
+			string targetFrameworkName = AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName;
+			if (!AppContextDefaultValues.TryParseFrameworkName(targetFrameworkName, out identifier, out version, out profile))
+			{
+				identifier = ".NETFramework";
+				version = 40000;
+				profile = string.Empty;
+			}
+		}
+
+		// Token: 0x0600001F RID: 31 RVA: 0x00002324 File Offset: 0x00000524
+		private static bool TryParseFrameworkName(string frameworkName, out string identifier, out int version, out string profile)
+		{
+			string empty;
+			profile = (empty = string.Empty);
+			identifier = empty;
+			version = 0;
+			if (frameworkName == null || frameworkName.Length == 0)
+			{
+				return false;
+			}
+			string[] array = frameworkName.Split(new char[]
+			{
+				','
+			});
+			version = 0;
+			if (array.Length < 2 || array.Length > 3)
+			{
+				return false;
+			}
+			identifier = array[0].Trim();
+			if (identifier.Length == 0)
+			{
+				return false;
+			}
+			bool result = false;
+			profile = null;
+			for (int i = 1; i < array.Length; i++)
+			{
+				string[] array2 = array[i].Split(new char[]
+				{
+					'='
+				});
+				if (array2.Length != 2)
+				{
+					return false;
+				}
+				string text = array2[0].Trim();
+				string text2 = array2[1].Trim();
+				if (text.Equals("Version", StringComparison.OrdinalIgnoreCase))
+				{
+					result = true;
+					if (text2.Length > 0 && (text2[0] == 'v' || text2[0] == 'V'))
+					{
+						text2 = text2.Substring(1);
+					}
+					Version version2 = new Version(text2);
+					version = version2.Major * 10000;
+					if (version2.Minor > 0)
+					{
+						version += version2.Minor * 100;
+					}
+					if (version2.Build > 0)
+					{
+						version += version2.Build;
+					}
+				}
+				else
+				{
+					if (!text.Equals("Profile", StringComparison.OrdinalIgnoreCase))
+					{
+						return false;
+					}
+					if (!string.IsNullOrEmpty(text2))
+					{
+						profile = text2;
+					}
+				}
+			}
+			return result;
+		}
+	}
+}

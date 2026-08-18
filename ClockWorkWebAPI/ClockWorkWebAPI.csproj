@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE25FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClockWorkWebAPI</RootNamespace>
+    <AssemblyName>ClockWorkWebAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accommodation.cs" />
+    <Compile Include="AccommodationCollection.cs" />
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentCollection.cs" />
+    <Compile Include="Appointments.cs" />
+    <Compile Include="AppType.cs" />
+    <Compile Include="AuthenticationAuthorization\AuthenticationLookupMethod.cs" />
+    <Compile Include="AuthenticationAuthorization\AuthenticationMethod.cs" />
+    <Compile Include="AuthenticationAuthorization\Group.cs" />
+    <Compile Include="AuthenticationAuthorization\GroupMembership.cs" />
+    <Compile Include="AuthenticationAuthorization\iCustomLogin.cs" />
+    <Compile Include="AuthenticationAuthorization\LookupMethod.cs" />
+    <Compile Include="AuthenticationAuthorization\UserInfo.cs" />
+    <Compile Include="AuthenticationAuthorization\Utility.cs" />
+    <Compile Include="AvailabilityGroup.cs" />
+    <Compile Include="AvailabilitySchedule.cs" />
+    <Compile Include="AvailabilityScheduleRange.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Accommodation.cs" />
+    <Compile Include="ClockWorkAPIReplacement\AccommodationList.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Code.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Course.cs" />
+    <Compile Include="ClockWorkAPIReplacement\CourseContactInformation.cs" />
+    <Compile Include="ClockWorkAPIReplacement\CourseContactPermissionLevel.cs" />
+    <Compile Include="ClockWorkAPIReplacement\DynamicControl.cs" />
+    <Compile Include="ClockWorkAPIReplacement\DynamicDataExtraInfo.cs" />
+    <Compile Include="ClockWorkAPIReplacement\DynamicDataExtraInfoCollection.cs" />
+    <Compile Include="ClockWorkAPIReplacement\DynamicScreenReports.cs" />
+    <Compile Include="ClockWorkAPIReplacement\eExportFileType.cs" />
+    <Compile Include="ClockWorkAPIReplacement\eHowServiceProviderEnteredIntoClockWork.cs" />
+    <Compile Include="ClockWorkAPIReplacement\eMatchingMethod.cs" />
+    <Compile Include="ClockWorkAPIReplacement\EnforceType.cs" />
+    <Compile Include="ClockWorkAPIReplacement\ePaymentMethod.cs" />
+    <Compile Include="ClockWorkAPIReplacement\eServiceProviderType.cs" />
+    <Compile Include="ClockWorkAPIReplacement\ExamSitting.cs" />
+    <Compile Include="ClockWorkAPIReplacement\HtmlPdfPage.cs" />
+    <Compile Include="ClockWorkAPIReplacement\HtmlToPdf.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Instructor.cs" />
+    <Compile Include="ClockWorkAPIReplacement\InvigilatorConfirmation.cs" />
+    <Compile Include="ClockWorkAPIReplacement\MailMergeCode.cs" />
+    <Compile Include="ClockWorkAPIReplacement\MailMergeCodeValue.cs" />
+    <Compile Include="ClockWorkAPIReplacement\MailMergeValue.cs" />
+    <Compile Include="ClockWorkAPIReplacement\MailMergeWord.cs" />
+    <Compile Include="ClockWorkAPIReplacement\MeasurementUnit.cs" />
+    <Compile Include="ClockWorkAPIReplacement\ModificationType.cs" />
+    <Compile Include="ClockWorkAPIReplacement\PayMethod.cs" />
+    <Compile Include="ClockWorkAPIReplacement\RenderEvent.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Screen.cs" />
+    <Compile Include="ClockWorkAPIReplacement\ScreenCollection.cs" />
+    <Compile Include="ClockWorkAPIReplacement\ServiceProvider.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Staff.cs" />
+    <Compile Include="ClockWorkAPIReplacement\TemplateCode.cs" />
+    <Compile Include="ClockWorkAPIReplacement\TemplateCodeCollection.cs" />
+    <Compile Include="ClockWorkAPIReplacement\TemplateCodeGroup.cs" />
+    <Compile Include="ClockWorkAPIReplacement\TemplateCodeGroupCollection.cs" />
+    <Compile Include="ClockWorkAPIReplacement\TemplatesClass.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Test.cs" />
+    <Compile Include="ClockWorkAPIReplacement\TimeTableItem.cs" />
+    <Compile Include="ClockWorkAPIReplacement\Utility.cs" />
+    <Compile Include="Compression.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="DataSync.cs" />
+    <Compile Include="db.cs" />
+    <Compile Include="DynamicScreensWeb.cs" />
+    <Compile Include="Encryption.cs" />
+    <Compile Include="EncryptionCredentials.cs" />
+    <Compile Include="Facet\Combinatorics\GenerateOption.cs" />
+    <Compile Include="Facet\Combinatorics\IMetaCollection.cs" />
+    <Compile Include="Facet\Combinatorics\Permutations.cs" />
+    <Compile Include="Facet\Combinatorics\SmallPrimeUtility.cs" />
+    <Compile Include="Facet\Combinatorics\Variations.cs" />
+    <Compile Include="FileIcon.cs" />
+    <Compile Include="iNotetakerDataSync.cs" />
+    <Compile Include="LDAP.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="LoginLDAP.cs" />
+    <Compile Include="NameObjectPair.cs" />
+    <Compile Include="NameObjectPairCollection.cs" />
+    <Compile Include="Notetakerb.cs" />
+    <Compile Include="NotetakerWithCourses.cs" />
+    <Compile Include="Notetaking.cs" />
+    <Compile Include="Notetakingb.cs" />
+    <Compile Include="Parsing\ExpressionNode.cs" />
+    <Compile Include="Parsing\ExpressionNodeParsing2.cs" />
+    <Compile Include="Parsing\ExpressionTree.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStorage.cs" />
+    <Compile Include="RandomPassword.cs" />
+    <Compile Include="RandomPasswordTest.cs" />
+    <Compile Include="ScreenType.cs" />
+    <Compile Include="Settings\AppSettingsV2.cs" />
+    <Compile Include="SpecialAccommodation.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Templates\EmailTemplate.cs" />
+    <Compile Include="Templates\Template.cs" />
+    <Compile Include="TestBooking\Accommodation.cs" />
+    <Compile Include="TestBooking\AccommodationCollection.cs" />
+    <Compile Include="TestBooking\AppType.cs" />
+    <Compile Include="TestBooking\Asset.cs" />
+    <Compile Include="TestBooking\BookedTest.cs" />
+    <Compile Include="TestBooking\Booker.cs" />
+    <Compile Include="TestBooking\Booking.cs" />
+    <Compile Include="TestBooking\BookingResults.cs" />
+    <Compile Include="TestBooking\Course.cs" />
+    <Compile Include="TestBooking\CustomTestBookingRulesClass.cs" />
+    <Compile Include="TestBooking\DateRange.cs" />
+    <Compile Include="TestBooking\FindPotentialBookingInfo.cs" />
+    <Compile Include="TestBooking\FindPotentialBookingsInfo.cs" />
+    <Compile Include="TestBooking\Instructor.cs" />
+    <Compile Include="TestBooking\PotentialRoom.cs" />
+    <Compile Include="TestBooking\PotentialTest.cs" />
+    <Compile Include="TestBooking\PotentialTestMethodFoundNote.cs" />
+    <Compile Include="TestBooking\PrivateNote.cs" />
+    <Compile Include="TestBooking\Room.cs" />
+    <Compile Include="TestBooking\RoomCollection.cs" />
+    <Compile Include="TestBooking\RoomType.cs" />
+    <Compile Include="TestBooking\Rule.cs" />
+    <Compile Include="TestBooking\RuleCollection.cs" />
+    <Compile Include="TestBooking\SpecialAccommodation.cs" />
+    <Compile Include="TestBooking\SpecialAccommodationType.cs" />
+    <Compile Include="TestBooking\Test.cs" />
+    <Compile Include="TestBooking\TestType.cs" />
+    <Compile Include="TestType.cs" />
+    <Compile Include="TimeRange.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2606}</Project>
+      <Name>Common.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core.Impl.Local\Common.UI.ClientManager.Web.Core.Impl.Local.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264C}</Project>
+      <Name>Common.UI.ClientManager.Web.Core.Impl.Local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core\Common.UI.ClientManager.Web.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264B}</Project>
+      <Name>Common.UI.ClientManager.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Entity\Common.UI.Web.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2653}</Project>
+      <Name>Common.UI.Web.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\itextsharp\itextsharp.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE266E}</Project>
+      <Name>itextsharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Novell.Directory.Ldap\Novell.Directory.Ldap.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE267E}</Project>
+      <Name>Novell.Directory.Ldap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms.2\System.Windows.Forms.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D6}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

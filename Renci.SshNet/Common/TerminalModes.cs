@@ -1,0 +1,121 @@
+﻿using System;
+
+namespace Renci.SshNet.Common
+{
+	// Token: 0x02000107 RID: 263
+	public enum TerminalModes : byte
+	{
+		// Token: 0x04000415 RID: 1045
+		TTY_OP_END,
+		// Token: 0x04000416 RID: 1046
+		VINTR,
+		// Token: 0x04000417 RID: 1047
+		VQUIT,
+		// Token: 0x04000418 RID: 1048
+		VERASE,
+		// Token: 0x04000419 RID: 1049
+		VKILL,
+		// Token: 0x0400041A RID: 1050
+		VEOF,
+		// Token: 0x0400041B RID: 1051
+		VEOL,
+		// Token: 0x0400041C RID: 1052
+		VEOL2,
+		// Token: 0x0400041D RID: 1053
+		VSTART,
+		// Token: 0x0400041E RID: 1054
+		VSTOP,
+		// Token: 0x0400041F RID: 1055
+		VSUSP,
+		// Token: 0x04000420 RID: 1056
+		VDSUSP,
+		// Token: 0x04000421 RID: 1057
+		VREPRINT,
+		// Token: 0x04000422 RID: 1058
+		VWERASE,
+		// Token: 0x04000423 RID: 1059
+		VLNEXT,
+		// Token: 0x04000424 RID: 1060
+		VFLUSH,
+		// Token: 0x04000425 RID: 1061
+		VSWTCH,
+		// Token: 0x04000426 RID: 1062
+		VSTATUS,
+		// Token: 0x04000427 RID: 1063
+		VDISCARD,
+		// Token: 0x04000428 RID: 1064
+		IGNPAR = 30,
+		// Token: 0x04000429 RID: 1065
+		PARMRK,
+		// Token: 0x0400042A RID: 1066
+		INPCK,
+		// Token: 0x0400042B RID: 1067
+		ISTRIP,
+		// Token: 0x0400042C RID: 1068
+		INLCR,
+		// Token: 0x0400042D RID: 1069
+		IGNCR,
+		// Token: 0x0400042E RID: 1070
+		ICRNL,
+		// Token: 0x0400042F RID: 1071
+		IUCLC,
+		// Token: 0x04000430 RID: 1072
+		IXON,
+		// Token: 0x04000431 RID: 1073
+		IXANY,
+		// Token: 0x04000432 RID: 1074
+		IXOFF,
+		// Token: 0x04000433 RID: 1075
+		IMAXBEL,
+		// Token: 0x04000434 RID: 1076
+		ISIG = 50,
+		// Token: 0x04000435 RID: 1077
+		ICANON,
+		// Token: 0x04000436 RID: 1078
+		XCASE,
+		// Token: 0x04000437 RID: 1079
+		ECHO,
+		// Token: 0x04000438 RID: 1080
+		ECHOE,
+		// Token: 0x04000439 RID: 1081
+		ECHOK,
+		// Token: 0x0400043A RID: 1082
+		ECHONL,
+		// Token: 0x0400043B RID: 1083
+		NOFLSH,
+		// Token: 0x0400043C RID: 1084
+		TOSTOP,
+		// Token: 0x0400043D RID: 1085
+		IEXTEN,
+		// Token: 0x0400043E RID: 1086
+		ECHOCTL,
+		// Token: 0x0400043F RID: 1087
+		ECHOKE,
+		// Token: 0x04000440 RID: 1088
+		PENDIN,
+		// Token: 0x04000441 RID: 1089
+		OPOST = 70,
+		// Token: 0x04000442 RID: 1090
+		OLCUC,
+		// Token: 0x04000443 RID: 1091
+		ONLCR,
+		// Token: 0x04000444 RID: 1092
+		OCRNL,
+		// Token: 0x04000445 RID: 1093
+		ONOCR,
+		// Token: 0x04000446 RID: 1094
+		ONLRET,
+		// Token: 0x04000447 RID: 1095
+		CS7 = 90,
+		// Token: 0x04000448 RID: 1096
+		CS8,
+		// Token: 0x04000449 RID: 1097
+		PARENB,
+		// Token: 0x0400044A RID: 1098
+		PARODD,
+		// Token: 0x0400044B RID: 1099
+		TTY_OP_ISPEED = 128,
+		// Token: 0x0400044C RID: 1100
+		TTY_OP_OSPEED
+	}
+}

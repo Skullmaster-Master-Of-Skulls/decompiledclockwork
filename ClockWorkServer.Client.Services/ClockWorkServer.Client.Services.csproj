@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE25F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.ClockWorkServer.Client.Services</RootNamespace>
+    <AssemblyName>ClockWorkServer.Client.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Messaging" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\BindingAdapter.cs" />
+    <Compile Include="Adapters\ClockWorkServerConnectionInfoAdapter.cs" />
+    <Compile Include="Adapters\DbParameterAdapter.cs" />
+    <Compile Include="Adapters\IClientChannelAdapter.cs" />
+    <Compile Include="ClientCredential.cs" />
+    <Compile Include="Exceptions\ConnectionFailedException.cs" />
+    <Compile Include="OnExceededConcurrentUserLicenseEventArgs.cs" />
+    <Compile Include="Pool\ProxyConnectionPool.cs" />
+    <Compile Include="Pool\WcfConnectionPoolHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Proxies\AcademicTermClientBaseProxy.cs" />
+    <Compile Include="Proxies\AcademicTermReusableClientProxy.cs" />
+    <Compile Include="Proxies\AccommodationBatchLetterEmailsClientBaseProxy.cs" />
+    <Compile Include="Proxies\AccommodationBatchLetterEmailsReusableClientProxy.cs" />
+    <Compile Include="Proxies\AccommodationsClientBaseProxy.cs" />
+    <Compile Include="Proxies\AccommodationsReusableClientProxy.cs" />
+    <Compile Include="Proxies\AdminGroupClientBaseProxy.cs" />
+    <Compile Include="Proxies\AdminGroupReusableClientProxy.cs" />
+    <Compile Include="Proxies\AdminPeopleClientBaseProxy.cs" />
+    <Compile Include="Proxies\AdminPeopleReusableClientProxy.cs" />
+    <Compile Include="Proxies\AlertTriggerClientBaseProxy.cs" />
+    <Compile Include="Proxies\AlertTriggerReusableClientProxy.cs" />
+    <Compile Include="Proxies\AlternateContactClientBaseProxy.cs" />
+    <Compile Include="Proxies\AlternateContactReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentAttendeeClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentAttendeeReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentBookingStudentClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentBookingStudentReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentCancelInfoClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentCancelInfoReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentCancelReasonClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentCancelReasonReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentHolidayClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentHolidayReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentIconClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentIconReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentLogClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentLogReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentNotesClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentNotesReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentShowTimeAsTypeClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentShowTimeAsTypeReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentsReminderClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentsReminderReusableClientProxy.cs" />
+    <Compile Include="Proxies\AppointmentTypeClientBaseProxy.cs" />
+    <Compile Include="Proxies\AppointmentTypeReusableClientProxy.cs" />
+    <Compile Include="Proxies\AttachmentDropBoxClientBaseProxy.cs" />
+    <Compile Include="Proxies\AttachmentDropBoxReusableClientProxy.cs" />
+    <Compile Include="Proxies\AutoTestBookingClientBaseProxy.cs" />
+    <Compile Include="Proxies\AutoTestBookingReusableClientProxy.cs" />
+    <Compile Include="Proxies\AvailabilityScheduleClientBaseProxy.cs" />
+    <Compile Include="Proxies\AvailabilityScheduleReusableClientProxy.cs" />
+    <Compile Include="Proxies\AzureClientProxy.cs" />
+    <Compile Include="Proxies\BookSearchClientBaseProxy.cs" />
+    <Compile Include="Proxies\BookSearchReusableClientProxy.cs" />
+    <Compile Include="Proxies\CampusClientBaseProxy.cs" />
+    <Compile Include="Proxies\CampusReusableClientProxy.cs" />
+    <Compile Include="Proxies\CardHubClientBaseProxy.cs" />
+    <Compile Include="Proxies\CardHubReusableClientProxy.cs" />
+    <Compile Include="Proxies\CASAuthenticationClientBaseProxy.cs" />
+    <Compile Include="Proxies\CASAuthenticationReusableClientProxy.cs" />
+    <Compile Include="Proxies\CasesClientBaseProxy.cs" />
+    <Compile Include="Proxies\CasesReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClassTestDefinitionClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClassTestDefinitionReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClientStartupClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClientStartupReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClientUpdateClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClientUpdateReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkAuditClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkAuditReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkAuthenticationClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkAuthenticationReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkClientStartupClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkClientStartupReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkSasTokenProviderClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkSasTokenProviderReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkServerConnectionClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkServerConnectionReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkServerDiscoveryClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkServerDiscoveryReusableClientProxy.cs" />
+    <Compile Include="Proxies\ClockWorkServerJobClientBaseProxy.cs" />
+    <Compile Include="Proxies\ClockWorkServerJobReusableClientProxy.cs" />
+    <Compile Include="Proxies\CourseRegistrationClientBaseProxy.cs" />
+    <Compile Include="Proxies\CourseRegistrationReusableClientProxy.cs" />
+    <Compile Include="Proxies\CustomDataClientBaseProxy.cs" />
+    <Compile Include="Proxies\CustomDataReusableClientProxy.cs" />
+    <Compile Include="Proxies\CustomFieldClientBaseProxy.cs" />
+    <Compile Include="Proxies\CustomFieldReusableClientProxy.cs" />
+    <Compile Include="Proxies\CustomFormClientBaseProxy.cs" />
+    <Compile Include="Proxies\CustomFormListItemClientBaseProxy.cs" />
+    <Compile Include="Proxies\CustomFormListItemReusableClientProxy.cs" />
+    <Compile Include="Proxies\CustomFormReusableClientProxy.cs" />
+    <Compile Include="Proxies\DailyJobClientBaseProxy.cs" />
+    <Compile Include="Proxies\DailyJobReusableClientProxy.cs" />
+    <Compile Include="Proxies\DataMaintenanceClientBaseProxy.cs" />
+    <Compile Include="Proxies\DataMaintenanceReusableClientProxy.cs" />
+    <Compile Include="Proxies\DataMigrationClientProxyClientProxy.cs" />
+    <Compile Include="Proxies\DataMigrationClientProxyReusableClientProxy.cs" />
+    <Compile Include="Proxies\DataSyncAsyncClientBaseProxy.cs" />
+    <Compile Include="Proxies\DataSyncAsyncClientProxy.cs" />
+    <Compile Include="Proxies\DataSyncClientBaseProxy.cs" />
+    <Compile Include="Proxies\DataSyncCourseClientProxy.cs" />
+    <Compile Include="Proxies\DataSyncCourseReusableClientProxy.cs" />
+    <Compile Include="Proxies\DataSyncReusableClientProxy.cs" />
+    <Compile Include="Proxies\DynamicDataClientBaseProxy.cs" />
+    <Compile Include="Proxies\DynamicDataForReportsClientBaseProxy.cs" />
+    <Compile Include="Proxies\DynamicDataForReportsReusableClientProxy.cs" />
+    <Compile Include="Proxies\DynamicDataReusableClientProxy.cs" />
+    <Compile Include="Proxies\DynamicFieldClientBaseProxy.cs" />
+    <Compile Include="Proxies\DynamicFieldReusableClientProxy.cs" />
+    <Compile Include="Proxies\DynamicFormClientBaseProxy.cs" />
+    <Compile Include="Proxies\DynamicFormReusableClientProxy.cs" />
+    <Compile Include="Proxies\EmailAttachmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\EmailAttachmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\Encryption\LegacyEncryptionClientBaseProxy.cs" />
+    <Compile Include="Proxies\Encryption\LegacyEncryptionReusableClientProxy.cs" />
+    <Compile Include="Proxies\ExamFileClientBaseProxy.cs" />
+    <Compile Include="Proxies\ExamFileReusableClientProxy.cs" />
+    <Compile Include="Proxies\ExamRequestClientBaseProxy.cs" />
+    <Compile Include="Proxies\ExamRequestClientProxy.cs" />
+    <Compile Include="Proxies\FileSignClientBaseProxy.cs" />
+    <Compile Include="Proxies\FileSignReusableClientProxy.cs" />
+    <Compile Include="Proxies\FileStorageAsyncClientBaseProxy.cs" />
+    <Compile Include="Proxies\FileStorageAsyncClientProxy.cs" />
+    <Compile Include="Proxies\FileStorageClientBaseProxy.cs" />
+    <Compile Include="Proxies\FileStorageReusableClientProxy.cs" />
+    <Compile Include="Proxies\FinalExamsViewClientBaseProxy.cs" />
+    <Compile Include="Proxies\FinalExamsViewReusableClientProxy.cs" />
+    <Compile Include="Proxies\FormApprovalClientBaseProxy.cs" />
+    <Compile Include="Proxies\FormApprovalReusableClientProxy.cs" />
+    <Compile Include="Proxies\FormApprovalSupervisorClientBaseProxy.cs" />
+    <Compile Include="Proxies\FormApprovalSupervisorReusableClientProxy.cs" />
+    <Compile Include="Proxies\FormApprovalTraineeClientBaseProxy.cs" />
+    <Compile Include="Proxies\FormApprovalTraineeReusableClientProxy.cs" />
+    <Compile Include="Proxies\GroupClientBaseProxy.cs" />
+    <Compile Include="Proxies\GroupReusableClientProxy.cs" />
+    <Compile Include="Proxies\IClientBase.cs" />
+    <Compile Include="Proxies\IDataSyncAsync.cs" />
+    <Compile Include="Proxies\IFileStorageAsync.cs" />
+    <Compile Include="Proxies\IMailingAsync.cs" />
+    <Compile Include="Proxies\InMemoryFilesStorageClientBaseProxy.cs" />
+    <Compile Include="Proxies\InMemoryFilesStorageReusableClientProxy.cs" />
+    <Compile Include="Proxies\IntakeAccountClientBaseProxy.cs" />
+    <Compile Include="Proxies\IntakeAccountReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryAdminCatalogClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryAdminCatalogReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryAttachmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryAttachmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryCatalogClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryCatalogReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryCategoryClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryCategoryReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryGroupClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryGroupReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryLoanClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryLoanReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryLoanStatusClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryLoanStatusReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryLocationClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryLocationReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryProductClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryProductReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryProductSnapshotAsyncActionsClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryProductSnapshotAsyncActionsReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryProductStatusClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryProductStatusReusableClientProxy.cs" />
+    <Compile Include="Proxies\InventoryReservationClientBaseProxy.cs" />
+    <Compile Include="Proxies\InventoryReservationReusableClientProxy.cs" />
+    <Compile Include="Proxies\IPeopleAsync.cs" />
+    <Compile Include="Proxies\IReportAsync.cs" />
+    <Compile Include="Proxies\LargeFileStreamingClientBaseProxy.cs" />
+    <Compile Include="Proxies\LargeFileStreamingReusableClientProxy.cs" />
+    <Compile Include="Proxies\LdapClientBaseProxy.cs" />
+    <Compile Include="Proxies\LdapReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyAccommodationClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyAccommodationReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyActionPlanClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyActionPlanReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyAppointmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyAppointmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyDynamicDataClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyDynamicDataReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyDynamicDataSaveLoadClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyDynamicDataSaveLoadReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyServiceProviderClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyServiceProviderReusableClientProxy.cs" />
+    <Compile Include="Proxies\LegacyWebSettingsClientBaseProxy.cs" />
+    <Compile Include="Proxies\LegacyWebSettingsReusableClientProxy.cs" />
+    <Compile Include="Proxies\LicensingClientBaseProxy.cs" />
+    <Compile Include="Proxies\LicensingReusableClientProxy.cs" />
+    <Compile Include="Proxies\ListAppointmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\ListAppointmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\LookupCourseClientBaseProxy.cs" />
+    <Compile Include="Proxies\LookupCourseReusableClientProxy.cs" />
+    <Compile Include="Proxies\LookupInstructorClientBaseProxy.cs" />
+    <Compile Include="Proxies\LookupInstructorManagementClientBaseProxy.cs" />
+    <Compile Include="Proxies\LookupInstructorManagementReusableClientProxy.cs" />
+    <Compile Include="Proxies\LookupInstructorReusableClientProxy.cs" />
+    <Compile Include="Proxies\LookupSubjectClientBaseProxy.cs" />
+    <Compile Include="Proxies\LookupSubjectReusableClientProxy.cs" />
+    <Compile Include="Proxies\LookupTimetableItemClientBaseProxy.cs" />
+    <Compile Include="Proxies\LookupTimetableItemReusableClientProxy.cs" />
+    <Compile Include="Proxies\MailingAsyncClientBaseProxy.cs" />
+    <Compile Include="Proxies\MailingAsyncClientProxy.cs" />
+    <Compile Include="Proxies\MailingClientBaseProxy.cs" />
+    <Compile Include="Proxies\MailingReusableClientProxy.cs" />
+    <Compile Include="Proxies\MailMergingClientBaseProxy.cs" />
+    <Compile Include="Proxies\MailMergingDocClientBaseProxy.cs" />
+    <Compile Include="Proxies\MailMergingDocReusableClientProxy.cs" />
+    <Compile Include="Proxies\MailMergingEmailClientBaseProxy.cs" />
+    <Compile Include="Proxies\MailMergingEmailReusableClientProxy.cs" />
+    <Compile Include="Proxies\MailMergingReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaContentClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaContentFileClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaContentFileReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaContentReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaJobClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaJobReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaJobStatusClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaJobStatusReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaJobVolunteerClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaJobVolunteerReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaPublisherClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaPublisherReusableClientProxy.cs" />
+    <Compile Include="Proxies\MediaVendorClientBaseProxy.cs" />
+    <Compile Include="Proxies\MediaVendorReusableClientProxy.cs" />
+    <Compile Include="Proxies\MembershipClientBaseProxy.cs" />
+    <Compile Include="Proxies\MembershipReusableClientProxy.cs" />
+    <Compile Include="Proxies\MergeDuplicateStudentClientBaseProxy.cs" />
+    <Compile Include="Proxies\MergeDuplicateStudentReusableClientProxy.cs" />
+    <Compile Include="Proxies\MessagingClientBaseProxy.cs" />
+    <Compile Include="Proxies\MessagingDropBoxClientBaseProxy.cs" />
+    <Compile Include="Proxies\MessagingDropBoxReusableClientProxy.cs" />
+    <Compile Include="Proxies\MessagingReusableClientProxy.cs" />
+    <Compile Include="Proxies\MiscTableSettingsClientBaseProxy.cs" />
+    <Compile Include="Proxies\MiscTableSettingsReusableClientProxy.cs" />
+    <Compile Include="Proxies\NotetakerNotesClientBaseProxy.cs" />
+    <Compile Include="Proxies\NotetakerNotesReusableClientProxy.cs" />
+    <Compile Include="Proxies\NotetakingClientBaseProxy.cs" />
+    <Compile Include="Proxies\NotetakingReusableClientProxy.cs" />
+    <Compile Include="Proxies\OldUserSettingClientBaseProxy.cs" />
+    <Compile Include="Proxies\OldUserSettingReusableClientProxy.cs" />
+    <Compile Include="Proxies\OnlineFormClientBaseProxy.cs" />
+    <Compile Include="Proxies\OnlineFormQueueClientBaseProxy.cs" />
+    <Compile Include="Proxies\OnlineFormQueueReusableClientProxy.cs" />
+    <Compile Include="Proxies\OnlineFormReusableClientProxy.cs" />
+    <Compile Include="Proxies\OnMembershipInvalidCredentialsEventHandler.cs" />
+    <Compile Include="Proxies\OnServiceFaultedEventHandler.cs" />
+    <Compile Include="Proxies\OnSessionIdentifierChangedEventHandler.cs" />
+    <Compile Include="Proxies\PeopleAsyncClientBaseProxy.cs" />
+    <Compile Include="Proxies\PeopleAsyncClientProxy.cs" />
+    <Compile Include="Proxies\PeopleCacheClientBaseProxy.cs" />
+    <Compile Include="Proxies\PeopleCacheReusableClientProxy.cs" />
+    <Compile Include="Proxies\PeopleClientBaseProxy.cs" />
+    <Compile Include="Proxies\PeopleGroupClientBaseProxy.cs" />
+    <Compile Include="Proxies\PeopleGroupReusableClientProxy.cs" />
+    <Compile Include="Proxies\PeopleReusableClientProxy.cs" />
+    <Compile Include="Proxies\PerformanceTestClientBaseProxy.cs" />
+    <Compile Include="Proxies\PerformanceTestReusableClientProxy.cs" />
+    <Compile Include="Proxies\PermissionsClientBaseProxy.cs" />
+    <Compile Include="Proxies\PermissionsReusableClientProxy.cs" />
+    <Compile Include="Proxies\PointOfContactClientBaseProxy.cs" />
+    <Compile Include="Proxies\PointOfContactReusableClientProxy.cs" />
+    <Compile Include="Proxies\ProxyCreatedHandler.cs" />
+    <Compile Include="Proxies\QueryingClientBaseProxy.cs" />
+    <Compile Include="Proxies\QueryingReusableClientProxy.cs" />
+    <Compile Include="Proxies\RecurringAppointmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\RecurringAppointmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\ReferenceTableSettingClientBaseProxy.cs" />
+    <Compile Include="Proxies\ReferenceTableSettingReusableClientProxy.cs" />
+    <Compile Include="Proxies\ReportAsyncClientBaseProxy.cs" />
+    <Compile Include="Proxies\ReportAsyncClientProxy.cs" />
+    <Compile Include="Proxies\ReportClientBaseProxy.cs" />
+    <Compile Include="Proxies\ReportReusableClientProxy.cs" />
+    <Compile Include="Proxies\RequiredSessionFormClientBaseProxy.cs" />
+    <Compile Include="Proxies\RequiredSessionFormReusableClientProxy.cs" />
+    <Compile Include="Proxies\RoomClientBaseProxy.cs" />
+    <Compile Include="Proxies\RoomReusableClientProxy.cs" />
+    <Compile Include="Proxies\SelfRegClientBaseProxy.cs" />
+    <Compile Include="Proxies\SelfRegReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServerCacheClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServerCacheReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderApplicationClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderApplicationReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderCourseRegistrationClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderCourseRegistrationReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderMatchingClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderMatchingReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderOriginalApplicationCourseClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderOriginalApplicationCourseReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderOriginalMatchingClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderOriginalMatchingReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderOriginalProviderClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderOriginalProviderReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderTypeClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceProviderTypeReusableClientProxy.cs" />
+    <Compile Include="Proxies\ServiceRequestClientBaseProxy.cs" />
+    <Compile Include="Proxies\ServiceRequestReusableClientProxy.cs" />
+    <Compile Include="Proxies\SessionClientBaseProxy.cs" />
+    <Compile Include="Proxies\SessionReusableClientProxy.cs" />
+    <Compile Include="Proxies\SittingClientBaseProxy.cs" />
+    <Compile Include="Proxies\SittingReusableClientProxy.cs" />
+    <Compile Include="Proxies\StaffCommonInfoClientBaseProxy.cs" />
+    <Compile Include="Proxies\StaffCommonInfoReusableClientProxy.cs" />
+    <Compile Include="Proxies\StartupClientBaseProxy.cs" />
+    <Compile Include="Proxies\StartupReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentAccommodationReqClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentAccommodationReqReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentClassTestInfoClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentClassTestInfoReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentCommonInfoClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentCommonInfoReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentConfidentialityAgreementClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentConfidentialityAgreementReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentFileClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentFileReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentFilesQueueClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentFilesQueueReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentManagementClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentManagementReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentMediaRequestClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentMediaRequestReusableClientProxy.cs" />
+    <Compile Include="Proxies\StudentTuteeClientBaseProxy.cs" />
+    <Compile Include="Proxies\StudentTuteeReusableClientProxy.cs" />
+    <Compile Include="Proxies\SurveyClientBaseProxy.cs" />
+    <Compile Include="Proxies\SurveyQueueClientBaseProxy.cs" />
+    <Compile Include="Proxies\SurveyQueueReusableClientProxy.cs" />
+    <Compile Include="Proxies\SurveyReusableClientProxy.cs" />
+    <Compile Include="Proxies\TaskClientBaseProxy.cs" />
+    <Compile Include="Proxies\TaskGroupClientBaseProxy.cs" />
+    <Compile Include="Proxies\TaskGroupReusableClientProxy.cs" />
+    <Compile Include="Proxies\TaskReusableClientProxy.cs" />
+    <Compile Include="Proxies\TempFileClientBaseProxy.cs" />
+    <Compile Include="Proxies\TempFileReusableClientProxy.cs" />
+    <Compile Include="Proxies\TemplateClientBaseProxy.cs" />
+    <Compile Include="Proxies\TemplateReusableClientProxy.cs" />
+    <Compile Include="Proxies\TestBookingClientBaseProxy.cs" />
+    <Compile Include="Proxies\TestBookingReusableClientProxy.cs" />
+    <Compile Include="Proxies\TestExamBookingViewClientBaseProxy.cs" />
+    <Compile Include="Proxies\TestExamBookingViewReusableClientProxy.cs" />
+    <Compile Include="Proxies\TestExamBrowserClientBaseProxy.cs" />
+    <Compile Include="Proxies\TestExamBrowserReusableClientProxy.cs" />
+    <Compile Include="Proxies\TestExamSeatClientBaseProxy.cs" />
+    <Compile Include="Proxies\TestExamSeatReusableClientProxy.cs" />
+    <Compile Include="Proxies\TestProctorClientBaseProxy.cs" />
+    <Compile Include="Proxies\TestProctorReusableClientProxy.cs" />
+    <Compile Include="Proxies\TutorClientBaseProxy.cs" />
+    <Compile Include="Proxies\TutorReusableClientProxy.cs" />
+    <Compile Include="Proxies\UnivDataAccessClientBaseProxy.cs" />
+    <Compile Include="Proxies\UnivDataAccessReusableClientProxy.cs" />
+    <Compile Include="Proxies\UpdaterClientBaseProxy.cs" />
+    <Compile Include="Proxies\UpdaterRequiredClientBaseProxy.cs" />
+    <Compile Include="Proxies\UpdaterRequiredReusableClientProxy.cs" />
+    <Compile Include="Proxies\UpdaterReusableClientProxy.cs" />
+    <Compile Include="Proxies\UserAccountClientBaseProxy.cs" />
+    <Compile Include="Proxies\UserAccountReusableClientProxy.cs" />
+    <Compile Include="Proxies\VetsBenefitApplicationClientBaseProxy.cs" />
+    <Compile Include="Proxies\VetsBenefitApplicationReusableClientProxy.cs" />
+    <Compile Include="Proxies\VetsChapterClientBaseProxy.cs" />
+    <Compile Include="Proxies\VetsChapterReusableClientProxy.cs" />
+    <Compile Include="Proxies\WCFAsyncClientProxy.cs" />
+    <Compile Include="Proxies\WCFClientProxy.cs" />
+    <Compile Include="Proxies\WCFReusableClientProxy.cs" />
+    <Compile Include="Proxies\WCFTokenBasedAsyncClientProxy.cs" />
+    <Compile Include="Proxies\WCFTokenBasedReusableClientProxy.cs" />
+    <Compile Include="Proxies\WebSettingsClientBaseProxy.cs" />
+    <Compile Include="Proxies\WebSettingsReusableClientProxy.cs" />
+    <Compile Include="Proxies\WorkshopAppointmentClientBaseProxy.cs" />
+    <Compile Include="Proxies\WorkshopAppointmentReusableClientProxy.cs" />
+    <Compile Include="Proxies\WorkshopDefinitionClientBaseProxy.cs" />
+    <Compile Include="Proxies\WorkshopDefinitionReusableClientProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Client.CallbackContracts\ClockWorkServer.Client.CallbackContracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F4}</Project>
+      <Name>ClockWorkServer.Client.CallbackContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ClientCaching\Common.ClientManager.ClientCaching.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2601}</Project>
+      <Name>Common.ClientManager.ClientCaching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.WCF\Common.WCF.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE265A}</Project>
+      <Name>Common.WCF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.WinServices\Common.WinServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2661}</Project>
+      <Name>Common.WinServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.ServiceModel\System.ServiceModel.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D4}</Project>
+      <Name>System.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCFExtrasPlus\WCFExtrasPlus.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A7}</Project>
+      <Name>WCFExtrasPlus</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

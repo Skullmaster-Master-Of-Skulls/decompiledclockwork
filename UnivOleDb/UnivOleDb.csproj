@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnivOleDb22</RootNamespace>
+    <AssemblyName>UnivOleDb</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseAccessStartedEnded.cs" />
+    <Compile Include="DatabaseErrorHandler.cs" />
+    <Compile Include="dbName.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnivCommand.cs" />
+    <Compile Include="UnivConnection.cs" />
+    <Compile Include="UnivDataAdapter.cs" />
+    <Compile Include="UnivDataReader.cs" />
+    <Compile Include="UnivOleDb\DatabaseAccessStartedEnded.cs" />
+    <Compile Include="UnivOleDb\DatabaseErrorHandler.cs" />
+    <Compile Include="UnivOleDb\DatabaseVersionManager.cs" />
+    <Compile Include="UnivOleDb\QueryResults.cs" />
+    <Compile Include="UnivOleDb\UnivCommand.cs" />
+    <Compile Include="UnivOleDb\UnivConnection.cs" />
+    <Compile Include="UnivOleDb\UnivDataAdapter.cs" />
+    <Compile Include="UnivOleDb\UnivDataReader.cs" />
+    <Compile Include="UnivOleDb\UnivMSAccess\UnivMSAccess_Command.cs" />
+    <Compile Include="UnivOleDb\UnivMSAccess\UnivMSAccess_Connection.cs" />
+    <Compile Include="UnivOleDb\UnivMSAccess\UnivMSAccess_DataAdapter.cs" />
+    <Compile Include="UnivOleDb\UnivMSAccess\UnivMSAccess_DataReader.cs" />
+    <Compile Include="UnivOleDb\UnivMSAccess\UnivMSAccess_ParameterCollection.cs" />
+    <Compile Include="UnivOleDb\UnivMSAccess\UnivMSAccess_Transaction.cs" />
+    <Compile Include="UnivOleDb\UnivMySql\UnivMySql_Command.cs" />
+    <Compile Include="UnivOleDb\UnivMySql\UnivMySql_Connection.cs" />
+    <Compile Include="UnivOleDb\UnivMySql\UnivMySql_DataAdapter.cs" />
+    <Compile Include="UnivOleDb\UnivMySql\UnivMySql_DataReader.cs" />
+    <Compile Include="UnivOleDb\UnivMySql\UnivMySql_ParameterCollection.cs" />
+    <Compile Include="UnivOleDb\UnivMySql\UnivMySql_Transaction.cs" />
+    <Compile Include="UnivOleDb\UnivOleDbFactory.cs" />
+    <Compile Include="UnivOleDb\UnivParameterCollection.cs" />
+    <Compile Include="UnivOleDb\UnivSqlServer\UnivSqlServer_Command.cs" />
+    <Compile Include="UnivOleDb\UnivSqlServer\UnivSqlServer_Connection.cs" />
+    <Compile Include="UnivOleDb\UnivSqlServer\UnivSqlServer_DataAdapter.cs" />
+    <Compile Include="UnivOleDb\UnivSqlServer\UnivSqlServer_DataReader.cs" />
+    <Compile Include="UnivOleDb\UnivSqlServer\UnivSqlServer_ParameterCollection.cs" />
+    <Compile Include="UnivOleDb\UnivSqlServer\UnivSqlServer_Transaction.cs" />
+    <Compile Include="UnivOleDb\UnivTransaction.cs" />
+    <Compile Include="UnivParameterCollection.cs" />
+    <Compile Include="UnivTransaction.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

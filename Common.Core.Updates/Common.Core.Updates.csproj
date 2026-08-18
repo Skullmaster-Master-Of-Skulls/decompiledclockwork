@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE261A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.Core.Updates</RootNamespace>
+    <AssemblyName>Common.Core.Updates</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.ServiceProcess" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\InstanceInfoAdapter.cs" />
+    <Compile Include="Adapters\UpdateExecuterAdapter.cs" />
+    <Compile Include="ClockWorkServerUpdateExecuter.cs" />
+    <Compile Include="ClockWorkUpdateExecuter.cs" />
+    <Compile Include="ClockWorkWebUpdateExecuter.cs" />
+    <Compile Include="DatabasePatchUpdateExecuter.cs" />
+    <Compile Include="ExecuterFileTypeAttribute.cs" />
+    <Compile Include="ExecuteUpdateManager.cs" />
+    <Compile Include="ExternalLogsProvider\AzureUpdatesLogManager.cs" />
+    <Compile Include="FilesProviders\AzureUpdateDownloaderManager.cs" />
+    <Compile Include="IUpdateExecuter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\UpdateResources.cs" />
+    <Compile Include="UpdateExecutiveManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\UpdateResources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Compression\Common.Compression.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2605}</Project>
+      <Name>Common.Compression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2606}</Project>
+      <Name>Common.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Azure\Common.Core.Azure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260C}</Project>
+      <Name>Common.Core.Azure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Web.Deploy\Common.Core.Web.Deploy.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE261B}</Project>
+      <Name>Common.Core.Web.Deploy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.FileSign.Impl\Common.DAO.FileSign.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2622}</Project>
+      <Name>Common.DAO.FileSign.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO.Impl\Common.DAO.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2625}</Project>
+      <Name>Common.DAO.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DAO\Common.DAO.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE261F}</Project>
+      <Name>Common.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Web.Deploy\Common.Web.Deploy.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE265C}</Project>
+      <Name>Common.Web.Deploy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.WinServices\Common.WinServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2661}</Project>
+      <Name>Common.WinServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

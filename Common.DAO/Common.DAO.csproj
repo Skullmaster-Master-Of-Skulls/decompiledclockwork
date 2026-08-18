@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE261F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common</RootNamespace>
+    <AssemblyName>Common.DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderApplicationStatusLookupDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalApplicationAvailabilityDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalApplicationCourseDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalApplicationDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalMatchingDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalProviderDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalRequestDAO.cs" />
+    <Compile Include="Core\ServiceProvidersOriginal\IServiceProviderOriginalRequestDetailDAO.cs" />
+    <Compile Include="DAO\Academic\ISemesterDAO.cs" />
+    <Compile Include="DAO\AlertTrigger\IAlertTriggerDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaContentDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaContentFileDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaJobDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaJobStatusDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaPublisherDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaVendorDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IMediaVolunteerDAO.cs" />
+    <Compile Include="DAO\AlternativeFormat\IStudentMediaRequestDAO.cs" />
+    <Compile Include="DAO\AppointmentsCalendar\IAppointmentBookingStudentDAO.cs" />
+    <Compile Include="DAO\AppointmentsCalendar\IAppointmentDAO.cs" />
+    <Compile Include="DAO\AppointmentsCalendar\IAppointmentFastLoadDAO.cs" />
+    <Compile Include="DAO\AppointmentsCalendar\IAppointmentHolidayDAO.cs" />
+    <Compile Include="DAO\AppointmentsList\IListAppointmentDAO.cs" />
+    <Compile Include="DAO\AppointmentsPointOfContact\IPointOfContactDAO.cs" />
+    <Compile Include="DAO\AppointmentsRecurring\IRecurringAppointmentDAO.cs" />
+    <Compile Include="DAO\AppointmentsReminder\IAppointmentsReminderDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\IAutoBooker2DAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\IAutoTestBookingDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\IClassTestDefinitionDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\IExamFileDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\IExamRequestDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\ISittingDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\IStudentClassTestInfoDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\ITestBookingDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\ITestExamBookingViewDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\ITestExamBrowserDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestBooking\ITestProctorDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestExamViews\IFinalExamsViewDAO.cs" />
+    <Compile Include="DAO\AppointmentsTestExamViews\ITestBookingsViewDAO.cs" />
+    <Compile Include="DAO\AppointmentsWorkshops\IWorkshopAppointmentDAO.cs" />
+    <Compile Include="DAO\AppointmentsWorkshops\IWorkshopDefinitionDAO.cs" />
+    <Compile Include="DAO\AppointmentSync\IApplicationSyncAdministrationDAO.cs" />
+    <Compile Include="DAO\AppointmentSync\IAppointmentSyncMappingDAO.cs" />
+    <Compile Include="DAO\AppointmentSync\IClockWorkSyncDAO.cs" />
+    <Compile Include="DAO\AppointmentSync\IExternalAppointmentDAO.cs" />
+    <Compile Include="DAO\AppointmentSync\ISyncContactsDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentAttendeeDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentCancelInfoDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentCancelReasonDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentHistoryDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentIconDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentLogDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentRoomDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentShowTimeAsDAO.cs" />
+    <Compile Include="DAO\Appointments\IAppointmentTypeDAO.cs" />
+    <Compile Include="DAO\Appointments\IBaseAppointmentDAO.cs" />
+    <Compile Include="DAO\Appointments\IIconInfoDAO.cs" />
+    <Compile Include="DAO\AvailabilitySchedule\IAvailabilityScheduleDAO.cs" />
+    <Compile Include="DAO\Cache\IUserDatabaseCacheDAO.cs" />
+    <Compile Include="DAO\Cases\ICaseDAO.cs" />
+    <Compile Include="DAO\ClockWorkAudit\IClockWorkAuditDAO.cs" />
+    <Compile Include="DAO\ClockWorkClientConnectionInfo\IClockWorkClientConnectionInfoDAO.cs" />
+    <Compile Include="DAO\ClockWorkDailyJob\IDailyJobDAO.cs" />
+    <Compile Include="DAO\ClockWorkDatabase\IClockWorkDatabaseDAO.cs" />
+    <Compile Include="DAO\ClockWorkServerJob\IClockWorkServerJobDAO.cs" />
+    <Compile Include="DAO\ClockWorkSnapshots\IClockWorkSnapshotDAO.cs" />
+    <Compile Include="DAO\Communications\ICommunicationsSentDAO.cs" />
+    <Compile Include="DAO\ConfidentialityAgreement\IStudentConfidentialityAgreementDAO.cs" />
+    <Compile Include="DAO\ConnectionString\IClockWorkConnectionStringDAO.cs" />
+    <Compile Include="DAO\CourseRegistrations\ICourseRegistrationDAO.cs" />
+    <Compile Include="DAO\CustomForms\ICustomDataDAO.cs" />
+    <Compile Include="DAO\CustomForms\ICustomFieldDAO.cs" />
+    <Compile Include="DAO\CustomForms\ICustomFormDAO.cs" />
+    <Compile Include="DAO\CustomForms\ICustomFormListItemDAO.cs" />
+    <Compile Include="DAO\Database\IDatabaseDAO.cs" />
+    <Compile Include="DAO\DataSync\IDataSyncCourseDAO.cs" />
+    <Compile Include="DAO\DataSync\IDataSyncCourseExtendedDataDAO.cs" />
+    <Compile Include="DAO\DataSync\IDataSyncDAO.cs" />
+    <Compile Include="DAO\DataSync\IDataSyncInfoDAO.cs" />
+    <Compile Include="DAO\Data\IDataMaintenanceDAO.cs" />
+    <Compile Include="DAO\Departments\IDepartmentDAO.cs" />
+    <Compile Include="DAO\DynamicCompile\IDynamicCompileDAO.cs" />
+    <Compile Include="DAO\DynamicForms\FormApproval\IFormApprovalDAO.cs" />
+    <Compile Include="DAO\DynamicForms\FormApproval\IFormApprovalSupervisorDAO.cs" />
+    <Compile Include="DAO\DynamicForms\FormApproval\IFormApprovalTraineeDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IAccommodationBatchLetterEmailsDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IAccommodationsDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IAppointmentNotesDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IDynamicDataDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IDynamicDataForReportsDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IDynamicFieldDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IDynamicFileStorageDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IDynamicFormsDAO.cs" />
+    <Compile Include="DAO\DynamicForms\IDynamicPerDateDataDAO.cs" />
+    <Compile Include="DAO\DynamicForms\Legacy\ILegacyDynamicFieldSaveLoadDAO.cs" />
+    <Compile Include="DAO\DynamicQueries\IDynamicQueryDAO.cs" />
+    <Compile Include="DAO\Email\IAppointmentReminderEmailDAO.cs" />
+    <Compile Include="DAO\Email\IEmailAttachmentDAO.cs" />
+    <Compile Include="DAO\Email\IEmailDAO.cs" />
+    <Compile Include="DAO\Email\IEmailHistoryLoggerDAO.cs" />
+    <Compile Include="DAO\Encryption\IEncryptionDAO.cs" />
+    <Compile Include="DAO\Encryption\ILegacyEncryptionDAO.cs" />
+    <Compile Include="DAO\FileStorage\IDbFilesStorageDAO.cs" />
+    <Compile Include="DAO\FileStorage\IFilesStorageDAO.cs" />
+    <Compile Include="DAO\FileStorage\IFileTypeDAO.cs" />
+    <Compile Include="DAO\FTP\IFtpDAO.cs" />
+    <Compile Include="DAO\General\IModificationHistoryItemDAO.cs" />
+    <Compile Include="DAO\ICampusDAO.cs" />
+    <Compile Include="DAO\IFileStorageDAO.cs" />
+    <Compile Include="DAO\IFileSystemStorageDAO.cs" />
+    <Compile Include="DAO\ILicenseKeyDAO.cs" />
+    <Compile Include="DAO\IMiscSafeDAO.cs" />
+    <Compile Include="DAO\Institution\IInstitutionDAO.cs" />
+    <Compile Include="DAO\Intake\IIntakeAccountDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryAttachmentDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryCatalogDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryCategoryDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryGroupDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryLoanDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryLoanStatusDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryLocationDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryProductDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryProductStatusDAO.cs" />
+    <Compile Include="DAO\Inventory\IInventoryReservationDAO.cs" />
+    <Compile Include="DAO\IPersonDAO.cs" />
+    <Compile Include="DAO\IQueryingDAO.cs" />
+    <Compile Include="DAO\Legacy\ILegacyAccommodationDAO.cs" />
+    <Compile Include="DAO\Legacy\ILegacyActionPlanDAO.cs" />
+    <Compile Include="DAO\Legacy\ILegacyAppointmentDAO.cs" />
+    <Compile Include="DAO\Legacy\ILegacyDynamicDataDAO.cs" />
+    <Compile Include="DAO\Legacy\ILegacyServiceProviderDAO.cs" />
+    <Compile Include="DAO\Legacy\ILegacyWebSettingsDAO.cs" />
+    <Compile Include="DAO\LookupCourses\IAcademicTermDAO.cs" />
+    <Compile Include="DAO\LookupCourses\IAlternateContactDAO.cs" />
+    <Compile Include="DAO\LookupCourses\ILookupCourseDAO.cs" />
+    <Compile Include="DAO\LookupCourses\ILookupInstructorDAO.cs" />
+    <Compile Include="DAO\LookupCourses\ILookupSubjectDAO.cs" />
+    <Compile Include="DAO\LookupCourses\ILookupTimetableItemDAO.cs" />
+    <Compile Include="DAO\LookupCourses\ISessionDAO.cs" />
+    <Compile Include="DAO\LookupCourses\Management\ILookupInstructorManagementDAO.cs" />
+    <Compile Include="DAO\MailMerging\IMailMergingDAO.cs" />
+    <Compile Include="DAO\MailMerging\IMailMergingDocDAO.cs" />
+    <Compile Include="DAO\MailMerging\IMailMergingListDAO.cs" />
+    <Compile Include="DAO\MarkedForDeletion\IMarkedForDeletionItemDAO.cs" />
+    <Compile Include="DAO\MarkedForDeletion\IMarkedForDeletionJobDAO.cs" />
+    <Compile Include="DAO\Membership\IAuthenticationSessionDAO.cs" />
+    <Compile Include="DAO\Membership\IUserDAO.cs" />
+    <Compile Include="DAO\MergeDuplicates\IMergeDuplicateCoursesDAO.cs" />
+    <Compile Include="DAO\MergeDuplicates\IMergeDuplicateStudentDAO.cs" />
+    <Compile Include="DAO\Messaging\IAttachmentDropBoxDAO.cs" />
+    <Compile Include="DAO\Messaging\IIMDropBoxDAO.cs" />
+    <Compile Include="DAO\Misc\IMiscDAO.cs" />
+    <Compile Include="DAO\Notetaking\INotetakeeDAO.cs" />
+    <Compile Include="DAO\Notetaking\INotetakerNotesDAO.cs" />
+    <Compile Include="DAO\Notetaking\INotetakingDAO.cs" />
+    <Compile Include="DAO\OnlineForms\IOnlineFormDAO.cs" />
+    <Compile Include="DAO\OnlineForms\IOnlineFormQueueDAO.cs" />
+    <Compile Include="DAO\People\IAdminGroupDAO.cs" />
+    <Compile Include="DAO\People\IGroupDAO.cs" />
+    <Compile Include="DAO\People\IPeopleDAO.cs" />
+    <Compile Include="DAO\People\IPeopleGroupDAO.cs" />
+    <Compile Include="DAO\People\IStaffCommonInfoDAO.cs" />
+    <Compile Include="DAO\People\IStudentActivationDAO.cs" />
+    <Compile Include="DAO\People\IStudentCommonInfoDAO.cs" />
+    <Compile Include="DAO\People\IStudentManagementDAO.cs" />
+    <Compile Include="DAO\PerformanceTesting\IPerformanceTestDAO.cs" />
+    <Compile Include="DAO\Reports\IOracleQueryDAO.cs" />
+    <Compile Include="DAO\Reports\IReportDAO.cs" />
+    <Compile Include="DAO\Room\IRoomDAO.cs" />
+    <Compile Include="DAO\ServiceProvidersOriginal\IServiceProviderOriginalNotesDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceProviderApplicationDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceProviderCourseRegistrationDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceProviderDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceProviderLookupDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceProviderMatchingDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceProviderTypeDAO.cs" />
+    <Compile Include="DAO\ServiceProvider\IServiceRequestDAO.cs" />
+    <Compile Include="DAO\Settings\IMiscTableSettingsDAO.cs" />
+    <Compile Include="DAO\Settings\IReferenceTableSettingDAO.cs" />
+    <Compile Include="DAO\Settings\ISettingDAO.cs" />
+    <Compile Include="DAO\Settings\ISpecialControlDAO.cs" />
+    <Compile Include="DAO\Snapshot\ISnapshotDAO.cs" />
+    <Compile Include="DAO\StudentAccommodationRequests\ISelfRegDAO.cs" />
+    <Compile Include="DAO\StudentAccommodationRequests\ISelfRegTrackingDAO.cs" />
+    <Compile Include="DAO\StudentAccommodationRequests\IStudentAccommodationRequestDAO.cs" />
+    <Compile Include="DAO\StudentFiles\IStudentFilesQueueDAO.cs" />
+    <Compile Include="DAO\Surveys\ISurveyDAO.cs" />
+    <Compile Include="DAO\Surveys\ISurveyQueueDAO.cs" />
+    <Compile Include="DAO\Tasks\ITaskDAO.cs" />
+    <Compile Include="DAO\Tasks\ITaskGroupDAO.cs" />
+    <Compile Include="DAO\TempFiles\ITempFileDAO.cs" />
+    <Compile Include="DAO\Templates\ITemplateDAO.cs" />
+    <Compile Include="DAO\Tutoring\IStudentTuteeDAO.cs" />
+    <Compile Include="DAO\Tutoring\ITutorDAO.cs" />
+    <Compile Include="DAO\UnivDataAccess\IUnivDataAccessDAO.cs" />
+    <Compile Include="DAO\Updates\IExecuteUpdateDAO.cs" />
+    <Compile Include="DAO\Updates\IUpdateDAO.cs" />
+    <Compile Include="DAO\UserAccount\IUserAccountDAO.cs" />
+    <Compile Include="DAO\UserAccount\IUserLoginTrackingDAO.cs" />
+    <Compile Include="DAO\UserSettingsPermissions\IMiscCodeDAO.cs" />
+    <Compile Include="DAO\UserSettingsPermissions\IOldSettingDAO.cs" />
+    <Compile Include="DAO\UserSettingsPermissions\IPermissionDAO.cs" />
+    <Compile Include="DAO\Veteran\IVeteranDAO.cs" />
+    <Compile Include="DAO\Vets\IVetsBenefitApplicationDAO.cs" />
+    <Compile Include="DAO\Vets\IVetsChangeInBenefitDAO.cs" />
+    <Compile Include="DAO\Vets\IVetsChapterDAO.cs" />
+    <Compile Include="DAO\Workflows\IWorkflowDAO.cs" />
+    <Compile Include="DAO\Workflows\IWorkflowProgressStepDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.DAO.Entity\Common.DAO.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2620}</Project>
+      <Name>Common.DAO.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

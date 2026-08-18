@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<tools>
+		<tool name="Bold" shortcut="CTRL+B / CMD+B"/>
+		<tool name="Italic" shortcut="CTRL+I / CMD+I"/>
+		<tool name="Underline" shortcut="CTRL+U / CMD+U"/>
+	</tools>
+	<tools>
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+	</tools>
+	<tools>
+		<tool name="InsertOrderedList" />
+		<tool name="InsertUnorderedList" />
+	</tools>
+	<tools>
+		<tool name="InsertLink" />
+		<tool name="Unlink" shortcut="CTRL+SHIFT+K / CMD+SHIFT+K" />
+		<tool name="InsertImage" />
+		<tool name="InsertTableLight"/>
+	</tools>
+	<tools>
+		<tool name="ForeColor" />
+		<tool name="BackColor" />
+	</tools>
+	<tools>
+		<tool name="FormatSets" />
+		<tool name="FontName" shortcut="CTRL+SHIFT+F / CMD+SHIFT+F" />
+		<tool name="RealFontSize" shortcut="CTRL+SHIFT+P / CMD+SHIFT+P" />
+	</tools>
+	<tools>
+		<tool name="ApplyClass" />
+		<tool name="FormatStripper" />
+	</tools>
+	<tools>
+		<tool name="ToggleEditMode"></tool>
+	</tools>
+</root>

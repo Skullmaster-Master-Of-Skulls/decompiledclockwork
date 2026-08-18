@@ -1,0 +1,1 @@
+.RadRating_Silk a,.RadRating_Silk a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Silk.Rating.Sprite.png")%>')}@media print{.RadRating_Silk a:before,.RadRating_Silk a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Silk.Rating.Sprite.png")%>')}}

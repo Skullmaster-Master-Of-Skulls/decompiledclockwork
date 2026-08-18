@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.EnterpriseServices</RootNamespace>
+    <AssemblyName>System.EnterpriseServices</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessChecksLevelOption.cs" />
+    <Compile Include="ActivationOption.cs" />
+    <Compile Include="Activity.cs" />
+    <Compile Include="Admin\ApplicationExportOptions.cs" />
+    <Compile Include="Admin\ApplicationInstallOptions.cs" />
+    <Compile Include="Admin\AuthenticationCapabilitiesOptions.cs" />
+    <Compile Include="Admin\Bitness.cs" />
+    <Compile Include="Admin\CollectionName.cs" />
+    <Compile Include="Admin\ComponentFlags.cs" />
+    <Compile Include="Admin\FileFlags.cs" />
+    <Compile Include="Admin\ICatalog.cs" />
+    <Compile Include="Admin\ICatalog2.cs" />
+    <Compile Include="Admin\ICatalogCollection.cs" />
+    <Compile Include="Admin\ICatalogObject.cs" />
+    <Compile Include="Admin\IComponentUtil.cs" />
+    <Compile Include="Admin\IMtsCatalog.cs" />
+    <Compile Include="Admin\IRoleAssociationUtil.cs" />
+    <Compile Include="Admin\ServiceStatusOptions.cs" />
+    <Compile Include="Admin\xCatalog.cs" />
+    <Compile Include="Admin\xMtsCatalog.cs" />
+    <Compile Include="ApplicationAccessControlAttribute.cs" />
+    <Compile Include="ApplicationActivationAttribute.cs" />
+    <Compile Include="ApplicationIDAttribute.cs" />
+    <Compile Include="ApplicationNameAttribute.cs" />
+    <Compile Include="ApplicationQueuingAttribute.cs" />
+    <Compile Include="ApplicationSpec.cs" />
+    <Compile Include="AuthenticationOption.cs" />
+    <Compile Include="AutoCompleteAttribute.cs" />
+    <Compile Include="BaseSwitch.cs" />
+    <Compile Include="BindingOption.cs" />
+    <Compile Include="BlindMBRO.cs" />
+    <Compile Include="BOID.cs" />
+    <Compile Include="BooleanSwitch.cs" />
+    <Compile Include="BYOT.cs" />
+    <Compile Include="Cachetable.cs" />
+    <Compile Include="CatalogSync.cs" />
+    <Compile Include="ClassicProxyTearoff.cs" />
+    <Compile Include="ClassTypes.cs" />
+    <Compile Include="ComObjRef.cs" />
+    <Compile Include="CompensatingResourceManager\ApplicationCrmEnabledAttribute.cs" />
+    <Compile Include="CompensatingResourceManager\BlobPackage.cs" />
+    <Compile Include="CompensatingResourceManager\Clerk.cs" />
+    <Compile Include="CompensatingResourceManager\ClerkInfo.cs" />
+    <Compile Include="CompensatingResourceManager\ClerkMonitor.cs" />
+    <Compile Include="CompensatingResourceManager\ClerkMonitorEnumerator.cs" />
+    <Compile Include="CompensatingResourceManager\Compensator.cs" />
+    <Compile Include="CompensatingResourceManager\CompensatorOptions.cs" />
+    <Compile Include="CompensatingResourceManager\IFormatLogRecords.cs" />
+    <Compile Include="CompensatingResourceManager\LogRecord.cs" />
+    <Compile Include="CompensatingResourceManager\LogRecordFlags.cs" />
+    <Compile Include="CompensatingResourceManager\Packager.cs" />
+    <Compile Include="CompensatingResourceManager\TransactionState.cs" />
+    <Compile Include="CompensatingResourceManager\_ICompensator.cs" />
+    <Compile Include="CompensatingResourceManager\_IFormatLogRecords.cs" />
+    <Compile Include="CompensatingResourceManager\_IMonitorClerks.cs" />
+    <Compile Include="CompensatingResourceManager\_IMonitorLogRecords.cs" />
+    <Compile Include="ComponentAccessControlAttribute.cs" />
+    <Compile Include="ComponentConfigCallback.cs" />
+    <Compile Include="ComponentSerializer.cs" />
+    <Compile Include="ComponentServices.cs" />
+    <Compile Include="ComSurrogateSelector.cs" />
+    <Compile Include="COMTIIntrinsicsAttribute.cs" />
+    <Compile Include="ConstructionEnabledAttribute.cs" />
+    <Compile Include="ContextUtil.cs" />
+    <Compile Include="DBG.cs" />
+    <Compile Include="DescriptionAttribute.cs" />
+    <Compile Include="DtcIsolationLevel.cs" />
+    <Compile Include="EventClassAttribute.cs" />
+    <Compile Include="EventTrackingEnabledAttribute.cs" />
+    <Compile Include="ExceptionClassAttribute.cs" />
+    <Compile Include="FastRSCPObjRef.cs" />
+    <Compile Include="IAsyncErrorNotify.cs" />
+    <Compile Include="ICatalogServices.cs" />
+    <Compile Include="IConfigCallback.cs" />
+    <Compile Include="IConfigurationAttribute.cs" />
+    <Compile Include="IContext.cs" />
+    <Compile Include="IContextProperties.cs" />
+    <Compile Include="IContextState.cs" />
+    <Compile Include="IContextTransactionInfo.cs" />
+    <Compile Include="ICreateTypeLib.cs" />
+    <Compile Include="ICreateWithLocalTransaction.cs" />
+    <Compile Include="ICreateWithTipTransactionEx.cs" />
+    <Compile Include="ICreateWithTransactionEx.cs" />
+    <Compile Include="IdentityTable.cs" />
+    <Compile Include="IDispatchContext.cs" />
+    <Compile Include="IGetContextProperties.cs" />
+    <Compile Include="IISIntrinsicsAttribute.cs" />
+    <Compile Include="IManagedActivationEvents.cs" />
+    <Compile Include="IManagedObject.cs" />
+    <Compile Include="IManagedObjectInfo.cs" />
+    <Compile Include="IManagedPoolAction.cs" />
+    <Compile Include="ImpersonationLevelOption.cs" />
+    <Compile Include="InheritanceOption.cs" />
+    <Compile Include="InstallationFlags.cs" />
+    <Compile Include="InterfaceConfigCallback.cs" />
+    <Compile Include="InterfaceQueuingAttribute.cs" />
+    <Compile Include="InterlockedStack.cs" />
+    <Compile Include="IntermediaryObjRef.cs" />
+    <Compile Include="Internal\AppDomainHelper.cs" />
+    <Compile Include="Internal\AssemblyLocator.cs" />
+    <Compile Include="Internal\AssemblyManager.cs" />
+    <Compile Include="Internal\CacheInfo.cs" />
+    <Compile Include="Internal\ClientRemotingConfig.cs" />
+    <Compile Include="Internal\ClrObjectFactory.cs" />
+    <Compile Include="Internal\ComManagedImportUtil.cs" />
+    <Compile Include="Internal\ComSoapPublishError.cs" />
+    <Compile Include="Internal\DiscoFile.cs" />
+    <Compile Include="Internal\GenAssemblyFromWsdl.cs" />
+    <Compile Include="Internal\GenerateMetadata.cs" />
+    <Compile Include="Internal\HomePage.cs" />
+    <Compile Include="Internal\IAppDomainHelper.cs" />
+    <Compile Include="Internal\IApplicationContext.cs" />
+    <Compile Include="Internal\IAssemblyCache.cs" />
+    <Compile Include="Internal\IAssemblyCacheItem.cs" />
+    <Compile Include="Internal\IAssemblyLocator.cs" />
+    <Compile Include="Internal\IAssemblyName.cs" />
+    <Compile Include="Internal\IClrObjectFactory.cs" />
+    <Compile Include="Internal\IComManagedImportUtil.cs" />
+    <Compile Include="Internal\IComSoapIISVRoot.cs" />
+    <Compile Include="Internal\IComSoapMetadata.cs" />
+    <Compile Include="Internal\IComSoapPublisher.cs" />
+    <Compile Include="Internal\IISVirtualRoot.cs" />
+    <Compile Include="Internal\IISVirtualRootEx.cs" />
+    <Compile Include="Internal\IServerWebConfig.cs" />
+    <Compile Include="Internal\ISoapClientImport.cs" />
+    <Compile Include="Internal\ISoapServerTlb.cs" />
+    <Compile Include="Internal\ISoapServerVRoot.cs" />
+    <Compile Include="Internal\ISoapUtility.cs" />
+    <Compile Include="Internal\ITypeLib2.cs" />
+    <Compile Include="Internal\NativeMethods.cs" />
+    <Compile Include="Internal\NonRootVRootException.cs" />
+    <Compile Include="Internal\Publish.cs" />
+    <Compile Include="Internal\REGKIND.cs" />
+    <Compile Include="Internal\SafeUserTokenHandle.cs" />
+    <Compile Include="Internal\ServerWebConfig.cs" />
+    <Compile Include="Internal\SoapClientConfig.cs" />
+    <Compile Include="Internal\SoapClientImport.cs" />
+    <Compile Include="Internal\SoapServerConfig.cs" />
+    <Compile Include="Internal\SoapServerInfo.cs" />
+    <Compile Include="Internal\SoapServerTlb.cs" />
+    <Compile Include="Internal\SoapServerVRoot.cs" />
+    <Compile Include="Internal\SoapUtility.cs" />
+    <Compile Include="IObjectConstruct.cs" />
+    <Compile Include="IObjectConstructString.cs" />
+    <Compile Include="IObjectContext.cs" />
+    <Compile Include="IObjectContextInfo.cs" />
+    <Compile Include="IObjectContextInfo2.cs" />
+    <Compile Include="IObjectControl.cs" />
+    <Compile Include="IObjPool.cs" />
+    <Compile Include="IPlaybackControl.cs" />
+    <Compile Include="IProcessInitControl.cs" />
+    <Compile Include="IProcessInitializer.cs" />
+    <Compile Include="IRegistrationHelper.cs" />
+    <Compile Include="IRemoteDispatch.cs" />
+    <Compile Include="ISecurityCallContext.cs" />
+    <Compile Include="ISecurityCallersColl.cs" />
+    <Compile Include="ISecurityIdentityColl.cs" />
+    <Compile Include="IServiceCall.cs" />
+    <Compile Include="IServicedComponentInfo.cs" />
+    <Compile Include="ISharedProperty.cs" />
+    <Compile Include="ISharedPropertyGroup.cs" />
+    <Compile Include="ISharedPropertyGroupManager.cs" />
+    <Compile Include="ITransaction.cs" />
+    <Compile Include="ITransactionOutcomeEvents.cs" />
+    <Compile Include="ITransactionProperty.cs" />
+    <Compile Include="ITransactionProxy.cs" />
+    <Compile Include="ITransactionResourcePool.cs" />
+    <Compile Include="ITransactionVoterBallotAsync2.cs" />
+    <Compile Include="ITransactionVoterNotifyAsync2.cs" />
+    <Compile Include="ITxStreamInternal.cs" />
+    <Compile Include="JustInTimeActivationAttribute.cs" />
+    <Compile Include="LoadBalancingSupportedAttribute.cs" />
+    <Compile Include="MethodCallMessageWrapperEx.cs" />
+    <Compile Include="MethodConfigCallback.cs" />
+    <Compile Include="MustRunInClientContextAttribute.cs" />
+    <Compile Include="ObjectPoolingAttribute.cs" />
+    <Compile Include="PartitionOption.cs" />
+    <Compile Include="Perf.cs" />
+    <Compile Include="Platform.cs" />
+    <Compile Include="PlatformFeature.cs" />
+    <Compile Include="PrivateComponentAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyLockMode.cs" />
+    <Compile Include="PropertyReleaseMode.cs" />
+    <Compile Include="ProxyTearoff.cs" />
+    <Compile Include="ReflectionCache.cs" />
+    <Compile Include="RegistrationConfig.cs" />
+    <Compile Include="RegistrationDriver.cs" />
+    <Compile Include="RegistrationErrorInfo.cs" />
+    <Compile Include="RegistrationException.cs" />
+    <Compile Include="RegistrationExporterNotifySink.cs" />
+    <Compile Include="RegistrationHelper.cs" />
+    <Compile Include="RegistrationHelperTx.cs" />
+    <Compile Include="RegistrationThreadWrapper.cs" />
+    <Compile Include="RemoteServicedComponentProxy.cs" />
+    <Compile Include="RemotingIntermediary.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="ResourcePool.cs" />
+    <Compile Include="RWHashTable.cs" />
+    <Compile Include="RWHashTableEx.cs" />
+    <Compile Include="SCMChannelInfo.cs" />
+    <Compile Include="SCMTypeName.cs" />
+    <Compile Include="SCUnMarshaler.cs" />
+    <Compile Include="SecureMethodAttribute.cs" />
+    <Compile Include="SecurityCallContext.cs" />
+    <Compile Include="SecurityCallers.cs" />
+    <Compile Include="SecurityIdentity.cs" />
+    <Compile Include="SecurityIdentityEnumerator.cs" />
+    <Compile Include="SecurityProperty.cs" />
+    <Compile Include="SecurityRoleAttribute.cs" />
+    <Compile Include="ServiceConfig.cs" />
+    <Compile Include="ServicedComponent.cs" />
+    <Compile Include="ServicedComponentException.cs" />
+    <Compile Include="ServicedComponentInfo.cs" />
+    <Compile Include="ServicedComponentMarshaler.cs" />
+    <Compile Include="ServicedComponentProxy.cs" />
+    <Compile Include="ServicedComponentProxyAttribute.cs" />
+    <Compile Include="ServicedComponentStub.cs" />
+    <Compile Include="ServiceDomain.cs" />
+    <Compile Include="SharedProperty.cs" />
+    <Compile Include="SharedPropertyGroup.cs" />
+    <Compile Include="SharedPropertyGroupManager.cs" />
+    <Compile Include="SxsOption.cs" />
+    <Compile Include="SynchronizationAttribute.cs" />
+    <Compile Include="SynchronizationOption.cs" />
+    <Compile Include="ThreadPoolOption.cs" />
+    <Compile Include="TraceLevel.cs" />
+    <Compile Include="TraceSwitch.cs" />
+    <Compile Include="TransactionAttribute.cs" />
+    <Compile Include="TransactionIsolationLevel.cs" />
+    <Compile Include="TransactionOption.cs" />
+    <Compile Include="TransactionProxy.cs" />
+    <Compile Include="TransactionProxyException.cs" />
+    <Compile Include="TransactionStatus.cs" />
+    <Compile Include="TransactionVote.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="VoterBallot.cs" />
+    <Compile Include="WeakProxyTearoff.cs" />
+    <Compile Include="Wow64Helper.cs" />
+    <Compile Include="XACTTRANSINFO.cs" />
+    <Compile Include="xByotServer.cs" />
+    <Compile Include="xSharedPropertyGroupManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.VisualC\Microsoft.VisualC.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B2}</Project>
+      <Name>Microsoft.VisualC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.DirectoryServices\System.DirectoryServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B9}</Project>
+      <Name>System.DirectoryServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Runtime.Remoting\System.Runtime.Remoting.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BC}</Project>
+      <Name>System.Runtime.Remoting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Transactions\System.Transactions.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AF}</Project>
+      <Name>System.Transactions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

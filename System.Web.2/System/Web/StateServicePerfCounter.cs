@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace System.Web
+{
+	// Token: 0x02000018 RID: 24
+	internal enum StateServicePerfCounter
+	{
+		// Token: 0x040000D5 RID: 213
+		STATE_SERVICE_SESSIONS_ACTIVE = 97,
+		// Token: 0x040000D6 RID: 214
+		STATE_SERVICE_SESSIONS_ABANDONED,
+		// Token: 0x040000D7 RID: 215
+		STATE_SERVICE_SESSIONS_TIMED_OUT,
+		// Token: 0x040000D8 RID: 216
+		STATE_SERVICE_SESSIONS_TOTAL
+	}
+}

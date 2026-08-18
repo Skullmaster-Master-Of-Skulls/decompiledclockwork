@@ -1,0 +1,22 @@
+﻿using System;
+
+namespace TechnoPro.Common.Win32
+{
+	// Token: 0x02000007 RID: 7
+	[Flags]
+	public enum MoveFileFlags
+	{
+		// Token: 0x0400000C RID: 12
+		MOVEFILE_REPLACE_EXISTING = 1,
+		// Token: 0x0400000D RID: 13
+		MOVEFILE_COPY_ALLOWED = 2,
+		// Token: 0x0400000E RID: 14
+		MOVEFILE_DELAY_UNTIL_REBOOT = 4,
+		// Token: 0x0400000F RID: 15
+		MOVEFILE_WRITE_THROUGH = 8,
+		// Token: 0x04000010 RID: 16
+		MOVEFILE_CREATE_HARDLINK = 16,
+		// Token: 0x04000011 RID: 17
+		MOVEFILE_FAIL_IF_NOT_TRACKABLE = 32
+	}
+}

@@ -1,0 +1,135 @@
+﻿using System;
+using System.CodeDom.Compiler;
+using System.IO;
+using System.Security.Permissions;
+using System.Web.Hosting;
+using System.Web.UI;
+using System.Web.Util;
+
+namespace System.Web.Compilation
+{
+	// Token: 0x02000866 RID: 2150
+	internal static class ThemeDirectoryCompiler
+	{
+		// Token: 0x06006586 RID: 25990 RVA: 0x0016577C File Offset: 0x0016397C
+		internal static VirtualPath GetAppThemeVirtualDir(string themeName)
+		{
+			return HttpRuntime.AppDomainAppVirtualPathObject.SimpleCombineWithDir("App_Themes/" + themeName);
+		}
+
+		// Token: 0x06006587 RID: 25991 RVA: 0x00165793 File Offset: 0x00163993
+		internal static VirtualPath GetGlobalThemeVirtualDir(string themeName)
+		{
+			return BuildManager.ScriptVirtualDir.SimpleCombineWithDir("Themes/" + themeName);
+		}
+
+		// Token: 0x06006588 RID: 25992 RVA: 0x001657AC File Offset: 0x001639AC
+		[PermissionSet(SecurityAction.Assert, Unrestricted = true)]
+		internal static BuildResultCompiledType GetThemeBuildResultType(HttpContext context, string themeName)
+		{
+			BuildResultCompiledType themeBuildResultType;
+			using (new ApplicationImpersonationContext())
+			{
+				themeBuildResultType = ThemeDirectoryCompiler.GetThemeBuildResultType(themeName);
+			}
+			return themeBuildResultType;
+		}
+
+		// Token: 0x06006589 RID: 25993 RVA: 0x001657E4 File Offset: 0x001639E4
+		private static BuildResultCompiledType GetThemeBuildResultType(string themeName)
+		{
+			string text = null;
+			string text2 = "Theme_" + Util.MakeValidTypeNameFromString(themeName);
+			BuildResultCompiledType buildResultCompiledType = (BuildResultCompiledType)BuildManager.GetBuildResultFromCache(text2);
+			if (buildResultCompiledType == null)
+			{
+				text = "GlobalTheme_" + themeName;
+				buildResultCompiledType = (BuildResultCompiledType)BuildManager.GetBuildResultFromCache(text);
+			}
+			if (buildResultCompiledType != null)
+			{
+				return buildResultCompiledType;
+			}
+			bool flag = false;
+			try
+			{
+				CompilationLock.GetLock(ref flag);
+				buildResultCompiledType = (BuildResultCompiledType)BuildManager.GetBuildResultFromCache(text2);
+				if (buildResultCompiledType == null)
+				{
+					buildResultCompiledType = (BuildResultCompiledType)BuildManager.GetBuildResultFromCache(text);
+				}
+				if (buildResultCompiledType != null)
+				{
+					return buildResultCompiledType;
+				}
+				VirtualPath appThemeVirtualDir = ThemeDirectoryCompiler.GetAppThemeVirtualDir(themeName);
+				VirtualPath virtualPath = appThemeVirtualDir;
+				string cacheKey = text2;
+				PageThemeBuildProvider pageThemeBuildProvider;
+				if (appThemeVirtualDir.DirectoryExists())
+				{
+					pageThemeBuildProvider = new PageThemeBuildProvider(appThemeVirtualDir);
+				}
+				else
+				{
+					VirtualPath globalThemeVirtualDir = ThemeDirectoryCompiler.GetGlobalThemeVirtualDir(themeName);
+					if (!globalThemeVirtualDir.DirectoryExists())
+					{
+						throw new HttpException(SR.GetString("Page_theme_not_found", new object[]
+						{
+							themeName
+						}));
+					}
+					virtualPath = globalThemeVirtualDir;
+					cacheKey = text;
+					pageThemeBuildProvider = new GlobalPageThemeBuildProvider(globalThemeVirtualDir);
+				}
+				DateTime utcNow = DateTime.UtcNow;
+				VirtualDirectory directory = virtualPath.GetDirectory();
+				ThemeDirectoryCompiler.AddThemeFilesToBuildProvider(directory, pageThemeBuildProvider, true);
+				BuildProvidersCompiler buildProvidersCompiler = new BuildProvidersCompiler(virtualPath, pageThemeBuildProvider.AssemblyNamePrefix + BuildManager.GenerateRandomAssemblyName(themeName));
+				buildProvidersCompiler.SetBuildProviders(new SingleObjectCollection(pageThemeBuildProvider));
+				CompilerResults results = buildProvidersCompiler.PerformBuild();
+				buildResultCompiledType = (BuildResultCompiledType)pageThemeBuildProvider.GetBuildResult(results);
+				BuildManager.CacheBuildResult(cacheKey, buildResultCompiledType, utcNow);
+			}
+			finally
+			{
+				if (flag)
+				{
+					CompilationLock.ReleaseLock();
+				}
+			}
+			return buildResultCompiledType;
+		}
+
+		// Token: 0x0600658A RID: 25994 RVA: 0x00165948 File Offset: 0x00163B48
+		private static void AddThemeFilesToBuildProvider(VirtualDirectory vdir, PageThemeBuildProvider themeBuildProvider, bool topLevel)
+		{
+			foreach (object obj in vdir.Children)
+			{
+				VirtualFileBase virtualFileBase = (VirtualFileBase)obj;
+				if (virtualFileBase.IsDirectory)
+				{
+					ThemeDirectoryCompiler.AddThemeFilesToBuildProvider(virtualFileBase as VirtualDirectory, themeBuildProvider, false);
+				}
+				else
+				{
+					string extension = Path.GetExtension(virtualFileBase.Name);
+					if (StringUtil.EqualsIgnoreCase(extension, ".skin") && topLevel)
+					{
+						themeBuildProvider.AddSkinFile(virtualFileBase.VirtualPathObject);
+					}
+					else if (StringUtil.EqualsIgnoreCase(extension, ".css"))
+					{
+						themeBuildProvider.AddCssFile(virtualFileBase.VirtualPathObject);
+					}
+				}
+			}
+		}
+
+		// Token: 0x0400343C RID: 13372
+		internal const string skinExtension = ".skin";
+	}
+}

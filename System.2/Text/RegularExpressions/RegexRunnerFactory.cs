@@ -1,0 +1,13 @@
+﻿using System;
+using System.ComponentModel;
+
+namespace System.Text.RegularExpressions
+{
+	// Token: 0x020006A6 RID: 1702
+	[EditorBrowsable(EditorBrowsableState.Never)]
+	public abstract class RegexRunnerFactory
+	{
+		// Token: 0x06003FC3 RID: 16323
+		protected internal abstract RegexRunner CreateInstance();
+	}
+}

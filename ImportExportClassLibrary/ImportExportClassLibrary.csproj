@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE266C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImportExportClassLibrary</RootNamespace>
+    <AssemblyName>ImportExportClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.UI.WinForms.Settings" />
+    <Reference Include="Common.UI.WinForms.TestBooking" />
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Reference Include="Interop.Excel" />
+    <Reference Include="Interop.Word" />
+    <Reference Include="Itenso.Rtf.Converter.Html" />
+    <Reference Include="Itenso.Rtf.Interpreter" />
+    <Reference Include="Itenso.Rtf.Parser" />
+    <Reference Include="MailMerging" />
+    <Reference Include="Microsoft.Data.Odbc" />
+    <Reference Include="PrintingClassLibrary" />
+    <Reference Include="SettingsPermissions" />
+    <Reference Include="TPEmailer" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BinaryFile.cs" />
+    <Compile Include="Code.cs" />
+    <Compile Include="Compression.cs" />
+    <Compile Include="Controls\FilePreview.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="CsvParser.cs" />
+    <Compile Include="DataTableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataTableView.Designer.cs">
+      <DependentUpon>DataTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataTableViewProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataTableViewProperties.Designer.cs">
+      <DependentUpon>DataTableViewProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs" />
+    <Compile Include="EmailMethod.cs" />
+    <Compile Include="EmailSentEventHandler.cs" />
+    <Compile Include="FilterColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterColumns.Designer.cs">
+      <DependentUpon>FilterColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpClient.cs" />
+    <Compile Include="GetCodesHandler.cs" />
+    <Compile Include="HowProblemWasFixed.cs" />
+    <Compile Include="ImportData.cs" />
+    <Compile Include="ImportItem.cs" />
+    <Compile Include="ImportItemStatus.cs" />
+    <Compile Include="ImportManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportManager.Designer.cs">
+      <DependentUpon>ImportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportODBC.cs" />
+    <Compile Include="ImportODBCLuCourses.cs" />
+    <Compile Include="ImportProblem.cs" />
+    <Compile Include="Mailing.cs" />
+    <Compile Include="MailMerge.cs" />
+    <Compile Include="MSOffice\ExcelUtility.cs" />
+    <Compile Include="MSOffice\MailMergeWord.cs" />
+    <Compile Include="PdfTemplatesClass.cs" />
+    <Compile Include="PersonTemplate.cs" />
+    <Compile Include="Plugin.cs" />
+    <Compile Include="PluginType.cs" />
+    <Compile Include="ProblemSolution.cs" />
+    <Compile Include="ProblemType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="RegistryFunctions.cs" />
+    <Compile Include="RtfToHtml.cs" />
+    <Compile Include="SolutionChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolutionChooser.Designer.cs">
+      <DependentUpon>SolutionChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateCode.cs" />
+    <Compile Include="TemplateCodeCollection.cs" />
+    <Compile Include="TemplateCodeGroup.cs" />
+    <Compile Include="TemplateCodeGroupCollection.cs" />
+    <Compile Include="TemplateInDatabase.cs" />
+    <Compile Include="TemplateInDatabaseCollection.cs" />
+    <Compile Include="TemplateInDatabaseEmailSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateInDatabaseEmailSettings.Designer.cs">
+      <DependentUpon>TemplateInDatabaseEmailSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateInDatabaseListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemplateInDatabaseListDialog.Designer.cs">
+      <DependentUpon>TemplateInDatabaseListDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateLoop.cs" />
+    <Compile Include="TemplatesClass.cs" />
+    <Compile Include="TemplatesClassPrinterSettings.cs" />
+    <Compile Include="Templates\NameObjectPair.cs" />
+    <Compile Include="Templates\NameObjectPairCollection.cs" />
+    <Compile Include="Templates\Template.cs" />
+    <Compile Include="Zip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\FilePreview.resources" />
+    <EmbeddedResource Include="DataTableView.resources" />
+    <EmbeddedResource Include="DataTableViewProperties.resources" />
+    <EmbeddedResource Include="FilterColumns.resources" />
+    <EmbeddedResource Include="ImportManager.resources" />
+    <EmbeddedResource Include="license\elic.xml" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="SolutionChooser.resources" />
+    <EmbeddedResource Include="TemplateInDatabaseEmailSettings.resources" />
+    <EmbeddedResource Include="TemplateInDatabaseListDialog.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoComboBox\AutoComboBox.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25ED}</Project>
+      <Name>AutoComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkAPI\ClockWorkAPI.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F0}</Project>
+      <Name>ClockWorkAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailClassLibrary\EmailClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2665}</Project>
+      <Name>EmailClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE266B}</Project>
+      <Name>ICSharpCode.SharpZipLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\itextsharp\itextsharp.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE266E}</Project>
+      <Name>itextsharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.Doc\Spire.Doc.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2689}</Project>
+      <Name>Spire.Doc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.License\Spire.License.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE268A}</Project>
+      <Name>Spire.License</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spire.XLS\Spire.XLS.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE268B}</Project>
+      <Name>Spire.XLS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

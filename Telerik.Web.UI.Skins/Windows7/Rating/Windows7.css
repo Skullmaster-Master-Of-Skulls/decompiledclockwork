@@ -1,0 +1,1 @@
+.RadRating_Windows7 a,.RadRating_Windows7 a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Windows7.Rating.Sprite.png")%>')}@media print{.RadRating_Windows7 a:before,.RadRating_Windows7 a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Windows7.Rating.Sprite.png")%>')}}

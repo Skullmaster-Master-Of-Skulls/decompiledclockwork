@@ -1,0 +1,1 @@
+.RadRating_Outlook a,.RadRating_Outlook a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Outlook.Rating.Sprite.png")%>')}@media print{.RadRating_Outlook a:before,.RadRating_Outlook a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Outlook.Rating.Sprite.png")%>')}}

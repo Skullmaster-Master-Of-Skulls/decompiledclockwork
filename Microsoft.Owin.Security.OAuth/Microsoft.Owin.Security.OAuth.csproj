@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2678}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Owin.Security.OAuth</RootNamespace>
+    <AssemblyName>Microsoft.Owin.Security.OAuth</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseValidatingClientContext.cs" />
+    <Compile Include="BaseValidatingContext.cs" />
+    <Compile Include="BaseValidatingTicketContext.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="DefaultBehavior.cs" />
+    <Compile Include="IOAuthAuthorizationServerProvider.cs" />
+    <Compile Include="IOAuthBearerAuthenticationProvider.cs" />
+    <Compile Include="Messages\AuthorizeEndpointRequest.cs" />
+    <Compile Include="Messages\TokenEndpointRequest.cs" />
+    <Compile Include="Messages\TokenEndpointRequestAuthorizationCode.cs" />
+    <Compile Include="Messages\TokenEndpointRequestClientCredentials.cs" />
+    <Compile Include="Messages\TokenEndpointRequestCustomExtension.cs" />
+    <Compile Include="Messages\TokenEndpointRequestRefreshToken.cs" />
+    <Compile Include="Messages\TokenEndpointRequestResourceOwnerPasswordCredentials.cs" />
+    <Compile Include="OAuthAuthorizationEndpointResponseContext.cs" />
+    <Compile Include="OAuthAuthorizationServerHandler.cs" />
+    <Compile Include="OAuthAuthorizationServerMiddleware.cs" />
+    <Compile Include="OAuthAuthorizationServerOptions.cs" />
+    <Compile Include="OAuthAuthorizationServerProvider.cs" />
+    <Compile Include="OAuthAuthorizeEndpointContext.cs" />
+    <Compile Include="OAuthBearerAuthenticationHandler.cs" />
+    <Compile Include="OAuthBearerAuthenticationMiddleware.cs" />
+    <Compile Include="OAuthBearerAuthenticationOptions.cs" />
+    <Compile Include="OAuthBearerAuthenticationProvider.cs" />
+    <Compile Include="OAuthChallengeContext.cs" />
+    <Compile Include="OAuthDefaults.cs" />
+    <Compile Include="OAuthGrantAuthorizationCodeContext.cs" />
+    <Compile Include="OAuthGrantClientCredentialsContext.cs" />
+    <Compile Include="OAuthGrantCustomExtensionContext.cs" />
+    <Compile Include="OAuthGrantRefreshTokenContext.cs" />
+    <Compile Include="OAuthGrantResourceOwnerCredentialsContext.cs" />
+    <Compile Include="OAuthMatchEndpointContext.cs" />
+    <Compile Include="OAuthRequestTokenContext.cs" />
+    <Compile Include="OAuthTokenEndpointContext.cs" />
+    <Compile Include="OAuthTokenEndpointResponseContext.cs" />
+    <Compile Include="OAuthValidateAuthorizeRequestContext.cs" />
+    <Compile Include="OAuthValidateClientAuthenticationContext.cs" />
+    <Compile Include="OAuthValidateClientRedirectUriContext.cs" />
+    <Compile Include="OAuthValidateIdentityContext.cs" />
+    <Compile Include="OAuthValidateTokenRequestContext.cs" />
+    <Compile Include="Owin\OAuthAuthorizationServerExtensions.cs" />
+    <Compile Include="Owin\OAuthBearerAuthenticationExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2677}</Project>
+      <Name>Microsoft.Owin.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Owin\Owin.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2682}</Project>
+      <Name>Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE264A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.UI.ClientManager.Web.Auth</RootNamespace>
+    <AssemblyName>Common.UI.ClientManager.Web.Auth</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationLookupMethod.cs" />
+    <Compile Include="AuthenticationMethod.cs" />
+    <Compile Include="Authentication\ApplicationSignInManager.cs" />
+    <Compile Include="Authentication\ApplicationUserManager.cs" />
+    <Compile Include="Authentication\ClockWorkApplicationUser.cs" />
+    <Compile Include="Authentication\ClockWorkUserStore.cs" />
+    <Compile Include="Authentication\CustomAuthorizeAttribute.cs" />
+    <Compile Include="Authentication\EmailService.cs" />
+    <Compile Include="Authentication\SmsService.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupMembership.cs" />
+    <Compile Include="LegacyCaching.cs" />
+    <Compile Include="LookupMethod.cs" />
+    <Compile Include="PermissionClientManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStorage.cs" />
+    <Compile Include="SamlAuthWebClientManager.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="WebAuthenticationAuthorizationWebClientManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.Core\Common.ClientManager.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2602}</Project>
+      <Name>Common.ClientManager.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ClientManager.ICore\Common.ClientManager.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2603}</Project>
+      <Name>Common.ClientManager.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Configuration\Common.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2606}</Project>
+      <Name>Common.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Security.Saml\Common.Security.Saml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2645}</Project>
+      <Name>Common.Security.Saml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.ClientManager.Web.Core\Common.UI.ClientManager.Web.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE264B}</Project>
+      <Name>Common.UI.ClientManager.Web.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.UI.Web.Entity\Common.UI.Web.Entity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2653}</Project>
+      <Name>Common.UI.Web.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Databases\Databases.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2663}</Project>
+      <Name>Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.AspNet.Identity.Core\Microsoft.AspNet.Identity.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2672}</Project>
+      <Name>Microsoft.AspNet.Identity.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.AspNet.Identity.EntityFramework\Microsoft.AspNet.Identity.EntityFramework.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2673}</Project>
+      <Name>Microsoft.AspNet.Identity.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.AspNet.Identity.Owin\Microsoft.AspNet.Identity.Owin.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2674}</Project>
+      <Name>Microsoft.AspNet.Identity.Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2677}</Project>
+      <Name>Microsoft.Owin.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Mvc\System.Web.Mvc.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269D}</Project>
+      <Name>System.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

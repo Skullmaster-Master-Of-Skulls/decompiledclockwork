@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2603}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.ClientManager.ICore</RootNamespace>
+    <AssemblyName>Common.ClientManager.ICore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlertTrigger\IAlertTriggerClientManager.cs" />
+    <Compile Include="AlternateFormat\IBookSearchClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaContentClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaContentFileClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaJobClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaJobStatusClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaPublisherClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaVendorClientManager.cs" />
+    <Compile Include="AlternateFormat\IMediaVolunteerClientManager.cs" />
+    <Compile Include="AlternateFormat\IStudentMediaRequestClientManager.cs" />
+    <Compile Include="AppointmentsCalendar\DatesAndAppointmentsWithAvailabilityAndTimetable.cs" />
+    <Compile Include="AppointmentsCalendar\IAppointmentBookingStudentClientManager.cs" />
+    <Compile Include="AppointmentsCalendar\IAppointmentClientManager.cs" />
+    <Compile Include="AppointmentsCalendar\IAppointmentHolidayClientManager.cs" />
+    <Compile Include="AppointmentsCalendar\LoadAppointmentsFromDatabaseParameters.cs" />
+    <Compile Include="AppointmentsList\IListAppointmentClientManager.cs" />
+    <Compile Include="AppointmentsPointOfContact\IPointOfContactClientManager.cs" />
+    <Compile Include="AppointmentsRecurring\IRecurringAppointmentClientManager.cs" />
+    <Compile Include="AppointmentsReminder\IAppointmentsReminderClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\IAutoTestBookingClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\IClassTestDefinitionClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\IExamFileClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\IExamRequestClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\ISittingClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\IStudentClassTestInfoClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\ITestBookingClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\ITestExamBookingViewClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\ITestExamBrowserClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\ITestExamSeatClientManager.cs" />
+    <Compile Include="AppointmentsTestBooking\ITestProctorClientManager.cs" />
+    <Compile Include="AppointmentsTestExamViews\IFinalExamsViewClientManager.cs" />
+    <Compile Include="AppointmentsWorkshops\IWorkshopAppointmentClientManager.cs" />
+    <Compile Include="AppointmentsWorkshops\IWorkshopDefinitionClientManager.cs" />
+    <Compile Include="Appointments\IAppointmentAttendeeClientManager.cs" />
+    <Compile Include="Appointments\IAppointmentCancelInfoClientManager.cs" />
+    <Compile Include="Appointments\IAppointmentCancelReasonClientManager.cs" />
+    <Compile Include="Appointments\IAppointmentIconClientManager.cs" />
+    <Compile Include="Appointments\IAppointmentShowTimeAsTypeClientManager.cs" />
+    <Compile Include="Appointments\IAppointmentTypeClientManager.cs" />
+    <Compile Include="Authentication\ICASAuthenticationClientManager.cs" />
+    <Compile Include="Authentication\IClockWorkAuthenticationClientManager.cs" />
+    <Compile Include="Authentication\ILdapClientManager.cs" />
+    <Compile Include="AvailabilitySchedule\IAvailabilityScheduleClientManager.cs" />
+    <Compile Include="Azure\Storage\IClockWorkSasTokenProviderClientManager.cs" />
+    <Compile Include="Caching\IServerCacheClientManager.cs" />
+    <Compile Include="Campus\ICampusClientManager.cs" />
+    <Compile Include="Cards\ICardHubClientManager.cs" />
+    <Compile Include="Cases\ICasesClientManager.cs" />
+    <Compile Include="ClockWorkAudit\IClockWorkAuditClientManager.cs" />
+    <Compile Include="ClockWorkServerConnection\IClockWorkClientConnectionInfoClientManager.cs" />
+    <Compile Include="ClockWorkServerConnection\IClockWorkServerConnectionsClientManager.cs" />
+    <Compile Include="ClockWorkServerConnection\IClockWorkServerDiscoveryClientManager.cs" />
+    <Compile Include="ClockWorkServerJob\IClockWorkServerJobClientManager.cs" />
+    <Compile Include="CourseRegistrations\ICourseRegistrationClientManager.cs" />
+    <Compile Include="CustomForms\ICustomDataClientManager.cs" />
+    <Compile Include="CustomForms\ICustomFieldClientManager.cs" />
+    <Compile Include="CustomForms\ICustomFormClientManager.cs" />
+    <Compile Include="CustomForms\ICustomFormListItemClientManager.cs" />
+    <Compile Include="DataSync\IDataSyncClientManager.cs" />
+    <Compile Include="DataSync\IDataSyncCourseClientManager.cs" />
+    <Compile Include="Data\IDataMaintenanceClientManager.cs" />
+    <Compile Include="DynamicForms\IAccommodationBatchLetterEmailsClientManager.cs" />
+    <Compile Include="DynamicForms\IAccommodationsClientManager.cs" />
+    <Compile Include="DynamicForms\IAppointmentNotesClientManager.cs" />
+    <Compile Include="DynamicForms\IDynamicDataClientManager.cs" />
+    <Compile Include="DynamicForms\IDynamicDataForReportsClientManager.cs" />
+    <Compile Include="DynamicForms\IDynamicFieldClientManager.cs" />
+    <Compile Include="DynamicForms\IDynamicFormsClientManager.cs" />
+    <Compile Include="DynamicForms\IFormApprovalClientManager.cs" />
+    <Compile Include="DynamicForms\IFormApprovalSupervisorClientManager.cs" />
+    <Compile Include="DynamicForms\IFormApprovalTraineeClientManager.cs" />
+    <Compile Include="DynamicForms\ILegacyDynamicDataSaveLoadClientManager.cs" />
+    <Compile Include="Email\IEmailAttachmentClientManager.cs" />
+    <Compile Include="Email\IEmailClientManager.cs" />
+    <Compile Include="Encryption\ILegacyEncryptionClientManager.cs" />
+    <Compile Include="FileStorage\FileResultEventArgs.cs" />
+    <Compile Include="FileStorage\IFilesStorageClientManager.cs" />
+    <Compile Include="FileStorage\IFileStorageClientManager.cs" />
+    <Compile Include="Intake\IIntakeAccountClientManager.cs" />
+    <Compile Include="Inventory\IInventoryAdminCatalogClientManager.cs" />
+    <Compile Include="Inventory\IInventoryAttachmentClientManager.cs" />
+    <Compile Include="Inventory\IInventoryCatalogClientManager.cs" />
+    <Compile Include="Inventory\IInventoryCategoryClientManager.cs" />
+    <Compile Include="Inventory\IInventoryGroupClientManager.cs" />
+    <Compile Include="Inventory\IInventoryLoanClientManager.cs" />
+    <Compile Include="Inventory\IInventoryLoanStatusClientManager.cs" />
+    <Compile Include="Inventory\IInventoryLocationClientManager.cs" />
+    <Compile Include="Inventory\IInventoryProductClientManager.cs" />
+    <Compile Include="Inventory\IInventoryProductStatusClientManager.cs" />
+    <Compile Include="Inventory\IInventoryReservationClientManager.cs" />
+    <Compile Include="IRequestBuilderClientManager.cs" />
+    <Compile Include="Legacy\ILegacyAccommodationClientManager.cs" />
+    <Compile Include="Legacy\ILegacyActionPlanClientManager.cs" />
+    <Compile Include="Legacy\ILegacyAppointmentClientManager.cs" />
+    <Compile Include="Legacy\ILegacyDynamicDataClientManager.cs" />
+    <Compile Include="Legacy\ILegacyServiceProviderClientManager.cs" />
+    <Compile Include="Legacy\ILegacyWebSettingsClientManager.cs" />
+    <Compile Include="Licensing\ILicensingClientManager.cs" />
+    <Compile Include="LookupCourses\IAcademicTermClientManager.cs" />
+    <Compile Include="LookupCourses\IAlternateContactClientManager.cs" />
+    <Compile Include="LookupCourses\ILookupCourseClientManager.cs" />
+    <Compile Include="LookupCourses\ILookupInstructorClientManager.cs" />
+    <Compile Include="LookupCourses\ILookupInstructorManagementClientManager.cs" />
+    <Compile Include="LookupCourses\ILookupSubjectClientManager.cs" />
+    <Compile Include="LookupCourses\ILookupTimetableItemClientManager.cs" />
+    <Compile Include="LookupCourses\ISessionClientManager.cs" />
+    <Compile Include="MailMerging\IMailMergingClientManager.cs" />
+    <Compile Include="MailMerging\IMailMergingDocClientManager.cs" />
+    <Compile Include="MailMerging\IMailMergingEmailClientManager.cs" />
+    <Compile Include="MergeDuplicates\IMergeDuplicateStudentClientManager.cs" />
+    <Compile Include="MiscTableSettings\IMiscTableSettingsClientManagers.cs" />
+    <Compile Include="Notetaking\INotetakerNotesClientManager.cs" />
+    <Compile Include="Notetaking\INotetakingClientManager.cs" />
+    <Compile Include="OnlineForms\IOnlineFormClientManager.cs" />
+    <Compile Include="OnlineForms\IOnlineFormQueueClientManager.cs" />
+    <Compile Include="People\IAdminGroupClientManager.cs" />
+    <Compile Include="People\IAdminPeopleClientManager.cs" />
+    <Compile Include="People\IGroupClientManager.cs" />
+    <Compile Include="People\IPeopleClientManager.cs" />
+    <Compile Include="People\IPeopleGroupClientManager.cs" />
+    <Compile Include="People\IPersonBaseClientManager.cs" />
+    <Compile Include="People\IStaffCommonInfoClientManager.cs" />
+    <Compile Include="People\IStudentCommonInfoClientManager.cs" />
+    <Compile Include="People\IStudentManagementClientManager.cs" />
+    <Compile Include="PerformanceTesting\IPerformanceTestClientManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\IReportAsyncClientManager.cs" />
+    <Compile Include="Reports\IReportClientManager.cs" />
+    <Compile Include="RequiredSessionForm\IRequiredSessionFormClientManager.cs" />
+    <Compile Include="Room\IRoomClientManager.cs" />
+    <Compile Include="ServiceProviderOriginal\IServiceProviderOriginalApplicationCourseClientManager.cs" />
+    <Compile Include="ServiceProviderOriginal\IServiceProviderOriginalMatchingClientManager.cs" />
+    <Compile Include="ServiceProviderOriginal\IServiceProviderOriginalProviderClientManager.cs" />
+    <Compile Include="ServiceProvider\IServiceProviderApplicationClientManager.cs" />
+    <Compile Include="ServiceProvider\IServiceProviderClientManager.cs" />
+    <Compile Include="ServiceProvider\IServiceProviderCourseRegistrationClientManager.cs" />
+    <Compile Include="ServiceProvider\IServiceProviderTypeClientManager.cs" />
+    <Compile Include="ServiceProvider\IServiceRequestClientManager.cs" />
+    <Compile Include="Settings\IReferenceTableSettingClientManager.cs" />
+    <Compile Include="Settings\IWebSettingsClientManager.cs" />
+    <Compile Include="Startup\IClientStartupClientManager.cs" />
+    <Compile Include="Startup\IClientUpdateClientManager.cs" />
+    <Compile Include="StudentAccommodationRequests\ISelfRegClientManager.cs" />
+    <Compile Include="StudentAccommodationRequests\IStudentAccommodationReqClientManager.cs" />
+    <Compile Include="StudentFiles\IStudentFileClientManager.cs" />
+    <Compile Include="StudentFiles\IStudentFilesQueueClientManager.cs" />
+    <Compile Include="Surveys\ISurveyClientManager.cs" />
+    <Compile Include="Surveys\ISurveyQueueClientManager.cs" />
+    <Compile Include="Tasks\ITaskClientManager.cs" />
+    <Compile Include="Tasks\ITaskGroupClientManager.cs" />
+    <Compile Include="TempFiles\ITempFileClientManager.cs" />
+    <Compile Include="Templates\ITemplateClientManager.cs" />
+    <Compile Include="Tutoring\IStudentTuteeClientManager.cs" />
+    <Compile Include="Tutoring\ITutorClientManager.cs" />
+    <Compile Include="UnivThroughServer\IUnivThroughServerClientManager.cs" />
+    <Compile Include="UserAccount\IUserAccountClientManager.cs" />
+    <Compile Include="UserSettingsPermissions\IOldUserSettingClientManager.cs" />
+    <Compile Include="UserSettingsPermissions\IPermissionStoreClientManager.cs" />
+    <Compile Include="Veteran\IVeteranClientManager.cs" />
+    <Compile Include="Vets\IVetsBenefitApplicationClientManager.cs" />
+    <Compile Include="Vets\IVetsChapterClientManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

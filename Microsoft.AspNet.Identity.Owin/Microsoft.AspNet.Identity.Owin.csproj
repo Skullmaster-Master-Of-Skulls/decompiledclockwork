@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2674}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.AspNet.Identity.Owin</RootNamespace>
+    <AssemblyName>Microsoft.AspNet.Identity.Owin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\..\..\Downloads\dnSpy-net-win64\Clockwork dlls\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Microsoft\AspNet\Identity\Owin\DataProtectorTokenProvider.2.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\DataProtectorTokenProvider.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\ExternalLoginInfo.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\IdentityFactoryMiddleware.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\IdentityFactoryOptions.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\IdentityFactoryProvider.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\IIdentityFactoryProvider.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\OwinContextExtensions.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\SecurityStampValidator.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\SignInManager.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\SignInManagerExtensions.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\SignInStatus.cs" />
+    <Compile Include="Microsoft\AspNet\Identity\Owin\StreamExtensions.cs" />
+    <Compile Include="Microsoft\Owin\Security\AuthenticationManagerExtensions.cs" />
+    <Compile Include="Owin\AppBuilderExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.AspNet.Identity.Core\Microsoft.AspNet.Identity.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2672}</Project>
+      <Name>Microsoft.AspNet.Identity.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Owin.Security.OAuth\Microsoft.Owin.Security.OAuth.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2678}</Project>
+      <Name>Microsoft.Owin.Security.OAuth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Microsoft.Owin.Security\Microsoft.Owin.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2677}</Project>
+      <Name>Microsoft.Owin.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Owin\Owin.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2682}</Project>
+      <Name>Owin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

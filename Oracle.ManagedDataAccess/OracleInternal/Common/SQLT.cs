@@ -1,0 +1,127 @@
+﻿using System;
+
+namespace OracleInternal.Common
+{
+	// Token: 0x0200008C RID: 140
+	internal enum SQLT
+	{
+		// Token: 0x040007AD RID: 1965
+		CHR = 1,
+		// Token: 0x040007AE RID: 1966
+		NUM,
+		// Token: 0x040007AF RID: 1967
+		INT,
+		// Token: 0x040007B0 RID: 1968
+		FLT,
+		// Token: 0x040007B1 RID: 1969
+		STR,
+		// Token: 0x040007B2 RID: 1970
+		VNU,
+		// Token: 0x040007B3 RID: 1971
+		PDN,
+		// Token: 0x040007B4 RID: 1972
+		LNG,
+		// Token: 0x040007B5 RID: 1973
+		VCS,
+		// Token: 0x040007B6 RID: 1974
+		NON,
+		// Token: 0x040007B7 RID: 1975
+		RID,
+		// Token: 0x040007B8 RID: 1976
+		DAT,
+		// Token: 0x040007B9 RID: 1977
+		VBI = 15,
+		// Token: 0x040007BA RID: 1978
+		BFLT = 21,
+		// Token: 0x040007BB RID: 1979
+		BDBL,
+		// Token: 0x040007BC RID: 1980
+		BIN,
+		// Token: 0x040007BD RID: 1981
+		LBI,
+		// Token: 0x040007BE RID: 1982
+		UIN = 68,
+		// Token: 0x040007BF RID: 1983
+		SLS = 91,
+		// Token: 0x040007C0 RID: 1984
+		LVC = 94,
+		// Token: 0x040007C1 RID: 1985
+		LVB,
+		// Token: 0x040007C2 RID: 1986
+		AFC,
+		// Token: 0x040007C3 RID: 1987
+		AVC,
+		// Token: 0x040007C4 RID: 1988
+		IBFL = 100,
+		// Token: 0x040007C5 RID: 1989
+		IBDL,
+		// Token: 0x040007C6 RID: 1990
+		CUR,
+		// Token: 0x040007C7 RID: 1991
+		RDD = 104,
+		// Token: 0x040007C8 RID: 1992
+		LAB,
+		// Token: 0x040007C9 RID: 1993
+		OSL,
+		// Token: 0x040007CA RID: 1994
+		BOL = 252,
+		// Token: 0x040007CB RID: 1995
+		NTY = 108,
+		// Token: 0x040007CC RID: 1996
+		XML,
+		// Token: 0x040007CD RID: 1997
+		REF,
+		// Token: 0x040007CE RID: 1998
+		CLOB = 112,
+		// Token: 0x040007CF RID: 1999
+		BLOB,
+		// Token: 0x040007D0 RID: 2000
+		BFILEE,
+		// Token: 0x040007D1 RID: 2001
+		CFILEE,
+		// Token: 0x040007D2 RID: 2002
+		RSET,
+		// Token: 0x040007D3 RID: 2003
+		NCO = 122,
+		// Token: 0x040007D4 RID: 2004
+		VST = 155,
+		// Token: 0x040007D5 RID: 2005
+		ODT,
+		// Token: 0x040007D6 RID: 2006
+		DTYSTAMP = 180,
+		// Token: 0x040007D7 RID: 2007
+		DTYSTZ,
+		// Token: 0x040007D8 RID: 2008
+		DTYIYM,
+		// Token: 0x040007D9 RID: 2009
+		DTYIDS,
+		// Token: 0x040007DA RID: 2010
+		DATE,
+		// Token: 0x040007DB RID: 2011
+		TIME,
+		// Token: 0x040007DC RID: 2012
+		TIME_TZ,
+		// Token: 0x040007DD RID: 2013
+		TIMESTAMP,
+		// Token: 0x040007DE RID: 2014
+		TIMESTAMP_TZ,
+		// Token: 0x040007DF RID: 2015
+		INTERVAL_YM,
+		// Token: 0x040007E0 RID: 2016
+		INTERVAL_DS,
+		// Token: 0x040007E1 RID: 2017
+		URID = 208,
+		// Token: 0x040007E2 RID: 2018
+		DTYSLTZ = 231,
+		// Token: 0x040007E3 RID: 2019
+		TIMESTAMP_LTZ,
+		// Token: 0x040007E4 RID: 2020
+		PNTY = 241,
+		// Token: 0x040007E5 RID: 2021
+		FILE = 114,
+		// Token: 0x040007E6 RID: 2022
+		CFILE,
+		// Token: 0x040007E7 RID: 2023
+		BFILE = 114
+	}
+}

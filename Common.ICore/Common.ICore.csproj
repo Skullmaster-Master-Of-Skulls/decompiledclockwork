@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2635}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common</RootNamespace>
+    <AssemblyName>Common.ICore</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Institution\IInstitutionManager.cs" />
+    <Compile Include="ICore\Academic\ISemesterManager.cs" />
+    <Compile Include="ICore\AlertTrigger\IAlertTriggerManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\BookSearch\IBookSearchManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\BookSearch\IBookSearchProvider.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaContentFileManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaContentManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaJobManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaJobStatusManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaPublisherManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaVendorManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IMediaVolunteerManager.cs" />
+    <Compile Include="ICore\AlternativeFormat\IStudentMediaRequestManager.cs" />
+    <Compile Include="ICore\ApplicationPool\IApplicationPoolManager.cs" />
+    <Compile Include="ICore\AppointmentLog\IAppointmentLogManager.cs" />
+    <Compile Include="ICore\AppointmentsCalendar\AppointmentBookingStudentRules\IStudentAppointmentBookingRuleManager.cs" />
+    <Compile Include="ICore\AppointmentsCalendar\IAppointmentBookingStudentManager.cs" />
+    <Compile Include="ICore\AppointmentsCalendar\IAppointmentFastLoadManager.cs" />
+    <Compile Include="ICore\AppointmentsCalendar\IAppointmentHolidayManager.cs" />
+    <Compile Include="ICore\AppointmentsCalendar\IAppointmentManager.cs" />
+    <Compile Include="ICore\AppointmentsList\IListAppointmentManager.cs" />
+    <Compile Include="ICore\AppointmentsPointOfContact\IPointOfContactManager.cs" />
+    <Compile Include="ICore\AppointmentsRecurring\IRecurringAppointmentManager.cs" />
+    <Compile Include="ICore\AppointmentsReminder\IAppointmentsReminderManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\IAutoTestBookingManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\IClassTestDefinitionManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\IExamFileManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\IExamRequestManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\ISittingManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\IStudentClassTestInfoManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\ITestBookingManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\ITestExamBookingViewManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\ITestExamBrowserManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\ITestExamSeatManager.cs" />
+    <Compile Include="ICore\AppointmentsTestBooking\ITestProctorManager.cs" />
+    <Compile Include="ICore\AppointmentsTestExamViews\IFinalExamsViewManager.cs" />
+    <Compile Include="ICore\AppointmentsTestExamViews\ITestBookingsViewManager.cs" />
+    <Compile Include="ICore\AppointmentsWorkshops\IWorkshopAppointmentManager.cs" />
+    <Compile Include="ICore\AppointmentsWorkshops\IWorkshopDefinitionManager.cs" />
+    <Compile Include="ICore\AppointmentSync\IApplicationSyncAdministrationManager.cs" />
+    <Compile Include="ICore\AppointmentSync\IApplicationSyncFactory.cs" />
+    <Compile Include="ICore\AppointmentSync\IAppointmentSyncMappingManager.cs" />
+    <Compile Include="ICore\AppointmentSync\IAppointmentSyncSettingsManager.cs" />
+    <Compile Include="ICore\AppointmentSync\ICalendarSyncManager.cs" />
+    <Compile Include="ICore\AppointmentSync\IClockWorkSyncAppointmentManager.cs" />
+    <Compile Include="ICore\AppointmentSync\IExternalAppointmentManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentAttendeeManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentCancelInfoManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentCancelReasonManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentHistoryManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentIconManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentRoomManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentShowTimeAsManager.cs" />
+    <Compile Include="ICore\Appointments\IAppointmentTypeManager.cs" />
+    <Compile Include="ICore\Appointments\IBaseAppointmentManager.cs" />
+    <Compile Include="ICore\Authentication\IADFSAuthManager.cs" />
+    <Compile Include="ICore\Authentication\ICASAuthManager.cs" />
+    <Compile Include="ICore\Authentication\IClockWorkAuthenticationManager.cs" />
+    <Compile Include="ICore\Authentication\IHashingAuthenticationManager.cs" />
+    <Compile Include="ICore\Authentication\ILdapManager.cs" />
+    <Compile Include="ICore\AvailabilitySchedule\IAvailabilityScheduleManager.cs" />
+    <Compile Include="ICore\Azure\Storage\IAzureStorageManager.cs" />
+    <Compile Include="ICore\Cards\ICardManager.cs" />
+    <Compile Include="ICore\Cases\ICaseManager.cs" />
+    <Compile Include="ICore\ClockWorkAudit\IClockWorkAuditHandler.cs" />
+    <Compile Include="ICore\ClockWorkAudit\IClockWorkAuditManager.cs" />
+    <Compile Include="ICore\ClockWorkDailyJob\IDailyJobManager.cs" />
+    <Compile Include="ICore\ClockWorkDatabase\IClockWorkDatabaseManager.cs" />
+    <Compile Include="ICore\ClockWorkServerConnection\IClockWorkClientConnectionInfoManager.cs" />
+    <Compile Include="ICore\ClockWorkServerConnection\IClockWorkServerConnectionInfoManager.cs" />
+    <Compile Include="ICore\ClockWorkServerJob\IClockWorkServerJobManager.cs" />
+    <Compile Include="ICore\ClockWorkServer\IServerInstanceInfoManager.cs" />
+    <Compile Include="ICore\ClockWorkSnapshots\IClockWorkSnapshotManager.cs" />
+    <Compile Include="ICore\Communications\ICommunicationsSentManager.cs" />
+    <Compile Include="ICore\ConfidentialityAgreement\IStudentConfidentilityAgreementManager.cs" />
+    <Compile Include="ICore\ConnectionString\IClockWorkConnectionStringManager.cs" />
+    <Compile Include="ICore\CourseRegistrations\ICourseRegistrationManager.cs" />
+    <Compile Include="ICore\CustomForms\ICustomDataManager.cs" />
+    <Compile Include="ICore\CustomForms\ICustomFieldManager.cs" />
+    <Compile Include="ICore\CustomForms\ICustomFormListItemManager.cs" />
+    <Compile Include="ICore\CustomForms\ICustomFormManager.cs" />
+    <Compile Include="ICore\DataMigration\IDataMigrationManager.cs" />
+    <Compile Include="ICore\DataSync\IDataSyncCourseExtendedDataManager.cs" />
+    <Compile Include="ICore\DataSync\IDataSyncCourseManager.cs" />
+    <Compile Include="ICore\DataSync\IDataSyncDataManager.cs" />
+    <Compile Include="ICore\DataSync\IDataSyncInfoManager.cs" />
+    <Compile Include="ICore\DataSync\IDataSyncManager.cs" />
+    <Compile Include="ICore\Data\IDataMaintenanceManager.cs" />
+    <Compile Include="ICore\Departments\IDepartmentManager.cs" />
+    <Compile Include="ICore\DynamicCompile\IDynamicCompileManager.cs" />
+    <Compile Include="ICore\DynamicForms\FormApproval\IFormApprovalManager.cs" />
+    <Compile Include="ICore\DynamicForms\FormApproval\IFormApprovalSupervisorManager.cs" />
+    <Compile Include="ICore\DynamicForms\FormApproval\IFormApprovalTraineeManager.cs" />
+    <Compile Include="ICore\DynamicForms\IAccommodationBatchLetterEmailsManager.cs" />
+    <Compile Include="ICore\DynamicForms\IAccommodationsManager.cs" />
+    <Compile Include="ICore\DynamicForms\IAppointmentNotesManager.cs" />
+    <Compile Include="ICore\DynamicForms\IConfidentialityFormSignedManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicDataForReportsManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicDataManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicFieldConversionManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicFieldManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicFileStorageManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicFormManager.cs" />
+    <Compile Include="ICore\DynamicForms\IDynamicPerDateDataManager.cs" />
+    <Compile Include="ICore\DynamicForms\Legacy\ILegacyDynamicDataSaveLoadManager.cs" />
+    <Compile Include="ICore\Emailing\IAppointmentReminderEmailManager.cs" />
+    <Compile Include="ICore\Emailing\IEmailAttachmentManager.cs" />
+    <Compile Include="ICore\Emailing\IEmailHistoryLoggerManager.cs" />
+    <Compile Include="ICore\Encryption\ILegacyEncryptionManager.cs" />
+    <Compile Include="ICore\FileStorages\IFileSignManager.cs" />
+    <Compile Include="ICore\FileStorages\IFilesStorageManager.cs" />
+    <Compile Include="ICore\FTP\IFtpManager.cs" />
+    <Compile Include="ICore\ICampusManager.cs" />
+    <Compile Include="ICore\IEmailManager.cs" />
+    <Compile Include="ICore\IFileStorageManager.cs" />
+    <Compile Include="ICore\IFileSystemStorageManager.cs" />
+    <Compile Include="ICore\ILicensingManager.cs" />
+    <Compile Include="ICore\IMiscSafeManager.cs" />
+    <Compile Include="ICore\InstanceInfo\IClockWorkInstanceInfoManager.cs" />
+    <Compile Include="ICore\InstanceInfo\IWebInstanceInfoManager.cs" />
+    <Compile Include="ICore\Intake\IIntakeAccountManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryAdminCatalogManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryAttachmentManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryCatalogManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryCategoryManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryGroupManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryLoanManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryLoanStatusManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryLocationManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryProductManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryProductStatusManager.cs" />
+    <Compile Include="ICore\Inventory\IInventoryReservationManager.cs" />
+    <Compile Include="ICore\Invoicing\IInvoicableItemManager.cs" />
+    <Compile Include="ICore\Invoicing\IInvoiceManager.cs" />
+    <Compile Include="ICore\Invoicing\IInvoicePaymentManager.cs" />
+    <Compile Include="ICore\Invoicing\IPaymentItemManager.cs" />
+    <Compile Include="ICore\Invoicing\IPaymentManager.cs" />
+    <Compile Include="ICore\IPersonManager.cs" />
+    <Compile Include="ICore\IQueryingManager.cs" />
+    <Compile Include="ICore\IRegistryManager.cs" />
+    <Compile Include="ICore\IRepository.cs" />
+    <Compile Include="ICore\IUserDatabaseCacheStorageManager.cs" />
+    <Compile Include="ICore\Legacy\ILegacyAccommodationManager.cs" />
+    <Compile Include="ICore\Legacy\ILegacyActionPlanManager.cs" />
+    <Compile Include="ICore\Legacy\ILegacyAppointmentManager.cs" />
+    <Compile Include="ICore\Legacy\ILegacyDynamicDataManager.cs" />
+    <Compile Include="ICore\Legacy\ILegacyServiceProviderManager.cs" />
+    <Compile Include="ICore\Legacy\ILegacyWebSettingsManager.cs" />
+    <Compile Include="ICore\LookupCourses\IAcademicTermManager.cs" />
+    <Compile Include="ICore\LookupCourses\IAlternateContactManager.cs" />
+    <Compile Include="ICore\LookupCourses\ILookupCourseManager.cs" />
+    <Compile Include="ICore\LookupCourses\ILookupInstructorManager.cs" />
+    <Compile Include="ICore\LookupCourses\ILookupSubjectManager.cs" />
+    <Compile Include="ICore\LookupCourses\ILookupTimetableItemManager.cs" />
+    <Compile Include="ICore\LookupCourses\ISessionManager.cs" />
+    <Compile Include="ICore\LookupCourses\Management\ILookupInstructorManagementManager.cs" />
+    <Compile Include="ICore\MailMerging\IMailMergeListManager.cs" />
+    <Compile Include="ICore\MailMerging\IMailMergingDocManager.cs" />
+    <Compile Include="ICore\MailMerging\IMailMergingEmailManager.cs" />
+    <Compile Include="ICore\MailMerging\IMailMergingManager.cs" />
+    <Compile Include="ICore\MailMerging\Output\IMailMergeOutputManager.cs" />
+    <Compile Include="ICore\MarkedForDeletion\IMarkedForDeletionArchiveManager.cs" />
+    <Compile Include="ICore\MarkedForDeletion\IMarkedForDeletionItemManager.cs" />
+    <Compile Include="ICore\MarkedForDeletion\IMarkedForDeletionJobManager.cs" />
+    <Compile Include="ICore\Membership\IMembershipManager.cs" />
+    <Compile Include="ICore\Membership\IUserManager.cs" />
+    <Compile Include="ICore\MergeDuplicates\IMergeDuplicateCoursesManager.cs" />
+    <Compile Include="ICore\MergeDuplicates\IMergeDuplicateStudentManager.cs" />
+    <Compile Include="ICore\MessagingQueue\IMessagingQueueManager.cs" />
+    <Compile Include="ICore\Messaging\IAttachmentDropBoxManager.cs" />
+    <Compile Include="ICore\Messaging\IMessagingDropBoxManager.cs" />
+    <Compile Include="ICore\MonitoringLists\IMonitoringListManager.cs" />
+    <Compile Include="ICore\Notetaking\INotetakeeManager.cs" />
+    <Compile Include="ICore\Notetaking\INotetakerNotesManager.cs" />
+    <Compile Include="ICore\Notetaking\INotetakingManager.cs" />
+    <Compile Include="ICore\OnlineForms\IOnlineFormManager.cs" />
+    <Compile Include="ICore\OnlineForms\IOnlineFormQueueManager.cs" />
+    <Compile Include="ICore\People\IAdminGroupManager.cs" />
+    <Compile Include="ICore\People\IAdminPeopleManager.cs" />
+    <Compile Include="ICore\People\IGroupManager.cs" />
+    <Compile Include="ICore\People\IPeopleGroupManager.cs" />
+    <Compile Include="ICore\People\IPeopleManager.cs" />
+    <Compile Include="ICore\People\IStaffCommonInfoManager.cs" />
+    <Compile Include="ICore\People\IStudentActivationManager.cs" />
+    <Compile Include="ICore\People\IStudentCommonInfoManager.cs" />
+    <Compile Include="ICore\People\IStudentManagementManager.cs" />
+    <Compile Include="ICore\PerformanceTesting\IPerformanceTestManager.cs" />
+    <Compile Include="ICore\Reports\IReportFunctionExecute.cs" />
+    <Compile Include="ICore\Reports\IReportManager.cs" />
+    <Compile Include="ICore\RequiredSessionForm\IRequiredSessionFormManager.cs" />
+    <Compile Include="ICore\Room\IRoomManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderApplicationStatusLookupManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalApplicationAvailabilityManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalApplicationCourseManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalApplicationManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalMatchingManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalNotesManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalProviderManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalRequestDetailManager.cs" />
+    <Compile Include="ICore\ServiceProvidersOriginal\IServiceProviderOriginalRequestManager.cs" />
+    <Compile Include="ICore\ServiceProviders\IServiceProviderApplicationManager.cs" />
+    <Compile Include="ICore\ServiceProviders\IServiceProviderCourseRegistrationManager.cs" />
+    <Compile Include="ICore\ServiceProviders\IServiceProviderManager.cs" />
+    <Compile Include="ICore\ServiceProviders\IServiceProviderMatchingManager.cs" />
+    <Compile Include="ICore\ServiceProviders\IServiceProviderTypeManager.cs" />
+    <Compile Include="ICore\ServiceProviders\IServiceRequestManager.cs" />
+    <Compile Include="ICore\Settings\ILookupSettingManager.cs" />
+    <Compile Include="ICore\Settings\IMiscTableSettingsManager.cs" />
+    <Compile Include="ICore\Settings\IReferenceTableSettingManager.cs" />
+    <Compile Include="ICore\Settings\ISettingManager.cs" />
+    <Compile Include="ICore\Settings\ISpecialControlManager.cs" />
+    <Compile Include="ICore\Settings\IWebSettingManager.cs" />
+    <Compile Include="ICore\Startup\IClientStartupManager.cs" />
+    <Compile Include="ICore\Startup\IClockWorkClientStartupManager.cs" />
+    <Compile Include="ICore\Startup\IStartupManager.cs" />
+    <Compile Include="ICore\StudentAccommodationRequests\ISelfRegAccommodationLetterDeliveryManager.cs" />
+    <Compile Include="ICore\StudentAccommodationRequests\ISelfRegManager.cs" />
+    <Compile Include="ICore\StudentAccommodationRequests\ISelfRegTrackingManager.cs" />
+    <Compile Include="ICore\StudentAccommodationRequests\IStudentAccommodationRequestManager.cs" />
+    <Compile Include="ICore\StudentFiles\IStudentFilesCategoryManager.cs" />
+    <Compile Include="ICore\StudentFiles\IStudentFilesQueueManager.cs" />
+    <Compile Include="ICore\Surveys\ISurveyManager.cs" />
+    <Compile Include="ICore\Surveys\ISurveyQueueManager.cs" />
+    <Compile Include="ICore\Tasks\ITaskGroupManager.cs" />
+    <Compile Include="ICore\Tasks\ITaskManager.cs" />
+    <Compile Include="ICore\TempFiles\ITempFileManager.cs" />
+    <Compile Include="ICore\Templates\ITemplateManager.cs" />
+    <Compile Include="ICore\TextFormat\IRtfManager.cs" />
+    <Compile Include="ICore\Timers\ITimerManager.cs" />
+    <Compile Include="ICore\Tutoring\IStudentTuteeManager.cs" />
+    <Compile Include="ICore\Tutoring\ITutorManager.cs" />
+    <Compile Include="ICore\UnivDataAccess\IUnivDataAccessManager.cs" />
+    <Compile Include="ICore\Updates\IExecuteUpdateManager.cs" />
+    <Compile Include="ICore\Updates\IExternalLogManager.cs" />
+    <Compile Include="ICore\Updates\IUpdateClientVersion.cs" />
+    <Compile Include="ICore\Updates\IUpdateDownloaderManager.cs" />
+    <Compile Include="ICore\Updates\IUpdateManager.cs" />
+    <Compile Include="ICore\UserAccount\IUserAccountManager.cs" />
+    <Compile Include="ICore\UserAccount\IUserLoginTrackingManager.cs" />
+    <Compile Include="ICore\UserSettingsPermissions\IMiscCodeManager.cs" />
+    <Compile Include="ICore\UserSettingsPermissions\IOldUserSettingManager.cs" />
+    <Compile Include="ICore\UserSettingsPermissions\IPermissionManager.cs" />
+    <Compile Include="ICore\Veteran\IVeteranManager.cs" />
+    <Compile Include="ICore\Vets\IVetsBenefitApplicationManager.cs" />
+    <Compile Include="ICore\Vets\IVetsChangeInBenefitManager.cs" />
+    <Compile Include="ICore\Vets\IVetsChapterManager.cs" />
+    <Compile Include="ICore\Workflows\IWorkflowManager.cs" />
+    <Compile Include="ICore\Workflows\IWorkflowProgressStepManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Security.Saml\Common.Security.Saml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2645}</Project>
+      <Name>Common.Security.Saml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Security\Common.Security.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2644}</Project>
+      <Name>Common.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

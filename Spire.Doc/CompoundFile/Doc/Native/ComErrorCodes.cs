@@ -1,0 +1,26 @@
+﻿using System;
+
+namespace Spire.CompoundFile.Doc.Native
+{
+	// Token: 0x0200048B RID: 1163
+	[CLSCompliant(false)]
+	internal enum ComErrorCodes : uint
+	{
+		// Token: 0x04002F39 RID: 12089
+		S_OK,
+		// Token: 0x04002F3A RID: 12090
+		S_FALSE,
+		// Token: 0x04002F3B RID: 12091
+		E_FAIL = 2147500037U,
+		// Token: 0x04002F3C RID: 12092
+		E_NOTIMPL = 2147483649U,
+		// Token: 0x04002F3D RID: 12093
+		E_INVALIDARG = 2147942487U,
+		// Token: 0x04002F3E RID: 12094
+		E_UNEXPECTED = 2147549183U,
+		// Token: 0x04002F3F RID: 12095
+		DV_E_FORMATETC = 2147745892U,
+		// Token: 0x04002F40 RID: 12096
+		OLE_E_ADVISENOTSUPPORTED = 2147745795U
+	}
+}

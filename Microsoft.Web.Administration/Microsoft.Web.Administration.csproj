@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE267B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Web</RootNamespace>
+    <AssemblyName>Microsoft.Web.Administration</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administration\Application.cs" />
+    <Compile Include="Administration\ApplicationCollection.cs" />
+    <Compile Include="Administration\ApplicationDefaults.cs" />
+    <Compile Include="Administration\ApplicationDomain.cs" />
+    <Compile Include="Administration\ApplicationDomainCollection.cs" />
+    <Compile Include="Administration\ApplicationPool.cs" />
+    <Compile Include="Administration\ApplicationPoolCollection.cs" />
+    <Compile Include="Administration\ApplicationPoolCpu.cs" />
+    <Compile Include="Administration\ApplicationPoolDefaults.cs" />
+    <Compile Include="Administration\ApplicationPoolFailure.cs" />
+    <Compile Include="Administration\ApplicationPoolPeriodicRestart.cs" />
+    <Compile Include="Administration\ApplicationPoolProcessModel.cs" />
+    <Compile Include="Administration\ApplicationPoolRecycling.cs" />
+    <Compile Include="Administration\AuthenticationLogonMethod.cs" />
+    <Compile Include="Administration\Binding.cs" />
+    <Compile Include="Administration\BindingCollection.cs" />
+    <Compile Include="Administration\BindingManager.cs" />
+    <Compile Include="Administration\Configuration.cs" />
+    <Compile Include="Administration\ConfigurationAttribute.cs" />
+    <Compile Include="Administration\ConfigurationAttributeCollection.cs" />
+    <Compile Include="Administration\ConfigurationAttributeSchema.cs" />
+    <Compile Include="Administration\ConfigurationAttributeSchemaCollection.cs" />
+    <Compile Include="Administration\ConfigurationChildElementCollection.cs" />
+    <Compile Include="Administration\ConfigurationCollectionSchema.cs" />
+    <Compile Include="Administration\ConfigurationElement.cs" />
+    <Compile Include="Administration\ConfigurationElementCollection.cs" />
+    <Compile Include="Administration\ConfigurationElementCollectionBase.cs" />
+    <Compile Include="Administration\ConfigurationElementSchema.cs" />
+    <Compile Include="Administration\ConfigurationElementSchemaCollection.cs" />
+    <Compile Include="Administration\ConfigurationEnumValue.cs" />
+    <Compile Include="Administration\ConfigurationEnumValueCollection.cs" />
+    <Compile Include="Administration\ConfigurationManager.cs" />
+    <Compile Include="Administration\ConfigurationMethod.cs" />
+    <Compile Include="Administration\ConfigurationMethodCollection.cs" />
+    <Compile Include="Administration\ConfigurationMethodInstance.cs" />
+    <Compile Include="Administration\ConfigurationMethodSchema.cs" />
+    <Compile Include="Administration\ConfigurationSection.cs" />
+    <Compile Include="Administration\Interop\AppHostAdminManager.cs" />
+    <Compile Include="Administration\Interop\AppHostWritableAdminManager.cs" />
+    <Compile Include="Administration\Interop\IAppHostAdminManager.cs" />
+    <Compile Include="Administration\Interop\IAppHostChangeHandler.cs" />
+    <Compile Include="Administration\Interop\IAppHostChildElementCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostCollectionSchema.cs" />
+    <Compile Include="Administration\Interop\IAppHostConfigException.cs" />
+    <Compile Include="Administration\Interop\IAppHostConfigFile.cs" />
+    <Compile Include="Administration\Interop\IAppHostConfigLocation.cs" />
+    <Compile Include="Administration\Interop\IAppHostConfigLocationCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostConfigManager.cs" />
+    <Compile Include="Administration\Interop\IAppHostConstantValue.cs" />
+    <Compile Include="Administration\Interop\IAppHostConstantValueCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostElement.cs" />
+    <Compile Include="Administration\Interop\IAppHostElementCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostElementSchema.cs" />
+    <Compile Include="Administration\Interop\IAppHostElementSchemaCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostMethod.cs" />
+    <Compile Include="Administration\Interop\IAppHostMethodCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostMethodInstance.cs" />
+    <Compile Include="Administration\Interop\IAppHostMethodSchema.cs" />
+    <Compile Include="Administration\Interop\IAppHostPathMapper.cs" />
+    <Compile Include="Administration\Interop\IAppHostPathMapper2.cs" />
+    <Compile Include="Administration\Interop\IAppHostProperty.cs" />
+    <Compile Include="Administration\Interop\IAppHostPropertyCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostPropertyException.cs" />
+    <Compile Include="Administration\Interop\IAppHostPropertySchema.cs" />
+    <Compile Include="Administration\Interop\IAppHostPropertySchemaCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostSectionDefinition.cs" />
+    <Compile Include="Administration\Interop\IAppHostSectionDefinitionCollection.cs" />
+    <Compile Include="Administration\Interop\IAppHostSectionGroup.cs" />
+    <Compile Include="Administration\Interop\IAppHostWritableAdminManager.cs" />
+    <Compile Include="Administration\LoadBalancerCapabilities.cs" />
+    <Compile Include="Administration\LogExtFileFlags.cs" />
+    <Compile Include="Administration\LogFormat.cs" />
+    <Compile Include="Administration\LoggingRolloverPeriod.cs" />
+    <Compile Include="Administration\ManagedPipelineMode.cs" />
+    <Compile Include="Administration\ObjectState.cs" />
+    <Compile Include="Administration\OverrideMode.cs" />
+    <Compile Include="Administration\PipelineState.cs" />
+    <Compile Include="Administration\ProcessModelIdentityType.cs" />
+    <Compile Include="Administration\ProcessorAction.cs" />
+    <Compile Include="Administration\RecyclingLogEventOnRecycle.cs" />
+    <Compile Include="Administration\Request.cs" />
+    <Compile Include="Administration\RequestCollection.cs" />
+    <Compile Include="Administration\Resources.cs" />
+    <Compile Include="Administration\Schedule.cs" />
+    <Compile Include="Administration\ScheduleCollection.cs" />
+    <Compile Include="Administration\SectionDefinition.cs" />
+    <Compile Include="Administration\SectionDefinitionCollection.cs" />
+    <Compile Include="Administration\SectionGroup.cs" />
+    <Compile Include="Administration\SectionGroupCollection.cs" />
+    <Compile Include="Administration\ServerManager.cs" />
+    <Compile Include="Administration\ServerManagerException.cs" />
+    <Compile Include="Administration\SharedGlobals.cs" />
+    <Compile Include="Administration\ShimGlobals.cs" />
+    <Compile Include="Administration\Site.cs" />
+    <Compile Include="Administration\SiteCollection.cs" />
+    <Compile Include="Administration\SiteDefaults.cs" />
+    <Compile Include="Administration\SiteLimits.cs" />
+    <Compile Include="Administration\SiteLogFile.cs" />
+    <Compile Include="Administration\SiteTraceFailedRequestsLogging.cs" />
+    <Compile Include="Administration\VirtualDirectory.cs" />
+    <Compile Include="Administration\VirtualDirectoryCollection.cs" />
+    <Compile Include="Administration\VirtualDirectoryDefaults.cs" />
+    <Compile Include="Administration\WebConfigurationManager.cs" />
+    <Compile Include="Administration\WebConfigurationMap.cs" />
+    <Compile Include="Administration\WorkerProcess.cs" />
+    <Compile Include="Administration\WorkerProcessCollection.cs" />
+    <Compile Include="Administration\WorkerProcessState.cs" />
+    <Compile Include="Management\Utility\BindingUtility.cs" />
+    <Compile Include="Management\Utility\HttpApiWrapper.cs" />
+    <Compile Include="Management\Utility\ImpersonationHelper.cs" />
+    <Compile Include="Management\Utility\SafeGlobalAllocHandle.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administration\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration\System.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B4}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.ServiceProcess\System.ServiceProcess.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BF}</Project>
+      <Name>System.ServiceProcess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web\System.Web.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B0}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

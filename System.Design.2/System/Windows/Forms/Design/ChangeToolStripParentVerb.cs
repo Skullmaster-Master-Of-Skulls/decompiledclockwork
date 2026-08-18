@@ -1,0 +1,134 @@
+﻿using System;
+using System.ComponentModel;
+using System.ComponentModel.Design;
+using System.Drawing.Design;
+
+namespace System.Windows.Forms.Design
+{
+	// Token: 0x020002A0 RID: 672
+	internal class ChangeToolStripParentVerb
+	{
+		// Token: 0x060019E8 RID: 6632 RVA: 0x000940D4 File Offset: 0x000922D4
+		internal ChangeToolStripParentVerb(string text, ToolStripDesigner designer)
+		{
+			this._designer = designer;
+			this._provider = designer.Component.Site;
+			this._host = (IDesignerHost)this._provider.GetService(typeof(IDesignerHost));
+			this.componentChangeSvc = (IComponentChangeService)this._provider.GetService(typeof(IComponentChangeService));
+		}
+
+		// Token: 0x060019E9 RID: 6633 RVA: 0x00094140 File Offset: 0x00092340
+		public void ChangeParent()
+		{
+			Cursor value = Cursor.Current;
+			DesignerTransaction designerTransaction = this._host.CreateTransaction("Add ToolStripContainer Transaction");
+			try
+			{
+				Cursor.Current = Cursors.WaitCursor;
+				Control control = this._host.RootComponent as Control;
+				ParentControlDesigner parentControlDesigner = this._host.GetDesigner(control) as ParentControlDesigner;
+				if (parentControlDesigner != null)
+				{
+					ToolStrip toolStrip = this._designer.Component as ToolStrip;
+					if (toolStrip != null && this._designer != null && this._designer.Component != null && this._provider != null)
+					{
+						DesignerActionUIService designerActionUIService = this._provider.GetService(typeof(DesignerActionUIService)) as DesignerActionUIService;
+						designerActionUIService.HideUI(toolStrip);
+					}
+					ToolboxItem tool = new ToolboxItem(typeof(ToolStripContainer));
+					OleDragDropHandler oleDragHandler = parentControlDesigner.GetOleDragHandler();
+					if (oleDragHandler != null)
+					{
+						IComponent[] array = oleDragHandler.CreateTool(tool, control, 0, 0, 0, 0, false, false);
+						ToolStripContainer toolStripContainer = array[0] as ToolStripContainer;
+						if (toolStripContainer != null && toolStrip != null)
+						{
+							IComponentChangeService componentChangeService = this._provider.GetService(typeof(IComponentChangeService)) as IComponentChangeService;
+							Control parent = this.GetParent(toolStripContainer, toolStrip);
+							PropertyDescriptor member = TypeDescriptor.GetProperties(parent)["Controls"];
+							Control parent2 = toolStrip.Parent;
+							if (parent2 != null)
+							{
+								componentChangeService.OnComponentChanging(parent2, member);
+								parent2.Controls.Remove(toolStrip);
+							}
+							if (parent != null)
+							{
+								componentChangeService.OnComponentChanging(parent, member);
+								parent.Controls.Add(toolStrip);
+							}
+							if (componentChangeService != null && parent2 != null && parent != null)
+							{
+								componentChangeService.OnComponentChanged(parent2, member, null, null);
+								componentChangeService.OnComponentChanged(parent, member, null, null);
+							}
+							ISelectionService selectionService = this._provider.GetService(typeof(ISelectionService)) as ISelectionService;
+							if (selectionService != null)
+							{
+								selectionService.SetSelectedComponents(new IComponent[]
+								{
+									toolStripContainer
+								});
+							}
+						}
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				if (ex is InvalidOperationException)
+				{
+					IUIService iuiservice = (IUIService)this._provider.GetService(typeof(IUIService));
+					iuiservice.ShowError(ex.Message);
+				}
+				if (designerTransaction != null)
+				{
+					designerTransaction.Cancel();
+					designerTransaction = null;
+				}
+			}
+			finally
+			{
+				if (designerTransaction != null)
+				{
+					designerTransaction.Commit();
+					designerTransaction = null;
+				}
+				Cursor.Current = value;
+			}
+		}
+
+		// Token: 0x060019EA RID: 6634 RVA: 0x0009439C File Offset: 0x0009259C
+		private Control GetParent(ToolStripContainer container, Control c)
+		{
+			Control result = container.ContentPanel;
+			DockStyle dock = c.Dock;
+			if (c.Parent is ToolStripPanel)
+			{
+				dock = c.Parent.Dock;
+			}
+			foreach (object obj in container.Controls)
+			{
+				Control control = (Control)obj;
+				if (control is ToolStripPanel && control.Dock == dock)
+				{
+					result = control;
+					break;
+				}
+			}
+			return result;
+		}
+
+		// Token: 0x040015C1 RID: 5569
+		private ToolStripDesigner _designer;
+
+		// Token: 0x040015C2 RID: 5570
+		private IDesignerHost _host;
+
+		// Token: 0x040015C3 RID: 5571
+		private IComponentChangeService componentChangeSvc;
+
+		// Token: 0x040015C4 RID: 5572
+		private IServiceProvider _provider;
+	}
+}

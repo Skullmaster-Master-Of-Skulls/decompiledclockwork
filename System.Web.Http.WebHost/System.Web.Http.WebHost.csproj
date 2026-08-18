@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE269C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Web.Http.WebHost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\Generic\DictionaryExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\Tasks\TaskHelpers.cs" />
+    <Compile Include="Threading\Tasks\TaskHelpersExtensions.cs" />
+    <Compile Include="Web\Http\Error.cs" />
+    <Compile Include="Web\Http\GlobalConfiguration.cs" />
+    <Compile Include="Web\Http\HttpMethodHelper.cs" />
+    <Compile Include="Web\Http\NonOwnedStream.cs" />
+    <Compile Include="Web\Http\Properties\CommonWebApiResources.cs" />
+    <Compile Include="Web\Http\RouteCollectionExtensions.cs" />
+    <Compile Include="Web\Http\WebHost\HttpBatchContextWrapper.cs" />
+    <Compile Include="Web\Http\WebHost\HttpControllerHandler.cs" />
+    <Compile Include="Web\Http\WebHost\HttpControllerRouteHandler.cs" />
+    <Compile Include="Web\Http\WebHost\HttpControllerTypeCacheSerializer.cs" />
+    <Compile Include="Web\Http\WebHost\HttpRequestMessageExtensions.cs" />
+    <Compile Include="Web\Http\WebHost\HttpResponseBaseExtensions.cs" />
+    <Compile Include="Web\Http\WebHost\PreApplicationStartCode.cs" />
+    <Compile Include="Web\Http\WebHost\Properties\SRResources.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HostedHttpRoute.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HostedHttpRouteCollection.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HostedHttpRouteData.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HostedHttpVirtualPathData.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpContextBaseExtensions.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpRequestMessageContextWrapper.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpRequestMessageWrapper.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpRouteDataExtensions.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpRouteExceptionHandler.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpRouteExceptionRouteHandler.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpRouteExtensions.cs" />
+    <Compile Include="Web\Http\WebHost\Routing\HttpWebRoute.cs" />
+    <Compile Include="Web\Http\WebHost\SeekableBufferedRequestStream.cs" />
+    <Compile Include="Web\Http\WebHost\SuppressFormsAuthRedirectHelper.cs" />
+    <Compile Include="Web\Http\WebHost\TaskWrapperAsyncResult.cs" />
+    <Compile Include="Web\Http\WebHost\WebHostAssembliesResolver.cs" />
+    <Compile Include="Web\Http\WebHost\WebHostBufferPolicySelector.cs" />
+    <Compile Include="Web\Http\WebHost\WebHostExceptionCatchBlocks.cs" />
+    <Compile Include="Web\Http\WebHost\WebHostExceptionHandler.cs" />
+    <Compile Include="Web\Http\WebHost\WebHostHttpControllerTypeResolver.cs" />
+    <Compile Include="Web\Http\WebHost\WebHostHttpRequestContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Web\Http\WebHost\Properties\CommonWebApiResources.resources" />
+    <EmbeddedResource Include="Web\Http\WebHost\Properties\SRResources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Net.Http.Formatting\System.Net.Http.Formatting.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2693}</Project>
+      <Name>System.Net.Http.Formatting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Net.Http\System.Net.Http.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D0}</Project>
+      <Name>System.Net.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.2\System.Web.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C7}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web.Http\System.Web.Http.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE269A}</Project>
+      <Name>System.Web.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

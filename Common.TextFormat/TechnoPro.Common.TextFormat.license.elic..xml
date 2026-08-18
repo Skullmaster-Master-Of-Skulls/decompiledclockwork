@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<License Version="1.3" Key="Nt7LAQBrbp9srInAFY1rTBrNwnmkYJkGXApnOKEuC/9MCHqIMm712u/jfvvnbpVIQiXmzdElmPz/sUFt/zJRG/cOb9fMnza0pvdIOGRFzQC1O+XHsUVxMF2mfKxawADpojVNdvk/OycnX+c7iLqgLfMRGsMQ7FYpqyFtKfxZXwqcFXOMnXGQSVf+bkXv/mfn4o3C7YhCx0IvOoBhgmVWItGwjGfeem0T39gv60LHF2Jw6Eo6Y3LDLASobZXkt0MxOfc330IkYtpeLEovbZWyf/9PUk7iLG6+ursM6zjMEjX6EIKKehcS/yMmPY76pwjcX43eOzWcncDGu6m7tSHb1ZRnewehTDOowiW0dJWsvwjZTn6JYP6JbeyBKGa3WdZ4BUOuzW8GtIgF2FMi7CfNu+Xq51yjzhNYwxAEuLSmLDfgnWmqEzWNWrLGUlMTqQMu07s9RCMp+o9nZNr9U3En2FlMKXZ92Tt9zSZcfi+n8u/Zk2QSfeBN6PEmYOuFO5b+ULp3ymNRpAYuYXWdG6XLka+xJiEdWcjc3tGsi0zhmKohKrL4WFB9uWs7jaHoyqn6IAXjJP+BhMXRaSDn3W8CISe/rsBzq5HS/OMb9MtV7CnUcorvlAJ50Rv6aSgDpfpNZB1z7WKeGNtxedg9Fp+HOJ+xrRLecdUTVAVlqqn5JPM2O8nd84k7TUUqs9t0ZjKyEG2UarSjtcjARWXVAv7kLx/MFaHgHFrLGmec0hDKwwIv2ejCiHQBqrj37J8HYvvc3ShTfkcBSnytUzBuzMVBD8G1Fx0rAwll3gEhRp+bPDXrB/7m/hm+x2ZjriUkbKCmijNJGMRh2KoM/2lwzvDIsZHQheZtYBruz803UtTBjxRlJvwqVAfCX09K/MFTqM7pwv9G9eJQAwpYMKk4vZD87Gvvcr01Fs9A0qk541MCC/D+uDyFv4XwxHNu68R110x1sYOcyYtZzRIOo6Ag+84DQOSDTm9j5pc29IlBAXV5P41z8OmyS2ZTrLe/jGN5ZGc3KgTqbqz9YP6z+KYe2rtmQpCRSs1eDcV2aCntcJTLEMjil/aA7A/FN4m6bQ3EBuV9NqcH3MmNQ/2Js3jq+I0GpzuKX7iGdi6ti0nD16ULLgVTY0BvNYf9+s9k/o1LMGuloZPPf3poxhgNSMUBdyEg+kjh8i+AMa42a6CRv0cpmrE4UM7Kc8n34BzCHNARd3qZLnWt8MlXV+dfSkaAVjdx1TwHvQLGmG9do372RIWHtLTra9rc22hJjvwnsI9LZz88SFtSQlrZfqNxn6Z1h+NvHBmIXDqAoBSvt6TorDgMBL64EYCbxo9fdyEj/+i2TMv8aq4UJUK6p29hWaD/Rmu/v6BT/EDhMzFJdFOHbFu4AxOhNX5jOjhCH1El8Es0JRpc4HMWfT7zDV/WOU3eH3RO5j6Iu2fD2Q3EpGJfINvVKZ8uAnI2z44tQIUgJmHrthd4cecyHBzS2IU=">
+    <Type>Runtime</Type>
+    <Email>mike@tpro.ca</Email>
+    <Organization>TechnoPro Computer Solutions, Inc.</Organization>
+    <LicensedDate>2012-12-05T12:00:00Z</LicensedDate>
+    <ExpiredDate>2013-12-05T12:00:00Z</ExpiredDate>
+    <Products>
+        <Product>
+            <Name>Spire.Office for .NET</Name>
+            <Version>2.4</Version>
+            <Subscription>
+                <NumberOfPermittedDeveloper>1</NumberOfPermittedDeveloper>
+                <NumberOfPermittedSite>2147483647</NumberOfPermittedSite>
+            </Subscription>
+        </Product>
+    </Products>
+    <Issuer>
+        <Name>e-iceblue</Name>
+        <Email>sales@e-iceblue.com</Email>
+        <Url>http://www.e-iceblue.com</Url>
+    </Issuer>
+</License>

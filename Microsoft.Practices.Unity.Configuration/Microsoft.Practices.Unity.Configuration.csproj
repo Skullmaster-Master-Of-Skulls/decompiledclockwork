@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2679}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Practices.Unity.Configuration</RootNamespace>
+    <AssemblyName>Microsoft.Practices.Unity.Configuration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliasElement.cs" />
+    <Compile Include="AliasElementCollection.cs" />
+    <Compile Include="ArrayElement.cs" />
+    <Compile Include="AssemblyElement.cs" />
+    <Compile Include="AssemblyElementCollection.cs" />
+    <Compile Include="ConfigurationHelpers\ConfigurationElementExtensions.cs" />
+    <Compile Include="ConfigurationHelpers\DeserializableConfigurationElement.cs" />
+    <Compile Include="ConfigurationHelpers\DeserializableConfigurationElementCollection.cs" />
+    <Compile Include="ConfigurationHelpers\DeserializableConfigurationElementCollectionBase.cs" />
+    <Compile Include="ConfigurationHelpers\DictionaryExtensions.cs" />
+    <Compile Include="ConfigurationHelpers\InputStream.cs" />
+    <Compile Include="ConfigurationHelpers\IValueProvidingElement.cs" />
+    <Compile Include="ConfigurationHelpers\ParseBuilder.cs" />
+    <Compile Include="ConfigurationHelpers\ParseResult.cs" />
+    <Compile Include="ConfigurationHelpers\SequenceResult.cs" />
+    <Compile Include="ConfigurationHelpers\TypeNameInfo.cs" />
+    <Compile Include="ConfigurationHelpers\TypeNameParser.cs" />
+    <Compile Include="ConfigurationHelpers\TypeResolver.cs" />
+    <Compile Include="ConfigurationHelpers\TypeResolverImpl.cs" />
+    <Compile Include="ConfigurationHelpers\UnknownElementHandlerMap.2.cs" />
+    <Compile Include="ConfigurationHelpers\UnknownElementHandlerMap.cs" />
+    <Compile Include="ConfigurationHelpers\ValueElementHelper.cs" />
+    <Compile Include="ConfigurationHelpers\XmlWriterExtensions.cs" />
+    <Compile Include="ConstructorElement.cs" />
+    <Compile Include="ContainerConfiguringElement.cs" />
+    <Compile Include="ContainerConfiguringElementCollection.cs" />
+    <Compile Include="ContainerElement.cs" />
+    <Compile Include="ContainerElementCollection.cs" />
+    <Compile Include="ContainerExtensionElement.cs" />
+    <Compile Include="ContainerExtensionElementCollection.cs" />
+    <Compile Include="DependencyElement.cs" />
+    <Compile Include="ExtensionConfigurationElement.cs" />
+    <Compile Include="ExtensionConfigurationElementCollection.cs" />
+    <Compile Include="ExtensionElementMap.cs" />
+    <Compile Include="IAttributeOnlyElement.cs" />
+    <Compile Include="InjectionMemberElement.cs" />
+    <Compile Include="InjectionMemberElementCollection.cs" />
+    <Compile Include="InstanceElement.cs" />
+    <Compile Include="InstanceElementCollection.cs" />
+    <Compile Include="LifetimeElement.cs" />
+    <Compile Include="MethodElement.cs" />
+    <Compile Include="NamedElement.cs" />
+    <Compile Include="NamespaceElement.cs" />
+    <Compile Include="NamespaceElementCollection.cs" />
+    <Compile Include="OptionalElement.cs" />
+    <Compile Include="ParameterElement.cs" />
+    <Compile Include="ParameterElementCollection.cs" />
+    <Compile Include="ParameterValueElement.cs" />
+    <Compile Include="ParameterValueElementCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="PropertyElement.cs" />
+    <Compile Include="RegisterElement.cs" />
+    <Compile Include="RegisterElementCollection.cs" />
+    <Compile Include="SectionExtension.cs" />
+    <Compile Include="SectionExtensionContext.cs" />
+    <Compile Include="SectionExtensionElement.cs" />
+    <Compile Include="SectionExtensionElementCollection.cs" />
+    <Compile Include="UnityConfigurationSection.cs" />
+    <Compile Include="UnityContainerExtensions.cs" />
+    <Compile Include="ValueElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Practices.Unity\Microsoft.Practices.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE267A}</Project>
+      <Name>Microsoft.Practices.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

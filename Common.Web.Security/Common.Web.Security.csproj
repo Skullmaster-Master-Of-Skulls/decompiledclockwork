@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE265E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.Web.Security</RootNamespace>
+    <AssemblyName>Common.Web.Security</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Authorization" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authorization\Requirement\FormApprovalSupervisorIdHandler.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalSupervisorIdRequirement.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalSupervisorScreenNumHandler.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalSupervisorScreenNumRequirement.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalTraineeIdHandler.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalTraineeIdRequirement.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalTraineeScreenNumHandler.cs" />
+    <Compile Include="Authorization\Requirement\FormApprovalTraineeScreenNumRequirement.cs" />
+    <Compile Include="Authorization\Requirement\HashMessageHandler.cs" />
+    <Compile Include="Authorization\Requirement\HashMessageRequirement.cs" />
+    <Compile Include="Authorization\Requirement\Inventory\InventoryAdminHandler.cs" />
+    <Compile Include="Authorization\Requirement\Inventory\InventoryAdminRequirement.cs" />
+    <Compile Include="Authorization\Requirement\Inventory\InventoryCatalogAllowedHandler.cs" />
+    <Compile Include="Authorization\Requirement\Inventory\InventoryCatalogAllowedRequirement.cs" />
+    <Compile Include="Authorization\Requirement\Inventory\InventoryCategoryAllowedHandler.cs" />
+    <Compile Include="Authorization\Requirement\Inventory\InventoryCategoryAllowedRequirement.cs" />
+    <Compile Include="Authorization\Requirement\UserAccount\UserAccountManageUserRoomPermissionHandler.cs" />
+    <Compile Include="Authorization\Requirement\UserAccount\UserAccountRequirement.cs" />
+    <Compile Include="Credentials\DigestCredentials.cs" />
+    <Compile Include="Credentials\IClientIdCredentials.cs" />
+    <Compile Include="Credentials\IUserCredentials.cs" />
+    <Compile Include="Credentials\TokenUserCredentials.cs" />
+    <Compile Include="Credentials\UserNameCredentials.cs" />
+    <Compile Include="Exceptions\InvalidCredentialsException.cs" />
+    <Compile Include="Extensions\OperationContextExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\AnonymousRestProxy.cs" />
+    <Compile Include="Proxy\BasicHttpClientBuilder.cs" />
+    <Compile Include="Proxy\BasicHttpHandler.cs" />
+    <Compile Include="Proxy\BearerHttpClientBuilder.cs" />
+    <Compile Include="Proxy\BearerHttpHandler.cs" />
+    <Compile Include="Proxy\BearerTokenRestProxy.cs" />
+    <Compile Include="Proxy\DigestAuthenticationRestProxy.cs" />
+    <Compile Include="Proxy\DigestHttpClientBuilder.cs" />
+    <Compile Include="Proxy\IHttpClientBuilder.cs" />
+    <Compile Include="Proxy\RestProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Net.Http.Formatting\System.Net.Http.Formatting.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2693}</Project>
+      <Name>System.Net.Http.Formatting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Net.Http\System.Net.Http.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D0}</Project>
+      <Name>System.Net.Http</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

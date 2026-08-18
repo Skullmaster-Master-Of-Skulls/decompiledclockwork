@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE2617}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.Common.Core.Mappers</RootNamespace>
+    <AssemblyName>Common.Core.Mappers</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Academic\SemesterMapper.cs" />
+    <Compile Include="Accommodations\AccommodationDataMapper.cs" />
+    <Compile Include="Accommodations\ExtendedAccommodationInfoMapper.cs" />
+    <Compile Include="ActionPlan\ActionTaskMapper.cs" />
+    <Compile Include="ActionPlan\CompletionStatusMapper.cs" />
+    <Compile Include="AlertTrigger\AlertTriggerForUserGroupMapper.cs" />
+    <Compile Include="AlertTrigger\AlertTriggerForUserMapper.cs" />
+    <Compile Include="AlertTrigger\AlertTriggerForUserSetMapper.cs" />
+    <Compile Include="AlternativeFormat\AlternateFormatVolunteerMapper.cs" />
+    <Compile Include="AlternativeFormat\BasicMediaContentMapper.cs" />
+    <Compile Include="AlternativeFormat\BookSearch\BookSearchToMediaContentConverter.cs" />
+    <Compile Include="AlternativeFormat\BookSearch\EBookSearchRequestMapper.cs" />
+    <Compile Include="AlternativeFormat\BookSearch\EBookSearchResultMapper.cs" />
+    <Compile Include="AlternativeFormat\BookSearch\PublisherDTOResolver.cs" />
+    <Compile Include="AlternativeFormat\BookSearch\PublisherResolver.cs" />
+    <Compile Include="AlternativeFormat\CancelledMediaJobMapper.cs" />
+    <Compile Include="AlternativeFormat\CompletedMediaJobMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentDetailMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentFileWithoutDataMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentIdentifierMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentPerFormatInfoMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentPerFormatStatusInfoMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaContentRequestedInfoMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaJobMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaJobRunninNoteMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaJobStatusMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaJobVolunteerInfoMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaJobVolunteerWorkingHoursInfoMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaPublisherMapper.cs" />
+    <Compile Include="AlternativeFormat\MediaVendorMapper.cs" />
+    <Compile Include="AlternativeFormat\ProofOfPurchaseMapper.cs" />
+    <Compile Include="AlternativeFormat\StudentMediaContentFileWithProofOfPurchaseInfoMapper.cs" />
+    <Compile Include="AlternativeFormat\StudentMediaRequestMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\BookingRequest\AppointmentBookingReqMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\BookingRequest\AppointmentBookingResultMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\BookingRequest\BookingFilterParametersMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\ChannelAvailabilityMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\ChannelMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\ChannelPersonCollectionMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\ChannelUnderlyingPersonMapper.cs" />
+    <Compile Include="AppointmentBookingStudent\CutoffTimeMapper.cs" />
+    <Compile Include="AppointmentsCalendar\AppointmentMapper.cs" />
+    <Compile Include="AppointmentsCalendar\AppointmentsWithAvailabilityAndTimetableMapper.cs" />
+    <Compile Include="AppointmentsCalendar\AppointmentTimetableItemMapper.cs" />
+    <Compile Include="AppointmentsCalendar\AppointmentToBaseBasicAppointmentMapper.cs" />
+    <Compile Include="AppointmentsCalendar\AppointmentToBaseExtendedAppointmentMapper.cs" />
+    <Compile Include="AppointmentsCalendar\AppointmentToRecurringAppointmentMapper.cs" />
+    <Compile Include="AppointmentsCalendar\StudentAppointmentBooking\AvailabilityForChannelCalendarMapper.cs" />
+    <Compile Include="AppointmentsCalendar\StudentAppointmentBooking\ChannelCalendarWithAvailabilityMapper.cs" />
+    <Compile Include="AppointmentsList\ClosedDayMapper.cs" />
+    <Compile Include="AppointmentsList\ListAppointmentMapper.cs" />
+    <Compile Include="AppointmentsList\ListAppointmentOrAvailabilityMapper.cs" />
+    <Compile Include="AppointmentsPointOfContact\PointOfContactMapper.cs" />
+    <Compile Include="AppointmentsRecurring\AppointmentRecurringInfoMapper.cs" />
+    <Compile Include="AppointmentsRecurring\RecurringAppointmentMapper.cs" />
+    <Compile Include="AppointmentsRecurring\RecurringInstanceMapper.cs" />
+    <Compile Include="AppointmentsRecurring\RecurringInstanceSetModifyBehaviourMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AccommodationForTestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AccommodationBasicMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AccommodationMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\ApplySpecialAccommodationsRespMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AppointmentMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AssetMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AutoBookTestExamPreviewResultMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AutoBookTestExamResultMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\AutoRescheduleTestExamResultMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\BookingMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\BookingResultsMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\CustomTestBookingRulesClassMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\DateRangeMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\FindPotentialBookingsReqMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\FindPotentialBookingsRespMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\PotentialRoomMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\PotentialTestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\PotentialTestMethodFoundNoteMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\PrivateNoteMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\RoomMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\SpecialAccommodationMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\TestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\TestRuleMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\AutoTestBookingHelper\TimeTableItemMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\BasicAppointmentTestExamInfoMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\BasicTestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\Booker2\TryToBookAccommodationToUseMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\Booker2\TryToBookFailureMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\Booker2\TryToBookPotentialBookingMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\Booker2\TryToBookResultMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\Booker2\TryToBookRoomMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\Booker2\TryToBookWarningMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ClassTestBaseMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ClassTestForDisplayMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ClassTestForEditMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ClassTestForExamRequestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ExamFileMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ExamRequestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ExamStatusMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\FullTest\InstructorAcknowledgedStudentMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\FullTest\TestForEdit2Mapper.cs" />
+    <Compile Include="AppointmentsTestBooking\FullTest\TestForEditBookingSpecificMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\FullTest\TestForEditClassDefinitionSpecificMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\ProctorMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\SittingBaseMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\SittingMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\StudentClassTestBaseMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\StudentClassTestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\StudentWritingTestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\BookingsManagementContextMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\ClassTestDefinitionsManagementContextMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\ExamManagementViewMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\UnBookedStudentManagementContextMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\ViewEntities\ClassTestDefinitionSmallMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\ViewEntities\TestBookingFullMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\ViewEntities\TestBookingSmallMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestBookingViews\ViewEntities\UnbookedStudentsSmallMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestExamRowMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestForEditMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\TestMapper.cs" />
+    <Compile Include="AppointmentsTestBooking\UnbookedTestExamStudentMapper.cs" />
+    <Compile Include="AppointmentsTestExamViews\FinalExamsContextMapper.cs" />
+    <Compile Include="AppointmentsTestExamViews\FinalExamsViewBaseMapper.cs" />
+    <Compile Include="AppointmentsTestExamViews\FinalExamsViewLightBookingMapper.cs" />
+    <Compile Include="AppointmentsTestExamViews\FinalExamsViewLightMapper.cs" />
+    <Compile Include="AppointmentsTestExamViews\PotentialFinalExamBookingMapper.cs" />
+    <Compile Include="AppointmentsWorkshops\AppointmentWorkshopInfoMapper.cs" />
+    <Compile Include="AppointmentsWorkshops\WorkshopAppointmentMapper.cs" />
+    <Compile Include="AppointmentsWorkshops\WorkshopAppointmentToBaseExtendedAppointmentMapper.cs" />
+    <Compile Include="AppointmentsWorkshops\WorkshopDefinitionMapper.cs" />
+    <Compile Include="AppointmentsWorkshops\WorkshopDefinitionOrAppTypeForestMapper.cs" />
+    <Compile Include="AppointmentsWorkshops\WorkshopDefinitionOrAppTypeMapper.cs" />
+    <Compile Include="Appointments\AppCancelInfoMapper.cs" />
+    <Compile Include="Appointments\AppCancelReasonGroupMapper.cs" />
+    <Compile Include="Appointments\AppCancelReasonMapper.cs" />
+    <Compile Include="Appointments\AppCancelReasonOrGroupForestMapper.cs" />
+    <Compile Include="Appointments\AppCancelResaonOrGroupMapper.cs" />
+    <Compile Include="Appointments\AppointmentForNotificationMapper.cs" />
+    <Compile Include="Appointments\AppointmentIconMapper.cs" />
+    <Compile Include="Appointments\AppointmentLoadOptionsMapper.cs" />
+    <Compile Include="Appointments\AppointmentRoomMapper.cs" />
+    <Compile Include="Appointments\AppointmentRoomWithAvailabilityMapper.cs" />
+    <Compile Include="Appointments\AppShowTimeAsTypeMapper.cs" />
+    <Compile Include="Appointments\AppTypeGroupMapper.cs" />
+    <Compile Include="Appointments\AppTypeGroupWithAppTypesMapper.cs" />
+    <Compile Include="Appointments\AppTypeMapper.cs" />
+    <Compile Include="Appointments\AppTypeWithExtendedInfoMapper.cs" />
+    <Compile Include="Appointments\AttendeeMapper.cs" />
+    <Compile Include="Appointments\BaseBasicAppointmentMapper.cs" />
+    <Compile Include="Appointments\BaseExtendedAppointmentMapper.cs" />
+    <Compile Include="Appointments\FreeTimeSearchContextMapper.cs" />
+    <Compile Include="Appointments\FreeTimeSearchRecurringRuleMapper.cs" />
+    <Compile Include="Appointments\HolidayMapper.cs" />
+    <Compile Include="Appointments\IconInfoMapper.cs" />
+    <Compile Include="AppSettingMapper.cs" />
+    <Compile Include="AttachmentFileMapper.cs" />
+    <Compile Include="AttachmentInfoMapper.cs" />
+    <Compile Include="Authentication\AuthenticationAndAuthorizationResultMapper.cs" />
+    <Compile Include="Authentication\Authentication\AuthenticationArgsMapper.cs" />
+    <Compile Include="Authentication\Authentication\AuthenticationContextItemMapper.cs" />
+    <Compile Include="Authentication\Authentication\AuthenticationContextMapper.cs" />
+    <Compile Include="Authentication\Authentication\AuthenticationRequestParametersMapper.cs" />
+    <Compile Include="Authentication\Authentication\AuthenticationResultParametersMapper.cs" />
+    <Compile Include="Authentication\Authentication\ExternalUserInfoMapper.cs" />
+    <Compile Include="Authentication\AuthorizationContextItemMapper.cs" />
+    <Compile Include="Authentication\AuthorizationContextMapper.cs" />
+    <Compile Include="Authentication\CASAuthenticationOptionsMapper.cs" />
+    <Compile Include="Authentication\CASAuthenticationResultMapper.cs" />
+    <Compile Include="Authentication\ClockWorkHashAuthenticationMapper.cs" />
+    <Compile Include="Authentication\ClockWorkUserMapper.cs" />
+    <Compile Include="Authentication\LdapAuthenticationResultMapper.cs" />
+    <Compile Include="Authentication\LdapConnectionInfoMapper.cs" />
+    <Compile Include="AvailabilitySchedule2\Availability2ItemMapper.cs" />
+    <Compile Include="AvailabilitySchedule2\Availability2MarkerMapper.cs" />
+    <Compile Include="AvailabilitySchedule2\Availability2NoteMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AddAvailabilitiesActionResultMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AddAvailabilityActionResultMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityGroupMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityScheduleContextMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityScheduleDateAndTimeMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityScheduleItemActionResultMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityScheduleItemInfoMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityScheduleItemsForContextMapper.cs" />
+    <Compile Include="AvailabilitySchedule\AvailabilityScheduleTimeMapper.cs" />
+    <Compile Include="AvailabilitySchedule\DeleteAvailabilityActionResultMapper.cs" />
+    <Compile Include="Caching\ServerCacheItemMapper.cs" />
+    <Compile Include="CampusMapper.cs" />
+    <Compile Include="Campus\SchoolCampusMapper.cs" />
+    <Compile Include="Cards\CardInfoMapper.cs" />
+    <Compile Include="Cards\CardLayoutMapper.cs" />
+    <Compile Include="Cases\CaseBaseMapper.cs" />
+    <Compile Include="Cases\CaseClientMapper.cs" />
+    <Compile Include="Cases\CaseForDisplayMapper.cs" />
+    <Compile Include="Cases\CaseMapper.cs" />
+    <Compile Include="ClientParametersMapper.cs" />
+    <Compile Include="ClockWorkAudit\AuditCheckMapper.cs" />
+    <Compile Include="ClockWorkAudit\AuditResultMapper.cs" />
+    <Compile Include="ClockWorkDailyJob\DailyJobTaskMapper.cs" />
+    <Compile Include="ClockWorkDailyJob\DailyJobTaskResultMapper.cs" />
+    <Compile Include="ClockWorkServerConnection\CertificateInfoMapper.cs" />
+    <Compile Include="ClockWorkServerConnection\ClockWorkServerConnectionInfoMapper.cs" />
+    <Compile Include="ClockWorkServerConnection\InternetInformationServicesVersionMapper.cs" />
+    <Compile Include="ClockWorkServerJob\ClockWorkServerJobExecutionLogMapper.cs" />
+    <Compile Include="ClockWorkServerJob\ClockWorkServerJobInfoCredentialsMapper.cs" />
+    <Compile Include="ClockWorkServerJob\ClockWorkServerJobInfoMapper.cs" />
+    <Compile Include="ClockWorkServerJob\ClockWorkServerJobScheduleMapper.cs" />
+    <Compile Include="ClockWorkServerJob\ClockWorkServerJobStepMapper.cs" />
+    <Compile Include="ClockWorkServer\ClockWorkServerInfoMapper.cs" />
+    <Compile Include="Common\FileMapper.cs" />
+    <Compile Include="ConfidentialityAgreement\StudentConfidentialityAgreementMapper.cs" />
+    <Compile Include="CourseRegistrations\CourseRegistrationBaseMapper.cs" />
+    <Compile Include="CourseRegistrations\CourseRegistrationMapper.cs" />
+    <Compile Include="CourseRegistrations\CourseRegistrationStatusMapper.cs" />
+    <Compile Include="CourseRegistrations\CourseRegistrationWithAccommodationsMapper.cs" />
+    <Compile Include="CourseRegistrations\CourseRegistrationWithStudentSpecificInfoMapper.cs" />
+    <Compile Include="CourseRegistrations\CourseStudentSpecificMapper.cs" />
+    <Compile Include="CourseRegistrations\eRegistrationStatusMapper.cs" />
+    <Compile Include="CourseRegistrations\StudentCourseListMapper.cs" />
+    <Compile Include="CourseRegistrations\StudentWithCourseAndAccommodationInfoMapper.cs" />
+    <Compile Include="CustomForms\Data\Context\CustomDataContextMapper.cs" />
+    <Compile Include="CustomForms\Data\Context\CustomDataPerDateContextMapper.cs" />
+    <Compile Include="CustomForms\Data\Context\CustomDataPerSemesterContextMapper.cs" />
+    <Compile Include="CustomForms\Data\Context\CustomDataPerStudentContextMapper.cs" />
+    <Compile Include="CustomForms\Data\CustomDataHolderCollectionMapper.cs" />
+    <Compile Include="CustomForms\Data\CustomDataSetMapper.cs" />
+    <Compile Include="CustomForms\Data\DataHolders\CustomDataHolderMapper.cs" />
+    <Compile Include="CustomForms\Field\CustomDataInstanceMapper.cs" />
+    <Compile Include="CustomForms\Field\CustomListItemGroupMapper.cs" />
+    <Compile Include="CustomForms\Field\CustomListItemMapper.cs" />
+    <Compile Include="CustomForms\Form\CustomFormMapper.cs" />
+    <Compile Include="Database\DbConnectionInfoMapper.cs" />
+    <Compile Include="DataMigration\MigrationAppointmentItemResultMapper.cs" />
+    <Compile Include="DataMigration\MigrationAppointmentMapper.cs" />
+    <Compile Include="DataMigration\MigrationCreateStudentResultMapper.cs" />
+    <Compile Include="DataMigration\MigrationDataItemMapper.cs" />
+    <Compile Include="DataMigration\MigrationDataItemResultMapper.cs" />
+    <Compile Include="DataMigration\MigrationMapperDataItemMapper.cs" />
+    <Compile Include="DataMigration\MigrationStudentMapper.cs" />
+    <Compile Include="DataMigration\MigrationStudentWithDataMapper.cs" />
+    <Compile Include="DataMigration\MigrationStudentWithPerDateDataMapper.cs" />
+    <Compile Include="DataSync\DataSyncErrorMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseAltContactMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseFinalExamInfoMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseInstructorMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseRowPartMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseStudentSpecificMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseStudentSpecificRowPartMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseSyncResultMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalCourseTimetableItemMapper.cs" />
+    <Compile Include="DataSync\DataSyncExternalDataMapper.cs" />
+    <Compile Include="DataSync\DataSyncInfoMapper.cs" />
+    <Compile Include="DataSync\DataSyncPreviewResultMapper.cs" />
+    <Compile Include="DataSync\DataSyncResultMapper.cs" />
+    <Compile Include="DataSync\Notetaking\NotetakerWithExternalCoursesMapper.cs" />
+    <Compile Include="DataSync\Student\StudentDataSyncPreviewDataMapper.cs" />
+    <Compile Include="Data\ReassignStaffDropListResultMapper.cs" />
+    <Compile Include="Data\StaffDropListAssignmentMapper.cs" />
+    <Compile Include="DbParameterMapper.cs" />
+    <Compile Include="Departments\DepartmentDTOMapper.cs" />
+    <Compile Include="DropBoxUserMapper.cs" />
+    <Compile Include="DynamicForms\Accommodations\AccommodationLetterGenerateContextMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalApprovedInfoMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalCommentMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalCommentTextMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalForAppointmentMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalOptionsMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalPendingItemMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalScreenUserOptionsMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\FormApproval\FormApprovalSignatureMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\NotesAppointmentExtendedInfoMapper.cs" />
+    <Compile Include="DynamicForms\AppointmentNotes\NotesAppointmentMapper.cs" />
+    <Compile Include="DynamicForms\DynamicControls\SingleFileMetaDataMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataBaseMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataChangeMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataContextMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataForReports\StudentReportInfo\StudentInfoItemBaseMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataSetMapper.cs" />
+    <Compile Include="DynamicForms\DynamicDataSetWithStudentNameMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFieldForestMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFieldMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFileDescriptionMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFileDescriptionWithColDataMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFormBaseMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFormMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFormOrGroupOrFieldMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFormOrGroupOrFormTypeMapper.cs" />
+    <Compile Include="DynamicForms\DynamicFormWithExtendedInfoMapper.cs" />
+    <Compile Include="DynamicForms\DynamicListGroupMapper.cs" />
+    <Compile Include="DynamicForms\DynamicListItemMapper.cs" />
+    <Compile Include="DynamicForms\Legacy\LegacyDynamicDataRowDataMapper.cs" />
+    <Compile Include="DynamicForms\Legacy\LegacyDynamicDataRowDatasMapper.cs" />
+    <Compile Include="DynamicForms\Legacy\LegacySaveDataResultMapper.cs" />
+    <Compile Include="DynamicForms\PerDateEntryMapper.cs" />
+    <Compile Include="Files\BasicFileInfoMapper.cs" />
+    <Compile Include="Files\BinaryFileMapper.cs" />
+    <Compile Include="Files\FileIdentifierMapper.cs" />
+    <Compile Include="Files\FileStructureMapper.cs" />
+    <Compile Include="Files\FileSystemStructureMapper.cs" />
+    <Compile Include="Files\FileTypeMapper.cs" />
+    <Compile Include="Files\FileUpload\TempFileContextMapper.cs" />
+    <Compile Include="Files\InMemoryFileInfoMapper.cs" />
+    <Compile Include="Files\LargeFileInfoMapper.cs" />
+    <Compile Include="General\ModificationHistoryItemBaseMapper.cs" />
+    <Compile Include="General\ModificationHistoryItemMapper.cs" />
+    <Compile Include="InstantMessageMapper.cs" />
+    <Compile Include="Intake\CreateRealStudentAccountFromIntakeResultMapper.cs" />
+    <Compile Include="Intake\IntakeEntryMapper.cs" />
+    <Compile Include="Intake\IntakeEntryQueueItemMapper.cs" />
+    <Compile Include="Intake\IntakeStatusMapper.cs" />
+    <Compile Include="Intake\IntakeUserAccountMapper.cs" />
+    <Compile Include="Inventory\InventoryArchivedLoanDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryAttachedFileDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryAttachedFileInfoDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryCatalogDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryCategoryDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryGroupDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryLoanDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryLoanGroupDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryLoanStatusDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryLocationDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryProductAccessoryMapper.cs" />
+    <Compile Include="Inventory\InventoryProductBookedTimeMapper.cs" />
+    <Compile Include="Inventory\InventoryProductDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryProductSnapshotDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryProductStatusDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryReservationDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryReservationGroupDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryReturnedLoanDTOMapper.cs" />
+    <Compile Include="Inventory\InventoryVendorInfoDTOMapper.cs" />
+    <Compile Include="Inventory\ProductBarCodeMapper.cs" />
+    <Compile Include="Legacy\ActionPlan\ActionPlanNoteMapper.cs" />
+    <Compile Include="Legacy\ActionPlan\ActionPlanTaskMapper.cs" />
+    <Compile Include="Legacy\Appointment\AppointmentModifiedHistoryItemMapper.cs" />
+    <Compile Include="Legacy\DynamicData\DynamicDataDecryptedPreviewItemMapper.cs" />
+    <Compile Include="Legacy\DynamicData\LegacyDynamicDataItemItemsThatHaveBeenDecryptedMapper.cs" />
+    <Compile Include="Legacy\DynamicData\LegacyDynamicDataItemItemsToBeDecryptedMapper.cs" />
+    <Compile Include="Legacy\DynamicData\LegacyStudentNoteMapper.cs" />
+    <Compile Include="Legacy\ServiceProvider\LegacyRequestDetailNotesAndSpecialInstructionsMapper.cs" />
+    <Compile Include="Legacy\ServiceProvider\LegacyServiceProviderRequestDetailMapper.cs" />
+    <Compile Include="LicenseInfoMapper.cs" />
+    <Compile Include="LookupCourses\AcademicTermMapper.cs" />
+    <Compile Include="LookupCourses\AlternateContactMapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseBaseMapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseBaseWithPrimaryInstructorMapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseDateRangeMapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseMapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseToLookupCourseBaseMapper.cs" />
+    <Compile Include="LookupCourses\LookupCourseToLookupCourseBaseWithPrimaryInstructorMapper.cs" />
+    <Compile Include="LookupCourses\LookupDurationTermSubjectMapper.cs" />
+    <Compile Include="LookupCourses\LookupInstructorCourseInfoMapper.cs" />
+    <Compile Include="LookupCourses\LookupInstructorMapper.cs" />
+    <Compile Include="LookupCourses\LookupSubjectMapper.cs" />
+    <Compile Include="LookupCourses\LookupTimetableItemMapper.cs" />
+    <Compile Include="LookupCourses\Management\LookInstructorForManagementListMapper.cs" />
+    <Compile Include="LookupCourses\Management\LookupInstructorCourseAttachmentForManagementMapper.cs" />
+    <Compile Include="LookupCourses\Management\LookupInstructorCourseStudentAttachmentForManagementMapper.cs" />
+    <Compile Include="LookupCourses\Management\LookupInstructorForManagementMapper.cs" />
+    <Compile Include="LookupCourses\SessionMapper.cs" />
+    <Compile Include="LookupSettingMapper.cs" />
+    <Compile Include="MailingInfoMapper.cs" />
+    <Compile Include="MailMergeEntities\Labels\LabelTemplateMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeCodeMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeContextMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeContextWithCustomDictionaryMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeCustomDictionaryMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeData\MailMergeTestBookingMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeDefaultPrinterSettingsMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeTemplateMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValueFormatMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueAccommodationDataMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueBaseMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueBoolMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueByteArrayMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueDateTimeMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueDateTimeNullableMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueDoubleMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueDynamicDataMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueIntMapper.cs" />
+    <Compile Include="MailMergeEntities\MailMergeValues\MailMergeValueStringMapper.cs" />
+    <Compile Include="Membership\AuthenticationSessionInfoMapper.cs" />
+    <Compile Include="Membership\LogonUserInfoMapper.cs" />
+    <Compile Include="MergeDuplicatesStudents\DuplicateDynamicDataItemMapper.cs" />
+    <Compile Include="MergeDuplicatesStudents\DuplicateStudentMapper.cs" />
+    <Compile Include="MergeDuplicatesStudents\DuplicateStudentSetMapper.cs" />
+    <Compile Include="MergeDuplicatesStudents\PotentialDuplicateStudentSetMapper.cs" />
+    <Compile Include="MonitoringLists\MonitorListMapper.cs" />
+    <Compile Include="Notetaking\DownloadedLectureNoteMapper.cs" />
+    <Compile Include="Notetaking\LectureNoteDescriptionMapper.cs" />
+    <Compile Include="Notetaking\LectureNoteMapper.cs" />
+    <Compile Include="Notetaking\NotetakerBaseMapper.cs" />
+    <Compile Include="Notetaking\NotetakerBaseWithLookupCourseBaseMapper.cs" />
+    <Compile Include="OnlineForms\OnlineFormIdWithOpenItemsCountMapper.cs" />
+    <Compile Include="OnlineForms\OnlineFormMapper.cs" />
+    <Compile Include="OnlineForms\OnlineFormStatusMapper.cs" />
+    <Compile Include="OnlineForms\SurveyForDisplayMapper.cs" />
+    <Compile Include="OnlineForms\SurveyQueueItemMapper.cs" />
+    <Compile Include="PerformanceTesting\PerformanceTestResultMapper.cs" />
+    <Compile Include="PerformanceTesting\PerformanceTestTimeTakenMapper.cs" />
+    <Compile Include="PerformanceTesting\SearchForPersonPerformanceTestResultMapper.cs" />
+    <Compile Include="PersonBaseMapper.cs" />
+    <Compile Include="PersonBase\BasicPersonMapper.cs" />
+    <Compile Include="PersonBase\GroupContainerForEditMapper.cs" />
+    <Compile Include="PersonBase\GroupContainerMapper.cs" />
+    <Compile Include="PersonBase\GroupForEditMapper.cs" />
+    <Compile Include="PersonBase\GroupMapper.cs" />
+    <Compile Include="PersonBase\PersonBaseWithExtendedInfoMapper.cs" />
+    <Compile Include="PersonBase\StaffCommonInfoMapper.cs" />
+    <Compile Include="PersonBase\StaffWithCommonInfoMapper.cs" />
+    <Compile Include="PersonBase\StudenSummaryMapper.cs" />
+    <Compile Include="PersonBase\StudentCommonInfoMapper.cs" />
+    <Compile Include="PersonBase\StudentWithCommonInfoMapper.cs" />
+    <Compile Include="PersonBase\UserGroupObjectIdMapper.cs" />
+    <Compile Include="PersonBase\UserGroupObjectMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\ColumnFormattingRuleMapper.cs" />
+    <Compile Include="Reports\ColumnSortingRuleMapper.cs" />
+    <Compile Include="Reports\ExecuteReportResultMapper.cs" />
+    <Compile Include="Reports\FormattedReportMapper.cs" />
+    <Compile Include="Reports\ReportBaseMapper.cs" />
+    <Compile Include="Reports\ReportCollectionMapper.cs" />
+    <Compile Include="Reports\ReportCompileLineWarningOrErrorMapper.cs" />
+    <Compile Include="Reports\ReportContextMapper.cs" />
+    <Compile Include="Reports\ReportFunctionMapper.cs" />
+    <Compile Include="Reports\ReportGroupMapper.cs" />
+    <Compile Include="Reports\ReportMapper.cs" />
+    <Compile Include="Reports\ReportOptionsMapper.cs" />
+    <Compile Include="Reports\ReportOrGroupForestMapper.cs" />
+    <Compile Include="Reports\ReportOrGroupMapper.cs" />
+    <Compile Include="Reports\ReportParameterFormMapper.cs" />
+    <Compile Include="Reports\ReportParameterMapper.cs" />
+    <Compile Include="Reports\ReportParametersLegacyMapper.cs" />
+    <Compile Include="Reports\RowFormattingMapper.cs" />
+    <Compile Include="Reports\RunReportResults\ExecuteReportPlanItemMapper.cs" />
+    <Compile Include="Reports\RunReportResults\ReportExecutionPlanMapper.cs" />
+    <Compile Include="Reports\RunReportResults\RunFunctionDataMapper.cs" />
+    <Compile Include="Reports\RunReportResults\RunFunctionResultMapper.cs" />
+    <Compile Include="Reports\RunReportResults\RunFunctionResultWithDataMapper.cs" />
+    <Compile Include="Reports\RunReportResults\RunReportResultMapper.cs" />
+    <Compile Include="Reports\RunReportResults\RunStatusMapper.cs" />
+    <Compile Include="RequiredSessionForm\RequiredSessionFormItemMapper.cs" />
+    <Compile Include="Room\SeatAssetAccommodationMapper.cs" />
+    <Compile Include="Room\SeatAssetMapper.cs" />
+    <Compile Include="Room\SeatCollectionMapper.cs" />
+    <Compile Include="Room\SeatGroupMapper.cs" />
+    <Compile Include="Room\SeatMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceProviderAssignmentMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceProviderBaseMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceProviderMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceProviderRequestDetailBaseMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceProviderTypeMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceRequestBaseMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceRequestMapper.cs" />
+    <Compile Include="ServiceProvidersOriginal\ServiceRequestPartBaseMapper.cs" />
+    <Compile Include="ServiceProvider\SPApplicationAvailabilityItemMapper.cs" />
+    <Compile Include="ServiceProvider\SPApplicationAvailabilityTypeMapper.cs" />
+    <Compile Include="ServiceProvider\SPApplicationCourseMapper.cs" />
+    <Compile Include="ServiceProvider\SPApplicationMapper.cs" />
+    <Compile Include="ServiceProvider\SPProviderCourseRegistrationMapper.cs" />
+    <Compile Include="ServiceProvider\SPProviderMapper.cs" />
+    <Compile Include="ServiceProvider\SPProviderTypeMapper.cs" />
+    <Compile Include="ServiceProvider\SPRateOfPayTypeMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestAssignmentStatusTypeMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestCourseAssignmentMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestCourseMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestEventAssignmentMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestEventMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestStatusTypeMapper.cs" />
+    <Compile Include="ServiceProvider\SPRequestWithSubItemsMapper.cs" />
+    <Compile Include="ServiceProvider\SPUrgencyLevelTypeMapper.cs" />
+    <Compile Include="Startup\CacheClusterFullMapper.cs" />
+    <Compile Include="Startup\ClockWorkClientStartupMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\AllowedStudentCourseRegistrationsForCustomEmailLogicMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\CourseRegistrationWithAccommodationRequestMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\CourseRequestBaseMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\SelfRegProcessing\SelfRegCheckedAccommodationMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\SelfRegProcessing\SelfRegCourseInfoMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\StudentCourseAccommodationModificationRequestItemMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\StudentCourseAccommodationRequestHistoryItemDateApprovedMapp.cs" />
+    <Compile Include="StudentAccommodationRequests\StudentCourseAccommodationRequestHistoryItemMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\StudentCourseAccommodationRequestHistoryMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\StudentCourseAccommodationRequestMapper.cs" />
+    <Compile Include="StudentAccommodationRequests\StudentWithRequestAndCourseInfoMapper.cs" />
+    <Compile Include="StudentFiles\StudentFileCategoryFieldMapper.cs" />
+    <Compile Include="StudentFiles\StudentFileCategoryFileDescriptionsMapper.cs" />
+    <Compile Include="StudentFiles\StudentFileCategoryFileDescriptionsWithColDataMapper.cs" />
+    <Compile Include="StudentFiles\StudentFileCategoryMapper.cs" />
+    <Compile Include="StudentFiles\StudentFilesLookupStatusMapper.cs" />
+    <Compile Include="StudentFiles\StudentFilesQueueFileItemMapper.cs" />
+    <Compile Include="StudentFiles\StudentFilesQueueItemsMapper.cs" />
+    <Compile Include="StudentFiles\StudentFilesQueueLoadParametersMapper.cs" />
+    <Compile Include="StudentFiles\StudentFilesQueueStudentItemMapper.cs" />
+    <Compile Include="StudentFiles\StudentFilesStatusMapper.cs" />
+    <Compile Include="Surveys\SurveyForDisplayMapper.cs" />
+    <Compile Include="Surveys\SurveyMapper.cs" />
+    <Compile Include="Surveys\SurveyQueueItemMapper.cs" />
+    <Compile Include="Surveys\SurveyStatusMapper.cs" />
+    <Compile Include="Tasks\TaskClientMapper.cs" />
+    <Compile Include="Tasks\TaskGroupMapper.cs" />
+    <Compile Include="Tasks\TaskMapper.cs" />
+    <Compile Include="Tasks\TaskNoteMapper.cs" />
+    <Compile Include="Tasks\TaskOrGroupForestMapper.cs" />
+    <Compile Include="Tasks\TaskOrGroupMapper.cs" />
+    <Compile Include="Templates\BaseTemplateMapper.cs" />
+    <Compile Include="Templates\TemplateCollectionMapper.cs" />
+    <Compile Include="Templates\TemplateGroupMapper.cs" />
+    <Compile Include="Templates\TemplateMapper.cs" />
+    <Compile Include="Templates\TemplateOrGroupForestMapper.cs" />
+    <Compile Include="Templates\TemplateOrGroupMapper.cs" />
+    <Compile Include="Templates\Vets\AgreementFormConsentMapper.cs" />
+    <Compile Include="Templates\Vets\VetsBenefitApplicationAgreementMapper.cs" />
+    <Compile Include="Templates\Vets\VetsBenefitApplicationBenAppMapper.cs" />
+    <Compile Include="Templates\Vets\VetsBenefitApplicationChapterMapper.cs" />
+    <Compile Include="Templates\Vets\VetsBenefitApplicationMapper.cs" />
+    <Compile Include="Templates\Vets\VetsBenefitApplicationRegistrationMapper.cs" />
+    <Compile Include="Templates\Vets\VetsBenefitApplicationStatusMapper.cs" />
+    <Compile Include="Templates\Vets\VetsChangeInBenefitApplicationMapper.cs" />
+    <Compile Include="Templates\Vets\VetsChapterMapper.cs" />
+    <Compile Include="Templates\Vets\VetsRequestChangeActionMapper.cs" />
+    <Compile Include="Templates\Vets\VetsRequestStatusNoteMapper.cs" />
+    <Compile Include="TPMailMan\eTPMessageDeliveryMethodMapper.cs" />
+    <Compile Include="TPMailMan\eTPMessagePriorityMapper.cs" />
+    <Compile Include="TPMailMan\TPMailAddressMapper.cs" />
+    <Compile Include="TPMailMan\TPMailAttachmentMapper.cs" />
+    <Compile Include="TPMailMan\TPMailMessageMapper.cs" />
+    <Compile Include="TPMailMan\TPMailResultMapper.cs" />
+    <Compile Include="TPMailMan\TPSmtpClientMapper.cs" />
+    <Compile Include="Tutoring\MyTutorMapper.cs" />
+    <Compile Include="Tutoring\TutorAppointmentMapper.cs" />
+    <Compile Include="Tutoring\TutorBaseMapper.cs" />
+    <Compile Include="Tutoring\TutorMapper.cs" />
+    <Compile Include="Tutoring\TutorToTutorWithActiveStatusMapper.cs" />
+    <Compile Include="Tutoring\TutorWithActiveStatusMapper.cs" />
+    <Compile Include="UnivDataAccess\CommonParameterMapper.cs" />
+    <Compile Include="UnivDataAccess\QueryRequestMapper.cs" />
+    <Compile Include="UnivDataAccess\QueryResultMapper.cs" />
+    <Compile Include="Updates\eUpdateStatusDTOMapper.cs" />
+    <Compile Include="Updates\FileTypeDTOMapper.cs" />
+    <Compile Include="Updates\UpdateFileInfoDTOMapper.cs" />
+    <Compile Include="Updates\UploadUpdateFileResultDTOMapper.cs" />
+    <Compile Include="UserAccount\PasswordPolicyMapper.cs" />
+    <Compile Include="UserAccount\UserInfoPasswordMapper.cs" />
+    <Compile Include="UserMapper.cs" />
+    <Compile Include="UserSettingsPermissions\OldUserSettingMapper.cs" />
+    <Compile Include="UserSettingsPermissions\OldUserSettings\OldUserSettingReportForUserItemMapper.cs" />
+    <Compile Include="UserSettingsPermissions\OldUserSettings\OldUserSettingReportForUserMapper.cs" />
+    <Compile Include="UserSettingsPermissions\OldUserSettings\OldUserSettingReportForUserSetMapper.cs" />
+    <Compile Include="UserSettingsPermissions\UserOrGroupJustPermissionMapper.cs" />
+    <Compile Include="UserSettingsPermissions\UserOrGroupJustPermissionSetMapper.cs" />
+    <Compile Include="UserSettingsPermissions\UserPermissionIsAllowedMapper.cs" />
+    <Compile Include="UserSettingsPermissions\UserPermissionIsAllowedSetMapper.cs" />
+    <Compile Include="UserSettingsPermissions\UserPermissionMapper.cs" />
+    <Compile Include="UserSettingsPermissions\UserPermissionSetMapper.cs" />
+    <Compile Include="Veteran\BenefitApplicationMapper.cs" />
+    <Compile Include="Veteran\ChangeInBenefitRequestMapper.cs" />
+    <Compile Include="Veteran\VeteranChapterMapper.cs" />
+    <Compile Include="Vets\VetsStudentCardInfoItemMapper.cs" />
+    <Compile Include="Vets\VetsStudentCardInfoMapper.cs" />
+    <Compile Include="Workflows\ProgressStepMapper.cs" />
+    <Compile Include="Workflows\WorkflowMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Common.Core.Mappers.dll.licenses" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoMapper\AutoMapper.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25EE}</Project>
+      <Name>AutoMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

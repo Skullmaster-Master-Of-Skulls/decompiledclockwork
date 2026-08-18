@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE25F9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoPro.ClockWorkServer.Common.Services.Impl</RootNamespace>
+    <AssemblyName>ClockWorkServer.Common.Services.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcademicTermServiceManager.cs" />
+    <Compile Include="AccommodationBatchLetterEmailsServiceManager.cs" />
+    <Compile Include="AccommodationsServiceManager.cs" />
+    <Compile Include="Adapters\BaseMessageReqAdapter.cs" />
+    <Compile Include="AdminGroupServiceManager.cs" />
+    <Compile Include="AdminPeopleServiceManager.cs" />
+    <Compile Include="AlertTriggerServiceManager.cs" />
+    <Compile Include="AlternateContactServiceManager.cs" />
+    <Compile Include="AppointmentAttendeeServiceManager.cs" />
+    <Compile Include="AppointmentBookingStudentServiceManager.cs" />
+    <Compile Include="AppointmentCancelInfoServiceManager.cs" />
+    <Compile Include="AppointmentCancelReasonServiceManager.cs" />
+    <Compile Include="AppointmentHolidayServiceManager.cs" />
+    <Compile Include="AppointmentIconServiceManager.cs" />
+    <Compile Include="AppointmentLogServiceManager.cs" />
+    <Compile Include="AppointmentNotesServiceManager.cs" />
+    <Compile Include="AppointmentServiceManager.cs" />
+    <Compile Include="AppointmentShowTimeAsTypeServiceManager.cs" />
+    <Compile Include="AppointmentsReminderServiceManager.cs" />
+    <Compile Include="AppointmentTypeServiceManager.cs" />
+    <Compile Include="AutoTestBookingServiceManager.cs" />
+    <Compile Include="AvailabilityScheduleServiceManager.cs" />
+    <Compile Include="BookSearchServiceManager.cs" />
+    <Compile Include="CampusServiceManager.cs" />
+    <Compile Include="CardHubServiceManager.cs" />
+    <Compile Include="CASAuthenticationServiceManager.cs" />
+    <Compile Include="CasesServiceManager.cs" />
+    <Compile Include="ClassTestDefinitionServiceManager.cs" />
+    <Compile Include="ClientStartupServiceManager.cs" />
+    <Compile Include="ClockWorkAuditServiceManager.cs" />
+    <Compile Include="ClockWorkAuthenticationServiceManager.cs" />
+    <Compile Include="ClockWorkClientStartupServiceManager.cs" />
+    <Compile Include="ClockWorkServerDiscoveryServiceManager.cs" />
+    <Compile Include="ClockWorkServerJobServiceManager.cs" />
+    <Compile Include="CourseRegistrationServiceManager.cs" />
+    <Compile Include="CustomDataServiceManager.cs" />
+    <Compile Include="CustomFieldServiceManager.cs" />
+    <Compile Include="CustomFormListItemServiceManager.cs" />
+    <Compile Include="CustomFormServiceManager.cs" />
+    <Compile Include="DailyJobServiceManager.cs" />
+    <Compile Include="DataMaintenanceServiceManager.cs" />
+    <Compile Include="DataMigrationServiceManager.cs" />
+    <Compile Include="DataSyncCourseServiceManager.cs" />
+    <Compile Include="DataSyncServiceManager.cs" />
+    <Compile Include="DynamicDataForReportsServiceManager.cs" />
+    <Compile Include="DynamicDataServiceManager.cs" />
+    <Compile Include="DynamicFieldServiceManager.cs" />
+    <Compile Include="DynamicFormServiceManager.cs" />
+    <Compile Include="EmailAttachmentServiceManager.cs" />
+    <Compile Include="ExamFileServiceManager.cs" />
+    <Compile Include="ExamRequestServiceManager.cs" />
+    <Compile Include="FileSignServiceManager.cs" />
+    <Compile Include="FileStorageServiceManager.cs" />
+    <Compile Include="FinalExamsViewServiceManager.cs" />
+    <Compile Include="FormApprovalServiceManager.cs" />
+    <Compile Include="FormApprovalSupervisorServiceManager.cs" />
+    <Compile Include="FormApprovalTraineeServiceManager.cs" />
+    <Compile Include="GroupServiceManager.cs" />
+    <Compile Include="InMemoryFilesStorageServiceManager.cs" />
+    <Compile Include="IntakeAccountServiceManager.cs" />
+    <Compile Include="InventoryAdminCatalogServiceManager.cs" />
+    <Compile Include="InventoryAttachmentServiceManager.cs" />
+    <Compile Include="InventoryCatalogServiceManager.cs" />
+    <Compile Include="InventoryCategoryServiceManager.cs" />
+    <Compile Include="InventoryGroupServiceManager.cs" />
+    <Compile Include="InventoryLoanServiceManager.cs" />
+    <Compile Include="InventoryLoanStatusServiceManager.cs" />
+    <Compile Include="InventoryLocationServiceManager.cs" />
+    <Compile Include="InventoryProductServiceManager.cs" />
+    <Compile Include="InventoryProductSnapshotAsyncActionsServiceManager.cs" />
+    <Compile Include="InventoryProductStatusServiceManager.cs" />
+    <Compile Include="InventoryReservationServiceManager.cs" />
+    <Compile Include="Inventory\Adapters\InventoryProductSnapshotAdapter.cs" />
+    <Compile Include="LargeFileStreamingServiceManager.cs" />
+    <Compile Include="LdapServiceManager.cs" />
+    <Compile Include="LegacyAccommodationServiceManager.cs" />
+    <Compile Include="LegacyActionPlanServiceManager.cs" />
+    <Compile Include="LegacyAppointmentServiceManager.cs" />
+    <Compile Include="LegacyDynamicDataSaveLoadServiceManager.cs" />
+    <Compile Include="LegacyDynamicDataServiceManager.cs" />
+    <Compile Include="LegacyEncryptionServiceManager.cs" />
+    <Compile Include="LegacyServiceProviderServiceManager.cs" />
+    <Compile Include="LegacyWebSettingsServiceManager.cs" />
+    <Compile Include="LicensingServiceManager.cs" />
+    <Compile Include="ListAppointmentServiceManager.cs" />
+    <Compile Include="LookupCourseServiceManager.cs" />
+    <Compile Include="LookupInstructorManagementServiceManager.cs" />
+    <Compile Include="LookupInstructorServiceManager.cs" />
+    <Compile Include="LookupSubjectServiceManager.cs" />
+    <Compile Include="LookupTimetableItemServiceManager.cs" />
+    <Compile Include="MailingServiceManager.cs" />
+    <Compile Include="MailMergingDocServiceManager.cs" />
+    <Compile Include="MailMergingEmailServiceManager.cs" />
+    <Compile Include="MailMergingServiceManager.cs" />
+    <Compile Include="MediaContentFileServiceManager.cs" />
+    <Compile Include="MediaContentServiceManager.cs" />
+    <Compile Include="MediaJobServiceManager.cs" />
+    <Compile Include="MediaJobStatusServiceManager.cs" />
+    <Compile Include="MediaJobVolunteerServiceManager.cs" />
+    <Compile Include="MediaPublisherServiceManager.cs" />
+    <Compile Include="MediaVendorServiceManager.cs" />
+    <Compile Include="MembershipServiceManager.cs" />
+    <Compile Include="MergeDuplicateStudentServiceManager.cs" />
+    <Compile Include="MiscTableSettingsServiceManager.cs" />
+    <Compile Include="NotetakerNotesServiceManager.cs" />
+    <Compile Include="NotetakingServiceManager.cs" />
+    <Compile Include="OldUserSettingServiceManager.cs" />
+    <Compile Include="OnlineFormQueueServiceManager.cs" />
+    <Compile Include="OnlineFormServiceManager.cs" />
+    <Compile Include="PeopleCacheServiceManager.cs" />
+    <Compile Include="PeopleGroupServiceManager.cs" />
+    <Compile Include="PeopleServiceManager.cs" />
+    <Compile Include="PerformanceTestServiceManager.cs" />
+    <Compile Include="PermissionsServiceManager.cs" />
+    <Compile Include="PointOfContactServiceManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecurringAppointmentServiceManager.cs" />
+    <Compile Include="ReferenceTableSettingServiceManager.cs" />
+    <Compile Include="ReportServiceManager.cs" />
+    <Compile Include="RequiredSessionFormServiceManager.cs" />
+    <Compile Include="RoomServiceManager.cs" />
+    <Compile Include="SelfRegServiceManager.cs" />
+    <Compile Include="ServerCacheServiceManager.cs" />
+    <Compile Include="ServiceProviderApplicationServiceManager.cs" />
+    <Compile Include="ServiceProviderCourseRegistrationServiceManager.cs" />
+    <Compile Include="ServiceProviderMatchingServiceManager.cs" />
+    <Compile Include="ServiceProviderOriginalApplicationCourseServiceManager.cs" />
+    <Compile Include="ServiceProviderOriginalMatchingServiceManager.cs" />
+    <Compile Include="ServiceProviderOriginalProviderServiceManager.cs" />
+    <Compile Include="ServiceProviderServiceManager.cs" />
+    <Compile Include="ServiceProviderTypeServiceManager.cs" />
+    <Compile Include="ServiceRequestServiceManager.cs" />
+    <Compile Include="SessionServiceManager.cs" />
+    <Compile Include="SittingServiceManager.cs" />
+    <Compile Include="StaffCommonInfoServiceManager.cs" />
+    <Compile Include="StartupServiceManager.cs" />
+    <Compile Include="StudentAccommodationReqServiceManager.cs" />
+    <Compile Include="StudentClassTestInfoServiceManager.cs" />
+    <Compile Include="StudentCommonInfoServiceManager.cs" />
+    <Compile Include="StudentConfidentialityAgreementServiceManager.cs" />
+    <Compile Include="StudentFileServiceManager.cs" />
+    <Compile Include="StudentFilesQueueServiceManager.cs" />
+    <Compile Include="StudentManagementServiceManager.cs" />
+    <Compile Include="StudentMediaRequestServiceManager.cs" />
+    <Compile Include="StudentTuteeServiceManager.cs" />
+    <Compile Include="SurveyQueueServiceManager.cs" />
+    <Compile Include="SurveyServiceManager.cs" />
+    <Compile Include="TaskGroupServiceManager.cs" />
+    <Compile Include="TaskServiceManager.cs" />
+    <Compile Include="TempFileServiceManager.cs" />
+    <Compile Include="TemplateServiceManager.cs" />
+    <Compile Include="TestBookingServiceManager.cs" />
+    <Compile Include="TestExamBookingViewServiceManager.cs" />
+    <Compile Include="TestExamBrowserServiceManager.cs" />
+    <Compile Include="TestExamSeatServiceManager.cs" />
+    <Compile Include="TestProctorServiceManager.cs" />
+    <Compile Include="TutorServiceManager.cs" />
+    <Compile Include="UnivDataAccessServiceManager.cs" />
+    <Compile Include="UpdaterServiceManager.cs" />
+    <Compile Include="UserAccountServiceManager.cs" />
+    <Compile Include="VeteranServiceManager.cs" />
+    <Compile Include="VetsBenefitApplicationServiceManager.cs" />
+    <Compile Include="VetsChapterServiceManager.cs" />
+    <Compile Include="WebSettingsServiceManager.cs" />
+    <Compile Include="WorkshopAppointmentServiceManager.cs" />
+    <Compile Include="WorkshopDefinitionServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkLogger\ClockWorkLogger.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F2}</Project>
+      <Name>ClockWorkLogger</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Core.Impl\ClockWorkServer.Core.Impl.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FC}</Project>
+      <Name>ClockWorkServer.Core.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.AuthenticationAuthorization\Common.Core.AuthenticationAuthorization.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260A}</Project>
+      <Name>Common.Core.AuthenticationAuthorization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.AuthenticationCAS\Common.Core.AuthenticationCAS.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260B}</Project>
+      <Name>Common.Core.AuthenticationCAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.ClockWorkAudit\Common.Core.ClockWorkAudit.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260D}</Project>
+      <Name>Common.Core.ClockWorkAudit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Jobs\Common.Core.Jobs.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2615}</Project>
+      <Name>Common.Core.Jobs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Ldap\Common.Core.Ldap.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2616}</Project>
+      <Name>Common.Core.Ldap</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.Mappers\Common.Core.Mappers.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2617}</Project>
+      <Name>Common.Core.Mappers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.SpireDoc\Common.Core.SpireDoc.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2618}</Project>
+      <Name>Common.Core.SpireDoc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core.UnivDataAccess\Common.Core.UnivDataAccess.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2619}</Project>
+      <Name>Common.Core.UnivDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Core\Common.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE260F}</Project>
+      <Name>Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.DataStructure\Common.DataStructure.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2630}</Project>
+      <Name>Common.DataStructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.ICore\Common.ICore.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2635}</Project>
+      <Name>Common.ICore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.TextFormat\Common.TextFormat.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2647}</Project>
+      <Name>Common.TextFormat</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Unity\Common.Unity.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2659}</Project>
+      <Name>Common.Unity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data.2\System.Data.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C6}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing.2\System.Drawing.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CD}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

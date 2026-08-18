@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+{0}
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <head>
+        <title>{2}</title>
+    </head>
+    <body>
+        {1}
+    </body>
+</html>

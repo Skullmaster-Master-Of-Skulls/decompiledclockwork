@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE25F0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClockWorkAPI</RootNamespace>
+    <AssemblyName>ClockWorkAPI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BinaryComponents.SuperList" />
+    <Reference Include="Common.UI.ClientManager.ClientCaching" />
+    <Reference Include="Common.UI.ClientManager.OldUserSettings" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core.Impl" />
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Reference Include="Settings" />
+    <Reference Include="SettingsPermissions" />
+    <Reference Include="UIAutomationProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessibleProfessionalColours.cs" />
+    <Compile Include="Accommodation.cs" />
+    <Compile Include="AccommodationList.cs" />
+    <Compile Include="ActionPlanItem.cs" />
+    <Compile Include="Activation.cs" />
+    <Compile Include="AdaptersTemp.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="AppointmentType.cs" />
+    <Compile Include="AppPermissionsManager.cs" />
+    <Compile Include="AT2\Item.cs" />
+    <Compile Include="AT2\ItemCollection.cs" />
+    <Compile Include="AT2\ItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AT2\ItemEdit.Designer.cs">
+      <DependentUpon>ItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AT2\ObjectStatus.cs" />
+    <Compile Include="AT\ATFactory.cs" />
+    <Compile Include="AT\AtItemChooserTextBox.cs" />
+    <Compile Include="AT\ATItemChooserTextBox_PopupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AT\ATItemChooserTextBox_PopupList.Designer.cs">
+      <DependentUpon>ATItemChooserTextBox_PopupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AT\Item.cs" />
+    <Compile Include="AT\ItemCategory.cs" />
+    <Compile Include="AT\ItemCategoryCollection.cs" />
+    <Compile Include="AT\ItemCollection.cs" />
+    <Compile Include="AT\ObjectStatus.cs" />
+    <Compile Include="AT\Vendor.cs" />
+    <Compile Include="AT\VendorCollection.cs" />
+    <Compile Include="AT\VendorContact.cs" />
+    <Compile Include="AT\VendorContactCollection.cs" />
+    <Compile Include="AT\VendorItem.cs" />
+    <Compile Include="AT\VendorItemCollection.cs" />
+    <Compile Include="AuditLog.cs" />
+    <Compile Include="Authorization.cs" />
+    <Compile Include="AuthorizationResults.cs" />
+    <Compile Include="AvailabilityDayOfWeek.cs" />
+    <Compile Include="AvailabilityDayOfWeekCollection.cs" />
+    <Compile Include="ClockWorkAppointmentMemoFileAttachmentMode.cs" />
+    <Compile Include="ClockWorkCore.cs" />
+    <Compile Include="ClockWorkDailyJob.cs" />
+    <Compile Include="ClockWorkLoginDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClockWorkLoginDialog.Designer.cs">
+      <DependentUpon>ClockWorkLoginDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClockWorkLoginDialogPasswordChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClockWorkLoginDialogPasswordChange.Designer.cs">
+      <DependentUpon>ClockWorkLoginDialogPasswordChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Collection\IDeepCopy.cs" />
+    <Compile Include="Collection\IEnumerableCollection.cs" />
+    <Compile Include="Collection\IEnumerableCollectionPair.cs" />
+    <Compile Include="Collection\INode.cs" />
+    <Compile Include="Collection\ITree.cs" />
+    <Compile Include="Collection\NodeTree.cs" />
+    <Compile Include="Collection\NodeTreeDataEventArgs.cs" />
+    <Compile Include="Collection\NodeTreeInsertEventArgs.cs" />
+    <Compile Include="Collection\NodeTreeInsertOperation.cs" />
+    <Compile Include="Collection\NodeTreeNodeEventArgs.cs" />
+    <Compile Include="CompressionTP.cs" />
+    <Compile Include="ConnectionBaseInfo.cs" />
+    <Compile Include="ConnectionFavourite.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="Courses\CourseContactInformation.cs" />
+    <Compile Include="Courses\Instructor.cs" />
+    <Compile Include="Courses\Subject.cs" />
+    <Compile Include="DataTableFunctions.cs" />
+    <Compile Include="DotNetVersionManager.cs" />
+    <Compile Include="DotNetVersions.cs" />
+    <Compile Include="DynamicData.cs" />
+    <Compile Include="DynamicDataCollection.cs" />
+    <Compile Include="DynamicDataForms\DataPerApp.cs" />
+    <Compile Include="DynamicDataForms\DataPerApp2.cs" />
+    <Compile Include="DynamicDataForms\DataPerStudent.cs" />
+    <Compile Include="DynamicDataForms\FormWrappers\ftmDataPerStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicDataForms\FormWrappers\ftmDataPerStudent.Designer.cs">
+      <DependentUpon>ftmDataPerStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicDataForms\VariableValuesEditByForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DynamicDataForms\VariableValuesEditByForm.Designer.cs">
+      <DependentUpon>VariableValuesEditByForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicDataItem\DataItemPs.cs" />
+    <Compile Include="DynamicDataItem\DataItemPsList.cs" />
+    <Compile Include="DynamicDataItem\DynamicDataValue.cs" />
+    <Compile Include="EasyRecurringAppointmentCollection.cs" />
+    <Compile Include="EasyRecurringAppointmentTimes.cs" />
+    <Compile Include="Email.cs" />
+    <Compile Include="EmailHistory.cs" />
+    <Compile Include="EntityExtensions\AppointmentCommand.cs" />
+    <Compile Include="EntityExtensions\AppointmentExt.cs" />
+    <Compile Include="EntityExtensions\AttendeeExt.cs" />
+    <Compile Include="EntityExtensions\PersonExt.cs" />
+    <Compile Include="Errors.cs" />
+    <Compile Include="Exams\ClassTestDefinition.cs" />
+    <Compile Include="Exams\Sittings\ExamSitting.cs" />
+    <Compile Include="Exams\Sittings\InvigilatorConfirmation.cs" />
+    <Compile Include="Exams\Sittings\PayMethod.cs" />
+    <Compile Include="Group.cs" />
+    <Compile Include="GroupList.cs" />
+    <Compile Include="HistoryLog.cs" />
+    <Compile Include="Icon.cs" />
+    <Compile Include="Icons.cs" />
+    <Compile Include="ImportantIconComparer.cs" />
+    <Compile Include="ImportExport.cs" />
+    <Compile Include="InfoStoreType.cs" />
+    <Compile Include="InputPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputPassword.Designer.cs">
+      <DependentUpon>InputPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LDAP.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LogGroup.cs" />
+    <Compile Include="LoginCompleteHandler.cs" />
+    <Compile Include="LoginMethod.cs" />
+    <Compile Include="LogTitle.cs" />
+    <Compile Include="LogType.cs" />
+    <Compile Include="MailMerge.cs" />
+    <Compile Include="MessageToStaff.cs" />
+    <Compile Include="MyRowSection.cs" />
+    <Compile Include="MySectionFactory.cs" />
+    <Compile Include="Notetaking\Notetakee.cs" />
+    <Compile Include="Notetaking\NotetakeeCourse.cs" />
+    <Compile Include="Notetaking\Notetaker.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="QueryStorage.cs" />
+    <Compile Include="RegKeyAttribute.cs" />
+    <Compile Include="ReportListItem.cs" />
+    <Compile Include="Schedule1DayControlBase.cs" />
+    <Compile Include="SchoolYear.cs" />
+    <Compile Include="SearchResponseAdapter.cs" />
+    <Compile Include="ServiceProviders\eHowServiceProviderEnteredIntoClockWork.cs" />
+    <Compile Include="ServiceProviders\eMatchingMethod.cs" />
+    <Compile Include="ServiceProviders\ePaymentMethod.cs" />
+    <Compile Include="ServiceProviders\eServiceProviderType.cs" />
+    <Compile Include="ServiceProviders\iSPDateTimeOccurrence.cs" />
+    <Compile Include="ServiceProviders\Matching\MatchingRule.cs" />
+    <Compile Include="ServiceProviders\Matching\MatchingRuleFoundMatch.cs" />
+    <Compile Include="ServiceProviders\Matching\MatchType.cs" />
+    <Compile Include="ServiceProviders\Matching\ServiceProviderUser.cs" />
+    <Compile Include="ServiceProviders\Matching\SortType.cs" />
+    <Compile Include="ServiceProviders\ServiceProvider.cs" />
+    <Compile Include="ServiceProviders\ServiceProviderRequest.cs" />
+    <Compile Include="ServiceProviders\SPCourse.cs" />
+    <Compile Include="ServiceProviders\SPDateTimeOccurrence.cs" />
+    <Compile Include="ServiceProviders\SPDayOfWeekOccurrence.cs" />
+    <Compile Include="ServiceProviders\SPFundingSource.cs" />
+    <Compile Include="ServiceProviders\SPMatching.cs" />
+    <Compile Include="ServiceProviders\SPProvider.cs" />
+    <Compile Include="ServiceProviders\SPType.cs" />
+    <Compile Include="Staff.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentEventArgs.cs" />
+    <Compile Include="StudentEventHandler.cs" />
+    <Compile Include="StudentSummary\StudentSummarySection.cs" />
+    <Compile Include="StudentSummary\StudentSummarySectionType.cs" />
+    <Compile Include="SummaryManagement\SummaryManagementView.cs" />
+    <Compile Include="Tasks.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="TextBoxNoBeepOnEnter.cs" />
+    <Compile Include="TimeTableItem.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="Workshops.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AT2\ItemEdit.resources" />
+    <EmbeddedResource Include="AT\AtItemChooserTextBox.resources" />
+    <EmbeddedResource Include="AT\ATItemChooserTextBox_PopupList.resources" />
+    <EmbeddedResource Include="ClockWorkLoginDialog.resources" />
+    <EmbeddedResource Include="ClockWorkLoginDialogPasswordChange.resources" />
+    <EmbeddedResource Include="DynamicDataForms\DataPerApp.resources" />
+    <EmbeddedResource Include="DynamicDataForms\DataPerApp2.resources" />
+    <EmbeddedResource Include="DynamicDataForms\DataPerStudent.resources" />
+    <EmbeddedResource Include="DynamicDataForms\FormWrappers\ftmDataPerStudent.resources" />
+    <EmbeddedResource Include="DynamicDataForms\VariableValuesEditByForm.resources" />
+    <EmbeddedResource Include="InputPassword.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutoComboBox\AutoComboBox.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25ED}</Project>
+      <Name>AutoComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Client.Services\ClockWorkServer.Client.Services.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25F8}</Project>
+      <Name>ClockWorkServer.Client.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicScreens\DynamicScreens.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2664}</Project>
+      <Name>DynamicScreens</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmailClassLibrary\EmailClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2665}</Project>
+      <Name>EmailClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.DirectoryServices.Protocols\System.DirectoryServices.Protocols.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B8}</Project>
+      <Name>System.DirectoryServices.Protocols</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Web\System.Web.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B0}</Project>
+      <Name>System.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

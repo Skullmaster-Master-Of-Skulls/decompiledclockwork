@@ -1,0 +1,2813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableStyles>
+	<TableStyle Name="TableStyleDark1">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#404040</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#737373</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark10">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="background">#8064A2</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="background">#D8E4BC</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark11">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="background">#F79646</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="background">#B7DEE8</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark2">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#366092</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#4F81BD</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark3">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#963634</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#C0504D</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark4">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#76933C</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#9BBB59</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark5">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#60497A</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#8064A2</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark6">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#31869B</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#4BACC6</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark7">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">white</Property>
+			<Property Name="background">#E26B0A</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">white</Property>
+			<Property Name="background">#F79646</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark8">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="background">#A6A6A6</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleDark9">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="background">#C0504D</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="background">#B8CCE4</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight1">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight10">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+			<Property Name="background">#C0504D</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C0504D</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C0504D</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C0504D</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C0504D</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C0504D</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C0504D</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C0504D</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight11">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+			<Property Name="background">#9BBB59</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#9BBB59</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#9BBB59</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight12">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+			<Property Name="background">#8064A2</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#8064A2</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#8064A2</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#8064A2</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#8064A2</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#8064A2</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#8064A2</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#8064A2</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight13">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+			<Property Name="background">#4BACC6</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4BACC6</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4BACC6</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight14">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+			<Property Name="background">#F79646</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#F79646</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#F79646</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#F79646</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#F79646</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#F79646</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#F79646</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#F79646</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight15">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight16">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4F81BD</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4F81BD</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4F81BD</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4F81BD</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4F81BD</Property>
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4F81BD</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4F81BD</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4F81BD</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight17">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C0504D</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C0504D</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C0504D</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C0504D</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C0504D</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C0504D</Property>
+			<Property Name="background">#F2DCDB</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C0504D</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C0504D</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C0504D</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight18">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#9BBB59</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#9BBB59</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#9BBB59</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#9BBB59</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#9BBB59</Property>
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#9BBB59</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#9BBB59</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#9BBB59</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight19">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#8064A2</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#8064A2</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#8064A2</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#8064A2</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#8064A2</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#8064A2</Property>
+			<Property Name="background">#E4DFEC</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#8064A2</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#8064A2</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#8064A2</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight2">
+		<Style Name="header">
+			<Property Name="color">#366092</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">#366092</Property>
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">#366092</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4F81BD</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight20">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4BACC6</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4BACC6</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4BACC6</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4BACC6</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4BACC6</Property>
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4BACC6</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4BACC6</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4BACC6</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight21">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#F79646</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#F79646</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#F79646</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#F79646</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#F79646</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#F79646</Property>
+			<Property Name="background">#FDE9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#F79646</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#F79646</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#F79646</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight3">
+		<Style Name="header">
+			<Property Name="color">#963634</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C0504D</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C0504D</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">#963634</Property>
+			<Property Name="background">#F2DCDB</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">#963634</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C0504D</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight4">
+		<Style Name="header">
+			<Property Name="color">#76933C</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#9BBB59</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#9BBB59</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">#76933C</Property>
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">#76933C</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#9BBB59</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight5">
+		<Style Name="header">
+			<Property Name="color">#60497A</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#8064A2</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#8064A2</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">#60497A</Property>
+			<Property Name="background">#E4DFEC</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">#60497A</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#8064A2</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight6">
+		<Style Name="header">
+			<Property Name="color">#31869B</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4BACC6</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4BACC6</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">#31869B</Property>
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">#31869B</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4BACC6</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight7">
+		<Style Name="header">
+			<Property Name="color">#E26B0A</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#F79646</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#F79646</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">#E26B0A</Property>
+			<Property Name="background">#FDE9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">#E26B0A</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#F79646</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight8">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleLight9">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+			<Property Name="background">#4F81BD</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4F81BD</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#4F81BD</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#4F81BD</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium1">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium10">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">#C0504D</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#E6B8B7</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#F2DCDB</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium11">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">#9BBB59</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#D8E4BC</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium12">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">#8064A2</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#CCC0DA</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#E4DFEC</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium13">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">#4BACC6</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#B7DEE8</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium14">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">#F79646</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#FCD5B4</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#FDE9D9</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium15">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium16">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#4F81BD</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium17">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#C0504D</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium18">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#9BBB59</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium19">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#8064A2</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium2">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#95B3D7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#95B3D7</Property>
+			<Property Name="background">#4F81BD</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#95B3D7</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#95B3D7</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#95B3D7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#95B3D7</Property>
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#95B3D7</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#95B3D7</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#95B3D7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#95B3D7</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#95B3D7</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#95B3D7</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium20">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#4BACC6</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium21">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">1.0pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#F79646</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-bottom-width">1.0pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium22">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#A6A6A6</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">black</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">black</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">black</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium23">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#95B3D7</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#95B3D7</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#95B3D7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#95B3D7</Property>
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#95B3D7</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#95B3D7</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#95B3D7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#95B3D7</Property>
+			<Property Name="background">#B8CCE4</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#95B3D7</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#95B3D7</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#95B3D7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#95B3D7</Property>
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium24">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#DA9694</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#DA9694</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#DA9694</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#DA9694</Property>
+			<Property Name="background">#F2DCDB</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#DA9694</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#DA9694</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#DA9694</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#DA9694</Property>
+			<Property Name="background">#E6B8B7</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#DA9694</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#DA9694</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#DA9694</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#DA9694</Property>
+			<Property Name="background">#F2DCDB</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium25">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C4D79B</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C4D79B</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C4D79B</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C4D79B</Property>
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C4D79B</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C4D79B</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C4D79B</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C4D79B</Property>
+			<Property Name="background">#D8E4BC</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C4D79B</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C4D79B</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C4D79B</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C4D79B</Property>
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium26">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#B1A0C7</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#B1A0C7</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#B1A0C7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#B1A0C7</Property>
+			<Property Name="background">#E4DFEC</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#B1A0C7</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#B1A0C7</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#B1A0C7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#B1A0C7</Property>
+			<Property Name="background">#CCC0DA</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#B1A0C7</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#B1A0C7</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#B1A0C7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#B1A0C7</Property>
+			<Property Name="background">#E4DFEC</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium27">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#92CDDC</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#92CDDC</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#92CDDC</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#92CDDC</Property>
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#92CDDC</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#92CDDC</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#92CDDC</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#92CDDC</Property>
+			<Property Name="background">#B7DEE8</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#92CDDC</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#92CDDC</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#92CDDC</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#92CDDC</Property>
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium28">
+		<Style Name="header">
+			<Property Name="color">black</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#FABF8F</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#FABF8F</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#FABF8F</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#FABF8F</Property>
+			<Property Name="background">#FDE9D9</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#FABF8F</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#FABF8F</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#FABF8F</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#FABF8F</Property>
+			<Property Name="background">#FCD5B4</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#FABF8F</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#FABF8F</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#FABF8F</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#FABF8F</Property>
+			<Property Name="background">#FDE9D9</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium3">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#DA9694</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#DA9694</Property>
+			<Property Name="background">#C0504D</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#DA9694</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#DA9694</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#DA9694</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#DA9694</Property>
+			<Property Name="background">#F2DCDB</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#DA9694</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#DA9694</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#DA9694</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#DA9694</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#DA9694</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#DA9694</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium4">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C4D79B</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C4D79B</Property>
+			<Property Name="background">#9BBB59</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C4D79B</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C4D79B</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C4D79B</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C4D79B</Property>
+			<Property Name="background">#EBF1DE</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C4D79B</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C4D79B</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#C4D79B</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#C4D79B</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#C4D79B</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#C4D79B</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium5">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#B1A0C7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#B1A0C7</Property>
+			<Property Name="background">#8064A2</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#B1A0C7</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#B1A0C7</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#B1A0C7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#B1A0C7</Property>
+			<Property Name="background">#E4DFEC</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#B1A0C7</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#B1A0C7</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#B1A0C7</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#B1A0C7</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#B1A0C7</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#B1A0C7</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium6">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#92CDDC</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#92CDDC</Property>
+			<Property Name="background">#4BACC6</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#92CDDC</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#92CDDC</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#92CDDC</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#92CDDC</Property>
+			<Property Name="background">#DAEEF3</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#92CDDC</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#92CDDC</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#92CDDC</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#92CDDC</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#92CDDC</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#92CDDC</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium7">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#FABF8F</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#FABF8F</Property>
+			<Property Name="background">#F79646</Property>
+		</Style>
+		<Style Name="header_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#FABF8F</Property>
+		</Style>
+		<Style Name="header_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#FABF8F</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#FABF8F</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#FABF8F</Property>
+			<Property Name="background">#FDE9D9</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#FABF8F</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#FABF8F</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">#FABF8F</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">#FABF8F</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">#FABF8F</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">#FABF8F</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium8">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">black</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#A6A6A6</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#D9D9D9</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+	<TableStyle Name="TableStyleMedium9">
+		<Style Name="header">
+			<Property Name="color">white</Property>
+			<Property Name="font-weight">700</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">1.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="background">#4F81BD</Property>
+		</Style>
+		<Style Name="row1">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#B8CCE4</Property>
+		</Style>
+		<Style Name="row1_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row1_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row2">
+			<Property Name="color">black</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="background">#DCE6F1</Property>
+		</Style>
+		<Style Name="row2_left">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+		</Style>
+		<Style Name="row2_right">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-bottom-width">.5pt</Property>
+			<Property Name="border-bottom-style">solid</Property>
+			<Property Name="border-bottom-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+		<Style Name="row_last">
+			<Property Name="border-top-width">.5pt</Property>
+			<Property Name="border-top-style">solid</Property>
+			<Property Name="border-top-color">white</Property>
+			<Property Name="border-right-width">.5pt</Property>
+			<Property Name="border-right-style">solid</Property>
+			<Property Name="border-right-color">white</Property>
+			<Property Name="border-left-width">.5pt</Property>
+			<Property Name="border-left-style">solid</Property>
+			<Property Name="border-left-color">white</Property>
+		</Style>
+	</TableStyle>
+</TableStyles>

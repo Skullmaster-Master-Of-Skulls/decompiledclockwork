@@ -1,0 +1,19 @@
+﻿using System;
+
+namespace System.Deployment.Internal.Isolation.Manifest
+{
+	// Token: 0x02000075 RID: 117
+	internal enum CMS_MANIFEST_FLAG
+	{
+		// Token: 0x040001FD RID: 509
+		CMS_MANIFEST_FLAG_ASSEMBLY = 1,
+		// Token: 0x040001FE RID: 510
+		CMS_MANIFEST_FLAG_CATEGORY,
+		// Token: 0x040001FF RID: 511
+		CMS_MANIFEST_FLAG_FEATURE,
+		// Token: 0x04000200 RID: 512
+		CMS_MANIFEST_FLAG_APPLICATION,
+		// Token: 0x04000201 RID: 513
+		CMS_MANIFEST_FLAG_USEMANIFESTFORTRUST = 8
+	}
+}

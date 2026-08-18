@@ -1,0 +1,26 @@
+﻿using System;
+
+namespace Spire.CompoundFile.XLS.Native
+{
+	// Token: 0x02000653 RID: 1619
+	[CLSCompliant(false)]
+	internal enum ComErrorCodes : uint
+	{
+		// Token: 0x04003003 RID: 12291
+		S_OK,
+		// Token: 0x04003004 RID: 12292
+		S_FALSE,
+		// Token: 0x04003005 RID: 12293
+		E_FAIL = 2147500037U,
+		// Token: 0x04003006 RID: 12294
+		E_NOTIMPL = 2147483649U,
+		// Token: 0x04003007 RID: 12295
+		E_INVALIDARG = 2147942487U,
+		// Token: 0x04003008 RID: 12296
+		E_UNEXPECTED = 2147549183U,
+		// Token: 0x04003009 RID: 12297
+		DV_E_FORMATETC = 2147745892U,
+		// Token: 0x0400300A RID: 12298
+		OLE_E_ADVISENOTSUPPORTED = 2147745795U
+	}
+}

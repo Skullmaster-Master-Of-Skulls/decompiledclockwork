@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26D2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System.ServiceModel</RootNamespace>
+    <AssemblyName>System.ServiceModel.Discovery</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel.Channels" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Channels\UdpConstants.cs" />
+    <Compile Include="Discovery\AnnouncementClient.cs" />
+    <Compile Include="Discovery\AnnouncementDispatcherAsyncResult.cs" />
+    <Compile Include="Discovery\AnnouncementEndpoint.cs" />
+    <Compile Include="Discovery\AnnouncementEventArgs.cs" />
+    <Compile Include="Discovery\AnnouncementSendsAsyncResult.cs" />
+    <Compile Include="Discovery\AnnouncementService.cs" />
+    <Compile Include="Discovery\AsyncOperationContext.cs" />
+    <Compile Include="Discovery\AsyncOperationLifetimeManager.cs" />
+    <Compile Include="Discovery\ByeOperationAsyncResult.cs" />
+    <Compile Include="Discovery\CompiledScopeCriteria.cs" />
+    <Compile Include="Discovery\CompiledScopeCriteriaMatchBy.cs" />
+    <Compile Include="Discovery\Configuration\AnnouncementChannelEndpointElementCollection.cs" />
+    <Compile Include="Discovery\Configuration\AnnouncementEndpointCollectionElement.cs" />
+    <Compile Include="Discovery\Configuration\AnnouncementEndpointElement.cs" />
+    <Compile Include="Discovery\Configuration\ConfigurationDiscoveryEndpointProvider.cs" />
+    <Compile Include="Discovery\Configuration\ConfigurationStrings.cs" />
+    <Compile Include="Discovery\Configuration\ConfigurationUtility.cs" />
+    <Compile Include="Discovery\Configuration\ContractTypeNameElement.cs" />
+    <Compile Include="Discovery\Configuration\ContractTypeNameElementCollection.cs" />
+    <Compile Include="Discovery\Configuration\DiscoveryClientElement.cs" />
+    <Compile Include="Discovery\Configuration\DiscoveryClientSettingsElement.cs" />
+    <Compile Include="Discovery\Configuration\DiscoveryEndpointCollectionElement.cs" />
+    <Compile Include="Discovery\Configuration\DiscoveryEndpointElement.cs" />
+    <Compile Include="Discovery\Configuration\DiscoveryVersionConverter.cs" />
+    <Compile Include="Discovery\Configuration\DynamicEndpointCollectionElement.cs" />
+    <Compile Include="Discovery\Configuration\DynamicEndpointElement.cs" />
+    <Compile Include="Discovery\Configuration\EndpointDiscoveryElement.cs" />
+    <Compile Include="Discovery\Configuration\FindCriteriaElement.cs" />
+    <Compile Include="Discovery\Configuration\ScopeElement.cs" />
+    <Compile Include="Discovery\Configuration\ScopeElementCollection.cs" />
+    <Compile Include="Discovery\Configuration\ServiceDiscoveryElement.cs" />
+    <Compile Include="Discovery\Configuration\UdpAnnouncementEndpointCollectionElement.cs" />
+    <Compile Include="Discovery\Configuration\UdpAnnouncementEndpointElement.cs" />
+    <Compile Include="Discovery\Configuration\UdpDiscoveryEndpointCollectionElement.cs" />
+    <Compile Include="Discovery\Configuration\UdpDiscoveryEndpointElement.cs" />
+    <Compile Include="Discovery\Configuration\UdpTransportSettingsElement.cs" />
+    <Compile Include="Discovery\ContractTypeNameCollection.cs" />
+    <Compile Include="Discovery\DefaultDiscoveryService.cs" />
+    <Compile Include="Discovery\DefaultDiscoveryServiceExtension.cs" />
+    <Compile Include="Discovery\DiscoveryCallbackBehavior.cs" />
+    <Compile Include="Discovery\DiscoveryClient.cs" />
+    <Compile Include="Discovery\DiscoveryClientBindingElement.cs" />
+    <Compile Include="Discovery\DiscoveryClientChannelBase.cs" />
+    <Compile Include="Discovery\DiscoveryClientChannelFactory.cs" />
+    <Compile Include="Discovery\DiscoveryClientDuplexChannel.cs" />
+    <Compile Include="Discovery\DiscoveryClientDuplexSessionChannel.cs" />
+    <Compile Include="Discovery\DiscoveryClientOutputChannel.cs" />
+    <Compile Include="Discovery\DiscoveryClientOutputSessionChannel.cs" />
+    <Compile Include="Discovery\DiscoveryClientRequestChannel.cs" />
+    <Compile Include="Discovery\DiscoveryClientRequestSessionChannel.cs" />
+    <Compile Include="Discovery\DiscoveryDefaults.cs" />
+    <Compile Include="Discovery\DiscoveryEndpoint.cs" />
+    <Compile Include="Discovery\DiscoveryEndpointProvider.cs" />
+    <Compile Include="Discovery\DiscoveryEndpointValidator.cs" />
+    <Compile Include="Discovery\DiscoveryMessageProperty.cs" />
+    <Compile Include="Discovery\DiscoveryMessageSequence.cs" />
+    <Compile Include="Discovery\DiscoveryMessageSequenceGenerator.cs" />
+    <Compile Include="Discovery\DiscoveryOperationContext.cs" />
+    <Compile Include="Discovery\DiscoveryOperationContextExtension.cs" />
+    <Compile Include="Discovery\DiscoveryOperationContextExtensionInitializer.cs" />
+    <Compile Include="Discovery\DiscoveryProxy.cs" />
+    <Compile Include="Discovery\DiscoveryService.cs" />
+    <Compile Include="Discovery\DiscoveryServiceExtension.cs" />
+    <Compile Include="Discovery\DiscoveryUtility.cs" />
+    <Compile Include="Discovery\DiscoveryVersion.cs" />
+    <Compile Include="Discovery\DiscoveryViaBehavior.cs" />
+    <Compile Include="Discovery\DynamicEndpoint.cs" />
+    <Compile Include="Discovery\EndpointDiscoveryBehavior.cs" />
+    <Compile Include="Discovery\EndpointDiscoveryMetadata.cs" />
+    <Compile Include="Discovery\FindCompletedEventArgs.cs" />
+    <Compile Include="Discovery\FindCriteria.cs" />
+    <Compile Include="Discovery\FindProgressChangedEventArgs.cs" />
+    <Compile Include="Discovery\FindRequestContext.cs" />
+    <Compile Include="Discovery\FindResponse.cs" />
+    <Compile Include="Discovery\FxTrace.cs" />
+    <Compile Include="Discovery\HelloOperationAsyncResult.cs" />
+    <Compile Include="Discovery\IAnnouncementInnerClient.cs" />
+    <Compile Include="Discovery\IAnnouncementServiceImplementation.cs" />
+    <Compile Include="Discovery\IDiscoveryInnerClient.cs" />
+    <Compile Include="Discovery\IDiscoveryInnerClientResponse.cs" />
+    <Compile Include="Discovery\IDiscoveryRequestContext.cs" />
+    <Compile Include="Discovery\IDiscoveryServiceImplementation.cs" />
+    <Compile Include="Discovery\IDiscoveryVersionImplementation.cs" />
+    <Compile Include="Discovery\IMulticastSuppressionImplementation.cs" />
+    <Compile Include="Discovery\IteratorAsyncResult.cs" />
+    <Compile Include="Discovery\NonNullItemCollection.cs" />
+    <Compile Include="Discovery\OfflineAnnouncementChannelDispatcher.cs" />
+    <Compile Include="Discovery\OnlineAnnouncementChannelDispatcher.cs" />
+    <Compile Include="Discovery\ProbeDuplexAsyncResult.cs" />
+    <Compile Include="Discovery\ProbeRequestResponseAsyncResult.cs" />
+    <Compile Include="Discovery\ProtocolStrings.cs" />
+    <Compile Include="Discovery\RandomDelayQueuedSendsAsyncResult.cs" />
+    <Compile Include="Discovery\RandomDelaySendsAsyncResult.cs" />
+    <Compile Include="Discovery\ResolveCompletedEventArgs.cs" />
+    <Compile Include="Discovery\ResolveCriteria.cs" />
+    <Compile Include="Discovery\ResolveDuplexAsyncResult.cs" />
+    <Compile Include="Discovery\ResolveRequestResponseAsyncResult.cs" />
+    <Compile Include="Discovery\ResolveResponse.cs" />
+    <Compile Include="Discovery\SchemaUtility.cs" />
+    <Compile Include="Discovery\ScopeCollection.cs" />
+    <Compile Include="Discovery\ScopeCompiler.cs" />
+    <Compile Include="Discovery\SerializationUtility.cs" />
+    <Compile Include="Discovery\ServiceDiscoveryBehavior.cs" />
+    <Compile Include="Discovery\ServiceDiscoveryInstanceContextProvider.cs" />
+    <Compile Include="Discovery\ServiceDiscoveryMode.cs" />
+    <Compile Include="Discovery\SR.cs" />
+    <Compile Include="Discovery\SyncOperationState.cs" />
+    <Compile Include="Discovery\TD.cs" />
+    <Compile Include="Discovery\UdpAnnouncementEndpoint.cs" />
+    <Compile Include="Discovery\UdpContractFilterBehavior.cs" />
+    <Compile Include="Discovery\UdpDiscoveryEndpoint.cs" />
+    <Compile Include="Discovery\UdpDiscoveryEndpointProvider.cs" />
+    <Compile Include="Discovery\UdpDiscoveryMessageFilter.cs" />
+    <Compile Include="Discovery\UdpReplyToBehavior.cs" />
+    <Compile Include="Discovery\UdpTransportSettings.cs" />
+    <Compile Include="Discovery\Version11\AnnouncementInnerClient11.cs" />
+    <Compile Include="Discovery\Version11\ByeMessage11.cs" />
+    <Compile Include="Discovery\Version11\ByeOperation11AsyncResult.cs" />
+    <Compile Include="Discovery\Version11\DiscoveryInnerClientAdhoc11.cs" />
+    <Compile Include="Discovery\Version11\DiscoveryInnerClientManaged11.cs" />
+    <Compile Include="Discovery\Version11\DiscoveryMessageSequence11.cs" />
+    <Compile Include="Discovery\Version11\DiscoveryVersion11Implementation.cs" />
+    <Compile Include="Discovery\Version11\EndpointDiscoveryMetadata11.cs" />
+    <Compile Include="Discovery\Version11\FindCriteria11.cs" />
+    <Compile Include="Discovery\Version11\HelloMessage11.cs" />
+    <Compile Include="Discovery\Version11\HelloOperation11AsyncResult.cs" />
+    <Compile Include="Discovery\Version11\IAnnouncementContract11.cs" />
+    <Compile Include="Discovery\Version11\IDiscoveryContractAdhoc11.cs" />
+    <Compile Include="Discovery\Version11\IDiscoveryContractManaged11.cs" />
+    <Compile Include="Discovery\Version11\IDiscoveryResponseContract11.cs" />
+    <Compile Include="Discovery\Version11\ProbeDuplex11AsyncResult.cs" />
+    <Compile Include="Discovery\Version11\ProbeMatches11.cs" />
+    <Compile Include="Discovery\Version11\ProbeMatchesMessage11.cs" />
+    <Compile Include="Discovery\Version11\ProbeMessage11.cs" />
+    <Compile Include="Discovery\Version11\ProbeRequestResponse11AsyncResult.cs" />
+    <Compile Include="Discovery\Version11\ResolveCriteria11.cs" />
+    <Compile Include="Discovery\Version11\ResolveDuplex11AsyncResult.cs" />
+    <Compile Include="Discovery\Version11\ResolveMatches11.cs" />
+    <Compile Include="Discovery\Version11\ResolveMatchesMessage11.cs" />
+    <Compile Include="Discovery\Version11\ResolveMessage11.cs" />
+    <Compile Include="Discovery\Version11\ResolveRequestResponse11AsyncResult.cs" />
+    <Compile Include="Discovery\VersionApril2005\AnnouncementInnerClientApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ByeMessageApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ByeOperationApril2005AsyncResult.cs" />
+    <Compile Include="Discovery\VersionApril2005\DiscoveryInnerClientApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\DiscoveryMessageSequenceApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\DiscoveryVersionApril2005Implementation.cs" />
+    <Compile Include="Discovery\VersionApril2005\EndpointDiscoveryMetadataApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\FindCriteriaApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\HelloMessageApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\HelloOperationApril2005AsyncResult.cs" />
+    <Compile Include="Discovery\VersionApril2005\IAnnouncementContractApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\IDiscoveryContractAdhocApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\IDiscoveryContractApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\IDiscoveryContractManagedApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\IDiscoveryResponseContractApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ProbeDuplexApril2005AsyncResult.cs" />
+    <Compile Include="Discovery\VersionApril2005\ProbeMatchesApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ProbeMatchesMessageApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ProbeMessageApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ResolveCriteriaApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ResolveDuplexApril2005AsyncResult.cs" />
+    <Compile Include="Discovery\VersionApril2005\ResolveMatchesApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ResolveMatchesMessageApril2005.cs" />
+    <Compile Include="Discovery\VersionApril2005\ResolveMessageApril2005.cs" />
+    <Compile Include="Discovery\VersionCD1\AnnouncementInnerClientCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ByeMessageCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ByeOperationCD1AsyncResult.cs" />
+    <Compile Include="Discovery\VersionCD1\DiscoveryInnerClientAdhocCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\DiscoveryInnerClientManagedCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\DiscoveryMessageSequenceCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\DiscoveryVersionCD1Implementation.cs" />
+    <Compile Include="Discovery\VersionCD1\EndpointDiscoveryMetadataCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\FindCriteriaCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\HelloMessageCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\HelloOperationCD1AsyncResult.cs" />
+    <Compile Include="Discovery\VersionCD1\IAnnouncementContractCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\IDiscoveryContractAdhocCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\IDiscoveryContractManagedCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\IDiscoveryResponseContractCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ProbeDuplexCD1AsyncResult.cs" />
+    <Compile Include="Discovery\VersionCD1\ProbeMatchesCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ProbeMatchesMessageCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ProbeMessageCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ProbeRequestResponseCD1AsyncResult.cs" />
+    <Compile Include="Discovery\VersionCD1\ResolveCriteriaCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ResolveDuplexCD1AsyncResult.cs" />
+    <Compile Include="Discovery\VersionCD1\ResolveMatchesCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ResolveMatchesMessageCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ResolveMessageCD1.cs" />
+    <Compile Include="Discovery\VersionCD1\ResolveRequestResponseCD1AsyncResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Discovery\SR.resources" />
+    <EmbeddedResource Include="Discovery\TD.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.ServiceModel.Internals\System.ServiceModel.Internals.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D3}</Project>
+      <Name>System.ServiceModel.Internals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.ServiceModel\System.ServiceModel.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D4}</Project>
+      <Name>System.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.Linq\System.Xml.Linq.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D7}</Project>
+      <Name>System.Xml.Linq</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

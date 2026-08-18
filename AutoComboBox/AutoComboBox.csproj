@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE25ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoComboBox</RootNamespace>
+    <AssemblyName>AutoComboBox</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.UI.ClientManager.ClientCaching" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core" />
+    <Reference Include="Common.UI.ClientManager.WinForms.Core.Impl" />
+    <Reference Include="Common.UI.WinForms.CoreComponents" />
+    <Reference Include="DevComponents.DotNetBar2" />
+    <Reference Include="SpellCheckerEx" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessibilityWrappers\AccessibleDevComponentsExplorerBar\AccDevComponentsExplorerBar.cs" />
+    <Compile Include="AttachmentsControl.cs" />
+    <Compile Include="AutoComboBox.cs" />
+    <Compile Include="AutoComboBoxAccessibleObject.cs" />
+    <Compile Include="CheckBoxAutoResizeMode.cs" />
+    <Compile Include="ControlPadding.cs" />
+    <Compile Include="CustomControl\OrientAbleTextControls\Direction.cs" />
+    <Compile Include="CustomControl\OrientAbleTextControls\Orientation.cs" />
+    <Compile Include="CustomControl\OrientAbleTextControls\OrientedTextLabel.cs" />
+    <Compile Include="CustomProgressBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomProgressBar.Designer.cs">
+      <DependentUpon>CustomProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataChangedEventHandler.cs" />
+    <Compile Include="DataGridNoActiveCellColumn.cs" />
+    <Compile Include="DataState.cs" />
+    <Compile Include="DataTableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataTableView.Designer.cs">
+      <DependentUpon>DataTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataTableViewProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataTableViewProperties.Designer.cs">
+      <DependentUpon>DataTableViewProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateRangeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateRangeInput.Designer.cs">
+      <DependentUpon>DateRangeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateScope.cs" />
+    <Compile Include="DateScopePicker.cs" />
+    <Compile Include="DateScopes.cs" />
+    <Compile Include="EdgePadding.cs" />
+    <Compile Include="eStartupCursorLocation.cs" />
+    <Compile Include="ExportClass.cs" />
+    <Compile Include="ExportTypeChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportTypeChooser.Designer.cs">
+      <DependentUpon>ExportTypeChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterColumns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilterColumns.Designer.cs">
+      <DependentUpon>FilterColumns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperControls\FilterPanel.cs" />
+    <Compile Include="HelperForms\DataGridView2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\DataGridView2.Designer.cs">
+      <DependentUpon>DataGridView2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperForms\FrmAccommodationExpiryPresetDatesEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\FrmAccommodationExpiryPresetDatesEdit.Designer.cs">
+      <DependentUpon>FrmAccommodationExpiryPresetDatesEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperForms\HtmlMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelperForms\HtmlMessageBox.Designer.cs">
+      <DependentUpon>HtmlMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportSettingsDialog.Designer.cs">
+      <DependentUpon>ImportSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputBoxButtons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputBoxButtons.Designer.cs">
+      <DependentUpon>InputBoxButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputCheckedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputCheckedList.Designer.cs">
+      <DependentUpon>InputCheckedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\AccessibilityOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\AccessibilityOptions.Designer.cs">
+      <DependentUpon>AccessibilityOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\AppDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\AppDelete.Designer.cs">
+      <DependentUpon>AppDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\AppDeleteButton.cs" />
+    <Compile Include="InputDialogControls\AppDeleteButtonLayout.cs" />
+    <Compile Include="InputDialogControls\AppDeleteFunctionality.cs" />
+    <Compile Include="InputDialogControls\DateRangeInputAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\DateRangeInputAcc.Designer.cs">
+      <DependentUpon>DateRangeInputAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\frmSaveClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\frmSaveClose.Designer.cs">
+      <DependentUpon>frmSaveClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\IconPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\IconPicker.Designer.cs">
+      <DependentUpon>IconPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\InputDataTableWithFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\InputDataTableWithFilter.Designer.cs">
+      <DependentUpon>InputDataTableWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\InputPersonChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\InputPersonChooser.Designer.cs">
+      <DependentUpon>InputPersonChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\NotesZoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\NotesZoom.Designer.cs">
+      <DependentUpon>NotesZoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\NotesZoom2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\NotesZoom2.Designer.cs">
+      <DependentUpon>NotesZoom2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\ShowTextDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\ShowTextDialog.Designer.cs">
+      <DependentUpon>ShowTextDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputDialogControls\TableFilters\TableFilter.cs" />
+    <Compile Include="InputDialogControls\TableFilters\TableFilterCollection.cs" />
+    <Compile Include="InputDialogControls\TableFilters\TableFilterComparerType.cs" />
+    <Compile Include="InputDialogControls\TableFilters\TableFilterControl.cs" />
+    <Compile Include="InputDialogControls\TableFilters\TableFilterControlCollection.cs" />
+    <Compile Include="InputDialogControls\TableFilters\TableFilterList.cs" />
+    <Compile Include="InputDialogControls\TableFilters\TableFiltersSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputDialogControls\TableFilters\TableFiltersSelectionDialog.Designer.cs">
+      <DependentUpon>TableFiltersSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputList.Designer.cs">
+      <DependentUpon>InputList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputListView.Designer.cs">
+      <DependentUpon>InputListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputMultipleOrderedItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputMultipleOrderedItems.Designer.cs">
+      <DependentUpon>InputMultipleOrderedItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputPassword.Designer.cs">
+      <DependentUpon>InputPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputRichTextBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputRichTextBox.Designer.cs">
+      <DependentUpon>InputRichTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemChangingEventArgs.cs" />
+    <Compile Include="ListBoxItem.cs" />
+    <Compile Include="ListViewColumn.cs" />
+    <Compile Include="ListViewEx.cs" />
+    <Compile Include="ListViewItemEx.cs" />
+    <Compile Include="ListViewMultipleColCompare.cs" />
+    <Compile Include="ListViewSettings.cs" />
+    <Compile Include="MaskCodeType.cs" />
+    <Compile Include="MaskRule.cs" />
+    <Compile Include="MyBorderStyle.cs" />
+    <Compile Include="MyButton.cs" />
+    <Compile Include="MyCheckBox.cs" />
+    <Compile Include="MyControls\AccommodationControl2.cs" />
+    <Compile Include="MyControls\AccommodationControlPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\AccommodationControlPopup.Designer.cs">
+      <DependentUpon>AccommodationControlPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\AccommodationControlType.cs" />
+    <Compile Include="MyControls\CustomTableControls\BtmPanel.cs" />
+    <Compile Include="MyControls\CustomTableControls\CellPersistObject.cs" />
+    <Compile Include="MyControls\CustomTableControls\CheckBoxDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\CheckBoxEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\CheckBoxEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColCellPersistObject.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColPersistObject.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnDefinition.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnDefinitionUIEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnDefinitionUIEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\CustomTableControls\ColumnDefinitionUIEditorForm.Designer.cs">
+      <DependentUpon>ColumnDefinitionUIEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeDefEnum.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeDefUtil.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeEditorPanel.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeEditUtil.cs" />
+    <Compile Include="MyControls\CustomTableControls\ColumnTypeManager.cs" />
+    <Compile Include="MyControls\CustomTableControls\CustomTable.cs" />
+    <Compile Include="MyControls\CustomTableControls\DateDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\DateEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\DateEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\DroplistDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\DroplistEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\DroplistEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\FileNameDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\FileNameEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\FileNameEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\NotesDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\NotesEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\NotesEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\RowEdit.cs" />
+    <Compile Include="MyControls\CustomTableControls\RowEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\CustomTableControls\RowEditForm.Designer.cs">
+      <DependentUpon>RowEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\CustomTableControls\RowPersistObject.cs" />
+    <Compile Include="MyControls\CustomTableControls\TableColsPersistObject.cs" />
+    <Compile Include="MyControls\CustomTableControls\TablePersistObject.cs" />
+    <Compile Include="MyControls\CustomTableControls\TableProperty.cs" />
+    <Compile Include="MyControls\CustomTableControls\TablePropertyEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\TablePropertyEditorEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\TablePropertyEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyControls\CustomTableControls\TablePropertyEditorForm.Designer.cs">
+      <DependentUpon>TablePropertyEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\CustomTableControls\TopPanel.cs" />
+    <Compile Include="MyControls\CustomTableControls\WhoenteredDef.cs" />
+    <Compile Include="MyControls\CustomTableControls\WhoenteredEditor.cs" />
+    <Compile Include="MyControls\CustomTableControls\WhoenteredEditorFactory.cs" />
+    <Compile Include="MyControls\CustomTableControls\XMLPersistUtil.cs" />
+    <Compile Include="MyControls\DateDefaultValue.cs" />
+    <Compile Include="MyControls\ExtendedRichTextBox\ClockWorkDocumentEventArgs.cs" />
+    <Compile Include="MyControls\ExtendedRichTextBox\ExtendedRichTextBoxCtrl.cs" />
+    <Compile Include="MyControls\ExtendedRichTextBox\RtfColor.cs" />
+    <Compile Include="MyControls\ExtendedRichTextBox\ScrollBarInformation.cs" />
+    <Compile Include="MyControls\ExtendedRichTextBox\UnderlineColor.cs" />
+    <Compile Include="MyControls\ExtendedRichTextBox\UnderlineStyle.cs" />
+    <Compile Include="MyControls\HtmlGroup.cs" />
+    <Compile Include="MyControls\HtmlRichTextBox.cs" />
+    <Compile Include="MyControls\IDisabled.cs" />
+    <Compile Include="MyControls\ListSelect.cs" />
+    <Compile Include="MyControls\ListSelectItem.cs" />
+    <Compile Include="MyControls\MultiDatabaseItemSelect.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\MultiLineItem.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\MultiLineItemCollection.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\MultiLineItemComparer.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\MyMultiLinePopupEdit.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\MyMultilineTextBox.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\MyMultilineTextBoxWithEditingControls.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\NTextBox.cs" />
+    <Compile Include="MyControls\MultiLineTextBox\ReverseComparer.cs" />
+    <Compile Include="MyControls\MyDataGridView.cs" />
+    <Compile Include="MyControls\MyDateTimePickerAcc.cs" />
+    <Compile Include="MyControls\MyDateTimePickerForAccommodationsExpiry.cs" />
+    <Compile Include="MyControls\MyDevComponentsTextBox.cs" />
+    <Compile Include="MyControls\MyDynamicControl.cs" />
+    <Compile Include="MyControls\MyExpandableGroupBox.cs" />
+    <Compile Include="MyControls\MyFile.cs" />
+    <Compile Include="MyControls\MyInfoBox.cs" />
+    <Compile Include="MyControls\MyLayoutPanel.cs" />
+    <Compile Include="MyControls\MyMaskedTextBox.cs" />
+    <Compile Include="MyControls\MyMonthCalendar.cs" />
+    <Compile Include="MyControls\MyMultiCheckbox.cs" />
+    <Compile Include="MyControls\MyMultiCheckBox2.cs" />
+    <Compile Include="MyControls\MyPasswordStrength.cs" />
+    <Compile Include="MyControls\MyPersonChooser.cs" />
+    <Compile Include="MyControls\MyPicture.cs" />
+    <Compile Include="MyControls\MyPictureBox.cs" />
+    <Compile Include="MyControls\MyRadioGroupPrimary.cs" />
+    <Compile Include="MyControls\MyRadioGroupPrimaryCheckboxMultiple.cs" />
+    <Compile Include="MyControls\MyRichText.cs" />
+    <Compile Include="MyControls\MyTempPasswordControl.cs" />
+    <Compile Include="MyControls\MyTimePicker.cs" />
+    <Compile Include="MyControls\MyTimePickerAcc.cs" />
+    <Compile Include="MyControls\MyWebBrowser.cs" />
+    <Compile Include="MyControls\RadioGroupPrimaryType.cs" />
+    <Compile Include="MyControls\SearchControl.cs" />
+    <Compile Include="MyControls\SearchMatchResult.cs" />
+    <Compile Include="MyControls\TimeOfDaySlider.cs" />
+    <Compile Include="MyControls\TreeViewMS.cs" />
+    <Compile Include="MyDataGrid.cs" />
+    <Compile Include="MyDataGridTextBoxColumn.cs" />
+    <Compile Include="MyDateTimePicker.cs" />
+    <Compile Include="MyGraphicsRoutines.cs" />
+    <Compile Include="MyLabel.cs" />
+    <Compile Include="MyMenuItem.cs" />
+    <Compile Include="MyPanel.cs" />
+    <Compile Include="MyProgressScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProgressScreen.Designer.cs">
+      <DependentUpon>MyProgressScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyRadioButton.cs" />
+    <Compile Include="MyRadioGroup.cs" />
+    <Compile Include="MySplitter.cs" />
+    <Compile Include="MyTabControl.cs" />
+    <Compile Include="MyTabPage.cs" />
+    <Compile Include="MyTextBox.cs" />
+    <Compile Include="MyTreeView.cs" />
+    <Compile Include="PasswordListManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordListManager.Designer.cs">
+      <DependentUpon>PasswordListManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PleaseWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PleaseWait.Designer.cs">
+      <DependentUpon>PleaseWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="RichTextBoxPrintCtrl.cs" />
+    <Compile Include="RtfColor.cs" />
+    <Compile Include="SchoolYearChooserCtrl.cs" />
+    <Compile Include="SecureTextBox.cs" />
+    <Compile Include="SessionChooser2.cs" />
+    <Compile Include="SessionEventArgs.cs" />
+    <Compile Include="ShowMode.cs" />
+    <Compile Include="SqlLocator.cs" />
+    <Compile Include="SubItemClickEventArgs.cs" />
+    <Compile Include="SubItemClickEventHandler.cs" />
+    <Compile Include="TextBoxLabelled.cs" />
+    <Compile Include="TimeBlockChooser.cs" />
+    <Compile Include="ToolboxButton.cs" />
+    <Compile Include="ToolStripCheckbox.cs" />
+    <Compile Include="Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AttachmentsControl.resources" />
+    <EmbeddedResource Include="AutoComboBox.resources" />
+    <EmbeddedResource Include="CustomProgressBar.resources" />
+    <EmbeddedResource Include="DataTableView.resources" />
+    <EmbeddedResource Include="DataTableViewProperties.resources" />
+    <EmbeddedResource Include="DateRangeInput.resources" />
+    <EmbeddedResource Include="DateScopePicker.resources" />
+    <EmbeddedResource Include="ExportTypeChooser.resources" />
+    <EmbeddedResource Include="FilterColumns.resources" />
+    <EmbeddedResource Include="HelperControls\FilterPanel.resources" />
+    <EmbeddedResource Include="HelperForms\DataGridView2.resources" />
+    <EmbeddedResource Include="HelperForms\FrmAccommodationExpiryPresetDatesEdit.resources" />
+    <EmbeddedResource Include="HelperForms\HtmlMessageBox.resources" />
+    <EmbeddedResource Include="ImportSettingsDialog.resources" />
+    <EmbeddedResource Include="InputBox.resources" />
+    <EmbeddedResource Include="InputBoxButtons.resources" />
+    <EmbeddedResource Include="InputCheckedList.resources" />
+    <EmbeddedResource Include="InputDialogControls\AccessibilityOptions.resources" />
+    <EmbeddedResource Include="InputDialogControls\AppDelete.resources" />
+    <EmbeddedResource Include="InputDialogControls\DateRangeInputAcc.resources" />
+    <EmbeddedResource Include="InputDialogControls\frmSaveClose.resources" />
+    <EmbeddedResource Include="InputDialogControls\IconPicker.resources" />
+    <EmbeddedResource Include="InputDialogControls\InputDataTableWithFilter.resources" />
+    <EmbeddedResource Include="InputDialogControls\InputPersonChooser.resources" />
+    <EmbeddedResource Include="InputDialogControls\NotesZoom.resources" />
+    <EmbeddedResource Include="InputDialogControls\NotesZoom2.resources" />
+    <EmbeddedResource Include="InputDialogControls\ShowTextDialog.resources" />
+    <EmbeddedResource Include="InputDialogControls\TableFilters\TableFilterControl.resources" />
+    <EmbeddedResource Include="InputDialogControls\TableFilters\TableFilterList.resources" />
+    <EmbeddedResource Include="InputDialogControls\TableFilters\TableFiltersSelectionDialog.resources" />
+    <EmbeddedResource Include="InputList.resources" />
+    <EmbeddedResource Include="InputListView.resources" />
+    <EmbeddedResource Include="InputMultipleOrderedItems.resources" />
+    <EmbeddedResource Include="InputPassword.resources" />
+    <EmbeddedResource Include="InputRichTextBox.resources" />
+    <EmbeddedResource Include="ListViewEx.resources" />
+    <EmbeddedResource Include="MyButton.resources" />
+    <EmbeddedResource Include="MyCheckBox.resources" />
+    <EmbeddedResource Include="MyControls\AccommodationControl2.resources" />
+    <EmbeddedResource Include="MyControls\AccommodationControlPopup.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\BtmPanel.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\CheckBoxEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\ColumnDefinitionUIEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\CustomTable.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\DateEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\DroplistEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\FileNameEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\NotesEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\RowEdit.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\RowEditForm.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\TablePropertyEditor.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\TablePropertyEditorForm.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\TopPanel.resources" />
+    <EmbeddedResource Include="MyControls\CustomTableControls\WhoenteredEditor.resources" />
+    <EmbeddedResource Include="MyControls\ListSelect.resources" />
+    <EmbeddedResource Include="MyControls\MultiDatabaseItemSelect.resources" />
+    <EmbeddedResource Include="MyControls\MultiLineTextBox\MyMultiLinePopupEdit.resources" />
+    <EmbeddedResource Include="MyControls\MultiLineTextBox\MyMultilineTextBox.resources" />
+    <EmbeddedResource Include="MyControls\MultiLineTextBox\MyMultilineTextBoxWithEditingControls.resources" />
+    <EmbeddedResource Include="MyControls\MyDateTimePickerAcc.resources" />
+    <EmbeddedResource Include="MyControls\MyDateTimePickerForAccommodationsExpiry.resources" />
+    <EmbeddedResource Include="MyControls\MyFile.resources" />
+    <EmbeddedResource Include="MyControls\MyInfoBox.resources" />
+    <EmbeddedResource Include="MyControls\MyMaskedTextBox.resources" />
+    <EmbeddedResource Include="MyControls\MyMultiCheckbox.resources" />
+    <EmbeddedResource Include="MyControls\MyPasswordStrength.resources" />
+    <EmbeddedResource Include="MyControls\MyPersonChooser.resources" />
+    <EmbeddedResource Include="MyControls\MyPicture.resources" />
+    <EmbeddedResource Include="MyControls\MyRadioGroupPrimary.resources" />
+    <EmbeddedResource Include="MyControls\MyRadioGroupPrimaryCheckboxMultiple.resources" />
+    <EmbeddedResource Include="MyControls\MyRichText.resources" />
+    <EmbeddedResource Include="MyControls\MyTempPasswordControl.resources" />
+    <EmbeddedResource Include="MyControls\MyTimePicker.resources" />
+    <EmbeddedResource Include="MyControls\MyTimePickerAcc.resources" />
+    <EmbeddedResource Include="MyControls\MyWebBrowser.resources" />
+    <EmbeddedResource Include="MyControls\SearchControl.resources" />
+    <EmbeddedResource Include="MyControls\TimeOfDaySlider.resources" />
+    <EmbeddedResource Include="MyDataGrid.resources" />
+    <EmbeddedResource Include="MyDateTimePicker.resources" />
+    <EmbeddedResource Include="MyPanel.resources" />
+    <EmbeddedResource Include="MyProgressScreen.resources" />
+    <EmbeddedResource Include="MyRadioButton.resources" />
+    <EmbeddedResource Include="MyRadioGroup.resources" />
+    <EmbeddedResource Include="MySplitter.resources" />
+    <EmbeddedResource Include="MyTabControl.resources" />
+    <EmbeddedResource Include="MyTabPage.resources" />
+    <EmbeddedResource Include="MyTextBox.resources" />
+    <EmbeddedResource Include="PasswordListManager.resources" />
+    <EmbeddedResource Include="PleaseWait.resources" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="RichTextBoxPrintCtrl.resources" />
+    <EmbeddedResource Include="SchoolYearChooserCtrl.resources" />
+    <EmbeddedResource Include="SessionChooser2.resources" />
+    <EmbeddedResource Include="TextBoxLabelled.resources" />
+    <EmbeddedResource Include="TimeBlockChooser.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClockWorkServer.Contracts\ClockWorkServer.Contracts.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE25FA}</Project>
+      <Name>ClockWorkServer.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Compression\Common.Compression.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2605}</Project>
+      <Name>Common.Compression</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Public\Common.Public.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE263E}</Project>
+      <Name>Common.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common.Win32\Common.Win32.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2660}</Project>
+      <Name>Common.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EncryptionClassLibrary\EncryptionClassLibrary.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE2666}</Project>
+      <Name>EncryptionClassLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Data\System.Data.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AC}</Project>
+      <Name>System.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Drawing\System.Drawing.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26BB}</Project>
+      <Name>System.Drawing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms\System.Windows.Forms.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C2}</Project>
+      <Name>System.Windows.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnivOleDb\UnivOleDb.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26A5}</Project>
+      <Name>UnivOleDb</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

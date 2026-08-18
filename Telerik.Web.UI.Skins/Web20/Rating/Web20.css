@@ -1,0 +1,1 @@
+.RadRating_Web20 a,.RadRating_Web20 a span{background-image:url('<%=WebResource("Telerik.Web.UI.Skins.Web20.Rating.Sprite.png")%>')}@media print{.RadRating_Web20 a:before,.RadRating_Web20 a span:before{content:url('<%=WebResource("Telerik.Web.UI.Skins.Web20.Rating.Sprite.png")%>')}}

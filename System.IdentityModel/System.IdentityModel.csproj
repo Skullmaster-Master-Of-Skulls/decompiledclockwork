@@ -1,0 +1,617 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.IdentityModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SMDiagnostics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppContextDefaultValues.cs" />
+    <Compile Include="AssemblyRef.cs" />
+    <Compile Include="FXAssembly.cs" />
+    <Compile Include="IdentityModel\Alg.cs" />
+    <Compile Include="IdentityModel\Asn1IntegerConverter.cs" />
+    <Compile Include="IdentityModel\AsynchronousOperationException.cs" />
+    <Compile Include="IdentityModel\AsyncResult.cs" />
+    <Compile Include="IdentityModel\AuthIdentityEx.cs" />
+    <Compile Include="IdentityModel\BadRequestException.cs" />
+    <Compile Include="IdentityModel\Bindings.cs" />
+    <Compile Include="IdentityModel\BoundedCache.cs" />
+    <Compile Include="IdentityModel\BufferManager.cs" />
+    <Compile Include="IdentityModel\BufferManagerOutputStream.cs" />
+    <Compile Include="IdentityModel\BufferType.cs" />
+    <Compile Include="IdentityModel\CanonicalFormWriter.cs" />
+    <Compile Include="IdentityModel\CanonicalizationDriver.cs" />
+    <Compile Include="IdentityModel\CAPI.cs" />
+    <Compile Include="IdentityModel\CertificateEncoding.cs" />
+    <Compile Include="IdentityModel\CipherDataElement.cs" />
+    <Compile Include="IdentityModel\Claims\Claim.cs" />
+    <Compile Include="IdentityModel\Claims\ClaimComparer.cs" />
+    <Compile Include="IdentityModel\Claims\ClaimSet.cs" />
+    <Compile Include="IdentityModel\Claims\ClaimTypes.cs" />
+    <Compile Include="IdentityModel\Claims\DefaultClaimSet.cs" />
+    <Compile Include="IdentityModel\Claims\Rights.cs" />
+    <Compile Include="IdentityModel\Claims\SessionDictionary.cs" />
+    <Compile Include="IdentityModel\Claims\WindowsClaimSet.cs" />
+    <Compile Include="IdentityModel\Claims\X509CertificateClaimSet.cs" />
+    <Compile Include="IdentityModel\Claims\X509Identity.cs" />
+    <Compile Include="IdentityModel\Claims\XsiConstants.cs" />
+    <Compile Include="IdentityModel\Configuration\ApplicationServiceConfigurationElement.cs" />
+    <Compile Include="IdentityModel\Configuration\AudienceUriElement.cs" />
+    <Compile Include="IdentityModel\Configuration\AudienceUriElementCollection.cs" />
+    <Compile Include="IdentityModel\Configuration\ConfigurationElementInterceptor.cs" />
+    <Compile Include="IdentityModel\Configuration\ConfigurationStrings.cs" />
+    <Compile Include="IdentityModel\Configuration\CustomTypeElement.cs" />
+    <Compile Include="IdentityModel\Configuration\ICustomIdentityConfiguration.cs" />
+    <Compile Include="IdentityModel\Configuration\IdentityConfiguration.cs" />
+    <Compile Include="IdentityModel\Configuration\IdentityConfigurationElement.cs" />
+    <Compile Include="IdentityModel\Configuration\IdentityConfigurationElementCollection.cs" />
+    <Compile Include="IdentityModel\Configuration\IdentityModelCaches.cs" />
+    <Compile Include="IdentityModel\Configuration\IdentityModelCachesElement.cs" />
+    <Compile Include="IdentityModel\Configuration\IdentityModelTimeSpanValidatorAttribute.cs" />
+    <Compile Include="IdentityModel\Configuration\IssuerNameRegistryElement.cs" />
+    <Compile Include="IdentityModel\Configuration\SecurityTokenHandlerConfigurationElement.cs" />
+    <Compile Include="IdentityModel\Configuration\SecurityTokenHandlerElementCollection.cs" />
+    <Compile Include="IdentityModel\Configuration\SecurityTokenHandlerSetElementCollection.cs" />
+    <Compile Include="IdentityModel\Configuration\SecurityTokenServiceConfiguration.cs" />
+    <Compile Include="IdentityModel\Configuration\StandardRuntimeEnumValidator.cs" />
+    <Compile Include="IdentityModel\Configuration\StandardRuntimeEnumValidatorAttribute.cs" />
+    <Compile Include="IdentityModel\Configuration\SystemIdentityModelSection.cs" />
+    <Compile Include="IdentityModel\Configuration\TimeSpanOrInfiniteConverter.cs" />
+    <Compile Include="IdentityModel\Configuration\TimeSpanOrInfiniteValidator.cs" />
+    <Compile Include="IdentityModel\Configuration\TokenReplayDetectionElement.cs" />
+    <Compile Include="IdentityModel\Configuration\TypeResolveHelper.cs" />
+    <Compile Include="IdentityModel\Configuration\X509CertificateValidationElement.cs" />
+    <Compile Include="IdentityModel\ContextAttribute.cs" />
+    <Compile Include="IdentityModel\CookieTransform.cs" />
+    <Compile Include="IdentityModel\CredentialStatus.cs" />
+    <Compile Include="IdentityModel\CredentialUse.cs" />
+    <Compile Include="IdentityModel\CREDUI_INFO.cs" />
+    <Compile Include="IdentityModel\CryptoHelper.cs" />
+    <Compile Include="IdentityModel\DateTimeFormats.cs" />
+    <Compile Include="IdentityModel\DateTimeUtil.cs" />
+    <Compile Include="IdentityModel\DeflateCookieTransform.cs" />
+    <Compile Include="IdentityModel\DelegatingXmlDictionaryReader.cs" />
+    <Compile Include="IdentityModel\DelegatingXmlDictionaryWriter.cs" />
+    <Compile Include="IdentityModel\Diagnostics\Application\FxTrace.cs" />
+    <Compile Include="IdentityModel\Diagnostics\Application\TD.cs" />
+    <Compile Include="IdentityModel\Diagnostics\AuthorizeTraceRecord.cs" />
+    <Compile Include="IdentityModel\Diagnostics\ClaimsPrincipalTraceRecord.cs" />
+    <Compile Include="IdentityModel\Diagnostics\DeflateCookieTraceRecord.cs" />
+    <Compile Include="IdentityModel\Diagnostics\DigestTraceRecord.cs" />
+    <Compile Include="IdentityModel\Diagnostics\DigestTraceRecordHelper.cs" />
+    <Compile Include="IdentityModel\Diagnostics\SecurityTraceRecord.cs" />
+    <Compile Include="IdentityModel\Diagnostics\SecurityTraceRecordHelper.cs" />
+    <Compile Include="IdentityModel\Diagnostics\TraceCode.cs" />
+    <Compile Include="IdentityModel\Diagnostics\TraceUtility.cs" />
+    <Compile Include="IdentityModel\DiagnosticUtility.cs" />
+    <Compile Include="IdentityModel\DictionaryManager.cs" />
+    <Compile Include="IdentityModel\ElementWithAlgorithmAttribute.cs" />
+    <Compile Include="IdentityModel\EmptyReadOnlyCollection.cs" />
+    <Compile Include="IdentityModel\EncryptedDataElement.cs" />
+    <Compile Include="IdentityModel\EncryptedKeyElement.cs" />
+    <Compile Include="IdentityModel\EncryptedTypeElement.cs" />
+    <Compile Include="IdentityModel\EncryptionMethodElement.cs" />
+    <Compile Include="IdentityModel\Endianness.cs" />
+    <Compile Include="IdentityModel\EnvelopedSignatureReader.cs" />
+    <Compile Include="IdentityModel\EnvelopedSignatureTransform.cs" />
+    <Compile Include="IdentityModel\EnvelopedSignatureWriter.cs" />
+    <Compile Include="IdentityModel\ExclusiveC14NDictionary.cs" />
+    <Compile Include="IdentityModel\ExclusiveC14NStrings.cs" />
+    <Compile Include="IdentityModel\ExclusiveCanonicalizationTransform.cs" />
+    <Compile Include="IdentityModel\ExtendedProtectionPolicyHelper.cs" />
+    <Compile Include="IdentityModel\ExtendedTransformFactory.cs" />
+    <Compile Include="IdentityModel\EXTENDED_NAME_FORMAT.cs" />
+    <Compile Include="IdentityModel\HashStream.cs" />
+    <Compile Include="IdentityModel\ICanonicalWriterEndRootElementCallback.cs" />
+    <Compile Include="IdentityModel\IdentityModelDictionary.cs" />
+    <Compile Include="IdentityModel\IdentityModelStrings.cs" />
+    <Compile Include="IdentityModel\IdentityModelStringsVersion1.cs" />
+    <Compile Include="IdentityModel\IdentityModelWrappedXmlDictionaryReader.cs" />
+    <Compile Include="IdentityModel\ImmutableCollection.cs" />
+    <Compile Include="IdentityModel\IntPtrHelper.cs" />
+    <Compile Include="IdentityModel\IPrefixGenerator.cs" />
+    <Compile Include="IdentityModel\ISecurityElement.cs" />
+    <Compile Include="IdentityModel\ISignatureReaderProvider.cs" />
+    <Compile Include="IdentityModel\ISignatureValueSecurityElement.cs" />
+    <Compile Include="IdentityModel\IWrappedTokenKeyResolver.cs" />
+    <Compile Include="IdentityModel\KERB_CERTIFICATE_S4U_LOGON.cs" />
+    <Compile Include="IdentityModel\KERB_LOGON_SUBMIT_TYPE.cs" />
+    <Compile Include="IdentityModel\KeyInfo.cs" />
+    <Compile Include="IdentityModel\LifeSpan.cs" />
+    <Compile Include="IdentityModel\LifeSpan_Struct.cs" />
+    <Compile Include="IdentityModel\LimitExceededException.cs" />
+    <Compile Include="IdentityModel\LocalAppContextSwitches.cs" />
+    <Compile Include="IdentityModel\LUID.cs" />
+    <Compile Include="IdentityModel\LUID_AND_ATTRIBUTES.cs" />
+    <Compile Include="IdentityModel\Metadata\ApplicationServiceDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\ContactPerson.cs" />
+    <Compile Include="IdentityModel\Metadata\ContactType.cs" />
+    <Compile Include="IdentityModel\Metadata\DisplayClaim.cs" />
+    <Compile Include="IdentityModel\Metadata\EncryptionMethod.cs" />
+    <Compile Include="IdentityModel\Metadata\EntitiesDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\EntityDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\EntityId.cs" />
+    <Compile Include="IdentityModel\Metadata\FederationMetadataConstants.cs" />
+    <Compile Include="IdentityModel\Metadata\IdentityProviderSingleSignOnDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\IndexedProtocolEndpoint.cs" />
+    <Compile Include="IdentityModel\Metadata\IndexedProtocolEndpointDictionary.cs" />
+    <Compile Include="IdentityModel\Metadata\KeyDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\KeyType.cs" />
+    <Compile Include="IdentityModel\Metadata\LocalizedEntry.cs" />
+    <Compile Include="IdentityModel\Metadata\LocalizedEntryCollection.cs" />
+    <Compile Include="IdentityModel\Metadata\LocalizedName.cs" />
+    <Compile Include="IdentityModel\Metadata\LocalizedUri.cs" />
+    <Compile Include="IdentityModel\Metadata\MetadataBase.cs" />
+    <Compile Include="IdentityModel\Metadata\MetadataSerializationException.cs" />
+    <Compile Include="IdentityModel\Metadata\MetadataSerializer.cs" />
+    <Compile Include="IdentityModel\Metadata\Organization.cs" />
+    <Compile Include="IdentityModel\Metadata\ProtocolEndpoint.cs" />
+    <Compile Include="IdentityModel\Metadata\RoleDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\Saml2MetadataConstants.cs" />
+    <Compile Include="IdentityModel\Metadata\SecurityTokenServiceDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\ServiceProviderSingleSignOnDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\SingleSignOnDescriptor.cs" />
+    <Compile Include="IdentityModel\Metadata\WebServiceDescriptor.cs" />
+    <Compile Include="IdentityModel\MostlySingletonList.cs" />
+    <Compile Include="IdentityModel\NativeMethods.cs" />
+    <Compile Include="IdentityModel\NegotiationInfo.cs" />
+    <Compile Include="IdentityModel\NegotiationInfoClass.cs" />
+    <Compile Include="IdentityModel\OpenObject.cs" />
+    <Compile Include="IdentityModel\PLAINTEXTKEYBLOBHEADER.cs" />
+    <Compile Include="IdentityModel\Policy\AuthorizationContext.cs" />
+    <Compile Include="IdentityModel\Policy\DefaultAuthorizationContext.cs" />
+    <Compile Include="IdentityModel\Policy\DefaultEvaluationContext.cs" />
+    <Compile Include="IdentityModel\Policy\EvaluationContext.cs" />
+    <Compile Include="IdentityModel\Policy\IAuthorizationComponent.cs" />
+    <Compile Include="IdentityModel\Policy\IAuthorizationPolicy.cs" />
+    <Compile Include="IdentityModel\Policy\IIdentityInfo.cs" />
+    <Compile Include="IdentityModel\Policy\UnconditionalPolicy.cs" />
+    <Compile Include="IdentityModel\Pool.cs" />
+    <Compile Include="IdentityModel\PreDigestedSignedInfo.cs" />
+    <Compile Include="IdentityModel\Privilege.cs" />
+    <Compile Include="IdentityModel\ProductConstants.cs" />
+    <Compile Include="IdentityModel\ProtectedDataCookieTransform.cs" />
+    <Compile Include="IdentityModel\Protocols\WSFederation\WSAuthorizationConstants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSFederation\WSFederationMetadataConstants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSMetadataExchangeConstants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\AdditionalContext.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\BinaryExchange.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\ContextItem.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\EndpointReference.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\Entropy.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\FederatedClientCredentialsParameters.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\InvalidRequestException.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\KeyTypes.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\Lifetime.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\Participants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\ProtectedKey.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\Renewing.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestClaim.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestClaimCollection.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestedProofToken.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestedSecurityToken.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestSecurityToken.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestSecurityTokenResponse.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\RequestTypes.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\Status.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\UseKey.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSIdentityConstants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSPolicyConstants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrust13Constants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrust13ConstantsAdapter.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrust13RequestSerializer.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrust13ResponseSerializer.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrust14Constants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustConstantsAdapter.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustFeb2005Constants.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustFeb2005ConstantsAdapter.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustFeb2005RequestSerializer.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustFeb2005ResponseSerializer.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustMessage.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustRequestSerializer.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustResponseSerializer.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustSerializationContext.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustSerializationException.cs" />
+    <Compile Include="IdentityModel\Protocols\WSTrust\WSTrustSerializationHelper.cs" />
+    <Compile Include="IdentityModel\Psha1DerivedKeyGenerator.cs" />
+    <Compile Include="IdentityModel\QUOTA_LIMITS.cs" />
+    <Compile Include="IdentityModel\Reference.cs" />
+    <Compile Include="IdentityModel\RequestException.cs" />
+    <Compile Include="IdentityModel\RequestFailedException.cs" />
+    <Compile Include="IdentityModel\RijndaelCryptoServiceProvider.cs" />
+    <Compile Include="IdentityModel\RsaEncryptionCookieTransform.cs" />
+    <Compile Include="IdentityModel\RsaSignatureCookieTransform.cs" />
+    <Compile Include="IdentityModel\SafeCertChainHandle.cs" />
+    <Compile Include="IdentityModel\SafeCertContextHandle.cs" />
+    <Compile Include="IdentityModel\SafeCertStoreHandle.cs" />
+    <Compile Include="IdentityModel\SafeCloseHandle.cs" />
+    <Compile Include="IdentityModel\SafeDeleteContext.cs" />
+    <Compile Include="IdentityModel\SafeFreeCertContext.cs" />
+    <Compile Include="IdentityModel\SafeFreeContextBuffer.cs" />
+    <Compile Include="IdentityModel\SafeFreeCredentials.cs" />
+    <Compile Include="IdentityModel\SafeHGlobalHandle.cs" />
+    <Compile Include="IdentityModel\SafeKeyHandle.cs" />
+    <Compile Include="IdentityModel\SafeLsaLogonProcessHandle.cs" />
+    <Compile Include="IdentityModel\SafeLsaReturnBufferHandle.cs" />
+    <Compile Include="IdentityModel\SafeProvHandle.cs" />
+    <Compile Include="IdentityModel\SamlDelegatingWriter.cs" />
+    <Compile Include="IdentityModel\SamlDictionary.cs" />
+    <Compile Include="IdentityModel\SamlStrings.cs" />
+    <Compile Include="IdentityModel\SchProtocols.cs" />
+    <Compile Include="IdentityModel\Scope.cs" />
+    <Compile Include="IdentityModel\SecPkgContext_SessionKey.cs" />
+    <Compile Include="IdentityModel\SecSizes.cs" />
+    <Compile Include="IdentityModel\SecureConversationDec2005Dictionary.cs" />
+    <Compile Include="IdentityModel\SecureConversationDec2005Strings.cs" />
+    <Compile Include="IdentityModel\SecureConversationDictionary.cs" />
+    <Compile Include="IdentityModel\SecureConversationFeb2005Dictionary.cs" />
+    <Compile Include="IdentityModel\SecureConversationFeb2005Strings.cs" />
+    <Compile Include="IdentityModel\SecureConversationStrings.cs" />
+    <Compile Include="IdentityModel\SecureCredential.cs" />
+    <Compile Include="IdentityModel\SecurityAlgorithmDec2005Dictionary.cs" />
+    <Compile Include="IdentityModel\SecurityAlgorithmDec2005Strings.cs" />
+    <Compile Include="IdentityModel\SecurityAlgorithmDictionary.cs" />
+    <Compile Include="IdentityModel\SecurityAlgorithmStrings.cs" />
+    <Compile Include="IdentityModel\SecurityBuffer.cs" />
+    <Compile Include="IdentityModel\SecurityBufferDescriptor.cs" />
+    <Compile Include="IdentityModel\SecurityBufferStruct.cs" />
+    <Compile Include="IdentityModel\SecurityJan2004Dictionary.cs" />
+    <Compile Include="IdentityModel\SecurityJan2004Strings.cs" />
+    <Compile Include="IdentityModel\SecurityLogonType.cs" />
+    <Compile Include="IdentityModel\SecurityMessageSerializationException.cs" />
+    <Compile Include="IdentityModel\SecurityPackageInfo.cs" />
+    <Compile Include="IdentityModel\SecurityPackageInfoClass.cs" />
+    <Compile Include="IdentityModel\SecuritySessionKeyClass.cs" />
+    <Compile Include="IdentityModel\SecurityStatus.cs" />
+    <Compile Include="IdentityModel\SecurityTokenService.cs" />
+    <Compile Include="IdentityModel\SecurityUniqueId.cs" />
+    <Compile Include="IdentityModel\SecurityUtils.cs" />
+    <Compile Include="IdentityModel\SecurityXXX2005Dictionary.cs" />
+    <Compile Include="IdentityModel\SecurityXXX2005Strings.cs" />
+    <Compile Include="IdentityModel\Security\WSTrust.cs" />
+    <Compile Include="IdentityModel\SECURITY_IMPERSONATION_LEVEL.cs" />
+    <Compile Include="IdentityModel\SEC_WINNT_AUTH_IDENTITY_EX.cs" />
+    <Compile Include="IdentityModel\Selectors\AudienceUriMode.cs" />
+    <Compile Include="IdentityModel\Selectors\AudienceUriModeValidationHelper.cs" />
+    <Compile Include="IdentityModel\Selectors\CustomUserNameSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\EmptySecurityTokenResolver.cs" />
+    <Compile Include="IdentityModel\Selectors\KerberosSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\KerberosSecurityTokenProvider.cs" />
+    <Compile Include="IdentityModel\Selectors\RsaSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\SamlSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenManager.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenProvider.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenRequirement.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenResolver.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenSerializer.cs" />
+    <Compile Include="IdentityModel\Selectors\SecurityTokenVersion.cs" />
+    <Compile Include="IdentityModel\Selectors\UserNamePasswordValidator.cs" />
+    <Compile Include="IdentityModel\Selectors\UserNameSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\UserNameSecurityTokenProvider.cs" />
+    <Compile Include="IdentityModel\Selectors\WindowsSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\WindowsUserNameSecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\X509CertificateChain.cs" />
+    <Compile Include="IdentityModel\Selectors\X509CertificateStore.cs" />
+    <Compile Include="IdentityModel\Selectors\X509CertificateValidator.cs" />
+    <Compile Include="IdentityModel\Selectors\X509SecurityTokenAuthenticator.cs" />
+    <Compile Include="IdentityModel\Selectors\X509SecurityTokenProvider.cs" />
+    <Compile Include="IdentityModel\SID_AND_ATTRIBUTES.cs" />
+    <Compile Include="IdentityModel\Signature.cs" />
+    <Compile Include="IdentityModel\SignatureResourcePool.cs" />
+    <Compile Include="IdentityModel\SignatureTargetIdManager.cs" />
+    <Compile Include="IdentityModel\SignatureVerificationFailedException.cs" />
+    <Compile Include="IdentityModel\SignedInfo.cs" />
+    <Compile Include="IdentityModel\SignedXml.cs" />
+    <Compile Include="IdentityModel\SR.cs" />
+    <Compile Include="IdentityModel\SRCategoryAttribute.cs" />
+    <Compile Include="IdentityModel\SRDescriptionAttribute.cs" />
+    <Compile Include="IdentityModel\SslConnectionInfo.cs" />
+    <Compile Include="IdentityModel\SspiContextFlags.cs" />
+    <Compile Include="IdentityModel\SSPIHandle.cs" />
+    <Compile Include="IdentityModel\SspiWrapper.cs" />
+    <Compile Include="IdentityModel\StandardSignedInfo.cs" />
+    <Compile Include="IdentityModel\StandardTransformFactory.cs" />
+    <Compile Include="IdentityModel\StreamSizes.cs" />
+    <Compile Include="IdentityModel\StringUtil.cs" />
+    <Compile Include="IdentityModel\StrTransform.cs" />
+    <Compile Include="IdentityModel\TokenInformationClass.cs" />
+    <Compile Include="IdentityModel\Tokens\AbsoluteUriCollection.cs" />
+    <Compile Include="IdentityModel\Tokens\AggregateTokenResolver.cs" />
+    <Compile Include="IdentityModel\Tokens\AsymmetricProofDescriptor.cs" />
+    <Compile Include="IdentityModel\Tokens\AsymmetricSecurityKey.cs" />
+    <Compile Include="IdentityModel\Tokens\AudienceRestriction.cs" />
+    <Compile Include="IdentityModel\Tokens\AudienceUriValidationFailedException.cs" />
+    <Compile Include="IdentityModel\Tokens\AuthenticationContext.cs" />
+    <Compile Include="IdentityModel\Tokens\AuthenticationMethods.cs" />
+    <Compile Include="IdentityModel\Tokens\AuthorizationPolicy.cs" />
+    <Compile Include="IdentityModel\Tokens\BinaryKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\BootstrapContext.cs" />
+    <Compile Include="IdentityModel\Tokens\BoundedXmlDictionaryReaderQuotas.cs" />
+    <Compile Include="IdentityModel\Tokens\ComputedKeyAlgorithms.cs" />
+    <Compile Include="IdentityModel\Tokens\ConfigurationBasedIssuerNameRegistry.cs" />
+    <Compile Include="IdentityModel\Tokens\DefaultTokenReplayCache.cs" />
+    <Compile Include="IdentityModel\Tokens\DEREncoding.cs" />
+    <Compile Include="IdentityModel\Tokens\EmptySecurityKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\EncryptedKeyEncryptingCredentials.cs" />
+    <Compile Include="IdentityModel\Tokens\EncryptedKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\EncryptedSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\EncryptedSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\EncryptedTokenDecryptionFailedException.cs" />
+    <Compile Include="IdentityModel\Tokens\EncryptingCredentials.cs" />
+    <Compile Include="IdentityModel\Tokens\EndpointAuthorizationPolicy.cs" />
+    <Compile Include="IdentityModel\Tokens\GenericXmlSecurityKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\GenericXmlSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\InMemorySymmetricSecurityKey.cs" />
+    <Compile Include="IdentityModel\Tokens\IssuerNameRegistry.cs" />
+    <Compile Include="IdentityModel\Tokens\IssuerTokenResolver.cs" />
+    <Compile Include="IdentityModel\Tokens\KerberosReceiverSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\KerberosRequestorSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\KerberosSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\KerberosTicketHashKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\KeyInfoSerializer.cs" />
+    <Compile Include="IdentityModel\Tokens\LocalIdKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\MruSessionSecurityTokenCache.cs" />
+    <Compile Include="IdentityModel\Tokens\ProofDescriptor.cs" />
+    <Compile Include="IdentityModel\Tokens\RsaKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\RsaSecurityKey.cs" />
+    <Compile Include="IdentityModel\Tokens\RsaSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\RsaSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Action.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Advice.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Assertion.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2AssertionKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Attribute.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2AttributeStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2AudienceRestriction.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2AuthenticationContext.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2AuthenticationStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2AuthorizationDecisionStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Conditions.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Constants.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Evidence.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Id.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2NameIdentifier.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2ProxyRestriction.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2SecurityKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2SecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2SecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Statement.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2Subject.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2SubjectConfirmation.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2SubjectConfirmationData.cs" />
+    <Compile Include="IdentityModel\Tokens\Saml2SubjectLocality.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAccessDecision.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAction.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAdvice.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAssertion.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAssertionKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAttribute.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAttributeKeyComparer.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAttributeStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAudienceRestrictionCondition.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAuthenticationClaimResource.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAuthenticationStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAuthorityBinding.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAuthorizationDecisionClaimResource.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlAuthorizationDecisionStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlCondition.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlConditions.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlConstants.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlDoNotCacheCondition.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlEvidence.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlNameIdentifierClaimResource.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSecurityKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSecurityTokenRequirement.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSerializer.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSubject.cs" />
+    <Compile Include="IdentityModel\Tokens\SamlSubjectStatement.cs" />
+    <Compile Include="IdentityModel\Tokens\SctAuthorizationPolicy.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityAlgorithms.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKey.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyElement.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyIdentifier.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyIdentifierClauseSerializer.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyType.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyTypeHelper.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyUsage.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityKeyUsageHelper.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenDescriptor.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenElement.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenException.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenExpiredException.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenHandlerCollection.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenHandlerCollectionManager.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenHandlerConfiguration.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenNotYetValidException.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenReplayDetectedException.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenSerializerAdapter.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenTypes.cs" />
+    <Compile Include="IdentityModel\Tokens\SecurityTokenValidationException.cs" />
+    <Compile Include="IdentityModel\Tokens\SessionSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\SessionSecurityTokenCache.cs" />
+    <Compile Include="IdentityModel\Tokens\SessionSecurityTokenCacheKey.cs" />
+    <Compile Include="IdentityModel\Tokens\SessionSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\SigningCredentials.cs" />
+    <Compile Include="IdentityModel\Tokens\SymmetricProofDescriptor.cs" />
+    <Compile Include="IdentityModel\Tokens\SymmetricSecurityKey.cs" />
+    <Compile Include="IdentityModel\Tokens\TokenReplayCache.cs" />
+    <Compile Include="IdentityModel\Tokens\UserNameSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\UserNameSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\WindowsSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\WindowsUserNameSecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\WrappedSaml2AssertionKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\WSSecurityJan2004.cs" />
+    <Compile Include="IdentityModel\Tokens\WSSecurityXXX2005.cs" />
+    <Compile Include="IdentityModel\Tokens\X509AsymmetricSecurityKey.cs" />
+    <Compile Include="IdentityModel\Tokens\X509CertificateStoreTokenResolver.cs" />
+    <Compile Include="IdentityModel\Tokens\X509DataSecurityKeyIdentifierClauseSerializer.cs" />
+    <Compile Include="IdentityModel\Tokens\X509EncryptingCredentials.cs" />
+    <Compile Include="IdentityModel\Tokens\X509IssuerSerialKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\X509NTAuthChainTrustValidator.cs" />
+    <Compile Include="IdentityModel\Tokens\X509RawDataKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\X509SecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\X509SecurityTokenHandler.cs" />
+    <Compile Include="IdentityModel\Tokens\X509SigningCredentials.cs" />
+    <Compile Include="IdentityModel\Tokens\X509SubjectKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\X509ThumbprintKeyIdentifierClause.cs" />
+    <Compile Include="IdentityModel\Tokens\X509WindowsSecurityToken.cs" />
+    <Compile Include="IdentityModel\Tokens\XmlDsigSep2000.cs" />
+    <Compile Include="IdentityModel\Tokens\XmlEncApr2001.cs" />
+    <Compile Include="IdentityModel\TokenType.cs" />
+    <Compile Include="IdentityModel\TOKEN_GROUPS.cs" />
+    <Compile Include="IdentityModel\TOKEN_PRIVILEGE.cs" />
+    <Compile Include="IdentityModel\TOKEN_SOURCE.cs" />
+    <Compile Include="IdentityModel\TranformationParameters.cs" />
+    <Compile Include="IdentityModel\Transform.cs" />
+    <Compile Include="IdentityModel\TransformChain.cs" />
+    <Compile Include="IdentityModel\TransformFactory.cs" />
+    <Compile Include="IdentityModel\TrustDec2005Dictionary.cs" />
+    <Compile Include="IdentityModel\TrustDec2005Strings.cs" />
+    <Compile Include="IdentityModel\TrustDictionary.cs" />
+    <Compile Include="IdentityModel\TrustFeb2005Dictionary.cs" />
+    <Compile Include="IdentityModel\TrustFeb2005Strings.cs" />
+    <Compile Include="IdentityModel\TrustStrings.cs" />
+    <Compile Include="IdentityModel\TypedAsyncResult.cs" />
+    <Compile Include="IdentityModel\UNICODE_INTPTR_STRING.cs" />
+    <Compile Include="IdentityModel\UniqueId.cs" />
+    <Compile Include="IdentityModel\UnsupportedTokenTypeBadRequestException.cs" />
+    <Compile Include="IdentityModel\UriUtil.cs" />
+    <Compile Include="IdentityModel\UtilityDictionary.cs" />
+    <Compile Include="IdentityModel\UtilityStrings.cs" />
+    <Compile Include="IdentityModel\WifSignedInfo.cs" />
+    <Compile Include="IdentityModel\Win32Error.cs" />
+    <Compile Include="IdentityModel\WrappedReader.cs" />
+    <Compile Include="IdentityModel\WrappedXmlDictionaryReader.cs" />
+    <Compile Include="IdentityModel\WSAddressing10Constants.cs" />
+    <Compile Include="IdentityModel\WSAddressing200408Constants.cs" />
+    <Compile Include="IdentityModel\WSSecureConversation13Constants.cs" />
+    <Compile Include="IdentityModel\WSSecureConversationFeb2005Constants.cs" />
+    <Compile Include="IdentityModel\WSSecurity10Constants.cs" />
+    <Compile Include="IdentityModel\WSSecurity11Constants.cs" />
+    <Compile Include="IdentityModel\WSSecurityUtilityConstants.cs" />
+    <Compile Include="IdentityModel\WSUtilityConstants.cs" />
+    <Compile Include="IdentityModel\X509CertificateValidatorEx.cs" />
+    <Compile Include="IdentityModel\X509Util.cs" />
+    <Compile Include="IdentityModel\XD.cs" />
+    <Compile Include="IdentityModel\XmlAttributeHolder.cs" />
+    <Compile Include="IdentityModel\XmlBuffer.cs" />
+    <Compile Include="IdentityModel\XmlEncryptionConstants.cs" />
+    <Compile Include="IdentityModel\XmlEncryptionDictionary.cs" />
+    <Compile Include="IdentityModel\XmlEncryptionStrings.cs" />
+    <Compile Include="IdentityModel\XmlHelper.cs" />
+    <Compile Include="IdentityModel\XmlSignatureConstants.cs" />
+    <Compile Include="IdentityModel\XmlSignatureDictionary.cs" />
+    <Compile Include="IdentityModel\XmlSignatureStrings.cs" />
+    <Compile Include="IdentityModel\XmlTokenStream.cs" />
+    <Compile Include="IdentityModel\XmlUtil.cs" />
+    <Compile Include="LocalAppContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\Claims\AuthenticationInformation.cs" />
+    <Compile Include="Security\Claims\AuthenticationTypeMaps.cs" />
+    <Compile Include="Security\Claims\AuthenticationTypes.cs" />
+    <Compile Include="Security\Claims\AuthorizationContext.cs" />
+    <Compile Include="Security\Claims\ClaimProperties.cs" />
+    <Compile Include="Security\Claims\ClaimsAuthenticationManager.cs" />
+    <Compile Include="Security\Claims\ClaimsAuthorizationManager.cs" />
+    <Compile Include="Security\Claims\ClaimsConversionHelper.cs" />
+    <Compile Include="Security\Claims\ClaimsHelper.cs" />
+    <Compile Include="Security\Cryptography\CngLightup.cs" />
+    <Compile Include="Security\Cryptography\X509Certificates\X509Helper.cs" />
+    <Compile Include="ServiceModel\Security\BinarySecretKeyIdentifierClause.cs" />
+    <Compile Include="ServiceModel\Security\EncryptedKey.cs" />
+    <Compile Include="ServiceModel\Security\EncryptedKeyHashIdentifierClause.cs" />
+    <Compile Include="ServiceModel\Security\EncryptedType.cs" />
+    <Compile Include="ServiceModel\Security\ISspiNegotiation.cs" />
+    <Compile Include="ServiceModel\Security\ISspiNegotiationInfo.cs" />
+    <Compile Include="ServiceModel\Security\KeyNameIdentifierClause.cs" />
+    <Compile Include="ServiceModel\Security\ReferenceList.cs" />
+    <Compile Include="ServiceModel\Security\RelAssertionDirectKeyIdentifierClause.cs" />
+    <Compile Include="ServiceModel\Security\SamlAssertionDirectKeyIdentifierClause.cs" />
+    <Compile Include="ServiceModel\Security\SecurityContextKeyIdentifierClause.cs" />
+    <Compile Include="ServiceModel\Security\Tokens\BinarySecretSecurityToken.cs" />
+    <Compile Include="ServiceModel\Security\Tokens\BufferedGenericXmlSecurityToken.cs" />
+    <Compile Include="ServiceModel\Security\Tokens\WrappedKeySecurityToken.cs" />
+    <Compile Include="ServiceModel\Security\X509CertificateValidationMode.cs" />
+    <Compile Include="ThisAssembly.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IdentityModel\Diagnostics\Application\TD.resources" />
+    <EmbeddedResource Include="IdentityModel\resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib.2\mscorlib.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C5}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.2\System.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D9}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration.2\System.Configuration.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C9}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Core\System.Core.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26CA}</Project>
+      <Name>System.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Security.2\System.Security.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D1}</Project>
+      <Name>System.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.ServiceModel.Internals\System.ServiceModel.Internals.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D3}</Project>
+      <Name>System.ServiceModel.Internals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml.2\System.Xml.2.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26D8}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

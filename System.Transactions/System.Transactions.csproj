@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{664086A8-7407-4AEE-92F4-264533EE26AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Transactions</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\PrivilegedConfigurationManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\ActiveStates.cs" />
+    <Compile Include="Transactions\Bucket.cs" />
+    <Compile Include="Transactions\BucketSet.cs" />
+    <Compile Include="Transactions\CheapUnfairReaderWriterLock.cs" />
+    <Compile Include="Transactions\CommittableTransaction.cs" />
+    <Compile Include="Transactions\Configuration\ConfigurationStrings.cs" />
+    <Compile Include="Transactions\Configuration\DefaultSettingsSection.cs" />
+    <Compile Include="Transactions\Configuration\MachineSettingsSection.cs" />
+    <Compile Include="Transactions\Configuration\TransactionsSectionGroup.cs" />
+    <Compile Include="Transactions\ContextData.cs" />
+    <Compile Include="Transactions\DefaultComContextState.cs" />
+    <Compile Include="Transactions\DependentCloneOption.cs" />
+    <Compile Include="Transactions\DependentTransaction.cs" />
+    <Compile Include="Transactions\Diagnostics\Activity.cs" />
+    <Compile Include="Transactions\Diagnostics\CloneCreatedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\ConfiguredDefaultTimeoutAdjustedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\DependentCloneCompleteTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\DependentCloneCreatedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\DiagnosticTrace.cs" />
+    <Compile Include="Transactions\Diagnostics\DictionaryTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\DistributedTransactionManagerCreatedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\EnlistmentCallback.cs" />
+    <Compile Include="Transactions\Diagnostics\EnlistmentCallbackNegativeTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\EnlistmentCallbackPositiveTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\EnlistmentNotificationCallTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\EnlistmentTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\EnlistmentType.cs" />
+    <Compile Include="Transactions\Diagnostics\ExceptionConsumedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\InternalErrorTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\InvalidOperationExceptionTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\MethodEnteredTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\MethodExitedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\NotificationCall.cs" />
+    <Compile Include="Transactions\Diagnostics\PlainXmlWriter.cs" />
+    <Compile Include="Transactions\Diagnostics\RecoveryCompleteTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\ReenlistTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TraceHelper.cs" />
+    <Compile Include="Transactions\Diagnostics\TraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TraceXPathNavigator.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionAbortedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionCommitCalledTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionCommittedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionCreatedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionDeserializedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionExceptionTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionInDoubtTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionPromotedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionRollbackCalledTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeCreatedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeCurrentChangedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeDisposedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeIncompleteTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeNestedIncorrectlyTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeResult.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionScopeTimeoutTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionSerializedTraceRecord.cs" />
+    <Compile Include="Transactions\Diagnostics\TransactionTimeoutTraceRecord.cs" />
+    <Compile Include="Transactions\DistributedTransactionPermission.cs" />
+    <Compile Include="Transactions\DistributedTransactionPermissionAttribute.cs" />
+    <Compile Include="Transactions\DurableEnlistmentAborting.cs" />
+    <Compile Include="Transactions\DurableEnlistmentActive.cs" />
+    <Compile Include="Transactions\DurableEnlistmentCommitting.cs" />
+    <Compile Include="Transactions\DurableEnlistmentDelegated.cs" />
+    <Compile Include="Transactions\DurableEnlistmentEnded.cs" />
+    <Compile Include="Transactions\DurableEnlistmentState.cs" />
+    <Compile Include="Transactions\DurableInternalEnlistment.cs" />
+    <Compile Include="Transactions\EnlistableStates.cs" />
+    <Compile Include="Transactions\Enlistment.cs" />
+    <Compile Include="Transactions\EnlistmentOptions.cs" />
+    <Compile Include="Transactions\EnlistmentState.cs" />
+    <Compile Include="Transactions\EnlistmentStatePromoted.cs" />
+    <Compile Include="Transactions\EnlistmentTraceIdentifier.cs" />
+    <Compile Include="Transactions\EnterpriseServicesInteropOption.cs" />
+    <Compile Include="Transactions\EnterpriseServicesState.cs" />
+    <Compile Include="Transactions\FinalizedObject.cs" />
+    <Compile Include="Transactions\HostCurrentTransactionCallback.cs" />
+    <Compile Include="Transactions\IDtcTransaction.cs" />
+    <Compile Include="Transactions\IEnlistmentNotification.cs" />
+    <Compile Include="Transactions\IEnlistmentNotificationInternal.cs" />
+    <Compile Include="Transactions\InternalEnlistment.cs" />
+    <Compile Include="Transactions\InternalTransaction.cs" />
+    <Compile Include="Transactions\IPromotableSinglePhaseNotification.cs" />
+    <Compile Include="Transactions\IPromotedEnlistment.cs" />
+    <Compile Include="Transactions\ISimpleTransactionSuperior.cs" />
+    <Compile Include="Transactions\ISinglePhaseNotification.cs" />
+    <Compile Include="Transactions\ISinglePhaseNotificationInternal.cs" />
+    <Compile Include="Transactions\IsolationLevel.cs" />
+    <Compile Include="Transactions\ITransactionPromoter.cs" />
+    <Compile Include="Transactions\NativeMethods.cs" />
+    <Compile Include="Transactions\Oletx\CoTaskMemHandle.cs" />
+    <Compile Include="Transactions\Oletx\DtcTransactionManager.cs" />
+    <Compile Include="Transactions\Oletx\HandleTable.cs" />
+    <Compile Include="Transactions\Oletx\IDtcProxyShimFactory.cs" />
+    <Compile Include="Transactions\Oletx\IEnlistmentShim.cs" />
+    <Compile Include="Transactions\Oletx\IPhase0EnlistmentShim.cs" />
+    <Compile Include="Transactions\Oletx\IResourceManagerShim.cs" />
+    <Compile Include="Transactions\Oletx\ITransactionNativeInternal.cs" />
+    <Compile Include="Transactions\Oletx\ITransactionShim.cs" />
+    <Compile Include="Transactions\Oletx\IVoterBallotShim.cs" />
+    <Compile Include="Transactions\Oletx\NativeMethods.cs" />
+    <Compile Include="Transactions\Oletx\OletxBaseEnlistment.cs" />
+    <Compile Include="Transactions\Oletx\OletxCommittableTransaction.cs" />
+    <Compile Include="Transactions\Oletx\OletxDependentTransaction.cs" />
+    <Compile Include="Transactions\Oletx\OletxEnlistment.cs" />
+    <Compile Include="Transactions\Oletx\OletxInternalResourceManager.cs" />
+    <Compile Include="Transactions\Oletx\OletxPhase0VolatileEnlistmentContainer.cs" />
+    <Compile Include="Transactions\Oletx\OletxPhase1VolatileEnlistmentContainer.cs" />
+    <Compile Include="Transactions\Oletx\OletxPrepareVoteType.cs" />
+    <Compile Include="Transactions\Oletx\OletxRecoveryInformation.cs" />
+    <Compile Include="Transactions\Oletx\OletxResourceManager.cs" />
+    <Compile Include="Transactions\Oletx\OletxTransaction.cs" />
+    <Compile Include="Transactions\Oletx\OletxTransactionIsoFlags.cs" />
+    <Compile Include="Transactions\Oletx\OletxTransactionIsolationLevel.cs" />
+    <Compile Include="Transactions\Oletx\OletxTransactionManager.cs" />
+    <Compile Include="Transactions\Oletx\OletxTransactionOutcome.cs" />
+    <Compile Include="Transactions\Oletx\OletxTransactionStatus.cs" />
+    <Compile Include="Transactions\Oletx\OletxVolatileEnlistment.cs" />
+    <Compile Include="Transactions\Oletx\OletxVolatileEnlistmentContainer.cs" />
+    <Compile Include="Transactions\Oletx\OletxXacttc.cs" />
+    <Compile Include="Transactions\Oletx\OletxXactTransInfo.cs" />
+    <Compile Include="Transactions\Oletx\OutcomeEnlistment.cs" />
+    <Compile Include="Transactions\Oletx\RealOletxTransaction.cs" />
+    <Compile Include="Transactions\Oletx\ShimNotificationType.cs" />
+    <Compile Include="Transactions\Phase0VolatileDemultiplexer.cs" />
+    <Compile Include="Transactions\Phase1VolatileDemultiplexer.cs" />
+    <Compile Include="Transactions\Phase1VolatileEnlistment.cs" />
+    <Compile Include="Transactions\PreparingEnlistment.cs" />
+    <Compile Include="Transactions\PromotableInternalEnlistment.cs" />
+    <Compile Include="Transactions\RecoveringInternalEnlistment.cs" />
+    <Compile Include="Transactions\SafeIUnknown.cs" />
+    <Compile Include="Transactions\SinglePhaseEnlistment.cs" />
+    <Compile Include="Transactions\SR.cs" />
+    <Compile Include="Transactions\SRCategoryAttribute.cs" />
+    <Compile Include="Transactions\SRDescriptionAttribute.cs" />
+    <Compile Include="Transactions\SubordinateTransaction.cs" />
+    <Compile Include="Transactions\Transaction.cs" />
+    <Compile Include="Transactions\TransactionAbortedException.cs" />
+    <Compile Include="Transactions\TransactionCompletedEventHandler.cs" />
+    <Compile Include="Transactions\TransactionEventArgs.cs" />
+    <Compile Include="Transactions\TransactionException.cs" />
+    <Compile Include="Transactions\TransactionInDoubtException.cs" />
+    <Compile Include="Transactions\TransactionInformation.cs" />
+    <Compile Include="Transactions\TransactionInterop.cs" />
+    <Compile Include="Transactions\TransactionManager.cs" />
+    <Compile Include="Transactions\TransactionManagerCommunicationException.cs" />
+    <Compile Include="Transactions\TransactionOptions.cs" />
+    <Compile Include="Transactions\TransactionPromotionException.cs" />
+    <Compile Include="Transactions\TransactionScope.cs" />
+    <Compile Include="Transactions\TransactionScopeOption.cs" />
+    <Compile Include="Transactions\TransactionStartedEventHandler.cs" />
+    <Compile Include="Transactions\TransactionState.cs" />
+    <Compile Include="Transactions\TransactionStateAborted.cs" />
+    <Compile Include="Transactions\TransactionStateActive.cs" />
+    <Compile Include="Transactions\TransactionStateCommitted.cs" />
+    <Compile Include="Transactions\TransactionStateDelegated.cs" />
+    <Compile Include="Transactions\TransactionStateDelegatedAborting.cs" />
+    <Compile Include="Transactions\TransactionStateDelegatedBase.cs" />
+    <Compile Include="Transactions\TransactionStateDelegatedCommitting.cs" />
+    <Compile Include="Transactions\TransactionStateDelegatedP0Wave.cs" />
+    <Compile Include="Transactions\TransactionStateDelegatedSubordinate.cs" />
+    <Compile Include="Transactions\TransactionStateEnded.cs" />
+    <Compile Include="Transactions\TransactionStateInDoubt.cs" />
+    <Compile Include="Transactions\TransactionStateNonCommittablePromoted.cs" />
+    <Compile Include="Transactions\TransactionStatePhase0.cs" />
+    <Compile Include="Transactions\TransactionStatePromoted.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedAborted.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedAborting.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedBase.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedCommitted.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedCommitting.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedEnded.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedIndoubt.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedP0Aborting.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedP0Wave.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedP1Aborting.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedPhase0.cs" />
+    <Compile Include="Transactions\TransactionStatePromotedPhase1.cs" />
+    <Compile Include="Transactions\TransactionStatePSPEOperation.cs" />
+    <Compile Include="Transactions\TransactionStateSPC.cs" />
+    <Compile Include="Transactions\TransactionStateSubordinateActive.cs" />
+    <Compile Include="Transactions\TransactionStateVolatilePhase1.cs" />
+    <Compile Include="Transactions\TransactionStateVolatileSPC.cs" />
+    <Compile Include="Transactions\TransactionStatus.cs" />
+    <Compile Include="Transactions\TransactionTable.cs" />
+    <Compile Include="Transactions\TransactionTraceIdentifier.cs" />
+    <Compile Include="Transactions\VolatileDemultiplexer.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentAborting.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentActive.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentCommitting.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentDone.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentEnded.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentInDoubt.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentPrepared.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentPreparing.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentPreparingAborting.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentSet.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentSPC.cs" />
+    <Compile Include="Transactions\VolatileEnlistmentState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AA}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Configuration\System.Configuration.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26B4}</Project>
+      <Name>System.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.EnterpriseServices\System.EnterpriseServices.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AD}</Project>
+      <Name>System.EnterpriseServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="System.Transactions.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26AF}</Project>
+      <Name>System.Transactions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Xml\System.Xml.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C3}</Project>
+      <Name>System.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System\System.csproj">
+      <Project>{664086A8-7407-4AEE-92F4-264533EE26C4}</Project>
+      <Name>System</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
