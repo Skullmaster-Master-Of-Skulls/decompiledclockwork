@@ -1,0 +1,3 @@
+table,unique_ddl
+dbo.LicenseSystem_LicenseInfo,ALTER TABLE [dbo].[LicenseSystem_LicenseInfo] ADD CONSTRAINT [IX_LicenseSystem_LicenseInfo] UNIQUE ([LicenseKey]);
+dbo.LicenseSystem_LicenseKeyInfo,ALTER TABLE [dbo].[LicenseSystem_LicenseKeyInfo] ADD CONSTRAINT [IX_LicenseSystem_LicenseKeyInfo] UNIQUE ([LicenseKey]);

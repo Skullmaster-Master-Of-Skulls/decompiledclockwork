@@ -1,0 +1,54 @@
+table,index_ddl
+dbo.AccommodationsTest,CREATE NONCLUSTERED INDEX [idx_accommodationstest_appointmentid] ON [dbo].[AccommodationsTest] ([AppointmentId]);
+dbo.AccommodationsTest,"CREATE NONCLUSTERED INDEX [idx_accommodationstest_personidcontrolid] ON [dbo].[AccommodationsTest] ([personid],[controlid]);"
+dbo.AppointmentCancelledReason,CREATE NONCLUSTERED INDEX [IX_AppointmentCancelledReason_cancelreasonid] ON [dbo].[AppointmentCancelledReason] ([cancelreasonid]);
+dbo.AppointmentCourses,CREATE NONCLUSTERED INDEX [idx_appointmentcourses_appointmentid] ON [dbo].[AppointmentCourses] ([AppointmentID]);
+dbo.AppointmentCourses,CREATE NONCLUSTERED INDEX [IX_AppointmentCourses_LUCourseID] ON [dbo].[AppointmentCourses] ([LUCourseID]);
+dbo.AppointmentCoursesFastLoad,CREATE NONCLUSTERED INDEX [idx_appointmentcoursesFastLoad_appointmentid] ON [dbo].[AppointmentCoursesFastLoad] ([AppointmentID]);
+dbo.AppointmentCoursesFastLoad,CREATE NONCLUSTERED INDEX [IX_AppointmentCoursesFastLoad_LUCourseID] ON [dbo].[AppointmentCoursesFastLoad] ([LUCourseID]);
+dbo.AppointmentIconInfo,CREATE NONCLUSTERED INDEX [IX_AppointmentIconInfo_iconIndex] ON [dbo].[AppointmentIconInfo] ([iconIndex]);
+dbo.AppointmentIcons,CREATE NONCLUSTERED INDEX [IX_AppointmentIcons_AppointmentId] ON [dbo].[AppointmentIcons] ([AppointmentID]);
+dbo.AppointmentIcons,CREATE NONCLUSTERED INDEX [IX_AppointmentIcons_iconNum] ON [dbo].[AppointmentIcons] ([iconNum]);
+dbo.AppointmentIconsFastLoad,CREATE NONCLUSTERED INDEX [IX_AppointmentIconsFastLoad_AppointmentId] ON [dbo].[AppointmentIconsFastLoad] ([AppointmentID]);
+dbo.AppointmentMappingsClockWorkOutlook,CREATE NONCLUSTERED INDEX [idx_AppointmentMappingsClockWorkOutlook_ClockWorkAppointmentId] ON [dbo].[AppointmentMappingsClockWorkOutlook] ([ClockWorkAppointmentId]);
+dbo.AppointmentMappingsClockWorkOutlook,CREATE NONCLUSTERED INDEX [idx_AppointmentMappingsClockWorkOutlook_UniqueId2] ON [dbo].[AppointmentMappingsClockWorkOutlook] ([UniqueId2]);
+dbo.AppointmentMemos,CREATE NONCLUSTERED INDEX [IX_AppointmentMemos_AppointmentId] ON [dbo].[AppointmentMemos] ([AppointmentID]);
+dbo.AppointmentMemosFastLoad,CREATE NONCLUSTERED INDEX [IX_AppointmentMemosFastLoad_AppointmentId] ON [dbo].[AppointmentMemosFastLoad] ([AppointmentID]);
+dbo.Appointments,CREATE NONCLUSTERED INDEX [idx_appointments_startdate] ON [dbo].[Appointments] ([startDate]);
+dbo.AppointmentsFastLoad,CREATE NONCLUSTERED INDEX [idx_appointmentsFastLoad_dateadded] ON [dbo].[AppointmentsFastLoad] ([dateAdded]);
+dbo.AppointmentsFastLoad,CREATE NONCLUSTERED INDEX [idx_appointmentsFastLoad_startdate] ON [dbo].[AppointmentsFastLoad] ([startDate]);
+dbo.AppointmentsModifiedDates,CREATE NONCLUSTERED INDEX [idx_appointmentsmodifieddates_appointmentid] ON [dbo].[AppointmentsModifiedDates] ([appointmentID]);
+dbo.AppointmentsModifiedDates,CREATE NONCLUSTERED INDEX [idx_appointmentsmodifieddates_dateModified] ON [dbo].[AppointmentsModifiedDates] ([dateModified]);
+dbo.AppointmentsReminder_Notification,"CREATE UNIQUE NONCLUSTERED INDEX [IX_AppointmentsReminder_Notification] ON [dbo].[AppointmentsReminder_Notification] ([AppointmentID],[PersonID]);"
+dbo.AppointmentTypes,CREATE NONCLUSTERED INDEX [IX_AppointmentTypes_appointmentTypeGroupId] ON [dbo].[AppointmentTypes] ([appointmentTypeGroupID]);
+dbo.AppointmentWorkshops,CREATE NONCLUSTERED INDEX [IX_AppointmentWorkshops_AppointmentId] ON [dbo].[AppointmentWorkshops] ([AppointmentID]);
+dbo.AppointmentWorkshops,CREATE NONCLUSTERED INDEX [IX_AppointmentWorkshops_WorkshopId] ON [dbo].[AppointmentWorkshops] ([WorkshopID]);
+dbo.AppointmentWorkshopsFastLoad,CREATE NONCLUSTERED INDEX [IX_AppointmentWorkshopsFastLoad_AppointmentId] ON [dbo].[AppointmentWorkshopsFastLoad] ([AppointmentID]);
+dbo.AppointmentWorkshopsFastLoad,CREATE NONCLUSTERED INDEX [IX_AppointmentWorkshopsFastLoad_WorkshopId] ON [dbo].[AppointmentWorkshopsFastLoad] ([WorkshopID]);
+dbo.Attendees,CREATE NONCLUSTERED INDEX [idx_attendees_appointmentid] ON [dbo].[Attendees] ([AppointmentID]);
+dbo.Attendees,CREATE NONCLUSTERED INDEX [idx_attendees_personid] ON [dbo].[Attendees] ([PersonID]);
+dbo.Caching_Appointments,CREATE NONCLUSTERED INDEX [idx_Caching_Appointments_appointmentid] ON [dbo].[Caching_Appointments] ([appointmentid]);
+dbo.Caching_Students,CREATE NONCLUSTERED INDEX [idx_Caching_Students_personid] ON [dbo].[Caching_Students] ([personid]);
+dbo.Courses,CREATE NONCLUSTERED INDEX [idx_courses_lucourseid] ON [dbo].[Courses] ([luCourseID]);
+dbo.Courses,CREATE NONCLUSTERED INDEX [idx_courses_personid] ON [dbo].[Courses] ([personID]);
+dbo.ExamsFastLoad,CREATE NONCLUSTERED INDEX [idx_examsFastLoad_lucourseid] ON [dbo].[ExamsFastLoad] ([lucourseid]);
+dbo.MainInfoAccommodationPS,CREATE NONCLUSTERED INDEX [idx_maininfoaccommodationps_courseid] ON [dbo].[MainInfoAccommodationPS] ([CourseID]);
+dbo.MainInfoAccommodationPS,CREATE NONCLUSTERED INDEX [idx_maininfoaccommodationps_personid] ON [dbo].[MainInfoAccommodationPS] ([PersonID]);
+dbo.People,CREATE NONCLUSTERED INDEX [IX_People_PersonId] ON [dbo].[People] ([PersonID]);
+dbo.PeopleGroups,CREATE NONCLUSTERED INDEX [IX_PeopleGroups_GroupId] ON [dbo].[PeopleGroups] ([GroupID]);
+dbo.PeopleGroups,CREATE NONCLUSTERED INDEX [IX_PeopleGroups_PersonId] ON [dbo].[PeopleGroups] ([PersonID]);
+HangFire.AggregatedCounter,CREATE UNIQUE NONCLUSTERED INDEX [UX_HangFire_CounterAggregated_Key] ON [HangFire].[AggregatedCounter] ([Key]);
+HangFire.Counter,CREATE NONCLUSTERED INDEX [IX_HangFire_Counter_Key] ON [HangFire].[Counter] ([Key]);
+HangFire.Hash,CREATE NONCLUSTERED INDEX [IX_HangFire_Hash_ExpireAt] ON [HangFire].[Hash] ([ExpireAt]);
+HangFire.Hash,CREATE NONCLUSTERED INDEX [IX_HangFire_Hash_Key] ON [HangFire].[Hash] ([Key]);
+HangFire.Hash,"CREATE UNIQUE NONCLUSTERED INDEX [UX_HangFire_Hash_Key_Field] ON [HangFire].[Hash] ([Key],[Field]);"
+HangFire.Job,CREATE NONCLUSTERED INDEX [IX_HangFire_Job_ExpireAt] ON [HangFire].[Job] ([ExpireAt]);
+HangFire.Job,CREATE NONCLUSTERED INDEX [IX_HangFire_Job_StateName] ON [HangFire].[Job] ([StateName]);
+HangFire.JobParameter,"CREATE NONCLUSTERED INDEX [IX_HangFire_JobParameter_JobIdAndName] ON [HangFire].[JobParameter] ([JobId],[Name]);"
+HangFire.JobQueue,"CREATE NONCLUSTERED INDEX [IX_HangFire_JobQueue_QueueAndFetchedAt] ON [HangFire].[JobQueue] ([Queue],[FetchedAt]);"
+HangFire.List,CREATE NONCLUSTERED INDEX [IX_HangFire_List_ExpireAt] ON [HangFire].[List] ([ExpireAt]);
+HangFire.List,CREATE NONCLUSTERED INDEX [IX_HangFire_List_Key] ON [HangFire].[List] ([Key]);
+HangFire.Set,CREATE NONCLUSTERED INDEX [IX_HangFire_Set_ExpireAt] ON [HangFire].[Set] ([ExpireAt]);
+HangFire.Set,CREATE NONCLUSTERED INDEX [IX_HangFire_Set_Key] ON [HangFire].[Set] ([Key]);
+HangFire.Set,"CREATE UNIQUE NONCLUSTERED INDEX [UX_HangFire_Set_KeyAndValue] ON [HangFire].[Set] ([Key],[Value]);"
+HangFire.State,CREATE NONCLUSTERED INDEX [IX_HangFire_State_JobId] ON [HangFire].[State] ([JobId]);
